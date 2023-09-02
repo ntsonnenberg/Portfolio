@@ -3,3 +3,7 @@ node_modules/
 public
 src/gatsby-types.d.ts
 package-lock.json
+.yarn
+yarn.lock
+.pnp.cjs
+.pnp.loader.mjs
