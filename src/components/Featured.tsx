@@ -69,12 +69,18 @@ export default function Featured(): JSX.Element {
         <h3 className="w-1/2">
           <span className="text-secondary font-extrabold">
             Lorem Ipsum is simply dummy text
-          </span>{" "}
+          </span>
           of the printing and typesetting industry. Lorem Ipsum has been the
           industry's.
         </h3>
         <div>
-          <Card />
+          <Card
+            imageUrl="https://www.logo.wine/a/logo/Gmail/Gmail-Logo.wine.svg"
+            title="Gmail"
+          >
+            Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry. Lorem Ipsum has been the industry's.
+          </Card>
         </div>
       </section>
     </div>

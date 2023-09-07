@@ -1,7 +1,7 @@
 import React from "react";
 import classNames from "classnames";
 
-type Props = {
+interface Props {
   children: string | JSX.Element;
   primary?: boolean;
   light?: boolean;
@@ -14,7 +14,7 @@ type Props = {
   large?: boolean;
   long?: boolean;
   className?: string;
-};
+}
 
 export default function Button({
   children,
