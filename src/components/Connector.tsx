@@ -2,10 +2,199 @@ import React from "react";
 
 export default function Connector(): JSX.Element {
   return (
-    <div className="bg-red-500 h-6 w-40 z-50">
-      <div className="flex flex-row bg-clip-border">
-        <div className="bg-blue-300 h-1 w-20 rotate-45"></div>
-      </div>
+    <div className="w-full h-6 absolute z-0 flex flex-row justify-evenly">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="70"
+        height="24"
+        viewBox="0 0 70 24"
+        fill="none"
+      >
+        <g clip-path="url(#clip0_634_160)">
+          <rect width="70" height="24" fill="#DDDDDD" />
+          <rect
+            x="2.6543"
+            y="-6"
+            width="43.0663"
+            height="4.26946"
+            transform="rotate(58.873 2.6543 -6)"
+            fill="#CECECE"
+          />
+          <rect
+            x="11.6543"
+            y="-6"
+            width="43.0663"
+            height="4.26946"
+            transform="rotate(58.873 11.6543 -6)"
+            fill="#CECECE"
+          />
+          <rect
+            x="21.6543"
+            y="-6"
+            width="43.0663"
+            height="4.26946"
+            transform="rotate(58.873 21.6543 -6)"
+            fill="#CECECE"
+          />
+          <rect
+            x="31.6543"
+            y="-6"
+            width="43.0663"
+            height="4.26946"
+            transform="rotate(58.873 31.6543 -6)"
+            fill="#CECECE"
+          />
+          <rect
+            x="41.6543"
+            y="-6"
+            width="43.0663"
+            height="4.26946"
+            transform="rotate(58.873 41.6543 -6)"
+            fill="#CECECE"
+          />
+          <rect
+            x="51.6543"
+            y="-6"
+            width="43.0663"
+            height="4.26946"
+            transform="rotate(58.873 51.6543 -6)"
+            fill="#CECECE"
+          />
+        </g>
+        <defs>
+          <clipPath id="clip0_634_160">
+            <rect width="70" height="24" fill="white" />
+          </clipPath>
+        </defs>
+      </svg>
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="70"
+        height="24"
+        viewBox="0 0 70 24"
+        fill="none"
+      >
+        <g clip-path="url(#clip0_634_160)">
+          <rect width="70" height="24" fill="#DDDDDD" />
+          <rect
+            x="2.6543"
+            y="-6"
+            width="43.0663"
+            height="4.26946"
+            transform="rotate(58.873 2.6543 -6)"
+            fill="#CECECE"
+          />
+          <rect
+            x="11.6543"
+            y="-6"
+            width="43.0663"
+            height="4.26946"
+            transform="rotate(58.873 11.6543 -6)"
+            fill="#CECECE"
+          />
+          <rect
+            x="21.6543"
+            y="-6"
+            width="43.0663"
+            height="4.26946"
+            transform="rotate(58.873 21.6543 -6)"
+            fill="#CECECE"
+          />
+          <rect
+            x="31.6543"
+            y="-6"
+            width="43.0663"
+            height="4.26946"
+            transform="rotate(58.873 31.6543 -6)"
+            fill="#CECECE"
+          />
+          <rect
+            x="41.6543"
+            y="-6"
+            width="43.0663"
+            height="4.26946"
+            transform="rotate(58.873 41.6543 -6)"
+            fill="#CECECE"
+          />
+          <rect
+            x="51.6543"
+            y="-6"
+            width="43.0663"
+            height="4.26946"
+            transform="rotate(58.873 51.6543 -6)"
+            fill="#CECECE"
+          />
+        </g>
+        <defs>
+          <clipPath id="clip0_634_160">
+            <rect width="70" height="24" fill="white" />
+          </clipPath>
+        </defs>
+      </svg>
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="70"
+        height="24"
+        viewBox="0 0 70 24"
+        fill="none"
+      >
+        <g clip-path="url(#clip0_634_160)">
+          <rect width="70" height="24" fill="#DDDDDD" />
+          <rect
+            x="2.6543"
+            y="-6"
+            width="43.0663"
+            height="4.26946"
+            transform="rotate(58.873 2.6543 -6)"
+            fill="#CECECE"
+          />
+          <rect
+            x="11.6543"
+            y="-6"
+            width="43.0663"
+            height="4.26946"
+            transform="rotate(58.873 11.6543 -6)"
+            fill="#CECECE"
+          />
+          <rect
+            x="21.6543"
+            y="-6"
+            width="43.0663"
+            height="4.26946"
+            transform="rotate(58.873 21.6543 -6)"
+            fill="#CECECE"
+          />
+          <rect
+            x="31.6543"
+            y="-6"
+            width="43.0663"
+            height="4.26946"
+            transform="rotate(58.873 31.6543 -6)"
+            fill="#CECECE"
+          />
+          <rect
+            x="41.6543"
+            y="-6"
+            width="43.0663"
+            height="4.26946"
+            transform="rotate(58.873 41.6543 -6)"
+            fill="#CECECE"
+          />
+          <rect
+            x="51.6543"
+            y="-6"
+            width="43.0663"
+            height="4.26946"
+            transform="rotate(58.873 51.6543 -6)"
+            fill="#CECECE"
+          />
+        </g>
+        <defs>
+          <clipPath id="clip0_634_160">
+            <rect width="70" height="24" fill="white" />
+          </clipPath>
+        </defs>
+      </svg>
     </div>
   );
 }

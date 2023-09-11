@@ -13,20 +13,20 @@ export default function Steps(): JSX.Element {
         of the printing and typesetting industry. Lorem Ipsum has been the
         industry's
       </h3>
-      <div className="my-28 flex flex-row items-center position-relative">
-        <StepCard step={1} title="Discovery" className="z-0">
+      <div className="my-28 flex flex-row items-center relative gap-5">
+        <StepCard step={1} title="Discovery" className="z-10">
+          Lorem Ipsum dolor sit amet, consectetur adipiscing elit.
+        </StepCard>
+        <StepCard step={2} title="Prototyping" className="z-10">
+          Lorem Ipsum dolor sit amet, consectetur adipiscing elit.
+        </StepCard>
+        <StepCard step={3} title="Implementation" className="z-10">
+          Lorem Ipsum dolor sit amet, consectetur adipiscing elit.
+        </StepCard>
+        <StepCard step={4} title="Acceptance" className="z-10">
           Lorem Ipsum dolor sit amet, consectetur adipiscing elit.
         </StepCard>
         <Connector />
-        <StepCard step={2} title="Prototyping">
-          Lorem Ipsum dolor sit amet, consectetur adipiscing elit.
-        </StepCard>
-        <StepCard step={3} title="Implementation">
-          Lorem Ipsum dolor sit amet, consectetur adipiscing elit.
-        </StepCard>
-        <StepCard step={4} title="Acceptance">
-          Lorem Ipsum dolor sit amet, consectetur adipiscing elit.
-        </StepCard>
       </div>
     </div>
   );
