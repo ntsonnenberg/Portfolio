@@ -3,6 +3,7 @@ import NavBar from "../components/NavBar";
 import Footer from "../components/Footer";
 import Hero from "../components/Hero";
 import Featured from "../components/Featured";
+import Steps from "../components/Steps";
 
 export default function IndexPage(): JSX.Element {
   return (
@@ -10,6 +11,7 @@ export default function IndexPage(): JSX.Element {
       <Hero />
       <NavBar />
       <Featured />
+      <Steps />
       <Footer />
     </div>
   );
