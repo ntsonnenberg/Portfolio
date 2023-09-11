@@ -73,10 +73,45 @@ export default function Featured(): JSX.Element {
           of the printing and typesetting industry. Lorem Ipsum has been the
           industry's.
         </h3>
-        <div>
+        <div className="my-28 grid grid-cols-3 gap-10">
           <Card
             imageUrl="https://www.logo.wine/a/logo/Gmail/Gmail-Logo.wine.svg"
             title="Gmail"
+          >
+            Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry. Lorem Ipsum has been the industry's.
+          </Card>
+          <Card
+            imageUrl="https://www.svgrepo.com/show/303503/shopify-logo.svg"
+            title="Shopify"
+          >
+            Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry. Lorem Ipsum has been the industry's.
+          </Card>
+          <Card
+            imageUrl="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/Font_Awesome_5_brands_squarespace.svg/1200px-Font_Awesome_5_brands_squarespace.svg.png"
+            title="Squarespace"
+          >
+            Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry. Lorem Ipsum has been the industry's.
+          </Card>
+          <Card
+            imageUrl="https://www.svgrepo.com/show/331433/hubspot.svg"
+            title="HubSpot"
+          >
+            Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry. Lorem Ipsum has been the industry's.
+          </Card>
+          <Card
+            imageUrl="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Slack_icon_2019.svg/2048px-Slack_icon_2019.svg.png"
+            title="Slack"
+          >
+            Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry. Lorem Ipsum has been the industry's.
+          </Card>
+          <Card
+            imageUrl="https://cdn.freebiesupply.com/logos/large/2x/facebook-3-logo-png-transparent.png"
+            title="Facebook"
           >
             Lorem Ipsum is simply dummy text of the printing and typesetting
             industry. Lorem Ipsum has been the industry's.
