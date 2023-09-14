@@ -1,10 +1,14 @@
 import React from "react";
 import Button from "./Button";
+import LandingContent from "../images/svg/3D_Landing_Content.inline.svg";
 
 export default function Hero(): JSX.Element {
   return (
     <div className="h-screen bg-primary-variant/80 text-on-primary flex flex-row phone:flex-col tablet:flex-col laptop:flex-row">
-      <div className="basis-3/5">Image</div>
+      <div className="basis-3/5">
+        Image
+        <LandingContent />
+      </div>
       <div className="basis-2/5 flex flex-col my-20 mx-10 phone:mx-6 tablet:mx-10 gap-10">
         <h1 className="text-6xl phone:text-5xl font-bold">
           Professional Web Development Services

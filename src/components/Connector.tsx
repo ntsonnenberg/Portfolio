@@ -2,13 +2,14 @@ import React from "react";
 
 export default function Connector(): JSX.Element {
   return (
-    <div className="w-full h-6 absolute z-0 flex flex-row justify-evenly">
+    <div className="absolute laptop:top-1/3 left-0 w-full laptop:h-6 -z-10 flex laptop:flex-row justify-evenly phone:flex-col phone:top-0 phone:items-center phone:h-full">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         width="70"
         height="24"
         viewBox="0 0 70 24"
         fill="none"
+        className="phone:rotate-90 laptop:rotate-0"
       >
         <g clip-path="url(#clip0_634_160)">
           <rect width="70" height="24" fill="#DDDDDD" />
@@ -73,6 +74,7 @@ export default function Connector(): JSX.Element {
         height="24"
         viewBox="0 0 70 24"
         fill="none"
+        className="phone:rotate-90 laptop:rotate-0"
       >
         <g clip-path="url(#clip0_634_160)">
           <rect width="70" height="24" fill="#DDDDDD" />
@@ -137,6 +139,7 @@ export default function Connector(): JSX.Element {
         height="24"
         viewBox="0 0 70 24"
         fill="none"
+        className="phone:rotate-90 laptop:rotate-0"
       >
         <g clip-path="url(#clip0_634_160)">
           <rect width="70" height="24" fill="#DDDDDD" />
