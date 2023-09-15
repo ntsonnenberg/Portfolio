@@ -1,6 +1,6 @@
 import React from "react";
 import Button from "./Button";
-import LandingContent from "../images/svg/3D_Landing_Content.inline.svg";
+import LandingContent from "../images/svg/3D_Landing_Content.svg";
 
 export default function Hero(): JSX.Element {
   return (
