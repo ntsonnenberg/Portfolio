@@ -5,7 +5,6 @@ interface Props {
   children: string | JSX.Element;
   primary?: boolean;
   light?: boolean;
-  dark?: boolean;
   secondary?: boolean;
   filled?: boolean;
   outline?: boolean;

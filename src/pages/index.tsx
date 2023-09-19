@@ -4,6 +4,7 @@ import Footer from "../components/Footer";
 import Hero from "../components/Hero";
 import Featured from "../components/Featured";
 import Steps from "../components/Steps";
+import ContactForm from "../components/ContactForm";
 
 export default function IndexPage(): JSX.Element {
   return (
@@ -12,6 +13,7 @@ export default function IndexPage(): JSX.Element {
       <NavBar />
       <Featured />
       <Steps />
+      <ContactForm />
       <Footer />
     </div>
   );
