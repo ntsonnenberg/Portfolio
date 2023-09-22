@@ -11,7 +11,7 @@ export default function Connector(): JSX.Element {
         fill="none"
         className="phone:rotate-90 laptop:rotate-0"
       >
-        <g clip-path="url(#clip0_634_160)">
+        <g clipPath="url(#clip0_634_160)">
           <rect width="70" height="24" fill="#DDDDDD" />
           <rect
             x="2.6543"
@@ -76,7 +76,7 @@ export default function Connector(): JSX.Element {
         fill="none"
         className="phone:rotate-90 laptop:rotate-0"
       >
-        <g clip-path="url(#clip0_634_160)">
+        <g clipPath="url(#clip0_634_160)">
           <rect width="70" height="24" fill="#DDDDDD" />
           <rect
             x="2.6543"
@@ -141,7 +141,7 @@ export default function Connector(): JSX.Element {
         fill="none"
         className="phone:rotate-90 laptop:rotate-0"
       >
-        <g clip-path="url(#clip0_634_160)">
+        <g clipPath="url(#clip0_634_160)">
           <rect width="70" height="24" fill="#DDDDDD" />
           <rect
             x="2.6543"

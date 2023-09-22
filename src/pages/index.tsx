@@ -1,20 +1,21 @@
 import * as React from "react";
-import NavBar from "../components/NavBar";
-import Footer from "../components/Footer";
 import Hero from "../components/Hero";
 import Featured from "../components/Featured";
 import Steps from "../components/Steps";
 import ContactForm from "../components/ContactForm";
+import Layout from "../components/Layout";
 
 export default function IndexPage(): JSX.Element {
   return (
     <div>
       <Hero />
-      <NavBar />
-      <Featured />
-      <Steps />
-      <ContactForm />
-      <Footer />
+      <Layout>
+        <>
+          <Featured />
+          <Steps />
+          <ContactForm />
+        </>
+      </Layout>
     </div>
   );
 }

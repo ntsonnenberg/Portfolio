@@ -1,21 +1,55 @@
 import React from "react";
 import { FiMenu } from "react-icons/fi";
+import { Link } from "gatsby";
+import { useState, useEffect } from "react";
 
 export default function NavBar(): JSX.Element {
+  const [showNav, setShowNav] = useState(false);
+
+  const controlNavbar = () => {
+    if (window.scrollY >= 700) {
+      setShowNav(true);
+    } else {
+      setShowNav(false);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", controlNavbar);
+
+    return () => window.removeEventListener("scroll", controlNavbar);
+  }, []);
+
   const renderedResponsiveNav =
     window.innerWidth < 1536 ? (
       <FiMenu className="tablet:h-10 tablet:w-10 phone:h-6 phone:w-6" />
     ) : (
       <div className="flex flex-row gap-24">
-        <h2 className="text-2xl">Portfolio</h2>
-        <h2 className="text-2xl">Contact</h2>
+        <Link
+          to="/portfolio"
+          className="text-2xl cursor-pointer transition-transform duration-100 hover:-translate-y-2 hover:ease-in hover:text-secondary hover:font-bold"
+        >
+          Portfolio
+        </Link>
+        <h2 className="text-2xl cursor-pointer transition-transform duration-100 hover:-translate-y-2 hover:ease-in hover:text-secondary hover:font-bold">
+          Contact
+        </h2>
       </div>
     );
 
   return (
-    <div className="h-40 w-full bg-primary-variant/80 text-on-primary backdrop-blur-lg drop-shadow-2xl sticky top-0">
+    <div
+      className={`${
+        showNav ? "visible" : "invisible"
+      } h-40 w-full bg-primary-variant/80 text-on-primary backdrop-blur-lg drop-shadow-2xl sticky top-0`}
+    >
       <div className="flex flex-row justify-around h-full items-center align-center">
-        <h1 className="tablet:text-4xl phone:text-2xl">Nathan Sonnenberg</h1>
+        <Link
+          to="/"
+          className="tablet:text-4xl phone:text-2xl cursor-pointer transition-transform duration-100 hover:-translate-y-2 hover:ease-in hover:text-secondary hover:font-bold"
+        >
+          Nathan Sonnenberg
+        </Link>
         {renderedResponsiveNav}
       </div>
     </div>
