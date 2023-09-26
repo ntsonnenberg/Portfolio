@@ -29,6 +29,10 @@ module.exports = {
       fontFamily: {
         poppins: ["Poppins", "sans-serif"],
       },
+      backgroundImage: {
+        typing:
+          "url(https://images.pexels.com/photos/5496464/pexels-photo-5496464.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1)",
+      },
       keyframes: {
         "fade-in-down": {
           "0%": {

@@ -4,6 +4,7 @@ import Featured from "../components/Featured";
 import Steps from "../components/Steps";
 import ContactForm from "../components/ContactForm";
 import Layout from "../components/Layout";
+import OverlayFeature from "../components/OverlayFeature";
 
 export default function IndexPage(): JSX.Element {
   return (
@@ -11,6 +12,7 @@ export default function IndexPage(): JSX.Element {
       <>
         <Hero />
         <Featured />
+        <OverlayFeature />
         <Steps />
         <ContactForm />
       </>

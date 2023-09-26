@@ -4,12 +4,14 @@ import { GoMegaphone } from "react-icons/go";
 import { RiMoneyDollarCircleLine } from "react-icons/ri";
 import { FaSquarespace } from "react-icons/fa";
 import Card from "./Card";
+import Image from "./Image";
+import CodingGIF from "../assets/coding-video.gif";
 
 export default function Featured(): JSX.Element {
   return (
     <div>
       <section className="flex flex-col text-center items-center my-52 mx-12">
-        <h1 className="mb-20 text-7xl phone:text-6xl tablet:text-7xl font-bold">
+        <h1 className="mb-20 phone:text-6xl tablet:text-7xl font-bold">
           Find Customized Solutions
         </h1>
         <div className="grid laptop:grid-cols-3 tablet:grid-cols-2 phone:grid-cols-1 mt-10 text-center phone:mt-16  phone:gap-y-16  tablet:gap-0 desktop:mt-24">
@@ -62,6 +64,16 @@ export default function Featured(): JSX.Element {
             </p>
           </div>
         </div>
+        <section className="flex flex-col py-52 gap-10 items-center">
+          <h1 className="font-bold phone:text-6xl tablet:text-7xl">
+            Everything You Need
+          </h1>
+          <h3 className="text-md w-[80%] text-on-surface/50">
+            Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry. Lorem Ipsum has been the industry's.
+          </h3>
+          <Image source={CodingGIF} className="w-full h-auto mt-12" />
+        </section>
       </section>
       <section className="flex flex-col text-center items-center py-52 px-12 bg-background text-on-background">
         <h1 className="mb-20 phone:text-6xl tablet:text-7xl font-bold">
@@ -70,7 +82,7 @@ export default function Featured(): JSX.Element {
         <h3 className="laptop:w-1/2 phone:w-11/12">
           <span className="text-secondary font-extrabold">
             Lorem Ipsum is simply dummy text
-          </span>
+          </span>{" "}
           of the printing and typesetting industry. Lorem Ipsum has been the
           industry's.
         </h3>
