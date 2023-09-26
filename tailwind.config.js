@@ -41,26 +41,8 @@ module.exports = {
           },
         },
       },
-      "fade-in": {
-        "0%": {
-          opacity: "100",
-        },
-        "100%": {
-          opacity: "0",
-        },
-      },
-      "fade-out": {
-        "0%": {
-          opacity: "0",
-        },
-        "100%": {
-          opacity: "100",
-        },
-      },
       animation: {
         "fade-in-down": "fade-in-down 2s ease-out",
-        "fade-in": "fade-in 2s ease-in",
-        "fade-out": "fade-out 2s ease-out",
       },
     },
   },
