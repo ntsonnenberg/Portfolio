@@ -7,16 +7,14 @@ import Layout from "../components/Layout";
 
 export default function IndexPage(): JSX.Element {
   return (
-    <div>
-      <Hero />
-      <Layout>
-        <>
-          <Featured />
-          <Steps />
-          <ContactForm />
-        </>
-      </Layout>
-    </div>
+    <Layout>
+      <>
+        <Hero />
+        <Featured />
+        <Steps />
+        <ContactForm />
+      </>
+    </Layout>
   );
 }
 
