@@ -24,7 +24,7 @@ export default function Input({
   });
 
   const inputWrapperClasses = classNames(
-    "relative inline-block bg-transparent",
+    "relative inline-block bg-transparent phone:py-1 laptop:py-0",
     {
       "w-60 h-auto": small,
       "w-80 h-10": medium,
@@ -40,7 +40,7 @@ export default function Input({
         <input
           type="text"
           placeholder={placeholder}
-          className="peer w-full h-full decoration-none bg-transparent border-b-4 pl-2 focus:border-0 focus:outline-0"
+          className="peer w-full h-full decoration-none bg-transparent border-b-4 pl-2 pb-1 focus:border-0 focus:outline-0"
         />
         <span className="ease absolute left-0 top-0 h-0 w-0 border-t-2 border-white transition-all duration-200 peer-focus:w-full"></span>
         <span className="ease absolute right-0 top-0 h-0 w-0 border-r-2 border-white transition-all duration-200 peer-focus:h-full"></span>
