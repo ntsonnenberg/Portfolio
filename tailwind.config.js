@@ -29,6 +29,9 @@ module.exports = {
       fontFamily: {
         poppins: ["Poppins", "sans-serif"],
       },
+      backgroundImage: {
+        code: "url(https://img.freepik.com/vetores-premium/estilo-de-design-de-web-de-fundo-de-cartao-de-hacker-de-matriz-para-o-seu-negocio-ilustracao-vetorial_287964-979.jpg?w=2000)",
+      },
       keyframes: {
         "fade-in-down": {
           "0%": {
