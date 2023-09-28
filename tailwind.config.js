@@ -30,7 +30,7 @@ module.exports = {
         poppins: ["Poppins", "sans-serif"],
       },
       backgroundImage: {
-        code: "url(https://img.freepik.com/vetores-premium/estilo-de-design-de-web-de-fundo-de-cartao-de-hacker-de-matriz-para-o-seu-negocio-ilustracao-vetorial_287964-979.jpg?w=2000)",
+        code: "url(https://i.etsystatic.com/25240952/r/il/b804e5/3585585644/il_fullxfull.3585585644_h58p.jpg)",
       },
       keyframes: {
         "fade-in-down": {
