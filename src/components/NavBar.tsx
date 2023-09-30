@@ -31,9 +31,12 @@ export default function NavBar(): JSX.Element {
         >
           Portfolio
         </Link>
-        <h2 className="text-2xl cursor-pointer transition-transform duration-100 hover:-translate-y-2 hover:ease-in hover:text-secondary hover:font-bold">
+        <Link
+          className="text-2xl cursor-pointer transition-transform duration-100 hover:-translate-y-2 hover:ease-in hover:text-secondary hover:font-bold"
+          to="/contact"
+        >
           Contact
-        </h2>
+        </Link>
       </div>
     );
 
