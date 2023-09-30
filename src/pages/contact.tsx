@@ -1,10 +1,10 @@
 import React from "react";
 import Layout from "../components/Layout";
 
-export default function PortfolioPage(): JSX.Element {
+export default function ContactPage(): JSX.Element {
   return (
     <Layout>
-      <h1>This is the portfolio page</h1>
+      <h1>Contact page</h1>
     </Layout>
   );
 }
