@@ -4,7 +4,9 @@ import { Link } from "gatsby";
 import { useState, useEffect } from "react";
 
 export default function NavBar(): JSX.Element {
-  const [showNav, setShowNav] = useState(false);
+  const [showNav, setShowNav] = useState(
+    window.location.pathname === "/" ? false : true
+  );
 
   const controlNavbar = () => {
     if (window.scrollY >= 500) {
@@ -15,9 +17,11 @@ export default function NavBar(): JSX.Element {
   };
 
   useEffect(() => {
-    window.addEventListener("scroll", controlNavbar);
+    if (window.location.pathname === "/") {
+      window.addEventListener("scroll", controlNavbar);
 
-    return () => window.removeEventListener("scroll", controlNavbar);
+      return () => window.removeEventListener("scroll", controlNavbar);
+    }
   }, []);
 
   const renderedResponsiveNav =

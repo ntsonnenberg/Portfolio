@@ -2,6 +2,7 @@ import React from "react";
 import classNames from "classnames";
 interface Props {
   label: string;
+  type: string;
   placeholder?: string;
   className?: string;
   small?: boolean;
@@ -11,6 +12,7 @@ interface Props {
 
 export default function Input({
   label,
+  type,
   placeholder,
   small,
   medium,
@@ -38,9 +40,9 @@ export default function Input({
       <label className={labelClasses}>{label}</label>
       <div className={inputWrapperClasses}>
         <input
-          type="text"
+          type={type}
           placeholder={placeholder}
-          className="peer w-full h-full decoration-none bg-transparent border-b-4 pl-2 pb-1 focus:border-0 focus:outline-0"
+          className="peer w-full h-full decoration-none bg-transparent border-b-4 pl-2 focus:border-0 focus:outline-0"
         />
         <span className="ease absolute left-0 top-0 h-0 w-0 border-t-2 border-white transition-all duration-200 peer-focus:w-full"></span>
         <span className="ease absolute right-0 top-0 h-0 w-0 border-r-2 border-white transition-all duration-200 peer-focus:h-full"></span>

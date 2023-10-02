@@ -15,6 +15,7 @@ export default function ContactUs(): JSX.Element {
       <form>
         <Input
           label="Email"
+          type="text"
           placeholder="Enter email..."
           small={isPhone}
           medium={isTablet}
