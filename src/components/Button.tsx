@@ -46,7 +46,7 @@ export default function Button({
       "outline-0 text-secondary-variant": text && secondary,
       "text-xl": large,
       "text-xs rounded-sm font-thin": small,
-      "h-10 w-1/4 text-xl": long,
+      "h-10 w-full text-xl": long,
     },
     className
   );
