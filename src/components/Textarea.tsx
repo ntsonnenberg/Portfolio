@@ -15,7 +15,7 @@ export default function Textarea({
   onChange,
 }: Props): JSX.Element {
   const textareaWrapperClasses = classNames(
-    "relative bg-transparent text-on-background h-60",
+    "relative bg-transparent text-on-background min-h-60",
     {}
   );
 

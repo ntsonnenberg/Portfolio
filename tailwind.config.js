@@ -30,7 +30,7 @@ module.exports = {
         poppins: ["Poppins", "sans-serif"],
       },
       backgroundImage: {
-        code: "url(https://i.etsystatic.com/25240952/r/il/b804e5/3585585644/il_fullxfull.3585585644_h58p.jpg)",
+        code: "url(https://images.pexels.com/photos/196659/pexels-photo-196659.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1)",
       },
       keyframes: {
         "fade-in-down": {
