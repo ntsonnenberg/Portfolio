@@ -47,6 +47,9 @@ module.exports = {
       animation: {
         "fade-in-down": "fade-in-down 2s ease-out",
       },
+      dropShadow: {
+        drawer: "0 10px 50px rgba(0, 0, 0, 0.75)",
+      },
     },
   },
   plugins: [],
