@@ -3,7 +3,11 @@ import { FiMenu } from "react-icons/fi";
 import { Link } from "gatsby";
 import { useState, useEffect } from "react";
 
-export default function NavBar(): JSX.Element {
+type Props = {
+  openDrawer: () => void;
+};
+
+export default function NavBar({ openDrawer }: Props): JSX.Element {
   const [showNav, setShowNav] = useState(
     window.location.pathname === "/" ? false : true
   );
@@ -26,7 +30,10 @@ export default function NavBar(): JSX.Element {
 
   const renderedResponsiveNav =
     window.innerWidth < 1536 ? (
-      <FiMenu className="tablet:h-10 tablet:w-10 phone:h-6 phone:w-6" />
+      <FiMenu
+        className="cursor-pointer tablet:h-10 tablet:w-10 phone:h-6 phone:w-6"
+        onClick={openDrawer}
+      />
     ) : (
       <div className="flex flex-row gap-24">
         <Link
