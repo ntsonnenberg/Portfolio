@@ -1,6 +1,7 @@
 import { Link } from "gatsby";
 import React, { useEffect } from "react";
 import { createPortal } from "react-dom";
+import { FiX } from "react-icons/fi";
 
 type Props = {
   closeDrawer: () => void;
@@ -23,13 +24,17 @@ export default function NavDrawer({ closeDrawer }: Props): JSX.Element {
         className="fixed inset-0 bg-background opacity-80"
         onClick={closeDrawer}
       ></div>
-      <div className="fixed inset-y-0 right-0 w-1/3 bg-primary-variant drop-shadow-drawer">
-        <div className="place-items-center pt-32 flex flex-col gap-32 text-on-background text-2xl">
+      <div className="fixed inset-y-0 right-0 w-1/3 bg-primary-variant text-on-background drop-shadow-drawer flex flex-col">
+        <FiX
+          className="w-10 h-10 self-end m-6 cursor-pointer"
+          onClick={closeDrawer}
+        />
+        <div className="place-items-center pt-32 flex flex-col gap-32 text-2xl">
           <Link
-            to="/portfolio"
+            to="/projects"
             className="cursor-pointer transition-transform duration-100 hover:-translate-y-2 hover:ease-in hover:text-secondary hover:font-bold"
           >
-            Portfolio
+            Projects
           </Link>
           <Link
             to="/contact"
