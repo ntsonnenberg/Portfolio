@@ -37,10 +37,10 @@ export default function NavBar({ openDrawer }: Props): JSX.Element {
     ) : (
       <div className="flex flex-row gap-24">
         <Link
-          to="/portfolio"
+          to="/projects"
           className="text-2xl cursor-pointer transition-transform duration-100 hover:-translate-y-2 hover:ease-in hover:text-secondary hover:font-bold"
         >
-          Portfolio
+          Projects
         </Link>
         <Link
           className="text-2xl cursor-pointer transition-transform duration-100 hover:-translate-y-2 hover:ease-in hover:text-secondary hover:font-bold"
