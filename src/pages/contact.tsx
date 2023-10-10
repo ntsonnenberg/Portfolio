@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Layout from "../components/Layout";
 import Input from "../components/Input";
 import Textarea from "../components/Textarea";
@@ -13,6 +13,15 @@ export default function ContactPage(): JSX.Element {
     message: "",
   });
 
+  const inputSize =
+    window.innerWidth >= 1536
+      ? "large"
+      : window.innerWidth < 1536 && window.innerWidth >= 664
+      ? "medium"
+      : window.innerWidth < 664
+      ? "small"
+      : "large";
+
   const updateMessageInput = (
     event: React.ChangeEvent<HTMLTextAreaElement>
   ): void => {
@@ -23,15 +32,38 @@ export default function ContactPage(): JSX.Element {
     <Layout>
       <div className="py-60 bg-background text-on-background min-h-screen flex flex-col items-center gap-20">
         <h1 className="text-center font-bold text-6xl">Book a Demo</h1>
-        <form className="flex flex-col gap-8">
-          <div className="flex flex-row gap-2">
-            <Input label="First Name" type="text" large />
-            <Input label="Last Name" type="text" large />
+        <form className="flex flex-col phone:gap-10 tablet:gap-8">
+          <div className="flex phone:flex-col phone:gap-10 tablet:flex-row tablet:gap-2">
+            <Input
+              label="First Name"
+              placeholder="Enter first name..."
+              type="text"
+              {...{ [inputSize]: true }}
+            />
+            <Input
+              label="Last Name"
+              placeholder="Enter last name..."
+              type="text"
+              {...{ [inputSize]: true }}
+            />
           </div>
-          <Input label="Email" type="text" large className="w-full" />
-          <Input label="Title" type="text" large className="w-full" />
+          <Input
+            label="Email"
+            placeholder="Enter email..."
+            type="text"
+            {...{ [inputSize]: true }}
+            className="w-full"
+          />
+          <Input
+            label="Title"
+            placeholder="Enter position at company..."
+            type="text"
+            {...{ [inputSize]: true }}
+            className="w-full"
+          />
           <Textarea
             label="Message"
+            placeholder="Enter message here..."
             value={formInputs.message}
             onChange={updateMessageInput}
           />

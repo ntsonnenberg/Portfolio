@@ -28,9 +28,9 @@ export default function Input({
   const inputWrapperClasses = classNames(
     "relative inline-block bg-transparent phone:py-1 laptop:py-0",
     {
-      "w-60 h-auto": small,
-      "w-80 h-10": medium,
-      "w-96 h-12": large,
+      "w-60 h-10": small,
+      "w-80 h-14": medium,
+      "w-96 h-16": large,
     },
     className
   );

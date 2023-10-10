@@ -4,6 +4,7 @@ import React from "react";
 type Props = {
   label: string;
   value: string;
+  placeholder?: string;
   className?: string;
   onChange: (event: React.ChangeEvent<HTMLTextAreaElement>) => void;
 };
@@ -11,6 +12,7 @@ type Props = {
 export default function Textarea({
   className,
   label,
+  placeholder,
   value,
   onChange,
 }: Props): JSX.Element {
@@ -25,6 +27,7 @@ export default function Textarea({
       <div className={textareaWrapperClasses}>
         <textarea
           value={value}
+          placeholder={placeholder}
           onChange={onChange}
           className={`peer bg-transparent text-on-background h-60 w-full border-b-4 pl-2 pt-2 focus:border-0 focus:outline-0 ${className}`}
         />

@@ -55,7 +55,7 @@ export default function NavBar({ openDrawer }: Props): JSX.Element {
     <div
       className={`transition-all duration-500 ${
         showNav ? "opacity-100" : "opacity-0"
-      } h-40 w-full bg-primary-variant/80 text-on-primary backdrop-blur-lg drop-shadow-2xl fixed top-0`}
+      } h-40 w-full bg-primary-variant/80 text-on-primary backdrop-blur-lg drop-shadow-2xl fixed top-0 z-10`}
     >
       <div className="flex flex-row justify-around h-full items-center align-center">
         <Link
