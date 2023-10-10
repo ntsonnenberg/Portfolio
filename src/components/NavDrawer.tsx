@@ -24,7 +24,7 @@ export default function NavDrawer({ closeDrawer }: Props): JSX.Element {
         className="fixed inset-0 bg-background opacity-80"
         onClick={closeDrawer}
       ></div>
-      <div className="fixed inset-y-0 right-0 bg-primary-variant text-on-background drop-shadow-drawer flex flex-col phone:w-4/5 tablet:w-1/2">
+      <div className="fixed inset-y-0 right-0 z-20 bg-primary-variant text-on-background drop-shadow-drawer flex flex-col phone:w-4/5 tablet:w-1/2">
         <FiX
           className="w-10 h-10 self-end m-6 cursor-pointer"
           onClick={closeDrawer}

@@ -1,5 +1,6 @@
 import React from "react";
 import Button from "./Button";
+import { Link } from "gatsby";
 
 export default function Hero(): JSX.Element {
   return (
@@ -39,10 +40,10 @@ export default function Hero(): JSX.Element {
         </h2>
         <div className="flex flex-row gap-5">
           <Button secondary filled large className="px-2 py-1">
-            Book Demo
+            <Link to="/contact">Book Demo</Link>
           </Button>
           <Button light outline large className="px-2 py-1">
-            View Portfolio
+            <Link to="projects">View Projects</Link>
           </Button>
         </div>
       </div>
