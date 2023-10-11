@@ -12,24 +12,14 @@ export default function ProjectsPage(): JSX.Element {
           link="https://goenlite.com"
         />
         <ProjectCard
-          image="/go-enlite-landing.svg"
-          title="Go Enlite"
-          link="https://goenlite.com"
+          image="/ecommerce-front-products.svg"
+          title="Ecommerce Website"
+          link="https://ecommerce-front-9975il0qq-ntsonnenberg.vercel.app/"
         />
         <ProjectCard
-          image="/go-enlite-landing.svg"
-          title="Go Enlite"
-          link="https://goenlite.com"
-        />
-        <ProjectCard
-          image="/go-enlite-landing.svg"
-          title="Go Enlite"
-          link="https://goenlite.com"
-        />
-        <ProjectCard
-          image="/go-enlite-landing.svg"
-          title="Go Enlite"
-          link="https://goenlite.com"
+          image="/ecommerce-admin-categories.svg"
+          title="Ecommerce Admin"
+          link="https://ecommerce-admin-taupe.vercel.app/"
         />
       </div>
     </Layout>
