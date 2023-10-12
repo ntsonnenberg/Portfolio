@@ -16,7 +16,7 @@ export default function ContactUs(): JSX.Element {
       <h1 className="font-bold phone:text-2xl tablet:text-5xl tablet:mb-10 laptop:text-7xl laptop:mb-16">
         Contact Us to Learn More
       </h1>
-      <form onSubmit={sendEmail}>
+      <form>
         <Input
           label="Email"
           type="text"
