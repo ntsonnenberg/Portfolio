@@ -1,19 +1,20 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { FiMenu } from "react-icons/fi";
 import { Link } from "gatsby";
-import { useState, useEffect } from "react";
 
 type Props = {
   openDrawer: () => void;
 };
 
 export default function NavBar({ openDrawer }: Props): JSX.Element {
-  const [showNav, setShowNav] = useState(
-    window.location.pathname === "/" ? false : true
-  );
+  // const [showNav, setShowNav] = useState(
+  //   window.location.pathname === "/" ? false : true
+  // );
+  const [showNav, setShowNav] = useState(false);
+  const [path, setPath] = useState<string | undefined>();
 
   const controlNavbar = () => {
-    if (window.scrollY >= 500) {
+    if (typeof window !== undefined && window.scrollY >= 500) {
       setShowNav(true);
     } else {
       setShowNav(false);
@@ -21,35 +22,20 @@ export default function NavBar({ openDrawer }: Props): JSX.Element {
   };
 
   useEffect(() => {
-    if (window.location.pathname === "/") {
+    setPath(window.location.pathname);
+
+    if (path === "/") {
       window.addEventListener("scroll", controlNavbar);
 
       return () => window.removeEventListener("scroll", controlNavbar);
     }
-  }, []);
+  }, [path]);
 
-  const renderedResponsiveNav =
-    window.innerWidth < 1536 ? (
-      <FiMenu
-        className="cursor-pointer tablet:h-10 tablet:w-10 phone:h-6 phone:w-6"
-        onClick={openDrawer}
-      />
-    ) : (
-      <div className="flex flex-row gap-24">
-        <Link
-          to="/projects"
-          className="text-2xl cursor-pointer transition-transform duration-100 hover:-translate-y-2 hover:ease-in hover:text-secondary hover:font-bold"
-        >
-          Projects
-        </Link>
-        <Link
-          className="text-2xl cursor-pointer transition-transform duration-100 hover:-translate-y-2 hover:ease-in hover:text-secondary hover:font-bold"
-          to="/contact"
-        >
-          Contact
-        </Link>
-      </div>
-    );
+  useEffect(() => {
+    if (path !== "/") {
+      setShowNav(true);
+    }
+  }, [path]);
 
   return (
     <div
@@ -64,7 +50,24 @@ export default function NavBar({ openDrawer }: Props): JSX.Element {
         >
           Nathan Sonnenberg
         </Link>
-        {renderedResponsiveNav}
+        <FiMenu
+          className="cursor-pointer phone:h-6 phone:w-6 tablet:h-10 tablet:w-10 laptop:hidden"
+          onClick={openDrawer}
+        />
+        <div className="hidden laptop:flex flex-row gap-24">
+          <Link
+            to="/projects"
+            className="text-2xl cursor-pointer transition-transform duration-100 hover:-translate-y-2 hover:ease-in hover:text-secondary hover:font-bold"
+          >
+            Projects
+          </Link>
+          <Link
+            to="/contact"
+            className="text-2xl cursor-pointer transition-tranform duration-100 hover:-translate-y-2 hover:ease-in hover:text-secondary hover:font-bold"
+          >
+            Contact
+          </Link>
+        </div>
       </div>
     </div>
   );

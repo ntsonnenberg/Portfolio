@@ -1,5 +1,4 @@
 import React from "react";
-import classNames from "classnames";
 interface Props {
   label: string;
   type: string;
@@ -14,31 +13,16 @@ export default function Input({
   label,
   type,
   placeholder,
-  small,
-  medium,
-  large,
   className,
 }: Props): JSX.Element {
-  const labelClasses = classNames({
-    "text-md": small,
-    "text-xl": medium,
-    "text-2xl": large,
-  });
-
-  const inputWrapperClasses = classNames(
-    "relative inline-block bg-transparent phone:py-1 laptop:py-0",
-    {
-      "w-60 h-10": small,
-      "w-80 h-14": medium,
-      "w-96 h-16": large,
-    },
-    className
-  );
-
   return (
-    <div className="flex flex-col items-start gap-1">
-      <label className={labelClasses}>{label}</label>
-      <div className={inputWrapperClasses}>
+    <div className="flex flex-col items-start gap-1 w-full">
+      <label className="phone:text-md tablet:text-xl laptop:text-2xl">
+        {label}
+      </label>
+      <div
+        className={`relative inline-block bg-transparent w-full phone:py-1 phone:h-10 tablet:h-12 laptop:py-0 laptop:h-14 ${className}`}
+      >
         <input
           type={type}
           placeholder={placeholder}
