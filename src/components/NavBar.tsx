@@ -7,11 +7,7 @@ type Props = {
 };
 
 export default function NavBar({ openDrawer }: Props): JSX.Element {
-  // const [showNav, setShowNav] = useState(
-  //   window.location.pathname === "/" ? false : true
-  // );
   const [showNav, setShowNav] = useState(false);
-  const [path, setPath] = useState<string | undefined>();
 
   const controlNavbar = () => {
     if (typeof window !== undefined && window.scrollY >= 500) {
@@ -22,26 +18,23 @@ export default function NavBar({ openDrawer }: Props): JSX.Element {
   };
 
   useEffect(() => {
-    setPath(window.location.pathname);
-
+    const path = window.location.pathname;
     if (path === "/") {
       window.addEventListener("scroll", controlNavbar);
-
-      return () => window.removeEventListener("scroll", controlNavbar);
-    }
-  }, [path]);
-
-  useEffect(() => {
-    if (path !== "/") {
+    } else {
       setShowNav(true);
     }
-  }, [path]);
+
+    return () => {
+      if (path === "/") window.removeEventListener("scroll", controlNavbar);
+    };
+  }, []);
 
   return (
     <div
       className={`transition-all duration-500 ${
         showNav ? "opacity-100" : "opacity-0"
-      } h-40 w-full bg-primary-variant/80 text-on-primary backdrop-blur-lg drop-shadow-2xl fixed top-0 z-10`}
+      } h-40 w-full bg-primary-variant/80 text-on-primary backdrop-blur-lg drop-shadow-2xl fixed top-0 z-50`}
     >
       <div className="flex flex-row justify-around h-full items-center align-center">
         <Link
