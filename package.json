@@ -18,6 +18,8 @@
   "dependencies": {
     "autoprefixer": "^10.4.15",
     "classnames": "^2.3.2",
+    "dotenv": "^16.3.1",
+    "firebase": "^10.5.0",
     "gatsby": "^5.11.0",
     "gatsby-plugin-google-gtag": "^5.11.0",
     "gatsby-plugin-image": "^3.11.0",

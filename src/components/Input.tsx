@@ -1,6 +1,8 @@
 import React from "react";
 interface Props {
   label: string;
+  value: string;
+  onChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
   type: string;
   placeholder?: string;
   className?: string;
@@ -11,6 +13,8 @@ interface Props {
 
 export default function Input({
   label,
+  value,
+  onChange,
   type,
   placeholder,
   className,
@@ -24,6 +28,8 @@ export default function Input({
         className={`relative inline-block bg-transparent w-full phone:py-1 phone:h-10 tablet:h-12 laptop:py-0 laptop:h-14 ${className}`}
       >
         <input
+          value={value}
+          onChange={onChange}
           type={type}
           placeholder={placeholder}
           className="peer w-full h-full decoration-none bg-transparent border-b-4 pl-2 focus:border-0 focus:outline-0"

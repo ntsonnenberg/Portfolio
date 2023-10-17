@@ -2,7 +2,7 @@ import React from "react";
 import classNames from "classnames";
 
 interface Props {
-  children: string | JSX.Element;
+  children: any;
   primary?: boolean;
   light?: boolean;
   secondary?: boolean;
