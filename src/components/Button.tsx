@@ -35,14 +35,19 @@ export default function Button({
       "font-bold outline outline-2 outline-white rounded-md": light,
       "font-bold outline outline-2 outline-secondary-variant rounded-md":
         secondary,
-      "bg-primary-variant text-on-primary": filled && primary,
-      "bg-transparent text-primary-variant": outline && primary,
+      "bg-primary-variant text-on-primary hover:bg-primary hover:outline-primary":
+        filled && primary,
+      "bg-transparent text-primary-variant hover:bg-primary-variant hover:text-white":
+        outline && primary,
       "outline-0 text-primary-variant": text && primary,
       "bg-white text-primary-variant": filled && light,
-      "bg-transparent text-white": outline && light,
+      "bg-transparent text-white hover:bg-white hover:text-primary":
+        outline && light,
       "outline-0 text-white": text && light,
-      "bg-secondary-variant text-on-secondary": filled && secondary,
-      "bg-transparent text-secondary-variant": outline && secondary,
+      "bg-secondary-variant text-on-secondary hover:bg-secondary hover:outline-secondary":
+        filled && secondary,
+      "bg-transparent text-secondary-variant hover:bg-secondary-variant hover:text-white":
+        outline && secondary,
       "outline-0 text-secondary-variant": text && secondary,
       "text-xl": large,
       "text-xs rounded-sm font-thin": small,

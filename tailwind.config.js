@@ -43,9 +43,14 @@ module.exports = {
             transform: "translateY(0)",
           },
         },
+        wave: {
+          "0%, 100%": { transform: "rotate(-20deg)" },
+          "50%": { transform: "rotate(20deg)" },
+        },
       },
       animation: {
         "fade-in-down": "fade-in-down 2s ease-out",
+        wave: "wave 1s infinite",
       },
       dropShadow: {
         drawer: "0 10px 50px rgba(0, 0, 0, 0.75)",

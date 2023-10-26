@@ -5,12 +5,14 @@ import Steps from "../components/Steps";
 import ContactForm from "../components/ContactForm";
 import Layout from "../components/Layout";
 import ParallaxFeature from "../components/ParallaxFeature";
+import ProfileFeature from "../components/ProfileFeature";
 
 export default function IndexPage(): JSX.Element {
   return (
     <Layout>
       <>
         <Hero />
+        <ProfileFeature />
         <Featured />
         <ParallaxFeature />
         <Steps />
