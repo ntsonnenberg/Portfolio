@@ -37,6 +37,12 @@ export default function NavDrawer({ closeDrawer }: Props): JSX.Element {
             Projects
           </Link>
           <Link
+            to="/aboutme"
+            className="cursor-pointer transition-transform duration-100 hover:-translate-y-2 hover:ease-in hover:text-secondary hover:font-bold"
+          >
+            About Me
+          </Link>
+          <Link
             to="/contact"
             className="cursor-pointer transition-transform duration-100 hover:-translate-y-2 hover:ease-in hover:text-secondary hover:font-bold"
           >

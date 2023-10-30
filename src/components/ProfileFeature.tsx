@@ -2,6 +2,7 @@ import React from "react";
 import { StaticImage } from "gatsby-plugin-image";
 import Button from "./Button";
 import BouncingArrow from "./BouncingArrow";
+import { Link } from "gatsby";
 
 export default function ProfileFeature(): JSX.Element {
   return (
@@ -10,7 +11,7 @@ export default function ProfileFeature(): JSX.Element {
         src="../images/profile.jpg"
         alt="profile"
         placeholder="blurred"
-        className="rounded-xl h-auto w-60 phone:place-self-center tablet:ml-10 tablet:place-self-center laptop:ml-0"
+        className="rounded-md h-auto w-60 phone:place-self-center tablet:ml-10 tablet:place-self-center laptop:ml-0"
       />
       <div className="w-1/2 flex flex-col items-start gap-6 phone:mx-6 phone:w-auto tablet:mx-12">
         <h1 className="font-bold text-5xl">
@@ -30,7 +31,7 @@ export default function ProfileFeature(): JSX.Element {
           <p className="mb-4">Learn more about my experience here! </p>
           <BouncingArrow />
           <Button filled secondary large className="px-2 py-1">
-            About Me
+            <Link to="/aboutme">About Me</Link>
           </Button>
         </div>
       </div>
