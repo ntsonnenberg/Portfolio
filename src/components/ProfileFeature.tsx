@@ -1,7 +1,6 @@
 import React from "react";
 import { StaticImage } from "gatsby-plugin-image";
 import Button from "./Button";
-import BouncingArrow from "./BouncingArrow";
 import { Link } from "gatsby";
 
 export default function ProfileFeature(): JSX.Element {
@@ -15,7 +14,7 @@ export default function ProfileFeature(): JSX.Element {
       />
       <div className="w-1/2 flex flex-col items-start gap-6 phone:mx-6 phone:w-auto tablet:mx-12">
         <h1 className="font-bold text-5xl">
-          Welcome <span className="inline-block animate-wave">&#128075;</span>
+          Welcome <span>&#128075;</span>
         </h1>
         <h2 className="font-bold text-2xl">
           I'm Nathan Sonnenberg, a professional freelance web developer.
@@ -29,7 +28,6 @@ export default function ProfileFeature(): JSX.Element {
         </p>
         <div className="flex flex-col phone:items-center tablet:items-end">
           <p className="mb-4">Learn more about my experience here! </p>
-          <BouncingArrow />
           <Button filled secondary large className="px-2 py-1">
             <Link to="/aboutme">About Me</Link>
           </Button>

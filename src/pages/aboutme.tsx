@@ -3,8 +3,55 @@ import Layout from "../components/Layout";
 import { StaticImage } from "gatsby-plugin-image";
 import Button from "../components/Button";
 import Carousel from "../components/Carousel";
+import ContactForm from "../components/ContactForm";
+
+import uintasHike from "../images/uintas-hike.jpg";
+import bAndNAtBeach from "../images/b-and-n-at-beach.jpeg";
+import edinburugh from "../images/edinburugh.jpeg";
+import gradMaeser from "../images/grad-maeser.jpg";
+import gradTanner from "../images/grad-tanner.jpg";
+import summerSales from "../images/summer-sales-2021.jpg";
+import goEnlite from "../images/go-enlite-hero.png";
+import grandTetons from "../images/grand-tetons.jpeg";
+import scotlandCastle from "../images/scotland-castle.jpeg";
+import interlaken from "../images/interlaken.jpeg";
+import rome from "../images/rome.jpeg";
 
 export default function AboutMePage(): JSX.Element {
+  const images = [
+    {
+      src: rome,
+      alt: "Rome",
+      overlayText: "Rome, Italy",
+    },
+    {
+      src: scotlandCastle,
+      alt: "Edinburugh Castle",
+      overlayText: "Edinburgh Castle, Scotland",
+    },
+    {
+      src: interlaken,
+      alt: "Interlaken",
+      overlayText: "Interlaken, Switzerland",
+    },
+    {
+      src: grandTetons,
+      alt: "Grand Tetons",
+      overlayText: "Grand Tetons, WY",
+    },
+    {
+      src: uintasHike,
+      alt: "Unitas",
+      overlayText: "High Uintas, WY",
+    },
+    {
+      src: bAndNAtBeach,
+      alt: "Pacific Coast Highway",
+      overlayText: "Pacific Coast Highway",
+    },
+    { src: edinburugh, alt: "Edinburugh", overlayText: "Edinburgh, Scotland" },
+  ];
+
   return (
     <Layout>
       <>
@@ -37,12 +84,40 @@ export default function AboutMePage(): JSX.Element {
             </div>
           </div>
         </div>
-        <div className="relative min-h-screen">
-          <Carousel />
-          {/* <div className="absolute bottom-32 inset-x-60 font-bold text-3xl">
-            My story begins when I first learned how to program in High School
-          </div> */}
+        <div className="min-h-screen flex flex-col items-center justify-center gap-20 py-40">
+          <div className="font-bold text-6xl h-[20vh]">My story begins...</div>
+          <div className="flex justify-evenly">
+            <div className="font-bold text-4xl w-1/3 self-center">
+              Graduated with a{" "}
+              <span className="text-secondary-variant">
+                Master's in Information Systems Management from BYU
+              </span>
+            </div>
+            <div className="relative w-1/3 h-screen">
+              <img
+                src={gradMaeser}
+                className="w-72 h-auto absolute inset-y-1/4 left-0 rounded-lg"
+              />
+              <img
+                src={gradTanner}
+                className="w-72 h-auto absolute inset-y-1/3 left-60 rounded-lg"
+              />
+            </div>
+          </div>
+          <div className="font-bold text-6xl w-3/4 text-center">
+            Working for Enlite as their VP of Technology
+          </div>
+          <img src={summerSales} className="w-1/2 h-auto rounded-lg" />
+          <div className="font-bold text-6xl w-3/4 text-center pt-40">
+            Building a Sales Portal for Enlite's sales department
+          </div>
+          <img src={goEnlite} className="w-1/2 h-auto rounded-lg" />
+          <div className="font-bold text-6xl w-3/4 text-center pt-40">
+            I love programming, but I also love adventures
+          </div>
+          <Carousel images={images} />
         </div>
+        <ContactForm />
       </>
     </Layout>
   );
