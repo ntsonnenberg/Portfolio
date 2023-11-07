@@ -43,14 +43,31 @@ module.exports = {
             transform: "translateY(0)",
           },
         },
-        wave: {
-          "0%, 100%": { transform: "rotate(-20deg)" },
-          "50%": { transform: "rotate(20deg)" },
+        "fade-in-right": {
+          "0%": {
+            opacity: "0",
+            transform: "translateX(-20px)",
+          },
+          "100%": {
+            opacity: "1",
+            transform: "translateX(0)",
+          },
+        },
+        "fade-in-left": {
+          "0%": {
+            opacity: "0",
+            transform: "translateX(20px)",
+          },
+          "100%": {
+            opacity: "1",
+            transform: "translateX(0)",
+          },
         },
       },
       animation: {
         "fade-in-down": "fade-in-down 2s ease-out",
-        wave: "wave 1s infinite",
+        "fade-in-right": "fade-in-right 2s ease-out",
+        "fade-in-left": "fade-in-left 2s ease-out",
       },
       dropShadow: {
         drawer: "0 10px 50px rgba(0, 0, 0, 0.75)",

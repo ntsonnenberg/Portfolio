@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import Layout from "../components/Layout";
 import { StaticImage } from "gatsby-plugin-image";
 import Button from "../components/Button";
 import Carousel from "../components/Carousel";
 import ContactForm from "../components/ContactForm";
+import useFadeInObserver from "../hooks/use-fade-in-observer";
 
 import uintasHike from "../images/uintas-hike.jpg";
 import bAndNAtBeach from "../images/b-and-n-at-beach.jpeg";
@@ -18,6 +19,14 @@ import interlaken from "../images/interlaken.jpeg";
 import rome from "../images/rome.jpeg";
 
 export default function AboutMePage(): JSX.Element {
+  const gradRef = useRef<HTMLDivElement>(null);
+  const summmerRef = useRef<HTMLImageElement>(null);
+  const goEnliteRef = useRef<HTMLImageElement>(null);
+
+  useFadeInObserver(gradRef, { fadeIn: "animate-fade-in-down" });
+  useFadeInObserver(summmerRef, { fadeIn: "animate-fade-in-right" });
+  useFadeInObserver(goEnliteRef, { fadeIn: "animate-fade-in-left" });
+
   const images = [
     {
       src: rome,
@@ -90,10 +99,11 @@ export default function AboutMePage(): JSX.Element {
             <div className="font-bold text-4xl w-1/3 self-center">
               Graduated with a{" "}
               <span className="text-secondary-variant">
-                Master's in Information Systems Management from BYU
-              </span>
+                Master's in Information Systems Management
+              </span>{" "}
+              from BYU
             </div>
-            <div className="relative w-1/3 h-screen">
+            <div ref={gradRef} className="relative w-1/3 h-screen">
               <img
                 src={gradMaeser}
                 className="w-72 h-auto absolute inset-y-1/4 left-0 rounded-lg"
@@ -107,11 +117,19 @@ export default function AboutMePage(): JSX.Element {
           <div className="font-bold text-6xl w-3/4 text-center">
             Working for Enlite as their VP of Technology
           </div>
-          <img src={summerSales} className="w-1/2 h-auto rounded-lg" />
+          <img
+            ref={summmerRef}
+            src={summerSales}
+            className="w-1/2 h-auto rounded-lg"
+          />
           <div className="font-bold text-6xl w-3/4 text-center pt-40">
             Building a Sales Portal for Enlite's sales department
           </div>
-          <img src={goEnlite} className="w-1/2 h-auto rounded-lg" />
+          <img
+            ref={goEnliteRef}
+            src={goEnlite}
+            className="w-1/2 h-auto rounded-lg"
+          />
           <div className="font-bold text-6xl w-3/4 text-center pt-40">
             I love programming, but I also love adventures
           </div>
