@@ -5,6 +5,7 @@ import Button from "../components/Button";
 import Carousel from "../components/Carousel";
 import ContactForm from "../components/ContactForm";
 import useFadeInObserver from "../hooks/use-fade-in-observer";
+import scrollTo from "gatsby-plugin-smoothscroll";
 
 import uintasHike from "../images/uintas-hike.jpg";
 import bAndNAtBeach from "../images/b-and-n-at-beach.jpeg";
@@ -61,6 +62,10 @@ export default function AboutMePage(): JSX.Element {
     { src: edinburugh, alt: "Edinburugh", overlayText: "Edinburgh, Scotland" },
   ];
 
+  const scrollDown = () => {
+    if (typeof document !== undefined) document;
+  };
+
   return (
     <Layout>
       <>
@@ -87,13 +92,17 @@ export default function AboutMePage(): JSX.Element {
                 filled
                 large
                 className="absolute rounded-sm phone:p-1 phone:text-sm phone:right-4 phone:bottom-4 tablet:p-2 tablet:right-10 tablet:bottom-6 laptop:right-28 laptop:bottom-16"
+                onClick={() => scrollTo("#my-story")}
               >
                 Learn More
               </Button>
             </div>
           </div>
         </div>
-        <div className="min-h-screen flex flex-col items-center justify-center gap-20 py-40">
+        <div
+          id="my-story"
+          className="min-h-screen flex flex-col items-center justify-center gap-20 py-40"
+        >
           <div className="font-bold text-6xl h-[20vh]">My story begins...</div>
           <div className="flex justify-evenly">
             <div className="font-bold text-4xl w-1/3 self-center">
