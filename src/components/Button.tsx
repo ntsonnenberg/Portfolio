@@ -13,6 +13,7 @@ interface Props {
   large?: boolean;
   long?: boolean;
   className?: string;
+  onClick?: () => void;
 }
 
 export default function Button({
@@ -27,6 +28,7 @@ export default function Button({
   large,
   long,
   className,
+  ...rest
 }: Props): JSX.Element {
   const buttonClasses = classNames(
     "font-bold",
@@ -56,5 +58,9 @@ export default function Button({
     className
   );
 
-  return <button className={buttonClasses}>{children}</button>;
+  return (
+    <button className={buttonClasses} {...rest}>
+      {children}
+    </button>
+  );
 }

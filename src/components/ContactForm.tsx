@@ -32,7 +32,7 @@ export default function ContactUs(): JSX.Element {
   return (
     <div className="bg-primary-variant text-on-primary flex flex-col text-center items-center py-20 gap-5">
       <h1 className="font-bold phone:text-2xl tablet:text-5xl tablet:mb-10 laptop:text-7xl laptop:mb-16">
-        Contact Us to Learn More
+        Contact Me to Learn More
       </h1>
       <form
         onSubmit={sendEmail}
