@@ -55,5 +55,7 @@ export default function Image({ src, ...rest }: Props): JSX.Element | null {
 
   if (!image) return null;
 
-  return <GatsbyImage image={image} {...rest} />;
+  return (
+    <GatsbyImage style={{ position: "absolute" }} image={image} {...rest} />
+  );
 }

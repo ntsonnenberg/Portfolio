@@ -8,18 +8,6 @@ import useFadeInObserver from "../hooks/use-fade-in-observer";
 import scrollTo from "gatsby-plugin-smoothscroll";
 import Image from "../components/Image";
 
-import uintasHike from "../images/uintas-hike.jpg";
-import bAndNAtBeach from "../images/b-and-n-at-beach.jpeg";
-import edinburugh from "../images/edinburugh.jpeg";
-import gradMaeser from "../images/grad-maeser.jpg";
-import gradTanner from "../images/grad-tanner.jpg";
-import summerSales from "../images/summer-sales-2021.jpg";
-import goEnlite from "../images/go-enlite-hero.png";
-import grandTetons from "../images/grand-tetons.jpeg";
-import scotlandCastle from "../images/scotland-castle.jpeg";
-import interlaken from "../images/interlaken.jpeg";
-import rome from "../images/rome.jpeg";
-
 export default function AboutMePage(): JSX.Element {
   const gradRef = useRef<HTMLDivElement>(null);
   const summerRef = useRef<HTMLImageElement>(null);
