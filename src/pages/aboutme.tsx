@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React, { useRef } from "react";
 import Layout from "../components/Layout";
 import { StaticImage } from "gatsby-plugin-image";
 import Button from "../components/Button";
@@ -6,6 +6,7 @@ import Carousel from "../components/Carousel";
 import ContactForm from "../components/ContactForm";
 import useFadeInObserver from "../hooks/use-fade-in-observer";
 import scrollTo from "gatsby-plugin-smoothscroll";
+import Image from "../components/Image";
 
 import uintasHike from "../images/uintas-hike.jpg";
 import bAndNAtBeach from "../images/b-and-n-at-beach.jpeg";
@@ -21,50 +22,50 @@ import rome from "../images/rome.jpeg";
 
 export default function AboutMePage(): JSX.Element {
   const gradRef = useRef<HTMLDivElement>(null);
-  const summmerRef = useRef<HTMLImageElement>(null);
+  const summerRef = useRef<HTMLImageElement>(null);
   const goEnliteRef = useRef<HTMLImageElement>(null);
 
   useFadeInObserver(gradRef, { fadeIn: "animate-fade-in-down" });
-  useFadeInObserver(summmerRef, { fadeIn: "animate-fade-in-right" });
+  useFadeInObserver(summerRef, { fadeIn: "animate-fade-in-right" });
   useFadeInObserver(goEnliteRef, { fadeIn: "animate-fade-in-left" });
 
   const images = [
     {
-      src: rome,
+      src: "rome.jpeg",
       alt: "Rome",
       overlayText: "Rome, Italy",
     },
     {
-      src: scotlandCastle,
+      src: "scotland-castle.jpeg",
       alt: "Edinburugh Castle",
       overlayText: "Edinburgh Castle, Scotland",
     },
     {
-      src: interlaken,
+      src: "interlaken.jpeg",
       alt: "Interlaken",
       overlayText: "Interlaken, Switzerland",
     },
     {
-      src: grandTetons,
+      src: "grand-tetons.JPEG",
       alt: "Grand Tetons",
       overlayText: "Grand Tetons, WY",
     },
     {
-      src: uintasHike,
+      src: "uintas-hike.jpg",
       alt: "Unitas",
       overlayText: "High Uintas, WY",
     },
     {
-      src: bAndNAtBeach,
+      src: "b-and-n-at-beach.jpeg",
       alt: "Pacific Coast Highway",
       overlayText: "Pacific Coast Highway",
     },
-    { src: edinburugh, alt: "Edinburugh", overlayText: "Edinburgh, Scotland" },
+    {
+      src: "edinburugh.jpeg",
+      alt: "Edinburugh",
+      overlayText: "Edinburgh, Scotland",
+    },
   ];
-
-  const scrollDown = () => {
-    if (typeof document !== undefined) document;
-  };
 
   return (
     <Layout>
@@ -113,32 +114,42 @@ export default function AboutMePage(): JSX.Element {
               from BYU
             </div>
             <div ref={gradRef} className="relative w-1/3 h-screen">
-              <img
-                src={gradMaeser}
-                className="w-72 h-auto absolute inset-y-1/4 left-0 rounded-lg"
+              <Image
+                src="grad-maeser.JPG"
+                alt="Grad Maeser"
+                placeholder="Grad Maeser"
+                className="w-72 h-min absolute inset-y-1/4 left-0 rounded-lg"
               />
-              <img
-                src={gradTanner}
-                className="w-72 h-auto absolute inset-y-1/3 left-60 rounded-lg"
+              <Image
+                src="grad-tanner.JPG"
+                alt="Grad Tanner"
+                placeholder="Grad Tanner"
+                className="w-72 h-min absolute inset-y-1/3 left-60 rounded-lg"
               />
             </div>
           </div>
           <div className="font-bold text-6xl w-3/4 text-center">
             Working for Enlite as their VP of Technology
           </div>
-          <img
-            ref={summmerRef}
-            src={summerSales}
-            className="w-1/2 h-auto rounded-lg"
-          />
+          <div ref={summerRef}>
+            <Image
+              src="summer-sales-2021.JPG"
+              alt="Summer Sales"
+              placeholder="Summmer Sales"
+              className="w-full h-auto rounded-lg"
+            />
+          </div>
           <div className="font-bold text-6xl w-3/4 text-center pt-40">
             Building a Sales Portal for Enlite's sales department
           </div>
-          <img
-            ref={goEnliteRef}
-            src={goEnlite}
-            className="w-1/2 h-auto rounded-lg"
-          />
+          <div ref={goEnliteRef}>
+            <Image
+              src="go-enlite-hero.png"
+              alt="Go Enlite"
+              placeholder="Go Enlite"
+              className="w-full h-auto rounded-lg"
+            />
+          </div>
           <div className="font-bold text-6xl w-3/4 text-center pt-40">
             I love programming, but I also love adventures
           </div>

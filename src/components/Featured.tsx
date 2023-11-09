@@ -5,7 +5,6 @@ import { RiMoneyDollarCircleLine } from "react-icons/ri";
 import { FaSquarespace } from "react-icons/fa";
 import Card from "./Card";
 import Image from "./Image";
-import CodingGIF from "../assets/coding-video.gif";
 
 export default function Featured(): JSX.Element {
   return (
@@ -72,7 +71,12 @@ export default function Featured(): JSX.Element {
             Lorem Ipsum is simply dummy text of the printing and typesetting
             industry. Lorem Ipsum has been the industry's.
           </h3>
-          <Image source={CodingGIF} className="w-full h-auto mt-12" />
+          <Image
+            src="coding-video.gif"
+            alt="Coding Video"
+            placeholder="Coding Video"
+            className="w-full h-auto mt-12"
+          />
         </section>
       </section>
       <section className="flex flex-col text-center items-center py-52 px-12 bg-background text-on-background">

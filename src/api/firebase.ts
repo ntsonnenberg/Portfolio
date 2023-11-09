@@ -19,8 +19,6 @@ if (!getApps().length) {
   app = getApp();
 }
 
-console.log(app);
-
 const db = getFirestore(app);
 
 export default db;
