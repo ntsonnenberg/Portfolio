@@ -56,6 +56,14 @@ export default function Image({ src, ...rest }: Props): JSX.Element | null {
   if (!image) return null;
 
   return (
-    <GatsbyImage style={{ position: "absolute" }} image={image} {...rest} />
+    <GatsbyImage
+      style={
+        src === "grad-maeser.JPG" || src === "grad-tanner.JPG"
+          ? { position: "absolute" }
+          : {}
+      }
+      image={image}
+      {...rest}
+    />
   );
 }
