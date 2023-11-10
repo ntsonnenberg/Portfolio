@@ -16,19 +16,16 @@ export default function ProfileFeature(): JSX.Element {
         <h2 className="font-bold text-3xl">
           I'm Nathan Sonnenberg, a professional freelance web developer.
         </h2>
-        <p>
+        <p className="text-lg">
           I help{" "}
           <span className="text-secondary-variant font-bold">
             businesses from all sizes to build technologies
           </span>
           , allowing them to accomplish there goals.
         </p>
-        <div className="flex flex-col phone:items-center tablet:items-end">
-          <p className="mb-4">Learn more about my experience here! </p>
-          <Button filled secondary large className="px-2 py-1">
-            <Link to="/aboutme">About Me</Link>
-          </Button>
-        </div>
+        <Button filled secondary large className="px-2 py-1 self-center mt-6">
+          <Link to="/aboutme">About Me</Link>
+        </Button>
       </div>
     </div>
   );

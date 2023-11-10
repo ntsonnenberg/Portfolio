@@ -58,7 +58,7 @@ export default function AboutMePage(): JSX.Element {
   return (
     <Layout>
       <>
-        <div className="relative min-h-screen">
+        <div className="relative phone:min-h-fit tablet:min-h-screen">
           <StaticImage
             src="../images/cardiff-castle.jpeg"
             alt="cardiff castle"
@@ -92,31 +92,36 @@ export default function AboutMePage(): JSX.Element {
           id="my-story"
           className="min-h-screen flex flex-col items-center justify-center gap-20 py-40"
         >
-          <div className="font-bold text-6xl h-[20vh]">My story begins...</div>
-          <div className="flex justify-evenly">
-            <div className="font-bold text-4xl w-1/3 self-center">
+          <div className="font-bold phone: phone:text-4xl phone:h-[30vh] tablet:text-6xl laptop:h-[20vh]">
+            My story begins...
+          </div>
+          <div className="flex justify-evenly phone:flex-col laptop:flex-row">
+            <div className="font-bold self-center phone:text-center phone:mx-4 phone:text-2xl tablet:text-start tablet:mx-0 tablet:text-4xl tablet:w-5/6 laptop:w-1/3">
               Graduated with a{" "}
               <span className="text-secondary-variant">
                 Master's in Information Systems Management
               </span>{" "}
               from BYU
             </div>
-            <div ref={gradRef} className="relative w-1/3 h-screen">
+            <div
+              ref={gradRef}
+              className="relative w-1/3 h-screen phone:ml-14 tablet:ml-40 laptop:ml-0"
+            >
               <Image
                 src="grad-maeser.JPG"
                 alt="Grad Maeser"
                 placeholder="Grad Maeser"
-                className="w-72 h-min absolute inset-y-1/4 left-0 rounded-lg"
+                className="h-min absolute inset-y-1/4 left-0 rounded-lg phone:w-40 tablet:w-72"
               />
               <Image
                 src="grad-tanner.JPG"
                 alt="Grad Tanner"
                 placeholder="Grad Tanner"
-                className="w-72 h-min absolute inset-y-1/3 left-60 rounded-lg"
+                className="h-min absolute inset-y-1/3 rounded-lg phone:w-40 phone:left-32 tablet:w-72 tablet:left-60"
               />
             </div>
           </div>
-          <div className="font-bold text-6xl w-3/4 text-center">
+          <div className="font-bold text-center phone:text-4xl tablet:text-6xl tablet:w-11/12 laptop:w-3/4">
             Working for Enlite as their VP of Technology
           </div>
           <div ref={summerRef}>
@@ -124,10 +129,10 @@ export default function AboutMePage(): JSX.Element {
               src="summer-sales-2021.JPG"
               alt="Summer Sales"
               placeholder="Summmer Sales"
-              className="w-full h-auto rounded-lg"
+              className="h-auto rounded-lg phone:w-5/6 phone:inset-x-8 tablet:w-full tablet:inset-x-0"
             />
           </div>
-          <div className="font-bold text-6xl w-3/4 text-center pt-40">
+          <div className="font-bold text-center pt-40 phone:text-4xl tablet:text-6xl tablet:w-11/12 laptop:w-3/4">
             Building a Sales Portal for Enlite's sales department
           </div>
           <div ref={goEnliteRef}>
@@ -135,10 +140,10 @@ export default function AboutMePage(): JSX.Element {
               src="go-enlite-hero.png"
               alt="Go Enlite"
               placeholder="Go Enlite"
-              className="w-full h-auto rounded-lg"
+              className="h-auto rounded-lg phone:w-5/6 phone:inset-x-8 tablet:w-full tablet:inset-x-0"
             />
           </div>
-          <div className="font-bold text-6xl w-3/4 text-center pt-40">
+          <div className="font-bold text-center pt-40 phone:text-4xl tablet:text-6xl tablet:w-11/12 laptop:w-3/4">
             I love programming, but I also love adventures
           </div>
           <Carousel images={images} />

@@ -17,7 +17,7 @@ export default function Carousel({ images }: Props): JSX.Element {
     setActiveIndex((prev) => (prev === images.length - 1 ? 0 : prev + 1));
   };
   return (
-    <div className="relative w-1/2 h-[620px] overflow-x-hidden rounded-3xl">
+    <div className="relative overflow-x-hidden rounded-3xl phone:h-[300px] phone:w-5/6 tablet:h-[500px] laptop:h-[400px] laptop:w-1/3">
       <div className="relative flex h-full">
         {images.map((image, index) => {
           const position =
@@ -34,7 +34,7 @@ export default function Carousel({ images }: Props): JSX.Element {
                 alt={image.alt}
                 className="w-full h-full bg-contain"
               />
-              <div className="absolute top-0 left-0 w-full h-full flex items-center justify-center bg-gray-600 bg-opacity-40">
+              <div className="absolute top-0 left-0 w-full h-full flex items-center text-center justify-center bg-gray-600 bg-opacity-40">
                 <span className="text-white font-bold text-3xl">
                   {image.overlayText}
                 </span>
