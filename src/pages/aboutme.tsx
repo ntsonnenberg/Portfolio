@@ -63,7 +63,7 @@ export default function AboutMePage(): JSX.Element {
             src="../images/cardiff-castle.jpeg"
             alt="cardiff castle"
             placeholder="blurred"
-            className="phone:mt-32"
+            className="phone:mt-20 tablet:mt-0"
           />
           <div className="absolute bg-primary/40 phone:w-52 phone:h-40 phone:right-2 phone:top-44 tablet:w-1/2 tablet:h-80 tablet:right-10 tablet:top-48 laptop:h-96 laptop:right-16 laptop:top-80">
             <div className="absolute bg-white phone:p-2 phone:inset-2 tablet:p-10 tablet:inset-5">

@@ -12,11 +12,11 @@ export default function ProfileFeature(): JSX.Element {
         placeholder="blurred"
         className="rounded-md h-auto w-60 phone:place-self-center tablet:ml-10 tablet:place-self-center laptop:ml-0"
       />
-      <div className="w-1/3 flex flex-col items-start gap-6 phone:mx-6 phone:w-auto tablet:mx-12">
-        <h2 className="font-bold text-3xl">
+      <div className="flex flex-col items-start gap-6 phone:mx-6 phone:w-auto tablet:mx-12">
+        <h2 className="font-bold text-3xl phone:w-full laptop:w-5/6">
           I'm Nathan Sonnenberg, a professional freelance web developer.
         </h2>
-        <p className="text-lg">
+        <p className="text-lg phone:w-full laptop:w-1/2">
           I help{" "}
           <span className="text-secondary-variant font-bold">
             businesses from all sizes to build technologies

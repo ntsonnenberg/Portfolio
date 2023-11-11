@@ -10,23 +10,22 @@ export default function Steps(): JSX.Element {
       </h1>
       <h3 className="tablet:w-1/2 phone:w-11/12">
         <span className="text-secondary font-extrabold">
-          Lorem Ipsum is simply dummy text
+          My proven methodology ensures a structured and efficient approach
         </span>{" "}
-        of the printing and typesetting industry. Lorem Ipsum has been the
-        industry's
+        to building high-quality software tailored to your needs.
       </h3>
       <div className="relative my-28 flex laptop:flex-row phone:flex-col gap-5 -z-10">
         <StepCard step={1} title="Discovery">
-          Lorem Ipsum dolor sit amet, consectetur adipiscing elit.
+          Identify goals and scope precisely and succinctly.
         </StepCard>
         <StepCard step={2} title="Prototyping">
-          Lorem Ipsum dolor sit amet, consectetur adipiscing elit.
+          Craft a rapid and clear prototype that aligns with your brand.
         </StepCard>
         <StepCard step={3} title="Implementation">
-          Lorem Ipsum dolor sit amet, consectetur adipiscing elit.
+          Execute the blueprint with precise and agile coding.
         </StepCard>
         <StepCard step={4} title="Acceptance">
-          Lorem Ipsum dolor sit amet, consectetur adipiscing elit.
+          Consistently evaluate the deliverables for client validation.
         </StepCard>
         <Connector />
       </div>

@@ -2,8 +2,9 @@ import React, { useState, FormEvent } from "react";
 import Button from "./Button";
 import Input from "./Input";
 import Spinner from "./Spinner";
-import db from "../api/firebase";
+import { db, auth } from "../api/firebase";
 import { addDoc, collection, serverTimestamp } from "firebase/firestore";
+import { signInAnonymously } from "firebase/auth";
 
 export default function ContactUs(): JSX.Element {
   const [email, setEmail] = useState<string>("");
@@ -15,6 +16,7 @@ export default function ContactUs(): JSX.Element {
 
     try {
       setIsLoading(true);
+      await signInAnonymously(auth);
       await addDoc(collection(db, "contacts"), {
         email,
         timestamp: serverTimestamp(),
@@ -56,8 +58,8 @@ export default function ContactUs(): JSX.Element {
           Submit
         </Button>
         <div
-          className={`mt-4 text-secondary ${
-            message.includes("Unable") ? "text-error" : ""
+          className={`mt-4 ${
+            message.includes("Unable") ? "text-error" : "text-secondary"
           }`}
         >
           {message}

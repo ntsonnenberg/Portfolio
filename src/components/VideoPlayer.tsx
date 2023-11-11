@@ -1,30 +1,23 @@
-import { graphql } from "gatsby";
+import { graphql, useStaticQuery } from "gatsby";
 import React from "react";
 
-export default function VideoPlayer(): JSX.Element {
-  return <div>Video Player</div>;
-}
+type Props = {
+  className?: string;
+};
 
-const pageQuery = graphql`
-  {
-    file(relativePath: { eq: "../assets/coding-video.mp4" }) {
-      childVideoFfmpeg {
-        mp4: transcode(
-          maxWidth: 900
-          maxHeight: 480
-          fileExtension: "mp4"
-          codec: "libx264"
-        ) {
-          width
-          src
-          presentationMaxWidth
-          presentationMaxHeight
-          originalName
-          height
-          fileExtension
-          aspectRatio
-        }
+export default function VideoPlayer({ className }: Props): JSX.Element {
+  const data = useStaticQuery(graphql`
+    query {
+      file(relativePath: { eq: "coding-video.mp4" }) {
+        publicURL
       }
     }
-  }
-`;
+  `);
+
+  return (
+    <video width="100%" height="auto" autoPlay muted loop className={className}>
+      <source src={data.file.publicURL} type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+  );
+}

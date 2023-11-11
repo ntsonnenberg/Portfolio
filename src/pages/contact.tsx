@@ -3,8 +3,9 @@ import Layout from "../components/Layout";
 import Input from "../components/Input";
 import Textarea from "../components/Textarea";
 import Button from "../components/Button";
-import db from "../api/firebase";
+import { db, auth } from "../api/firebase";
 import { addDoc, collection, serverTimestamp } from "firebase/firestore";
+import { signInAnonymously } from "firebase/auth";
 import Spinner from "../components/Spinner";
 
 export default function ContactPage(): JSX.Element {
@@ -23,6 +24,7 @@ export default function ContactPage(): JSX.Element {
 
     try {
       setIsLoading(true);
+      await signInAnonymously(auth);
       await addDoc(collection(db, "contacts"), {
         ...formInputs,
         timestamp: serverTimestamp(),
