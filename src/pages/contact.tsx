@@ -1,11 +1,10 @@
-import React, { useState, FormEvent } from "react";
+import React, { useState, FormEvent, useEffect } from "react";
 import Layout from "../components/Layout";
 import Input from "../components/Input";
 import Textarea from "../components/Textarea";
 import Button from "../components/Button";
-import { db, auth } from "../api/firebase";
+import { db } from "../api/firebase";
 import { addDoc, collection, serverTimestamp } from "firebase/firestore";
-import { signInAnonymously } from "firebase/auth";
 import Spinner from "../components/Spinner";
 
 export default function ContactPage(): JSX.Element {
@@ -24,18 +23,17 @@ export default function ContactPage(): JSX.Element {
 
     try {
       setIsLoading(true);
-      await signInAnonymously(auth);
       await addDoc(collection(db, "contacts"), {
         ...formInputs,
         timestamp: serverTimestamp(),
       });
       clearFormInputs();
-      setIsLoading(false);
       setMessage("Message sent! We will reach out to you shortly.");
     } catch (error) {
       console.error("Error sending contact:", error);
-      setIsLoading(false);
       setMessage("Unable to send message.");
+    } finally {
+      setIsLoading(false);
     }
   };
 

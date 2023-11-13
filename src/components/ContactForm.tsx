@@ -1,10 +1,9 @@
-import React, { useState, FormEvent } from "react";
+import React, { useState, useEffect, FormEvent } from "react";
 import Button from "./Button";
 import Input from "./Input";
 import Spinner from "./Spinner";
-import { db, auth } from "../api/firebase";
+import { db } from "../api/firebase";
 import { addDoc, collection, serverTimestamp } from "firebase/firestore";
-import { signInAnonymously } from "firebase/auth";
 
 export default function ContactUs(): JSX.Element {
   const [email, setEmail] = useState<string>("");
@@ -16,18 +15,17 @@ export default function ContactUs(): JSX.Element {
 
     try {
       setIsLoading(true);
-      await signInAnonymously(auth);
       await addDoc(collection(db, "contacts"), {
         email,
         timestamp: serverTimestamp(),
       });
       setEmail("");
-      setIsLoading(false);
       setMessage("Email sent! We will reach out to you shortly.");
     } catch (error) {
       console.error("Error sending email:", error);
-      setIsLoading(false);
       setMessage("Unable to send email.");
+    } finally {
+      setIsLoading(false);
     }
   };
 
