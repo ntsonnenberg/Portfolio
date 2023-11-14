@@ -20,10 +20,13 @@ export default function Footer(): JSX.Element {
           &copy; 2023
         </div>
         <div className="basis-2/3 grow flex flex-row justify-evenly tablet:mr-20 phone:mr-4">
-          <a href="https://www.linkedin.com/in/nathan-sonnenberg/">
+          <a
+            href="https://www.linkedin.com/in/nathan-sonnenberg/"
+            target="_blank"
+          >
             <FiLinkedin className="transition-transform duration-100 tablet:w-11 tablet:h-11 phone:w-6 phone:h-6 hover:transform hover:-translate-y-2 hover:ease-in hover:stroke-[#0077B5]" />
           </a>
-          <a href="https://www.instagram.com/nate.sonny/">
+          <a href="https://www.instagram.com/nate.sonny/" target="_blank">
             <svg
               id="ig-svg"
               stroke="currentColor"
@@ -67,10 +70,13 @@ export default function Footer(): JSX.Element {
               ></line>
             </svg>
           </a>
-          <a href="https://twitter.com/nate_sonnenberg">
+          <a href="https://twitter.com/nate_sonnenberg" target="_blank">
             <RiTwitterXLine className="transition-transform duration-100 tablet:w-11 tablet:h-11 phone:w-6 phone:h-6 hover:transform hover:-translate-y-2 hover:ease-in hover:text-[#08A0E9]" />
           </a>
-          <a href="https://www.facebook.com/nathan.sonnenberg.14">
+          <a
+            href="https://www.facebook.com/nathan.sonnenberg.14"
+            target="_blank"
+          >
             <FiFacebook className="transition-transform duration-100 tablet:w-11 tablet:h-11 phone:w-6 phone:h-6 hover:transform hover:-translate-y-2 hover:ease-in hover:stroke-[#4267B2]" />
           </a>
         </div>
