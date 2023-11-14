@@ -72,7 +72,7 @@ export default function Featured(): JSX.Element {
             code aligns precisely with your vision, driving your business
             towards unparalleled growth and efficiency.
           </h3>
-          <VideoPlayer className="w-1/2" />
+          <VideoPlayer className="w-1/2 rounded-sm" />
         </section>
       </section>
       <section className="flex flex-col text-center items-center py-52 px-12 bg-background text-on-background">

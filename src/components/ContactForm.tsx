@@ -1,4 +1,4 @@
-import React, { useState, useEffect, FormEvent } from "react";
+import React, { useState, FormEvent } from "react";
 import Button from "./Button";
 import Input from "./Input";
 import Spinner from "./Spinner";

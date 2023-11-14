@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { FiLinkedin, FiTwitter, FiFacebook } from "react-icons/fi";
+import { RiTwitterXLine } from "react-icons/ri";
 
 export default function Footer(): JSX.Element {
   const [isHovered, setIsHovered] = useState(false);
@@ -67,7 +68,7 @@ export default function Footer(): JSX.Element {
             </svg>
           </a>
           <a href="https://twitter.com/nate_sonnenberg">
-            <FiTwitter className="transition-transform duration-100 tablet:w-11 tablet:h-11 phone:w-6 phone:h-6 hover:transform hover:-translate-y-2 hover:ease-in hover:stroke-[#08A0E9]" />
+            <RiTwitterXLine className="transition-transform duration-100 tablet:w-11 tablet:h-11 phone:w-6 phone:h-6 hover:transform hover:-translate-y-2 hover:ease-in hover:text-[#08A0E9]" />
           </a>
           <a href="https://www.facebook.com/nathan.sonnenberg.14">
             <FiFacebook className="transition-transform duration-100 tablet:w-11 tablet:h-11 phone:w-6 phone:h-6 hover:transform hover:-translate-y-2 hover:ease-in hover:stroke-[#4267B2]" />
