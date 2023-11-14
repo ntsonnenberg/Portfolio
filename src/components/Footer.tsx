@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { FiLinkedin, FiTwitter, FiFacebook } from "react-icons/fi";
+import { FiLinkedin, FiFacebook } from "react-icons/fi";
 import { RiTwitterXLine } from "react-icons/ri";
 
 export default function Footer(): JSX.Element {
