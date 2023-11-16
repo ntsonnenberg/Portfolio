@@ -23,5 +23,28 @@ export default function IndexPage(): JSX.Element {
 }
 
 export function Head(): JSX.Element {
-  return <title>Nathan Sonnenberg</title>;
+  return (
+    <head>
+      <title>Bespoke Dev Solutions</title>
+      <meta name="title" content="Bespoke Dev Solutions" />
+      <meta
+        name="description"
+        content="Build your ideas into reality with a custom web application for your business."
+      />
+      <meta property="og:type" content="website" />
+      <meta property="og:url" content="https://bespokedevsolutions.com/" />
+      <meta property="og:title" content="Bespoke Dev Solutions" />
+      <meta
+        property="og:description"
+        content="Build your ideas into reality with a custom web application for your business."
+      />
+      <meta property="twitter:type" content="website" />
+      <meta property="twitter:url" content="https://bespokedevsolutions.com/" />
+      <meta property="twitter:title" content="Bespoke Dev Solutions" />
+      <meta
+        property="twitter:description"
+        content="Build your ideas into reality with a custom web application for your business."
+      />
+    </head>
+  );
 }
