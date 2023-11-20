@@ -6,6 +6,7 @@ import ContactForm from "../components/ContactForm";
 import Layout from "../components/Layout";
 import ParallaxFeature from "../components/ParallaxFeature";
 import ProfileFeature from "../components/ProfileFeature";
+import { Helmet } from "react-helmet";
 
 export default function IndexPage(): JSX.Element {
   return (
@@ -24,7 +25,7 @@ export default function IndexPage(): JSX.Element {
 
 export function Head(): JSX.Element {
   return (
-    <head>
+    <Helmet>
       <title>Bespoke Dev Solutions</title>
       <meta name="title" content="Bespoke Dev Solutions" />
       <meta
@@ -45,6 +46,6 @@ export function Head(): JSX.Element {
         property="twitter:description"
         content="Build your ideas into reality with a custom web application for your business."
       />
-    </head>
+    </Helmet>
   );
 }

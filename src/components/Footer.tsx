@@ -1,3 +1,4 @@
+import { StaticImage } from "gatsby-plugin-image";
 import React, { useState } from "react";
 import { FiLinkedin, FiFacebook } from "react-icons/fi";
 import { RiTwitterXLine } from "react-icons/ri";
@@ -16,8 +17,14 @@ export default function Footer(): JSX.Element {
   return (
     <div className="bottom-0 h-32 w-full bg-primary-variant text-on-primary">
       <div className="flex flex-row h-full items-center">
-        <div className="tablet:basis-1/3 tablet:text-2xl tablet:ml-40 phone:text-lg phone:ml-4">
-          &copy; 2023
+        <div className="flex gap-6 tablet:basis-1/3 tablet:text-2xl tablet:ml-40 phone:text-lg phone:ml-4">
+          <div>&copy; 2023</div>
+          <StaticImage
+            src="../images/bespoke-white-no-bg.png"
+            alt="Bespoke Dev Solutions"
+            placeholder="blurred"
+            className="w-36 h-auto"
+          />
         </div>
         <div className="basis-2/3 grow flex flex-row justify-evenly tablet:mr-20 phone:mr-4">
           <a
