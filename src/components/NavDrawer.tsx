@@ -29,7 +29,7 @@ export default function NavDrawer({ closeDrawer }: Props): JSX.Element {
           className="w-10 h-10 self-end m-6 cursor-pointer"
           onClick={closeDrawer}
         />
-        <div className="place-items-center pt-32 flex flex-col gap-32 text-2xl">
+        <div className="pl-20 pt-32 flex flex-col gap-20 text-3xl">
           <Link
             to="/projects"
             className="cursor-pointer transition-transform duration-100 hover:-translate-y-2 hover:ease-in hover:text-secondary hover:font-bold"

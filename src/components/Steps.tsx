@@ -4,7 +4,7 @@ import Connector from "./Connector";
 
 export default function Steps(): JSX.Element {
   return (
-    <div className="flex flex-col text-center items-center py-52 phone:px-1 tablet:px-6">
+    <div className="flex flex-col text-center items-center py-52 phone:px-1 phone:mx-6 tablet:mx-0 tablet:px-6">
       <h1 className="mb-20 font-bold phone:text-6xl tablet:text-7xl">
         How it works
       </h1>

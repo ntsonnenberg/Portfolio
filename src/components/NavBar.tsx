@@ -43,6 +43,7 @@ export default function NavBar({ openDrawer }: Props): JSX.Element {
             src="../images/bespoke-white-no-bg.png"
             alt="Bespoke Dev Solutions"
             placeholder="blurred"
+            className="phone:w-48 phone:h-auto tablet:w-auto"
           />
         </Link>
         <FiMenu

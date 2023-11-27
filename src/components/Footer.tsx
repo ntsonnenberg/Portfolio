@@ -15,18 +15,18 @@ export default function Footer(): JSX.Element {
   };
 
   return (
-    <div className="bottom-0 h-32 w-full bg-primary-variant text-on-primary">
-      <div className="flex flex-row h-full items-center">
-        <div className="flex gap-6 tablet:basis-1/3 tablet:text-2xl tablet:ml-40 phone:text-lg phone:ml-4">
+    <div className="bottom-0 w-full bg-primary-variant text-on-primary phone:h-auto laptop:h-32">
+      <div className="flex h-full items-center phone:flex-col phone:py-8 phone:gap-6 laptop:flex-row laptop:py-0 laptop:gap-0">
+        <div className="flex gap-6 tablet:basis-1/3 tablet:text-2xl laptop:ml-40 phone:text-lg phone:ml-4">
           <div>&copy; 2023</div>
           <StaticImage
             src="../images/bespoke-white-no-bg.png"
             alt="Bespoke Dev Solutions"
             placeholder="blurred"
-            className="w-36 h-auto"
+            className="phone:w-48 phone:h-auto"
           />
         </div>
-        <div className="basis-2/3 grow flex flex-row justify-evenly tablet:mr-20 phone:mr-4">
+        <div className="basis-2/3 grow flex flex-row justify-evenly phone:mr-4 phone:gap-4 laptop:mr-20 laptop:gap-0">
           <a
             href="https://www.linkedin.com/in/nathan-sonnenberg/"
             target="_blank"

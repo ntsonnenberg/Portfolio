@@ -121,7 +121,7 @@ export default function AboutMePage(): JSX.Element {
               />
             </div>
           </div>
-          <div className="font-bold text-center phone:text-4xl tablet:text-6xl tablet:w-11/12 laptop:w-3/4">
+          <div className="font-bold text-center phone:text-4xl phone:mx-6 tablet:text-6xl tablet:mx-0 tablet:w-11/12 laptop:w-3/4">
             Working for Enlite as their VP of Technology
           </div>
           <div ref={summerRef}>
@@ -132,7 +132,7 @@ export default function AboutMePage(): JSX.Element {
               className="h-auto rounded-lg phone:w-5/6 phone:inset-x-8 tablet:w-full tablet:inset-x-0"
             />
           </div>
-          <div className="font-bold text-center pt-40 phone:text-4xl tablet:text-6xl tablet:w-11/12 laptop:w-3/4">
+          <div className="font-bold text-center pt-40 phone:text-4xl phone:mx-6 tablet:text-6xl tablet:mx-0 tablet:w-11/12 laptop:w-3/4">
             Building a Sales Portal for Enlite's sales department
           </div>
           <div ref={goEnliteRef}>
@@ -143,7 +143,7 @@ export default function AboutMePage(): JSX.Element {
               className="h-auto rounded-lg phone:w-5/6 phone:inset-x-8 tablet:w-full tablet:inset-x-0"
             />
           </div>
-          <div className="font-bold text-center pt-40 phone:text-4xl tablet:text-6xl tablet:w-11/12 laptop:w-3/4">
+          <div className="font-bold text-center pt-40 phone:text-4xl phone:mx-6 tablet:text-6xl tablet:mx-0 tablet:w-11/12 laptop:w-3/4">
             I love programming, but I also love adventures
           </div>
           <Carousel images={images} />

@@ -3,12 +3,12 @@ import React from "react";
 
 export default function ParallaxFeature(): JSX.Element {
   return (
-    <div className="relative min-h-screen flex flex-col justify-start text-center items-center bg-code bg-no-repeat bg-center bg-cover laptop:bg-fixed">
+    <div className="relative min-h-screen flex flex-col justify-start text-center items-center bg-code bg-no-repeat bg-center bg-cover phone:px-8 laptop:px-0 laptop:bg-fixed">
       <StaticImage
         src="../images/bespoke-white-no-bg.png"
         alt="Bespoke Dev Solutions"
         placeholder="blurred"
-        className="mt-60"
+        className="mt-60 phone:w-60 phone:h-auto tablet:w-auto"
       />
       <h1 className="text-white mt-40 font-bold phone:text-5xl tablet:text-7xl">
         Solutions that Drive Sales
