@@ -6,7 +6,9 @@ import ContactForm from "../components/ContactForm";
 import Layout from "../components/Layout";
 import ParallaxFeature from "../components/ParallaxFeature";
 import ProfileFeature from "../components/ProfileFeature";
+import NewsletterForm from "../components/NewsletterForm";
 import { Helmet } from "react-helmet";
+import bespokeFavicon from "../images/bespoke-black-no-bg.png";
 
 export default function IndexPage(): JSX.Element {
   return (
@@ -17,6 +19,7 @@ export default function IndexPage(): JSX.Element {
         <Featured />
         <ParallaxFeature />
         <Steps />
+        <NewsletterForm />
         <ContactForm />
       </>
     </Layout>
@@ -27,6 +30,7 @@ export function Head(): JSX.Element {
   return (
     <Helmet>
       <title>Bespoke Dev Solutions</title>
+      <link rel="icon" type="image/png" href={bespokeFavicon}></link>
       <meta name="title" content="Bespoke Dev Solutions" />
       <meta
         name="description"
