@@ -36,6 +36,12 @@ const config: GatsbyConfig = {
       },
       __key: "assets",
     },
+    {
+      resolve: "gatsby-plugin-manifest",
+      options: {
+        icon: "src/images/bespoke-black-no-bg.png",
+      },
+    },
   ],
 };
 

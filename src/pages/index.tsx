@@ -9,6 +9,7 @@ import ProfileFeature from "../components/ProfileFeature";
 import NewsletterForm from "../components/NewsletterForm";
 import { Helmet } from "react-helmet";
 import bespokeFavicon from "../images/bespoke-black-no-bg.png";
+import SocialLinks from "../components/SocialLinks";
 
 export default function IndexPage(): JSX.Element {
   return (
@@ -19,6 +20,7 @@ export default function IndexPage(): JSX.Element {
         <Featured />
         <ParallaxFeature />
         <Steps />
+        <SocialLinks />
         <NewsletterForm />
         <ContactForm />
       </>

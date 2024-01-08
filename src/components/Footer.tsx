@@ -1,6 +1,6 @@
 import { StaticImage } from "gatsby-plugin-image";
 import React, { useState } from "react";
-import { FiLinkedin, FiFacebook } from "react-icons/fi";
+import { FiLinkedin, FiFacebook, FiGithub } from "react-icons/fi";
 import { RiTwitterXLine } from "react-icons/ri";
 
 export default function Footer(): JSX.Element {
@@ -85,6 +85,9 @@ export default function Footer(): JSX.Element {
             target="_blank"
           >
             <FiFacebook className="transition-transform duration-100 tablet:w-11 tablet:h-11 phone:w-6 phone:h-6 hover:transform hover:-translate-y-2 hover:ease-in hover:stroke-[#4267B2]" />
+          </a>
+          <a href="https://github.com/ntsonnenberg" target="_blank">
+            <FiGithub className="transition-transform duration-100 tablet:w-11 tablet:h-11 phone:w-6 phone:h-6 hover:transform hover:-translate-y-2 hover:ease-in hover:stroke-[#2DBA4E]" />
           </a>
         </div>
       </div>
