@@ -18,7 +18,7 @@ export default function Footer(): JSX.Element {
     <div className="bottom-0 w-full bg-primary-variant text-on-primary phone:h-auto laptop:h-32">
       <div className="flex h-full items-center phone:flex-col phone:py-8 phone:gap-6 laptop:flex-row laptop:py-0 laptop:gap-0">
         <div className="flex gap-6 tablet:basis-1/3 tablet:text-2xl laptop:ml-40 phone:text-lg phone:ml-4">
-          <div>&copy; 2023</div>
+          <p className="text-md">&copy; 2024</p>
           <StaticImage
             src="../images/bespoke-white-no-bg.png"
             alt="Bespoke Dev Solutions"

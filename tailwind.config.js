@@ -21,7 +21,7 @@ module.exports = {
         "on-secondary": "#FFFFFF",
         background: "#141414",
         "on-background": "#FFFFFF",
-        surface: "#F4F4F4",
+        surface: "#FAFAFA",
         "on-surface": "#141414",
         error: "#D42B2B",
         "on-error": "#000000",
@@ -32,7 +32,7 @@ module.exports = {
       backgroundImage: {
         code: "url(https://img.freepik.com/free-vector/pixel-rain-abstract-background_23-2148381456.jpg?size=626&ext=jpg&ga=GA1.1.1413502914.1696896000&semt=ais)",
         "code-at-desk":
-          "url(https://images.pexels.com/photos/574069/pexels-photo-574069.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1)",
+          "url(https://images.pexels.com/photos/4974912/pexels-photo-4974912.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1)",
       },
       keyframes: {
         "fade-in-down": {

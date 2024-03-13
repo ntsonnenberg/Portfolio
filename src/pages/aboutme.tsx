@@ -137,7 +137,7 @@ export default function AboutMePage(): JSX.Element {
           </div>
           <div ref={goEnliteRef}>
             <Image
-              src="go-enlite-hero.png"
+              src="go-enlite-leaderboard.PNG"
               alt="Go Enlite"
               placeholder="Go Enlite"
               className="h-auto rounded-lg phone:w-5/6 phone:inset-x-8 tablet:w-full tablet:inset-x-0"

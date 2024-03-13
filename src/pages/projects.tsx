@@ -7,7 +7,7 @@ export default function ProjectsPage(): JSX.Element {
     <Layout>
       <div className="py-60 min-h-screen grid justify-items-center phone:grid-col-1 phone:gap-12 tablet:grid-cols-2 tablet:gap-12 tablet:mx-12 laptop:grid-cols-3 laptop:gap-16 laptop:mx-52 desktop:mx-60">
         <ProjectCard
-          image="/go-enlite-landing.svg"
+          image="/dashboard-page.svg"
           title="Go Enlite"
           link="https://goenlite.com"
         />
@@ -20,6 +20,11 @@ export default function ProjectsPage(): JSX.Element {
           image="/ecommerce-admin-categories.svg"
           title="Ecommerce Admin"
           link="https://ecommerce-admin-taupe.vercel.app/"
+        />
+        <ProjectCard
+          image="/utah-automotive-landing.svg"
+          title="Utah Automotive"
+          link="https://utah-automotive.com/"
         />
       </div>
     </Layout>

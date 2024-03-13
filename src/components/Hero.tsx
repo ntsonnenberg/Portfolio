@@ -11,7 +11,7 @@ export default function Hero(): JSX.Element {
           className="w-auto h-60 absolute z-20 animate-fade-in-down mt-32 phone:top-12 tablet:top-0"
         />
         <img
-          src="/hero.svg"
+          src="/leaderboard-page.svg"
           className="w-auto h-96 z-10 absolute mt-44 animate-fade-in-down"
         />
         <img
