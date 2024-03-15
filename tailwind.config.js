@@ -26,6 +26,9 @@ module.exports = {
         error: "#D42B2B",
         "on-error": "#000000",
       },
+      dropShadow: {
+        over: "0 40px 28px rgba(0, 0, 0, 0.35)",
+      },
       fontFamily: {
         poppins: ["Poppins", "sans-serif"],
       },
