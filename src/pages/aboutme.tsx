@@ -4,7 +4,7 @@ import { StaticImage } from "gatsby-plugin-image";
 import Button from "../components/Button";
 import Carousel from "../components/Carousel";
 import ContactForm from "../components/ContactForm";
-import useFadeInObserver from "../hooks/use-fade-in-observer";
+import useScrollObserver from "../hooks/use-scroll-observer";
 import scrollTo from "gatsby-plugin-smoothscroll";
 import Image from "../components/Image";
 
@@ -13,9 +13,9 @@ export default function AboutMePage(): JSX.Element {
   const summerRef = useRef<HTMLImageElement>(null);
   const goEnliteRef = useRef<HTMLImageElement>(null);
 
-  useFadeInObserver(gradRef, { fadeIn: "animate-fade-in-down" });
-  useFadeInObserver(summerRef, { fadeIn: "animate-fade-in-right" });
-  useFadeInObserver(goEnliteRef, { fadeIn: "animate-fade-in-left" });
+  useScrollObserver(gradRef, { animationClass: "animate-fade-in-down" });
+  useScrollObserver(summerRef, { animationClass: "animate-fade-in-right" });
+  useScrollObserver(goEnliteRef, { animationClass: "animate-fade-in-left" });
 
   const images = [
     {

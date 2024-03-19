@@ -1,18 +1,42 @@
-import React from "react";
+import React, { useRef } from "react";
 import { FiShoppingCart, FiSettings, FiPieChart } from "react-icons/fi";
 import { GoMegaphone } from "react-icons/go";
 import { RiMoneyDollarCircleLine } from "react-icons/ri";
 import { FaSquarespace } from "react-icons/fa";
 import Card from "./Card";
 import VideoPlayer from "./VideoPlayer";
+import { animated } from "@react-spring/web";
+import useScrollObserver from "../hooks/use-scroll-observer";
+import useHeaderTransition from "../hooks/use-header-transition";
 
 export default function Featured(): JSX.Element {
+  const animatedDivRef = useRef<HTMLDivElement | null>(null);
+
+  const { transitions, clearItems, runTransition } = useHeaderTransition({
+    items: ["Find Customized Solutions"],
+    config: { delay: 600 },
+  });
+
+  useScrollObserver(animatedDivRef, {}, runTransition, clearItems);
+
+  const renderedTitleAnimation = transitions((style, item) => (
+    <animated.div
+      style={{ ...style, overflow: "hidden" }}
+      className="mb-20 will-change-transform"
+    >
+      <animated.h1
+        className="phone:text-6xl tablet:text-7xl font-bold"
+        style={{ overflow: "hidden", height: innerHeight }}
+      >
+        {item}
+      </animated.h1>
+    </animated.div>
+  ));
+
   return (
     <div>
       <section className="flex flex-col text-center items-center my-52 mx-12">
-        <h1 className="mb-20 phone:text-6xl tablet:text-7xl font-bold">
-          Find Customized Solutions
-        </h1>
+        <div ref={animatedDivRef}>{renderedTitleAnimation}</div>
         <div className="grid laptop:grid-cols-3 tablet:grid-cols-2 phone:grid-cols-1 mt-10 text-center phone:mt-16  phone:gap-y-16  tablet:gap-0 desktop:mt-24">
           <div className="tablet:p-8 laptop:p-14">
             <h3 className="mt-2 mb-8 text-2xl font-bold">Ecommerce</h3>

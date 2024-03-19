@@ -1,12 +1,14 @@
 import { RefObject, useEffect } from "react";
 
 type classes = {
-  fadeIn: string;
+  animationClass?: string;
 };
 
-export default function useFadeInObserver(
+export default function useScrollObserver(
   ref: RefObject<Element>,
-  { fadeIn }: classes
+  { animationClass }: classes,
+  animateIn?: () => void,
+  animateOut?: () => void
 ): void {
   useEffect(() => {
     if (typeof window !== undefined || !ref.current) {
@@ -15,10 +17,21 @@ export default function useFadeInObserver(
           entries.forEach((entry) => {
             if (entry.isIntersecting) {
               entry.target.classList.remove("opacity-0");
-              entry.target.classList.add(fadeIn);
+              if (animationClass) {
+                entry.target.classList.add(animationClass);
+              }
+              if (animateIn) {
+                animateIn();
+              }
             } else {
               entry.target.classList.add("opacity-0");
-              entry.target.classList.remove(fadeIn);
+              if (animationClass) {
+                entry.target.classList.remove(animationClass);
+              }
+
+              if (animateOut) {
+                animateOut();
+              }
             }
           });
         },
@@ -36,5 +49,5 @@ export default function useFadeInObserver(
 
       return () => observer.disconnect();
     }
-  }, [ref, fadeIn]);
+  }, [ref, animationClass]);
 }
