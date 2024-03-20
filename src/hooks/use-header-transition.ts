@@ -30,7 +30,11 @@ export default function useHeaderTransition({
       transform: "perspective(900px) rotateX(0deg)",
     },
     enter: [
-      { opacity: 1, height: 80, innerHeight: 80 },
+      {
+        opacity: 1,
+        height: 80,
+        innerHeight: 80,
+      },
       { transform: "perspective(600px) rotateX(180deg)" },
       { transform: "perspective(600px) rotateX(0deg)" },
     ],

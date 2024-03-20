@@ -10,22 +10,84 @@ import useScrollObserver from "../hooks/use-scroll-observer";
 import useHeaderTransition from "../hooks/use-header-transition";
 
 export default function Featured(): JSX.Element {
-  const animatedDivRef = useRef<HTMLDivElement | null>(null);
+  const firstAnimatedDivRef = useRef<HTMLDivElement | null>(null);
+  const secondAnimatedDivRef = useRef<HTMLDivElement | null>(null);
+  const thirdAnimatedDivRef = useRef<HTMLDivElement | null>(null);
 
   const { transitions, clearItems, runTransition } = useHeaderTransition({
     items: ["Find Customized Solutions"],
     config: { delay: 600 },
   });
+  useScrollObserver(firstAnimatedDivRef, {}, runTransition, clearItems);
 
-  useScrollObserver(animatedDivRef, {}, runTransition, clearItems);
+  const {
+    transitions: secondTransitions,
+    clearItems: secondClearItems,
+    runTransition: secondRunTransition,
+  } = useHeaderTransition({
+    items: ["Everything You Need"],
+    config: { delay: 600 },
+  });
+  useScrollObserver(
+    secondAnimatedDivRef,
+    {},
+    secondRunTransition,
+    secondClearItems
+  );
 
-  const renderedTitleAnimation = transitions((style, item) => (
+  const {
+    transitions: thirdTransitions,
+    clearItems: thirdClearItems,
+    runTransition: thirdRunTransitions,
+  } = useHeaderTransition({
+    items: ["Crafting Digital Excellence"],
+    config: { delay: 600 },
+  });
+  useScrollObserver(
+    thirdAnimatedDivRef,
+    {},
+    thirdRunTransitions,
+    thirdClearItems
+  );
+
+  const renderedFirstHeaderAnimation = transitions((style, item) => (
+    <animated.div
+      style={{
+        ...style,
+        overflow: "hidden",
+      }}
+      className="will-change-transform mb-20"
+    >
+      <animated.h1
+        className="font-bold phone:text-3xl tablet:text-5xl laptop:text-7xl"
+        style={{ overflow: "hidden", height: innerHeight }}
+      >
+        {item}
+      </animated.h1>
+    </animated.div>
+  ));
+
+  const renderedSecondHeaderAnimation = secondTransitions((style, item) => (
     <animated.div
       style={{ ...style, overflow: "hidden" }}
       className="mb-20 will-change-transform"
     >
       <animated.h1
-        className="phone:text-6xl tablet:text-7xl font-bold"
+        className="phone:text-4xl tablet:text-7xl font-bold"
+        style={{ overflow: "hidden", height: innerHeight }}
+      >
+        {item}
+      </animated.h1>
+    </animated.div>
+  ));
+
+  const renderedThirdHeaderAnimation = thirdTransitions((style, item) => (
+    <animated.div
+      style={{ ...style, overflow: "hidden" }}
+      className="mb-20 will-change-transform"
+    >
+      <animated.h1
+        className="phone:text-4xl tablet:text-7xl font-bold"
         style={{ overflow: "hidden", height: innerHeight }}
       >
         {item}
@@ -36,7 +98,7 @@ export default function Featured(): JSX.Element {
   return (
     <div>
       <section className="flex flex-col text-center items-center my-52 mx-12">
-        <div ref={animatedDivRef}>{renderedTitleAnimation}</div>
+        <div ref={firstAnimatedDivRef}>{renderedFirstHeaderAnimation}</div>
         <div className="grid laptop:grid-cols-3 tablet:grid-cols-2 phone:grid-cols-1 mt-10 text-center phone:mt-16  phone:gap-y-16  tablet:gap-0 desktop:mt-24">
           <div className="tablet:p-8 laptop:p-14">
             <h3 className="mt-2 mb-8 text-2xl font-bold">Ecommerce</h3>
@@ -88,9 +150,7 @@ export default function Featured(): JSX.Element {
           </div>
         </div>
         <section className="flex flex-col py-52 gap-10 items-center">
-          <h1 className="font-bold phone:text-6xl tablet:text-7xl">
-            Everything You Need
-          </h1>
+          <div ref={secondAnimatedDivRef}>{renderedSecondHeaderAnimation}</div>
           <h3 className="text-md w-[80%] text-on-surface/50">
             Crafting bespoke software solutions, we ensure that every line of
             code aligns precisely with your vision, driving your business
@@ -100,9 +160,7 @@ export default function Featured(): JSX.Element {
         </section>
       </section>
       <section className="flex flex-col text-center items-center py-52 px-12 bg-background text-on-background">
-        <h1 className="mb-20 phone:text-6xl tablet:text-7xl font-bold">
-          Crafting Digital Excellence
-        </h1>
+        <div ref={thirdAnimatedDivRef}>{renderedThirdHeaderAnimation}</div>
         <h3 className="laptop:w-1/2 phone:w-11/12">
           <span className="text-secondary font-extrabold">
             Delivering unparalleled code quality
