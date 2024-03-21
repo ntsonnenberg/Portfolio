@@ -1,104 +1,80 @@
-import React, { useRef } from "react";
+import React, { LegacyRef, useRef } from "react";
 import { FiShoppingCart, FiSettings, FiPieChart } from "react-icons/fi";
 import { GoMegaphone } from "react-icons/go";
 import { RiMoneyDollarCircleLine } from "react-icons/ri";
 import { FaSquarespace } from "react-icons/fa";
 import Card from "./Card";
 import VideoPlayer from "./VideoPlayer";
-import { animated } from "@react-spring/web";
 import useScrollObserver from "../hooks/use-scroll-observer";
-import useHeaderTransition from "../hooks/use-header-transition";
 
 export default function Featured(): JSX.Element {
-  const firstAnimatedDivRef = useRef<HTMLDivElement | null>(null);
-  const secondAnimatedDivRef = useRef<HTMLDivElement | null>(null);
-  const thirdAnimatedDivRef = useRef<HTMLDivElement | null>(null);
+  const solutionsBlockRef = useRef<HTMLDivElement | null>(null);
+  const solutionsHeaderRef = useRef<HTMLHeadingElement | null>(null);
+  const needBlockRef = useRef<HTMLDivElement | null>(null);
+  const needHeaderRef = useRef<HTMLHeadingElement | null>(null);
+  const craftingBlockRef = useRef<HTMLDivElement | null>(null);
+  const craftingHeaderRef = useRef<HTMLHeadingElement | null>(null);
 
-  const { transitions, clearItems, runTransition } = useHeaderTransition({
-    items: ["Find Customized Solutions"],
-    config: { delay: 600 },
+  useScrollObserver(solutionsBlockRef, {
+    animationClass: "animate-block",
   });
-  useScrollObserver(firstAnimatedDivRef, {}, runTransition, clearItems);
+  useScrollObserver(solutionsHeaderRef, {
+    animationClass: "animate-fade-in",
+    overrideOpacity: true,
+  });
 
-  const {
-    transitions: secondTransitions,
-    clearItems: secondClearItems,
-    runTransition: secondRunTransition,
-  } = useHeaderTransition({
-    items: ["Everything You Need"],
-    config: { delay: 600 },
+  useScrollObserver(needBlockRef, {
+    animationClass: "animate-block",
   });
-  useScrollObserver(
-    secondAnimatedDivRef,
-    {},
-    secondRunTransition,
-    secondClearItems
+  useScrollObserver(needHeaderRef, {
+    animationClass: "animate-fade-in",
+    overrideOpacity: true,
+  });
+
+  useScrollObserver(craftingBlockRef, {
+    animationClass: "animate-block",
+  });
+  useScrollObserver(craftingHeaderRef, {
+    animationClass: "animate-fade-in",
+    overrideOpacity: true,
+  });
+
+  interface AnimationParams {
+    headerText: string;
+    blockRef: LegacyRef<HTMLDivElement> | undefined;
+    headerRef: LegacyRef<HTMLHeadingElement> | undefined;
+    blockClasses: string;
+    headerClasses: string;
+  }
+
+  const renderHeaderAnimation = ({
+    headerText,
+    blockRef,
+    headerRef,
+    blockClasses,
+    headerClasses,
+  }: AnimationParams) => (
+    <div className="flex">
+      <div className="relative">
+        <div ref={blockRef} className={`absolute h-full ${blockClasses}`}></div>
+        <h1 ref={headerRef} className={`opacity-0 ${headerClasses}`}>
+          {headerText}
+        </h1>
+      </div>
+    </div>
   );
-
-  const {
-    transitions: thirdTransitions,
-    clearItems: thirdClearItems,
-    runTransition: thirdRunTransitions,
-  } = useHeaderTransition({
-    items: ["Crafting Digital Excellence"],
-    config: { delay: 600 },
-  });
-  useScrollObserver(
-    thirdAnimatedDivRef,
-    {},
-    thirdRunTransitions,
-    thirdClearItems
-  );
-
-  const renderedFirstHeaderAnimation = transitions((style, item) => (
-    <animated.div
-      style={{
-        ...style,
-        overflow: "hidden",
-      }}
-      className="will-change-transform mb-20"
-    >
-      <animated.h1
-        className="font-bold phone:text-3xl tablet:text-5xl laptop:text-7xl"
-        style={{ overflow: "hidden", height: innerHeight }}
-      >
-        {item}
-      </animated.h1>
-    </animated.div>
-  ));
-
-  const renderedSecondHeaderAnimation = secondTransitions((style, item) => (
-    <animated.div
-      style={{ ...style, overflow: "hidden" }}
-      className="mb-20 will-change-transform"
-    >
-      <animated.h1
-        className="phone:text-4xl tablet:text-7xl font-bold"
-        style={{ overflow: "hidden", height: innerHeight }}
-      >
-        {item}
-      </animated.h1>
-    </animated.div>
-  ));
-
-  const renderedThirdHeaderAnimation = thirdTransitions((style, item) => (
-    <animated.div
-      style={{ ...style, overflow: "hidden" }}
-      className="mb-20 will-change-transform"
-    >
-      <animated.h1
-        className="phone:text-4xl tablet:text-7xl font-bold"
-        style={{ overflow: "hidden", height: innerHeight }}
-      >
-        {item}
-      </animated.h1>
-    </animated.div>
-  ));
 
   return (
     <div>
       <section className="flex flex-col text-center items-center my-52 mx-12">
-        <div ref={firstAnimatedDivRef}>{renderedFirstHeaderAnimation}</div>
+        {renderHeaderAnimation({
+          headerText: "Find Customized Solutions",
+          blockRef: solutionsBlockRef,
+          headerRef: solutionsHeaderRef,
+          blockClasses: "bg-background",
+          headerClasses:
+            "text-background font-bold phone:text-5xl tablet:text-7xl",
+        })}
         <div className="grid laptop:grid-cols-3 tablet:grid-cols-2 phone:grid-cols-1 mt-10 text-center phone:mt-16  phone:gap-y-16  tablet:gap-0 desktop:mt-24">
           <div className="tablet:p-8 laptop:p-14">
             <h3 className="mt-2 mb-8 text-2xl font-bold">Ecommerce</h3>
@@ -150,7 +126,14 @@ export default function Featured(): JSX.Element {
           </div>
         </div>
         <section className="flex flex-col py-52 gap-10 items-center">
-          <div ref={secondAnimatedDivRef}>{renderedSecondHeaderAnimation}</div>
+          {renderHeaderAnimation({
+            headerText: "Everything You Need",
+            blockRef: needBlockRef,
+            headerRef: needHeaderRef,
+            blockClasses: "bg-background",
+            headerClasses:
+              "text-background font-bold phone:text-5xl tablet:text-7xl",
+          })}
           <h3 className="text-md w-[80%] text-on-surface/50">
             Crafting bespoke software solutions, we ensure that every line of
             code aligns precisely with your vision, driving your business
@@ -160,7 +143,16 @@ export default function Featured(): JSX.Element {
         </section>
       </section>
       <section className="flex flex-col text-center items-center py-52 px-12 bg-background text-on-background">
-        <div ref={thirdAnimatedDivRef}>{renderedThirdHeaderAnimation}</div>
+        <div className="pb-10">
+          {renderHeaderAnimation({
+            headerText: "Crafting Digital Excellence",
+            blockRef: craftingBlockRef,
+            headerRef: craftingHeaderRef,
+            blockClasses: "bg-on-background",
+            headerClasses:
+              "text-on-background font-bold phone:text-5xl tablet:text-7xl",
+          })}
+        </div>
         <h3 className="laptop:w-1/2 phone:w-11/12">
           <span className="text-secondary font-extrabold">
             Delivering unparalleled code quality

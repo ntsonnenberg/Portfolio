@@ -1,12 +1,13 @@
 import { RefObject, useEffect } from "react";
 
-type classes = {
+type Config = {
   animationClass?: string;
+  overrideOpacity?: boolean;
 };
 
 export default function useScrollObserver(
   ref: RefObject<Element>,
-  { animationClass }: classes,
+  { animationClass, overrideOpacity }: Config,
   animateIn?: () => void,
   animateOut?: () => void
 ): void {
@@ -16,7 +17,9 @@ export default function useScrollObserver(
         (entries) => {
           entries.forEach((entry) => {
             if (entry.isIntersecting) {
-              entry.target.classList.remove("opacity-0");
+              if (!overrideOpacity) {
+                entry.target.classList.remove("opacity-0");
+              }
               if (animationClass) {
                 entry.target.classList.add(animationClass);
               }

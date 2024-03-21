@@ -68,11 +68,35 @@ module.exports = {
             transform: "translateX(0)",
           },
         },
+        "fade-in": {
+          "0%": {
+            opacity: "0",
+          },
+          "100%": {
+            opacity: "1",
+          },
+        },
+        block: {
+          "0%": {
+            width: "0%",
+            left: 0,
+          },
+          "50%": {
+            width: "100%",
+            left: 0,
+          },
+          "100%": {
+            width: 0,
+            left: "100%",
+          },
+        },
       },
       animation: {
         "fade-in-down": "fade-in-down 2s ease-out",
         "fade-in-right": "fade-in-right 2s ease-out",
         "fade-in-left": "fade-in-left 2s ease-out",
+        "fade-in": "fade-in 2s 1.6s forwards",
+        block: "block 2s ease-in-out forwards",
       },
       dropShadow: {
         drawer: "0 10px 50px rgba(0, 0, 0, 0.75)",
