@@ -13,9 +13,18 @@ export default function AboutMePage(): JSX.Element {
   const summerRef = useRef<HTMLImageElement>(null);
   const goEnliteRef = useRef<HTMLImageElement>(null);
 
-  useScrollObserver(gradRef, { animationClass: "animate-fade-in-down" });
-  useScrollObserver(summerRef, { animationClass: "animate-fade-in-right" });
-  useScrollObserver(goEnliteRef, { animationClass: "animate-fade-in-left" });
+  useScrollObserver(gradRef, {
+    animationClass: "animate-fade-in-down",
+    handleOpacity: true,
+  });
+  useScrollObserver(summerRef, {
+    animationClass: "animate-fade-in-right",
+    handleOpacity: true,
+  });
+  useScrollObserver(goEnliteRef, {
+    animationClass: "animate-fade-in-left",
+    handleOpacity: true,
+  });
 
   const images = [
     {
@@ -105,7 +114,7 @@ export default function AboutMePage(): JSX.Element {
             </div>
             <div
               ref={gradRef}
-              className="relative w-1/3 h-screen phone:ml-14 tablet:ml-40 laptop:ml-0"
+              className="relative opacity-0 w-1/3 h-screen phone:ml-14 tablet:ml-40 laptop:ml-0"
             >
               <Image
                 src="grad-maeser.JPG"
@@ -124,7 +133,7 @@ export default function AboutMePage(): JSX.Element {
           <div className="font-bold text-center phone:text-4xl phone:mx-6 tablet:text-6xl tablet:mx-0 tablet:w-11/12 laptop:w-3/4">
             Working for Enlite as their VP of Technology
           </div>
-          <div ref={summerRef}>
+          <div ref={summerRef} className="opacity-0">
             <Image
               src="summer-sales-2021.JPG"
               alt="Summer Sales"
@@ -135,7 +144,7 @@ export default function AboutMePage(): JSX.Element {
           <div className="font-bold text-center pt-40 phone:text-4xl phone:mx-6 tablet:text-6xl tablet:mx-0 tablet:w-11/12 laptop:w-3/4">
             Building a Sales Portal for Enlite's sales department
           </div>
-          <div ref={goEnliteRef}>
+          <div ref={goEnliteRef} className="opacity-0">
             <Image
               src="go-enlite-leaderboard.PNG"
               alt="Go Enlite"

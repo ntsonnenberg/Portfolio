@@ -1,80 +1,17 @@
-import React, { LegacyRef, useRef } from "react";
+import React from "react";
 import { FiShoppingCart, FiSettings, FiPieChart } from "react-icons/fi";
 import { GoMegaphone } from "react-icons/go";
 import { RiMoneyDollarCircleLine } from "react-icons/ri";
 import { FaSquarespace } from "react-icons/fa";
 import Card from "./Card";
 import VideoPlayer from "./VideoPlayer";
-import useScrollObserver from "../hooks/use-scroll-observer";
+import Header from "./Header";
 
 export default function Featured(): JSX.Element {
-  const solutionsBlockRef = useRef<HTMLDivElement | null>(null);
-  const solutionsHeaderRef = useRef<HTMLHeadingElement | null>(null);
-  const needBlockRef = useRef<HTMLDivElement | null>(null);
-  const needHeaderRef = useRef<HTMLHeadingElement | null>(null);
-  const craftingBlockRef = useRef<HTMLDivElement | null>(null);
-  const craftingHeaderRef = useRef<HTMLHeadingElement | null>(null);
-
-  useScrollObserver(solutionsBlockRef, {
-    animationClass: "animate-block",
-  });
-  useScrollObserver(solutionsHeaderRef, {
-    animationClass: "animate-fade-in",
-    overrideOpacity: true,
-  });
-
-  useScrollObserver(needBlockRef, {
-    animationClass: "animate-block",
-  });
-  useScrollObserver(needHeaderRef, {
-    animationClass: "animate-fade-in",
-    overrideOpacity: true,
-  });
-
-  useScrollObserver(craftingBlockRef, {
-    animationClass: "animate-block",
-  });
-  useScrollObserver(craftingHeaderRef, {
-    animationClass: "animate-fade-in",
-    overrideOpacity: true,
-  });
-
-  interface AnimationParams {
-    headerText: string;
-    blockRef: LegacyRef<HTMLDivElement> | undefined;
-    headerRef: LegacyRef<HTMLHeadingElement> | undefined;
-    blockClasses: string;
-    headerClasses: string;
-  }
-
-  const renderHeaderAnimation = ({
-    headerText,
-    blockRef,
-    headerRef,
-    blockClasses,
-    headerClasses,
-  }: AnimationParams) => (
-    <div className="flex">
-      <div className="relative">
-        <div ref={blockRef} className={`absolute h-full ${blockClasses}`}></div>
-        <h1 ref={headerRef} className={`opacity-0 ${headerClasses}`}>
-          {headerText}
-        </h1>
-      </div>
-    </div>
-  );
-
   return (
     <div>
       <section className="flex flex-col text-center items-center my-52 mx-12">
-        {renderHeaderAnimation({
-          headerText: "Find Customized Solutions",
-          blockRef: solutionsBlockRef,
-          headerRef: solutionsHeaderRef,
-          blockClasses: "bg-background",
-          headerClasses:
-            "text-background font-bold phone:text-5xl tablet:text-7xl",
-        })}
+        <Header color="background">Find Customized Solutions</Header>
         <div className="grid laptop:grid-cols-3 tablet:grid-cols-2 phone:grid-cols-1 mt-10 text-center phone:mt-16  phone:gap-y-16  tablet:gap-0 desktop:mt-24">
           <div className="tablet:p-8 laptop:p-14">
             <h3 className="mt-2 mb-8 text-2xl font-bold">Ecommerce</h3>
@@ -126,14 +63,7 @@ export default function Featured(): JSX.Element {
           </div>
         </div>
         <section className="flex flex-col py-52 gap-10 items-center">
-          {renderHeaderAnimation({
-            headerText: "Everything You Need",
-            blockRef: needBlockRef,
-            headerRef: needHeaderRef,
-            blockClasses: "bg-background",
-            headerClasses:
-              "text-background font-bold phone:text-5xl tablet:text-7xl",
-          })}
+          <Header color="background">Everything You Need</Header>
           <h3 className="text-md w-[80%] text-on-surface/50">
             Crafting bespoke software solutions, we ensure that every line of
             code aligns precisely with your vision, driving your business
@@ -144,14 +74,7 @@ export default function Featured(): JSX.Element {
       </section>
       <section className="flex flex-col text-center items-center py-52 px-12 bg-background text-on-background">
         <div className="pb-10">
-          {renderHeaderAnimation({
-            headerText: "Crafting Digital Excellence",
-            blockRef: craftingBlockRef,
-            headerRef: craftingHeaderRef,
-            blockClasses: "bg-on-background",
-            headerClasses:
-              "text-on-background font-bold phone:text-5xl tablet:text-7xl",
-          })}
+          <Header color="on-background">Crafting Digital Excellence</Header>
         </div>
         <h3 className="laptop:w-1/2 phone:w-11/12">
           <span className="text-secondary font-extrabold">
