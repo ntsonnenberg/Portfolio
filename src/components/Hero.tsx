@@ -4,7 +4,7 @@ import { Link } from "gatsby";
 
 export default function Hero(): JSX.Element {
   return (
-    <div className="phone:h-[150vh] tablet:h-screen bg-primary-variant text-on-primary flex flex-row phone:flex-col tablet:flex-col laptop:flex-row">
+    <div className="phone:h-[150vh] tablet:min-h-screen laptop:h-screen bg-primary-variant text-on-primary flex flex-row phone:flex-col tablet:flex-col laptop:flex-row">
       <div className="basis-3/5 relative">
         <img
           src="/landing-content.svg"

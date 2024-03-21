@@ -4,6 +4,7 @@ import Input from "./Input";
 import Spinner from "./Spinner";
 import { db } from "../api/firebase";
 import { addDoc, collection, serverTimestamp } from "firebase/firestore";
+import Header from "./Header";
 
 export default function ContactUs(): JSX.Element {
   const [email, setEmail] = useState<string>("");
@@ -31,9 +32,9 @@ export default function ContactUs(): JSX.Element {
 
   return (
     <div className="bg-primary-variant text-on-primary flex flex-col text-center items-center py-20 gap-5">
-      <h1 className="font-bold phone:text-2xl tablet:text-5xl tablet:mb-10 laptop:text-7xl laptop:mb-16">
-        Contact Me to Learn More
-      </h1>
+      <div className="phone:mx-6 phone:mb-10 laptop:mb-16">
+        <Header color="on-background">Contact Me to Learn More</Header>
+      </div>
       <form
         onSubmit={sendEmail}
         className="phone:w-2/3 tablet:w-1/3 laptop:w-1/4"

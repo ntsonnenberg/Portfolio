@@ -24,7 +24,7 @@ export default function Layout({ children }: Props): JSX.Element {
       </Helmet>
       <NavBar openDrawer={() => setShowDrawer(true)} />
       {children}
-      {showDrawer && <NavDrawer closeDrawer={() => setShowDrawer(false)} />}
+      <NavDrawer isOpen={showDrawer} closeDrawer={() => setShowDrawer(false)} />
       <Footer />
     </div>
   );

@@ -1,13 +1,14 @@
-import * as React from "react";
+import React from "react";
 import StepCard from "./StepCard";
 import Connector from "./Connector";
+import Header from "./Header";
 
 export default function Steps(): JSX.Element {
   return (
     <div className="flex flex-col text-center items-center py-52 phone:px-1 phone:mx-6 tablet:mx-0 tablet:px-6">
-      <h1 className="mb-20 font-bold phone:text-6xl tablet:text-7xl">
-        How it works
-      </h1>
+      <div className="pb-20">
+        <Header color="background">How it works</Header>
+      </div>
       <h3 className="tablet:w-1/2 phone:w-11/12">
         <span className="text-secondary font-extrabold">
           My proven methodology ensures a structured and efficient approach

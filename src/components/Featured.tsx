@@ -5,14 +5,13 @@ import { RiMoneyDollarCircleLine } from "react-icons/ri";
 import { FaSquarespace } from "react-icons/fa";
 import Card from "./Card";
 import VideoPlayer from "./VideoPlayer";
+import Header from "./Header";
 
 export default function Featured(): JSX.Element {
   return (
     <div>
       <section className="flex flex-col text-center items-center my-52 mx-12">
-        <h1 className="mb-20 phone:text-6xl tablet:text-7xl font-bold">
-          Find Customized Solutions
-        </h1>
+        <Header color="background">Find Customized Solutions</Header>
         <div className="grid laptop:grid-cols-3 tablet:grid-cols-2 phone:grid-cols-1 mt-10 text-center phone:mt-16  phone:gap-y-16  tablet:gap-0 desktop:mt-24">
           <div className="tablet:p-8 laptop:p-14">
             <h3 className="mt-2 mb-8 text-2xl font-bold">Ecommerce</h3>
@@ -64,9 +63,7 @@ export default function Featured(): JSX.Element {
           </div>
         </div>
         <section className="flex flex-col py-52 gap-10 items-center">
-          <h1 className="font-bold phone:text-6xl tablet:text-7xl">
-            Everything You Need
-          </h1>
+          <Header color="background">Everything You Need</Header>
           <h3 className="text-md w-[80%] text-on-surface/50">
             Crafting bespoke software solutions, we ensure that every line of
             code aligns precisely with your vision, driving your business
@@ -76,9 +73,9 @@ export default function Featured(): JSX.Element {
         </section>
       </section>
       <section className="flex flex-col text-center items-center py-52 px-12 bg-background text-on-background">
-        <h1 className="mb-20 phone:text-6xl tablet:text-7xl font-bold">
-          Crafting Digital Excellence
-        </h1>
+        <div className="pb-10">
+          <Header color="on-background">Crafting Digital Excellence</Header>
+        </div>
         <h3 className="laptop:w-1/2 phone:w-11/12">
           <span className="text-secondary font-extrabold">
             Delivering unparalleled code quality

@@ -1,5 +1,6 @@
 import { StaticImage } from "gatsby-plugin-image";
 import React from "react";
+import Header from "./Header";
 
 export default function ParallaxFeature(): JSX.Element {
   return (
@@ -10,9 +11,9 @@ export default function ParallaxFeature(): JSX.Element {
         placeholder="blurred"
         className="mt-60 phone:w-60 phone:h-auto tablet:w-auto"
       />
-      <h1 className="text-white mt-40 font-bold phone:text-5xl tablet:text-7xl">
-        Solutions that Drive Sales
-      </h1>
+      <div className="phone:pt-20 tablet:pt-40">
+        <Header color="on-background">Solutions that Drive Sales</Header>
+      </div>
       <div className="absolute bg-surface w-full h-12 bottom-0 rounded-t-full"></div>
     </div>
   );
