@@ -3,9 +3,8 @@ import Layout from "../components/Layout";
 import Input from "../components/Input";
 import Textarea from "../components/Textarea";
 import Button from "../components/Button";
-import { db } from "../api/firebase";
-import { addDoc, collection, serverTimestamp } from "firebase/firestore";
 import Spinner from "../components/Spinner";
+import { addContact } from "../api/Contacts";
 
 export default function ContactPage(): JSX.Element {
   const [formInputs, setFormInputs] = useState({
@@ -23,10 +22,7 @@ export default function ContactPage(): JSX.Element {
 
     try {
       setIsLoading(true);
-      await addDoc(collection(db, "contacts"), {
-        ...formInputs,
-        timestamp: serverTimestamp(),
-      });
+      await addContact(formInputs);
       clearFormInputs();
       setMessage("Message sent! We will reach out to you shortly.");
     } catch (error) {

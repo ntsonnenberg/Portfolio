@@ -2,9 +2,8 @@ import React, { useState, FormEvent } from "react";
 import Button from "./Button";
 import Input from "./Input";
 import Spinner from "./Spinner";
-import { db } from "../api/firebase";
-import { addDoc, collection, serverTimestamp } from "firebase/firestore";
 import Header from "./Header";
+import { addEmail } from "../api/Contacts";
 
 export default function ContactUs(): JSX.Element {
   const [email, setEmail] = useState<string>("");
@@ -16,10 +15,7 @@ export default function ContactUs(): JSX.Element {
 
     try {
       setIsLoading(true);
-      await addDoc(collection(db, "contacts"), {
-        email,
-        timestamp: serverTimestamp(),
-      });
+      await addEmail(email);
       setEmail("");
       setMessage("Email sent! We will reach out to you shortly.");
     } catch (error) {
