@@ -38,6 +38,9 @@ module.exports = {
           "url(https://images.pexels.com/photos/4974912/pexels-photo-4974912.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1)",
       },
       keyframes: {
+        shimmer: {
+          "100%": { transform: "translateX(100%)" },
+        },
         "fade-in-down": {
           "0%": {
             opacity: "0",
@@ -92,6 +95,7 @@ module.exports = {
         },
       },
       animation: {
+        shimmer: "shimmer 1.5s infinite",
         "fade-in-down": "fade-in-down 2s ease-out",
         "fade-in-right": "fade-in-right 2s ease-out",
         "fade-in-left": "fade-in-left 2s ease-out",

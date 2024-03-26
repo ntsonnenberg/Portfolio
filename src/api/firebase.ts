@@ -1,5 +1,6 @@
 import { initializeApp, getApps, getApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore";
+import { getStorage } from "firebase/storage";
 
 const firebaseConfig = {
   apiKey: process.env.GATSBY_FIREBASE_API_KEY,
@@ -20,5 +21,6 @@ if (!getApps().length) {
 }
 
 const db = getFirestore(app);
+const storage = getStorage(app);
 
-export { db };
+export { db, storage };
