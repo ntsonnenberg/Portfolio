@@ -2,7 +2,6 @@ import React, { useState, FormEvent } from "react";
 import Button from "./Button";
 import Input from "./Input";
 import Spinner from "./Spinner";
-import Header from "./Header";
 import { addEmail } from "../api/Contacts";
 
 export default function ContactUs(): JSX.Element {
@@ -29,7 +28,9 @@ export default function ContactUs(): JSX.Element {
   return (
     <div className="bg-primary-variant text-on-primary flex flex-col text-center items-center py-20 gap-5">
       <div className="phone:mx-6 phone:mb-10 laptop:mb-16">
-        <Header color="on-background">Contact Me to Learn More</Header>
+        <h1 className="text-on-background font-bold phone:text-5xl tablet:text-7xl">
+          Contact Me to Learn More
+        </h1>
       </div>
       <form
         onSubmit={sendEmail}
