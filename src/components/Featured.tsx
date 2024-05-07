@@ -74,7 +74,9 @@ export default function Featured(): JSX.Element {
       </section>
       <section className="flex flex-col text-center items-center py-52 px-12 bg-background text-on-background">
         <div className="pb-10">
-          <Header color="on-background">Crafting Digital Excellence</Header>
+          <h1 className="text-on-background font-bold phone:text-5xl tablet:text-7xl">
+            Crafting Digital Excellence
+          </h1>
         </div>
         <h3 className="laptop:w-1/2 phone:w-11/12">
           <span className="text-secondary font-extrabold">

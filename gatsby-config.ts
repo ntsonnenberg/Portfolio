@@ -1,17 +1,35 @@
 import type { GatsbyConfig } from "gatsby";
+
 require("dotenv").config({
   path: `.env.${process.env.NODE_ENV}`,
 });
 
+interface ProjectDoc {
+  title: string;
+  link: string;
+  image: string;
+}
+
+const firestore_auth = {
+  type: process.env.FIRESTORE_TYPE,
+  project_id: process.env.FIRESTORE_PROJECT_ID,
+  private_key_id: process.env.FIRESTORE_PK_ID,
+  private_key: process.env.FIRESTORE_PK,
+  client_email: process.env.FIRESTORE_CLIENT_EMAIL,
+  client_id: process.env.FIRESTORE_CLIENT_ID,
+  auth_uri: process.env.FIRESTORE_AUTH_URI,
+  token_uri: process.env.FIRESTORE_TOKEN_URI,
+  auth_provider_x509_cert_url:
+    process.env.FIRESTORE_AUTH_PROVIDER_X509_CERT_URL,
+  client_x509_cert_url: process.env.FIRESTORE_CLIENT_X509_CERT_URL,
+  universe_domain: process.env.FIRESTORE_UNIVERSE_DOMAIN,
+};
+
 const config: GatsbyConfig = {
   siteMetadata: {
     title: `Portfolio`,
-    siteUrl: `https://www.yourdomain.tld`,
+    siteUrl: `https://bespokedevsolutions.com`,
   },
-  // More easily incorporate content into your pages through automatic TypeScript type generation and better GraphQL IntelliSense.
-  // If you use VSCode you can also use the GraphQL plugin
-  // Learn more at: https://gatsby.dev/graphql-typegen
-  graphqlTypegen: true,
   plugins: [
     "gatsby-plugin-postcss",
     "gatsby-plugin-image",
@@ -40,6 +58,23 @@ const config: GatsbyConfig = {
       resolve: "gatsby-plugin-manifest",
       options: {
         icon: "src/images/bespoke-black-no-bg.png",
+      },
+    },
+    {
+      resolve: "gatsby-firesource",
+      options: {
+        credential: firestore_auth,
+        types: [
+          {
+            type: "Project",
+            collection: "projects",
+            map: (doc: ProjectDoc) => ({
+              title: doc.title,
+              link: doc.link,
+              image: doc.image,
+            }),
+          },
+        ],
       },
     },
   ],

@@ -1,34 +1,46 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import Layout from "../components/Layout";
 import ProjectCard from "../components/ProjectCard";
-import { getProjects, Project } from "../api/Projects";
-import Skeleton from "../components/Skeleton";
+import { graphql, useStaticQuery } from "gatsby";
+
+export interface Project {
+  id: string;
+  title: string;
+  link: string;
+  image: string;
+}
 
 export default function ProjectsPage(): JSX.Element {
-  const [projects, setProjects] = useState<Project[] | null>(null);
+  const projectNodes = useStaticQuery(graphql`
+    query {
+      allProject {
+        edges {
+          node {
+            id
+            title
+            link
+            image
+          }
+        }
+      }
+    }
+  `);
 
-  useEffect(() => {
-    getProjects().then((projects) =>
-      setProjects(
-        projects.sort((a, b) => {
-          if (a.title === "Go Enlite") return -1;
-          if (b.title === "Go Enlite") return 1;
-          return 0;
-        })
-      )
-    );
-  }, []);
+  const projects: Project[] = projectNodes.allProject.edges.map(
+    ({ node }: { node: Project }) => ({
+      id: node.id,
+      title: node.title,
+      link: node.link,
+      image: node.image,
+    })
+  );
 
   if (!projects) {
     return (
       <Layout>
-        <div className="py-60 min-h-screen grid justify-items-center phone:grid-col-1 phone:gap-12 tablet:grid-cols-2 tablet:gap-12 tablet:mx-12 laptop:grid-cols-3 laptop:gap-16 laptop:mx-52 desktop:mx-60">
-          {Array(6)
-            .fill(0)
-            .map((_, i) => (
-              <Skeleton key={i} className="w-80 h-96" />
-            ))}
-        </div>
+        <h1 className="p-40 min-h-screen text-2xl font-bold">
+          No Projects Available
+        </h1>
       </Layout>
     );
   }
