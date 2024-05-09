@@ -34,6 +34,7 @@ export function Head(): JSX.Element {
       <title>Bespoke Dev Solutions</title>
       <link rel="icon" type="image/png" href={bespokeFavicon}></link>
       <meta name="title" content="Bespoke Dev Solutions" />
+      <meta name="theme-color" content="#141414" />
       <meta
         name="description"
         content="Build your ideas into reality with a custom web application for your business."
