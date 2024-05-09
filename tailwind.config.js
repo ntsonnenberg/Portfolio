@@ -93,6 +93,44 @@ module.exports = {
             left: "100%",
           },
         },
+        "spin-top-in": {
+          "0%": {
+            transform: "rotate(0deg) translateY(0rem)",
+          },
+          "50%": {
+            transform: "translateY(0.25rem)",
+          },
+          "100%": {
+            transform: "rotate(45deg) translateY(0.25rem) translateX(0.25rem)",
+          },
+        },
+        "spin-bottom-in": {
+          "0%": {
+            transform: "rotate(0deg) translateY(0rem)",
+          },
+          "50%": {
+            transform: "rotate(-90deg) translateX(0.50rem)",
+          },
+          "100%": {
+            transform:
+              "rotate(-45deg) translateY(-0.25rem) translateX(0.25rem)",
+          },
+        },
+        "spin-top-out": {
+          "0%": {
+            transform: "rotate(45deg) translateY(0.25rem) translateX(0.25rem)",
+          },
+          "50%": { transform: "translateY(0.25rem)" },
+          "100%": { transform: "rotate(0deg) translateY(-0.125rem)" },
+        },
+        "spin-bottom-out": {
+          "0%": {
+            transform:
+              "rotate(-45deg) translateY(-0.25rem) translateX(0.25rem)",
+          },
+          "50%": { transform: "rotate(-90deg) translateX(0.50rem)" },
+          "100%": { transform: "rotate(0deg) translateY(0.125rem)" },
+        },
       },
       animation: {
         shimmer: "shimmer 1.5s infinite",
@@ -101,9 +139,10 @@ module.exports = {
         "fade-in-left": "fade-in-left 2s ease-out",
         "fade-in": "fade-in 2s 1.6s forwards",
         block: "block 2s ease-in-out forwards",
-      },
-      dropShadow: {
-        drawer: "0 10px 50px rgba(0, 0, 0, 0.75)",
+        "spin-top-in": "spin-top-in 0.5s forwards",
+        "spin-bottom-in": "spin-bottom-in 0.5s forwards",
+        "spin-top-out": "spin-top-out 0.5s forwards",
+        "spin-bottom-out": "spin-bottom-out 0.5s forwards",
       },
     },
   },

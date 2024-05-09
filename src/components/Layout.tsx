@@ -22,7 +22,7 @@ export default function Layout({ children }: Props): JSX.Element {
         />
         <meta name="theme-color" content="bg-primary-variant/80" />
       </Helmet>
-      <NavBar openDrawer={() => setShowDrawer(true)} />
+      <NavBar openDrawer={() => setShowDrawer(!showDrawer)} />
       {children}
       <NavDrawer isOpen={showDrawer} closeDrawer={() => setShowDrawer(false)} />
       <Footer />
