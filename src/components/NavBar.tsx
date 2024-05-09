@@ -38,7 +38,7 @@ export default function NavBar({ openDrawer }: Props): JSX.Element {
 
   const renderedMenuButton = (
     <div
-      className="flex flex-col gap-1 justify-center items-center z-50 cursor-pointer"
+      className="flex flex-col gap-1 justify-center items-center z-50 cursor-pointer laptop:hidden"
       onClick={runMenuAnimation}
     >
       <span
