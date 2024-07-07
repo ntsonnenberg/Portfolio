@@ -2,11 +2,12 @@ import React from "react";
 
 export default function NewsletterForm(): JSX.Element {
   return (
-    <div className="flex justify-center items-center bg-background py-40">
+    <div className="flex justify-center items-center py-40">
       <iframe
         src="https://nathansonnenberg.substack.com/embed"
         width="480"
-        height="350"
+        height="400"
+        className="shadow-stand-out rounded-lg"
       ></iframe>
     </div>
   );

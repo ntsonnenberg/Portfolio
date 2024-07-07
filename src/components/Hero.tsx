@@ -39,10 +39,10 @@ export default function Hero(): JSX.Element {
           Build your ideas into reality and take your startup to the next level.
         </h2>
         <div className="flex flex-row gap-5">
-          <Button secondary filled large className="px-2 py-1">
+          <Button secondary filled large className="px-2 py-1 shadow-stand-out">
             <Link to="/contact">Book Demo</Link>
           </Button>
-          <Button light outline large className="px-2 py-1">
+          <Button light outline large className="px-2 py-1 shadow-stand-out">
             <Link to="projects">View Projects</Link>
           </Button>
         </div>

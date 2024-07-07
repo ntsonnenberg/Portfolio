@@ -75,13 +75,13 @@ export default function AboutMePage(): JSX.Element {
             className="phone:mt-20 tablet:mt-0"
           />
           <div className="absolute bg-primary/40 phone:w-52 phone:h-40 phone:right-2 phone:top-44 tablet:w-1/2 tablet:h-80 tablet:right-10 tablet:top-48 laptop:h-96 laptop:right-16 laptop:top-80">
-            <div className="absolute bg-white phone:p-2 phone:inset-2 tablet:p-10 tablet:inset-5">
-              <h1 className="font-bold phone:text-md tablet:text-2xl laptop:text-4xl">
+            <div className="absolute bg-surface phone:p-2 phone:inset-2 tablet:p-10 tablet:inset-5">
+              <h1 className="text-on-surface font-bold phone:text-md tablet:text-2xl laptop:text-4xl">
                 Your{" "}
                 <span className="text-secondary">Personalized Consultant</span>{" "}
                 for Web Applications
               </h1>
-              <p className="phone:hidden tablet:block tablet:mt-2 tablet:mx-0 tablet:text-sm laptop:mt-6 laptop:mx-4 laptop:text-lg">
+              <p className="text-on-surface/50 phone:hidden tablet:block tablet:mt-2 tablet:mx-0 tablet:text-sm laptop:mt-6 laptop:mx-4 laptop:text-lg">
                 I'm Nathan Sonnenberg, here for your web development & IT
                 consulting needs.
               </p>
@@ -120,13 +120,13 @@ export default function AboutMePage(): JSX.Element {
                 src="grad-maeser.JPG"
                 alt="Grad Maeser"
                 placeholder="Grad Maeser"
-                className="h-min absolute inset-y-1/4 left-0 rounded-lg phone:w-40 tablet:w-72"
+                className="h-min absolute shadow-stand-out border border-slate-600 inset-y-1/4 left-0 rounded-lg phone:w-40 tablet:w-72"
               />
               <Image
                 src="grad-tanner.JPG"
                 alt="Grad Tanner"
                 placeholder="Grad Tanner"
-                className="h-min absolute inset-y-1/3 rounded-lg phone:w-40 phone:left-32 tablet:w-72 tablet:left-60"
+                className="h-min absolute shadow-stand-out border border-slate-600 inset-y-1/3 rounded-lg phone:w-40 phone:left-32 tablet:w-72 tablet:left-60"
               />
             </div>
           </div>
@@ -138,7 +138,7 @@ export default function AboutMePage(): JSX.Element {
               src="summer-sales-2021.JPG"
               alt="Summer Sales"
               placeholder="Summmer Sales"
-              className="h-auto rounded-lg phone:w-5/6 phone:inset-x-8 tablet:w-full tablet:inset-x-0"
+              className="h-auto rounded-lg shadow-stand-out border border-slate-600 phone:w-5/6 phone:inset-x-8 tablet:w-full tablet:inset-x-0"
             />
           </div>
           <div className="font-bold text-center pt-40 phone:text-4xl phone:mx-6 tablet:text-6xl tablet:mx-0 tablet:w-11/12 laptop:w-3/4">
@@ -149,7 +149,7 @@ export default function AboutMePage(): JSX.Element {
               src="go-enlite-leaderboard.PNG"
               alt="Go Enlite"
               placeholder="Go Enlite"
-              className="h-auto rounded-lg phone:w-5/6 phone:inset-x-8 tablet:w-full tablet:inset-x-0"
+              className="h-auto rounded-lg shadow-stand-out border border-slate-600 phone:w-5/6 phone:inset-x-8 tablet:w-full tablet:inset-x-0"
             />
           </div>
           <div className="font-bold text-center pt-40 phone:text-4xl phone:mx-6 tablet:text-6xl tablet:mx-0 tablet:w-11/12 laptop:w-3/4">

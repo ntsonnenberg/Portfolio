@@ -4,12 +4,13 @@ import Featured from "../components/Featured";
 import Steps from "../components/Steps";
 import ContactForm from "../components/ContactForm";
 import Layout from "../components/Layout";
-import ParallaxFeature from "../components/ParallaxFeature";
+import SocialLinks from "../components/SocialLinks";
 import ProfileFeature from "../components/ProfileFeature";
 import NewsletterForm from "../components/NewsletterForm";
 import { Helmet } from "react-helmet";
 import bespokeFavicon from "../images/bespoke-black-no-bg.png";
-import SocialLinks from "../components/SocialLinks";
+import Marquee from "react-fast-marquee";
+import IntegrationFeatures from "../components/IntegrationFeatures";
 
 export default function IndexPage(): JSX.Element {
   return (
@@ -18,9 +19,27 @@ export default function IndexPage(): JSX.Element {
         <Hero />
         <ProfileFeature />
         <Featured />
-        <ParallaxFeature />
-        <Steps />
+        <IntegrationFeatures />
         <SocialLinks />
+        <Steps />
+        <Marquee
+          direction="right"
+          speed={100}
+          gradient
+          gradientColor="#141414"
+          className="py-4 overflow-clip"
+        >
+          <img
+            src="https://firebasestorage.googleapis.com/v0/b/portfolio-401812.appspot.com/o/client-logos%2Fenlite-logo.svg?alt=media&token=43f81f71-67e2-4a34-8ae4-8b05991e6120"
+            className="phone:w-40 phone:h-10 phone:mx-6 tablet:w-52 tablet:h-16 tablet:mx-10 laptop:w-60 laptop:h-20 laptop:mx-14"
+            alt="Enlite Logo"
+          />
+          <img
+            src="https://firebasestorage.googleapis.com/v0/b/portfolio-401812.appspot.com/o/client-logos%2Futah-automotive-logo.svg?alt=media&token=d1500c1c-5c17-4804-aa09-d92d8f83d0ac"
+            className="phone:w-24 phone:h-24 phone:mx-6 tablet:mx-10 tablet:w-28 tablet:h-28 laptop:mx-14"
+            alt="UTA Logo"
+          />
+        </Marquee>
         <NewsletterForm />
         <ContactForm />
       </>

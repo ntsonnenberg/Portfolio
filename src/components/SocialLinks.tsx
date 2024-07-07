@@ -1,6 +1,7 @@
-import React, { useState } from "react";
+import { StaticImage } from "gatsby-plugin-image";
 import { FiLinkedin, FiFacebook, FiGithub } from "react-icons/fi";
 import { RiTwitterXLine } from "react-icons/ri";
+import React, { useState } from "react";
 
 export default function SocialLinks(): JSX.Element {
   const [isHovered, setIsHovered] = useState(false);
@@ -14,7 +15,7 @@ export default function SocialLinks(): JSX.Element {
   };
 
   return (
-    <div className="relative min-h-screen flex bg-code-at-desk bg-no-repeat bg-center bg-cover phone:px-8 laptop:px-0 laptop:bg-fixed">
+    <div className="relative h-dvh flex bg-code bg-no-repeat bg-center bg-cover phone:px-8 laptop:px-0 bg-fixed">
       <div className="flex justify-evenly grow items-center">
         <a
           href="https://www.linkedin.com/in/nathan-sonnenberg/"
@@ -70,6 +71,7 @@ export default function SocialLinks(): JSX.Element {
           <FiGithub className="stroke-white  transition-transform duration-100 tablet:w-20 tablet:h-20 phone:w-10 phone:h-10 hover:transform hover:-translate-y-2 hover:ease-in hover:stroke-[#2DBA4E]" />
         </a>
       </div>
+      <div className="absolute bg-background w-full h-12 bottom-0 rounded-t-full"></div>
     </div>
   );
 }

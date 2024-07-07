@@ -1,18 +1,104 @@
-import React from "react";
+import React, { useLayoutEffect, useRef } from "react";
 import { FiShoppingCart, FiSettings, FiPieChart } from "react-icons/fi";
 import { GoMegaphone } from "react-icons/go";
 import { RiMoneyDollarCircleLine } from "react-icons/ri";
 import { FaSquarespace } from "react-icons/fa";
-import Card from "./Card";
+import FadeBlockHeader from "./FadeBlockHeader";
+import { useGSAP } from "@gsap/react";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import gsap from "gsap";
 import VideoPlayer from "./VideoPlayer";
-import Header from "./Header";
+
+gsap.registerPlugin(ScrollTrigger);
+gsap.registerPlugin(useGSAP);
 
 export default function Featured(): JSX.Element {
+  const panelContainerRef = useRef<HTMLDivElement>(null);
+  const panelSectionRef = useRef<HTMLDivElement>(null);
+
+  useLayoutEffect(() => {
+    let ctx = gsap.context(() => {
+      let panels = gsap.utils.toArray("#panel");
+      let container = panelContainerRef.current || null;
+
+      let scrollTween = gsap.to(panels, {
+        xPercent: -100 * (panels.length - 1),
+        duration: 1,
+        ease: "none",
+        scrollTrigger: {
+          trigger: container,
+          pin: true,
+          scrub: 1,
+          snap: {
+            snapTo: 1 / (panels.length - 1),
+            duration: { min: 0.2, max: 2 },
+            delay: 0.2,
+          },
+          end: () => "+=" + container?.offsetWidth,
+        },
+      });
+
+      gsap.from("#panel-text-1", {
+        y: -20,
+        opacity: 0,
+        duration: 1,
+        ease: "power2.inOut",
+        delay: 0.5,
+        scrollTrigger: "#panel-text-1",
+        autoAlpha: 0,
+      });
+      gsap.from("#panel-text-2", {
+        y: -20,
+        opacity: 0,
+        duration: 1,
+        ease: "power2.inOut",
+        delay: 1,
+        scrollTrigger: {
+          trigger: "#panel-text-2",
+          containerAnimation: scrollTween,
+        },
+        autoAlpha: 0,
+      });
+      gsap.from("#panel-text-3", {
+        y: -20,
+        opacity: 0,
+        duration: 1,
+        ease: "power2.inOut",
+        delay: 1,
+        scrollTrigger: {
+          trigger: "#panel-text-3",
+          containerAnimation: scrollTween,
+        },
+        autoAlpha: 0,
+      });
+      gsap.from("#panel-text-4", {
+        y: -20,
+        opacity: 0,
+        duration: 1,
+        ease: "power2.inOut",
+        delay: 1,
+        scrollTrigger: {
+          trigger: "#panel-text-4",
+          containerAnimation: scrollTween,
+        },
+        autoAlpha: 0,
+      });
+
+      gsap.set(panelSectionRef.current, {
+        height: 1.5 * (container?.offsetWidth || 0),
+      });
+    }, panelSectionRef);
+
+    return () => ctx.revert();
+  });
+
   return (
     <div>
       <section className="flex flex-col text-center items-center my-52 mx-12">
-        <Header color="background">Find Customized Solutions</Header>
-        <div className="grid laptop:grid-cols-3 tablet:grid-cols-2 phone:grid-cols-1 mt-10 text-center phone:mt-16  phone:gap-y-16  tablet:gap-0 desktop:mt-24">
+        <FadeBlockHeader color="on-background">
+          Find Customized Solutions
+        </FadeBlockHeader>
+        <div className=" grid laptop:grid-cols-3 tablet:grid-cols-2 phone:grid-cols-1 mt-10 text-center phone:mt-16  phone:gap-y-16  tablet:gap-0 desktop:mt-24">
           <div className="tablet:p-8 laptop:p-14">
             <h3 className="mt-2 mb-8 text-2xl font-bold">Ecommerce</h3>
             <FiShoppingCart className="h-10 w-10 mx-auto" />
@@ -21,7 +107,7 @@ export default function Featured(): JSX.Element {
               and drive sales.
             </p>
           </div>
-          <div className="tablet:p-8 laptop:p-14 tablet:border-l tablet:border-on-surface laptop:border-r">
+          <div className="tablet:p-8 laptop:p-14 tablet:border-l tablet:border-on-background/20 laptop:border-r">
             <h3 className="mt-2 mb-8 text-2xl font-bold">Landing Pages</h3>
             <GoMegaphone className="h-10 w-10 mx-auto" />
             <p className="mt-5 text-base">
@@ -29,7 +115,7 @@ export default function Featured(): JSX.Element {
               that highlight your brand.
             </p>
           </div>
-          <div className="tablet:p-8 tablet:border-r tablet:border-t tablet:border-on-surface laptop:border-t-0 laptop:border-r-0 laptop:p-14">
+          <div className="tablet:p-8 tablet:border-r tablet:border-t tablet:border-on-background/20 laptop:border-t-0 laptop:border-r-0 laptop:p-14">
             <h3 className="mt-2 mb-8 text-2xl font-bold">SaaS</h3>
             <FiSettings className="h-10 w-10 mx-auto" />
             <p className="mt-5 text-base">
@@ -37,7 +123,7 @@ export default function Featured(): JSX.Element {
               scalable, user-friendly platform.
             </p>
           </div>
-          <div className="tablet:p-8 laptop:p-14 tablet:border-t tablet:border-on-surface">
+          <div className="tablet:p-8 laptop:p-14 tablet:border-t tablet:border-on-background/20">
             <h3 className="mt-2 mb-8 text-2xl font-bold">CRM</h3>
             <RiMoneyDollarCircleLine className="h-10 w-10 mx-auto" />
             <p className="mt-5 text-base">
@@ -45,7 +131,7 @@ export default function Featured(): JSX.Element {
               streamlines interactions and harnesses data for growth.
             </p>
           </div>
-          <div className="tablet:p-8 laptop:p-14 tablet:border-t tablet:border-on-surface laptop:border-l">
+          <div className="tablet:p-8 laptop:p-14 tablet:border-t tablet:border-on-background/20 laptop:border-l">
             <h3 className="mt-2 mb-8 text-2xl font-bold">Analytics</h3>
             <FiPieChart className="h-10 w-10 mx-auto" />
             <p className="mt-5 text-base">
@@ -53,7 +139,7 @@ export default function Featured(): JSX.Element {
               informed decisions that propel your business forward.
             </p>
           </div>
-          <div className="tablet:p-8 laptop:p-14 tablet:border-t tablet:border-on-surface tablet:border-l">
+          <div className="tablet:p-8 laptop:p-14 tablet:border-t tablet:border-on-background/20 tablet:border-l">
             <h3 className="mt-2 mb-8 text-2xl font-bold">Squarespace</h3>
             <FaSquarespace className="h-10 w-10 mx-auto" />
             <p className="mt-5 text-base">
@@ -62,72 +148,81 @@ export default function Featured(): JSX.Element {
             </p>
           </div>
         </div>
-        <section className="flex flex-col py-52 gap-10 items-center">
-          <Header color="background">Everything You Need</Header>
-          <h3 className="text-md w-[80%] text-on-surface/50">
-            Crafting bespoke software solutions, we ensure that every line of
-            code aligns precisely with your vision, driving your business
-            towards unparalleled growth and efficiency.
-          </h3>
-          <VideoPlayer className="phone:w-5/6 tablet:w-1/2 rounded-sm" />
-        </section>
       </section>
-      <section className="flex flex-col text-center items-center py-52 px-12 bg-background text-on-background">
-        <div className="pb-10">
-          <h1 className="text-on-background font-bold phone:text-5xl tablet:text-7xl">
-            Crafting Digital Excellence
-          </h1>
+      <section
+        ref={panelSectionRef}
+        className="flex flex-col my-52 gap-10 items-center"
+      >
+        <div className="mb-20">
+          <FadeBlockHeader color="on-background">
+            Everything You Need
+          </FadeBlockHeader>
         </div>
-        <h3 className="laptop:w-1/2 phone:w-11/12">
-          <span className="text-secondary font-extrabold">
-            Delivering unparalleled code quality
-          </span>{" "}
-          and customization to craft digital solutions that embody excellence
-          and precision for your unique needs.
-        </h3>
-        <div className="my-28 grid laptop:grid-cols-3 tablet:grid-cols-2 phone:grid-cols-1 gap-10">
-          <Card
-            imageUrl="https://www.logo.wine/a/logo/Gmail/Gmail-Logo.wine.svg"
-            title="Gmail"
+        <div
+          id="panel-container"
+          ref={panelContainerRef}
+          className="flex overflow-x-hidden w-full min-h-screen"
+        >
+          <div
+            id="panel"
+            className="relative w-svw h-dvh flex-none overflow-hidden phone:flex phone:justify-center laptop:block"
           >
-            Streamline your communication with customers with seamless Gmail
-            integrations.
-          </Card>
-          <Card
-            imageUrl="https://www.svgrepo.com/show/303503/shopify-logo.svg"
-            title="Shopify"
+            <VideoPlayer
+              video="panel-1-vid.mp4"
+              className="absolute phone:w-auto phone:min-w-full phone:min-h-full phone:max-w-none laptop:min-w-0 laptop:min-h-0 laptop:max-w-full"
+            />
+            <h1
+              id="panel-text-1"
+              className="absolute flex items-center font-bold w-1/3 text-clip m-40 phone:text-xl tablet:text-4xl laptop:text-6xl"
+            >
+              Custom web design for your brand
+            </h1>
+          </div>
+          <div
+            id="panel"
+            className="relative w-svw h-dvh flex-none overflow-hidden phone:flex phone:justify-center laptop:block"
           >
-            Elevate your online store with expert Shopify integrations that
-            synchronize your e-commerce capabilities.
-          </Card>
-          <Card
-            imageUrl="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/Font_Awesome_5_brands_squarespace.svg/1200px-Font_Awesome_5_brands_squarespace.svg.png"
-            title="Squarespace"
+            <VideoPlayer
+              video="panel-2-vid.mp4"
+              className="absolute phone:w-auto phone:min-w-full phone:min-h-full phone:max-w-none laptop:min-w-0 laptop:min-h-0 laptop:max-w-full"
+            />
+            <h1
+              id="panel-text-2"
+              className="absolute flex items-center m-40 font-bold w-1/3 text-clip phone:text-xl tablet:text-4xl laptop:text-6xl"
+            >
+              Expand your reach to your targeted audience
+            </h1>
+          </div>
+          <div
+            id="panel"
+            className="relative w-svw h-dvh flex-none overflow-hidden phone:flex phone:justify-center laptop:block"
           >
-            Enhance your Squarespace site with custom integrations that add
-            dynamic functionality.
-          </Card>
-          <Card
-            imageUrl="https://www.svgrepo.com/show/331433/hubspot.svg"
-            title="HubSpot"
+            <VideoPlayer
+              video="panel-3-vid.mp4"
+              className="absolute phone:w-auto phone:min-w-full phone:min-h-full phone:max-w-none laptop:min-w-0 laptop:min-h-0 laptop:max-w-full"
+            />
+            <h1
+              id="panel-text-3"
+              className="absolute flex items-center font-bold w-1/3 text-clip p-4 m-40 bg-background phone:text-xl tablet:text-4xl laptop:text-6xl"
+            >
+              Integrate and automate your operations
+            </h1>
+          </div>
+          <div
+            id="panel"
+            className="relative w-svw h-dvh flex-none overflow-hidden phone:flex phone:justify-center laptop:block"
           >
-            Maximie your marketing, sales, and service engagement with tailored
-            HubSpot integrations.
-          </Card>
-          <Card
-            imageUrl="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Slack_icon_2019.svg/2048px-Slack_icon_2019.svg.png"
-            title="Slack"
-          >
-            Boost your team's productivity with custom Slack integrations that
-            streamline communication.
-          </Card>
-          <Card
-            imageUrl="https://cdn.freebiesupply.com/logos/large/2x/facebook-3-logo-png-transparent.png"
-            title="Facebook"
-          >
-            Expand your reach with integrated Facebook solutions that amplify
-            your social media presence.
-          </Card>
+            <VideoPlayer
+              video="panel-4-vid.mp4"
+              className="absolute phone:w-auto phone:min-w-full phone:min-h-full phone:max-w-none laptop:min-w-0 laptop:min-h-0 laptop:max-w-full"
+            />
+            <h1
+              id="panel-text-4"
+              className="absolute flex items-center font-bold w-1/3 text-clip p-4 m-40 bg-background phone:text-xl tablet:text-4xl laptop:text-6xl"
+            >
+              Build your dream, one line of code at a time
+            </h1>
+          </div>
         </div>
       </section>
     </div>

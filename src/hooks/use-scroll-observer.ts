@@ -26,18 +26,19 @@ export default function useScrollObserver(
               if (animateIn) {
                 animateIn();
               }
-            } else {
-              if (handleOpacity) {
-                entry.target.classList.add("opacity-0");
-              }
-              if (animationClass) {
-                entry.target.classList.remove(animationClass);
-              }
-
-              if (animateOut) {
-                animateOut();
-              }
             }
+            // else {
+            //   if (handleOpacity) {
+            //     entry.target.classList.add("opacity-0");
+            //   }
+            //   if (animationClass) {
+            //     entry.target.classList.remove(animationClass);
+            //   }
+
+            //   if (animateOut) {
+            //     animateOut();
+            //   }
+            // }
           });
         },
         {

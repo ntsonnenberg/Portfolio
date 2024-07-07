@@ -63,7 +63,7 @@ export default function NavBar({ openDrawer }: Props): JSX.Element {
     <div
       className={`transition-all duration-500 ${
         showNav ? "opacity-100" : "opacity-0"
-      } h-28 w-full bg-primary-variant/80 text-on-primary backdrop-blur-lg fixed top-0 z-50`}
+      } h-28 w-full bg-primary-variant/70 text-on-primary backdrop-blur-lg fixed top-0 z-50 shadow-xl border-b border-on-background/20`}
     >
       <div className="flex flex-row justify-around h-full items-center align-center">
         <Link to="/" className="cursor-pointer phone:text-2xl tablet:text-4xl">

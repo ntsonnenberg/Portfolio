@@ -1,13 +1,43 @@
-import React from "react";
+import React, { useRef } from "react";
 import StepCard from "./StepCard";
-import Connector from "./Connector";
-import Header from "./Header";
+import FadeBlockHeader from "./FadeBlockHeader";
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { FiArrowRight } from "react-icons/fi";
+
+gsap.registerPlugin(useGSAP);
+gsap.registerPlugin(ScrollTrigger);
 
 export default function Steps(): JSX.Element {
+  const containerRef = useRef(null);
+
+  useGSAP(
+    () => {
+      gsap.from("#step-card", {
+        scrollTrigger: "#step-card",
+        scale: 0,
+        duration: 1,
+        ease: "power2.inOut",
+        delay: 1,
+        stagger: { each: 0.5 },
+      });
+
+      gsap.from("#arrow", {
+        scrollTrigger: "#step-card",
+        duration: 1,
+        y: 20,
+        opacity: 0,
+        ease: "power2.inOut",
+      });
+    },
+    { scope: containerRef }
+  );
+
   return (
     <div className="flex flex-col text-center items-center py-52 phone:px-1 phone:mx-6 tablet:mx-0 tablet:px-6">
       <div className="pb-20">
-        <Header color="background">How it works</Header>
+        <FadeBlockHeader color="on-background">How it works</FadeBlockHeader>
       </div>
       <h3 className="tablet:w-1/2 phone:w-11/12">
         <span className="text-secondary font-extrabold">
@@ -15,20 +45,34 @@ export default function Steps(): JSX.Element {
         </span>{" "}
         to building high-quality software tailored to your needs.
       </h3>
-      <div className="relative my-28 flex laptop:flex-row phone:flex-col gap-5 -z-10">
-        <StepCard step={1} title="Discovery">
+      <div
+        ref={containerRef}
+        className="relative my-28 flex laptop:flex-row phone:flex-col items-center gap-5"
+      >
+        <StepCard id="step-card" step={1} title="Discovery">
           Identify goals and scope precisely and succinctly.
         </StepCard>
-        <StepCard step={2} title="Prototyping">
+        <FiArrowRight
+          id="arrow"
+          className="w-10 h-10 phone:rotate-90 laptop:rotate-0"
+        />
+        <StepCard id="step-card" step={2} title="Prototyping">
           Craft a rapid and clear prototype that aligns with your brand.
         </StepCard>
-        <StepCard step={3} title="Implementation">
+        <FiArrowRight
+          id="arrow"
+          className="w-10 h-10 phone:rotate-90 laptop:rotate-0"
+        />
+        <StepCard id="step-card" step={3} title="Implementation">
           Execute the blueprint with precise and agile coding.
         </StepCard>
-        <StepCard step={4} title="Acceptance">
+        <FiArrowRight
+          id="arrow"
+          className="w-10 h-10 phone:rotate-90 laptop:rotate-0"
+        />
+        <StepCard id="step-card" step={4} title="Acceptance">
           Consistently evaluate the deliverables for client validation.
         </StepCard>
-        <Connector />
       </div>
     </div>
   );

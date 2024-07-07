@@ -13,7 +13,7 @@ export default function Layout({ children }: Props): JSX.Element {
   const [showDrawer, setShowDrawer] = useState(false);
 
   return (
-    <div>
+    <div className="!scroll-smooth">
       <Helmet>
         <title>Nathan Sonnenberg</title>
         <meta

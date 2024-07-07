@@ -20,7 +20,7 @@ module.exports = {
         "secondary-variant": "#005C9E",
         "on-secondary": "#FFFFFF",
         background: "#141414",
-        "on-background": "#FFFFFF",
+        "on-background": "#E2E2E2",
         surface: "#FAFAFA",
         "on-surface": "#141414",
         error: "#D42B2B",
@@ -29,13 +29,16 @@ module.exports = {
       dropShadow: {
         over: "0 40px 28px rgba(0, 0, 0, 0.35)",
       },
+      boxShadow: {
+        "stand-out": "0 0px 100px 20px rgba(26, 9, 64, 0.7)",
+      },
       fontFamily: {
         poppins: ["Poppins", "sans-serif"],
       },
       backgroundImage: {
         code: "url(https://img.freepik.com/free-vector/pixel-rain-abstract-background_23-2148381456.jpg?size=626&ext=jpg&ga=GA1.1.1413502914.1696896000&semt=ais)",
-        "code-at-desk":
-          "url(https://images.pexels.com/photos/4974912/pexels-photo-4974912.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1)",
+        "macbook-almost-closed":
+          "url(https://images.pexels.com/photos/633409/pexels-photo-633409.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1)",
       },
       keyframes: {
         shimmer: {
@@ -131,6 +134,18 @@ module.exports = {
           "50%": { transform: "rotate(-90deg) translateX(0.50rem)" },
           "100%": { transform: "rotate(0deg) translateY(0.125rem)" },
         },
+        typing: {
+          "0%": { width: "0%", visibility: "hidden" },
+          "100%": { width: "100%" },
+        },
+        blink: {
+          "50%": { borderColor: "transparent" },
+          "100%": { borderColor: "white" },
+        },
+        grow: {
+          "0%": { transform: "scale(0.5)" },
+          "100%": { transform: "scale(1)" },
+        },
       },
       animation: {
         shimmer: "shimmer 1.5s infinite",
@@ -143,6 +158,8 @@ module.exports = {
         "spin-bottom-in": "spin-bottom-in 0.5s forwards",
         "spin-top-out": "spin-top-out 0.5s forwards",
         "spin-bottom-out": "spin-bottom-out 0.5s forwards",
+        typing: "typing 2s steps(15) forwards, blink .7s infinite",
+        grow: "grow 1s ease-in-out forwards",
       },
     },
   },

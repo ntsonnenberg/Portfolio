@@ -31,7 +31,7 @@ export default function Footer(): JSX.Element {
             href="https://www.linkedin.com/in/nathan-sonnenberg/"
             target="_blank"
           >
-            <FiLinkedin className="transition-transform duration-100 tablet:w-11 tablet:h-11 phone:w-6 phone:h-6 hover:transform hover:-translate-y-2 hover:ease-in hover:stroke-[#0077B5]" />
+            <FiLinkedin className="transition-transform duration-100 tablet:w-11 tablet:h-11 phone:w-6 phone:h-6 hover:transform hover:-translate-y-2 hover:ease-in hover:stroke-[#0077B5] hover:shadow-stand-out" />
           </a>
           <a href="https://www.instagram.com/nate.sonny/" target="_blank">
             <svg
@@ -42,7 +42,7 @@ export default function Footer(): JSX.Element {
               viewBox="0 0 24 24"
               strokeLinecap="round"
               strokeLinejoin="round"
-              className="transition-transform duration-100 tablet:w-11 tablet:h-11 phone:w-6 phone:h-6 hover:transform hover:-translate-y-2 hover:ease-in"
+              className="transition-transform duration-100 tablet:w-11 tablet:h-11 phone:w-6 phone:h-6 hover:transform hover:-translate-y-2 hover:ease-in hover:shadow-stand-out"
               height="1em"
               width="1em"
               xmlns="http://www.w3.org/2000/svg"
@@ -78,16 +78,16 @@ export default function Footer(): JSX.Element {
             </svg>
           </a>
           <a href="https://twitter.com/nate_sonnenberg" target="_blank">
-            <RiTwitterXLine className="transition-transform duration-100 tablet:w-11 tablet:h-11 phone:w-6 phone:h-6 hover:transform hover:-translate-y-2 hover:ease-in hover:text-[#08A0E9]" />
+            <RiTwitterXLine className="transition-transform duration-100 tablet:w-11 tablet:h-11 phone:w-6 phone:h-6 hover:transform hover:-translate-y-2 hover:ease-in hover:text-[#08A0E9] hover:shadow-stand-out" />
           </a>
           <a
             href="https://www.facebook.com/nathan.sonnenberg.14"
             target="_blank"
           >
-            <FiFacebook className="transition-transform duration-100 tablet:w-11 tablet:h-11 phone:w-6 phone:h-6 hover:transform hover:-translate-y-2 hover:ease-in hover:stroke-[#4267B2]" />
+            <FiFacebook className="transition-transform duration-100 tablet:w-11 tablet:h-11 phone:w-6 phone:h-6 hover:transform hover:-translate-y-2 hover:ease-in hover:stroke-[#4267B2] hover:shadow-stand-out" />
           </a>
           <a href="https://github.com/ntsonnenberg" target="_blank">
-            <FiGithub className="transition-transform duration-100 tablet:w-11 tablet:h-11 phone:w-6 phone:h-6 hover:transform hover:-translate-y-2 hover:ease-in hover:stroke-[#2DBA4E]" />
+            <FiGithub className="transition-transform duration-100 tablet:w-11 tablet:h-11 phone:w-6 phone:h-6 hover:transform hover:-translate-y-2 hover:ease-in hover:stroke-[#2DBA4E] hover:shadow-stand-out" />
           </a>
         </div>
       </div>
