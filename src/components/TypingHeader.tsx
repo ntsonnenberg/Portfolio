@@ -1,6 +1,5 @@
 import React, { useRef } from "react";
 import useScrollObserver from "../hooks/use-scroll-observer";
-import classNames from "classnames";
 
 interface HeaderProps {
   color?: string;
@@ -18,7 +17,7 @@ export default function FadeBlockHeader({
   return (
     <h1
       ref={headerRef}
-      className={`py-4 text-${color} font-bold overflow-hidden whitespace-nowrap border-r-4 phone:text-5xl tablet:text-7xl`}
+      className={`py-4 text-${color} font-bold overflow-hidden whitespace-nowrap border-r-4 phone:text-2xl tablet:text-7xl`}
     >
       {children}
     </h1>

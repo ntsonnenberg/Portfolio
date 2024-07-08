@@ -15,7 +15,7 @@ export default function SocialLinks(): JSX.Element {
   };
 
   return (
-    <div className="relative h-dvh flex bg-code bg-no-repeat bg-center bg-cover phone:px-8 laptop:px-0 bg-fixed">
+    <div className="relative h-dvh flex bg-code bg-no-repeat bg-center bg-cover phone:px-8 laptop:px-0 laptop:bg-fixed">
       <div className="flex justify-evenly grow items-center">
         <a
           href="https://www.linkedin.com/in/nathan-sonnenberg/"
@@ -71,7 +71,7 @@ export default function SocialLinks(): JSX.Element {
           <FiGithub className="stroke-white  transition-transform duration-100 tablet:w-20 tablet:h-20 phone:w-10 phone:h-10 hover:transform hover:-translate-y-2 hover:ease-in hover:stroke-[#2DBA4E]" />
         </a>
       </div>
-      <div className="absolute bg-background w-full h-12 bottom-0 rounded-t-full"></div>
+      {/* <div className="absolute bg-background w-full h-12 bottom-0 rounded-t-full"></div> */}
     </div>
   );
 }

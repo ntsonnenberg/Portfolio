@@ -153,7 +153,7 @@ export default function Featured(): JSX.Element {
         ref={panelSectionRef}
         className="flex flex-col my-52 gap-10 items-center"
       >
-        <div className="mb-20">
+        <div className="mb-20 px-2">
           <FadeBlockHeader color="on-background">
             Everything You Need
           </FadeBlockHeader>
