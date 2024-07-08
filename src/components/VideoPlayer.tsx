@@ -7,31 +7,6 @@ type Props = {
 };
 
 export default function VideoPlayer({ video, className }: Props): JSX.Element {
-  type QueryData = {
-    allFile: {
-      nodes: Array<{ relativePath: string; publicURL: string }>;
-    };
-  };
-
-  const data: QueryData = useStaticQuery(graphql`
-    query {
-      allFile(filter: { extension: { eq: "mp4" } }) {
-        nodes {
-          relativePath
-          publicURL
-        }
-      }
-    }
-  `);
-
-  const videoFile = data.allFile.nodes.find((node) =>
-    node.relativePath.includes(video)
-  );
-
-  if (!videoFile) {
-    return <div>Video not found.</div>;
-  }
-
   return (
     <video
       width="100%"
@@ -42,7 +17,7 @@ export default function VideoPlayer({ video, className }: Props): JSX.Element {
       playsInline
       className={className}
     >
-      <source src={videoFile.publicURL} type="video/mp4" />
+      <source src={video} />
       Your browser does not support the video tag.
     </video>
   );

@@ -168,7 +168,7 @@ export default function Featured(): JSX.Element {
             className="relative w-svw h-dvh flex-none overflow-hidden phone:flex phone:justify-center laptop:block"
           >
             <VideoPlayer
-              video="panel-1-vid.mp4"
+              video="https://firebasestorage.googleapis.com/v0/b/portfolio-401812.appspot.com/o/videos%2Fpanel-1-vid.mp4?alt=media&token=3220e429-ef51-4af7-b37c-0418f523b5cd"
               className="absolute phone:w-auto phone:min-w-full phone:min-h-full phone:max-w-none laptop:min-w-0 laptop:min-h-0 laptop:max-w-full"
             />
             <h1
@@ -183,7 +183,7 @@ export default function Featured(): JSX.Element {
             className="relative w-svw h-dvh flex-none overflow-hidden phone:flex phone:justify-center laptop:block"
           >
             <VideoPlayer
-              video="panel-2-vid.mp4"
+              video="https://firebasestorage.googleapis.com/v0/b/portfolio-401812.appspot.com/o/videos%2Fpanel-2-vid.mp4?alt=media&token=43689a25-c34f-4bca-bf97-b198316b1099"
               className="absolute phone:w-auto phone:min-w-full phone:min-h-full phone:max-w-none laptop:min-w-0 laptop:min-h-0 laptop:max-w-full"
             />
             <h1
@@ -198,7 +198,7 @@ export default function Featured(): JSX.Element {
             className="relative w-svw h-dvh flex-none overflow-hidden phone:flex phone:justify-center laptop:block"
           >
             <VideoPlayer
-              video="panel-3-vid.mp4"
+              video="https://firebasestorage.googleapis.com/v0/b/portfolio-401812.appspot.com/o/videos%2Fpanel-3-vid.mp4?alt=media&token=08a744dd-1e7c-467e-bbff-88c02f236cec"
               className="absolute phone:w-auto phone:min-w-full phone:min-h-full phone:max-w-none laptop:min-w-0 laptop:min-h-0 laptop:max-w-full"
             />
             <h1
@@ -213,7 +213,7 @@ export default function Featured(): JSX.Element {
             className="relative w-svw h-dvh flex-none overflow-hidden phone:flex phone:justify-center laptop:block"
           >
             <VideoPlayer
-              video="panel-4-vid.mp4"
+              video="https://firebasestorage.googleapis.com/v0/b/portfolio-401812.appspot.com/o/videos%2Fpanel-4-vid.mp4?alt=media&token=4b22eb60-066d-45d4-a151-d6bce795a252"
               className="absolute phone:w-auto phone:min-w-full phone:min-h-full phone:max-w-none laptop:min-w-0 laptop:min-h-0 laptop:max-w-full"
             />
             <h1
