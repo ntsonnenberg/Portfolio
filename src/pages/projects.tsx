@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import Layout from "../components/Layout";
 import ProjectCard from "../components/ProjectCard";
 import { graphql, useStaticQuery } from "gatsby";
@@ -11,6 +11,8 @@ export interface Project {
 }
 
 export default function ProjectsPage(): JSX.Element {
+  const containerRef = useRef(null);
+
   const projectNodes = useStaticQuery(graphql`
     query {
       allProject {

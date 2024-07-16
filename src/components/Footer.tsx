@@ -26,7 +26,7 @@ export default function Footer(): JSX.Element {
             className="phone:w-48 phone:h-auto"
           />
         </div>
-        <div className="basis-2/3 grow flex flex-row justify-evenly phone:mr-4 phone:gap-4 laptop:mr-20 laptop:gap-0">
+        <div className="basis-2/3 grow flex flex-row justify-evenly phone:mr-4 phone:gap-4 tablet:gap-6 laptop:mr-20 laptop:gap-0">
           <a
             href="https://www.linkedin.com/in/nathan-sonnenberg/"
             target="_blank"

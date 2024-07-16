@@ -11,6 +11,7 @@ import { Helmet } from "react-helmet";
 import bespokeFavicon from "../images/bespoke-black-no-bg.png";
 import Marquee from "react-fast-marquee";
 import IntegrationFeatures from "../components/IntegrationFeatures";
+import CodeExample from "../components/CodeExample";
 
 export default function IndexPage(): JSX.Element {
   return (
@@ -20,6 +21,7 @@ export default function IndexPage(): JSX.Element {
         <ProfileFeature />
         <Featured />
         <IntegrationFeatures />
+        <CodeExample />
         <SocialLinks />
         <Steps />
         <Marquee

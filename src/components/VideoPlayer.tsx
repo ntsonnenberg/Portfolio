@@ -1,4 +1,3 @@
-import { graphql, useStaticQuery } from "gatsby";
 import React from "react";
 
 type Props = {
