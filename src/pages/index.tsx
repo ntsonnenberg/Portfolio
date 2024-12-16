@@ -23,8 +23,10 @@ export default function IndexPage(): JSX.Element {
         <Hero />
         <ProfileFeature />
         <Featured />
-        <div className="flex gap-4 m-10">
-          <div className="w-1/2 shadow-stand-out border border-slate-800 rounded-sm">
+        <IntegrationFeatures />
+        {/* <CodeExample /> */}
+        <div className="flex gap-6 m-10">
+          <div className="w-2/3 shadow-stand-out border border-slate-800 rounded-sm">
             <ParticleRing />
           </div>
           <div className="flex justify-center items-center grow">
@@ -36,8 +38,6 @@ export default function IndexPage(): JSX.Element {
             </FadeBlockHeader>
           </div>
         </div>
-        <IntegrationFeatures />
-        {/* <CodeExample /> */}
         <SocialLinks />
         <div className="relative h-screen w-sceeen bg-surface">
           <FractalDotGrid />
