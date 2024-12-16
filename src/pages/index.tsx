@@ -12,6 +12,7 @@ import bespokeFavicon from "../images/bespoke-black-no-bg.png";
 import Marquee from "react-fast-marquee";
 import IntegrationFeatures from "../components/IntegrationFeatures";
 import CodeExample from "../components/CodeExample";
+import FractalDotGrid from "../components/FractalDotGrid";
 
 export default function IndexPage(): JSX.Element {
   return (
@@ -23,6 +24,9 @@ export default function IndexPage(): JSX.Element {
         <IntegrationFeatures />
         <CodeExample />
         <SocialLinks />
+        <div className="relative h-screen w-sceeen bg-surface">
+          <FractalDotGrid />
+        </div>
         <Steps />
         <Marquee
           direction="right"
