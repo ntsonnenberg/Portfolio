@@ -13,6 +13,8 @@ import Marquee from "react-fast-marquee";
 import IntegrationFeatures from "../components/IntegrationFeatures";
 import CodeExample from "../components/CodeExample";
 import FractalDotGrid from "../components/FractalDotGrid";
+import ParticleRing from "../components/ParticleRing";
+import FadeBlockHeader from "../components/FadeBlockHeader";
 
 export default function IndexPage(): JSX.Element {
   return (
@@ -21,8 +23,21 @@ export default function IndexPage(): JSX.Element {
         <Hero />
         <ProfileFeature />
         <Featured />
+        <div className="flex gap-4 m-10">
+          <div className="w-1/2 shadow-stand-out border border-slate-800 rounded-sm">
+            <ParticleRing />
+          </div>
+          <div className="flex justify-center items-center grow">
+            <FadeBlockHeader
+              className="place-self-center"
+              color="on-background"
+            >
+              3D Vectors to Infinity
+            </FadeBlockHeader>
+          </div>
+        </div>
         <IntegrationFeatures />
-        <CodeExample />
+        {/* <CodeExample /> */}
         <SocialLinks />
         <div className="relative h-screen w-sceeen bg-surface">
           <FractalDotGrid />
