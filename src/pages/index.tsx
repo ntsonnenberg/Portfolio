@@ -15,6 +15,7 @@ import CodeExample from "../components/CodeExample";
 import FractalDotGrid from "../components/FractalDotGrid";
 import ParticleRing from "../components/ParticleRing";
 import FadeBlockHeader from "../components/FadeBlockHeader";
+import { IconCloudDemo } from "../components/IconCloudDemo";
 
 export default function IndexPage(): JSX.Element {
   return (
@@ -24,8 +25,21 @@ export default function IndexPage(): JSX.Element {
         <ProfileFeature />
         <Featured />
         <IntegrationFeatures />
+        <div className="flex gap-10 m-10 pb-40">
+          <div className="flex justify-center items-center grow">
+            <FadeBlockHeader
+              color="on-background"
+              className="place-self-center"
+            >
+              Built with modern frameworks
+            </FadeBlockHeader>
+          </div>
+          <div className="w-2/3">
+            <IconCloudDemo />
+          </div>
+        </div>
         {/* <CodeExample /> */}
-        <div className="flex gap-6 m-10">
+        <div className="flex gap-4 m-10">
           <div className="w-2/3 shadow-stand-out border border-slate-800 rounded-sm">
             <ParticleRing />
           </div>
