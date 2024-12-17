@@ -18,11 +18,12 @@ import FadeBlockHeader from "../components/FadeBlockHeader";
 import { AuroraBackgroundView } from "../components/AuroraBackgroundView";
 import { MacbookScrollView } from "../components/MacbookScrollView";
 import { IconCloudDemo } from "../components/IconCloudDemo";
+import { ReactLenis } from "lenis/dist/lenis-react";
 
 export default function IndexPage(): JSX.Element {
   return (
     <Layout>
-      <>
+      <ReactLenis root>
         <Hero />
         <AuroraBackgroundView />
         <ProfileFeature />
@@ -81,7 +82,7 @@ export default function IndexPage(): JSX.Element {
         </Marquee>
         <NewsletterForm />
         <ContactForm />
-      </>
+      </ReactLenis>
     </Layout>
   );
 }
