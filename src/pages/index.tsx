@@ -29,7 +29,7 @@ export default function IndexPage(): JSX.Element {
         <MacbookScrollView />
         <Featured />
         <IntegrationFeatures />
-        <div className="flex gap-10 m-10 pb-40">
+        <div className="flex gap-10 m-10 pb-40 laptop:flex-row phone:flex-col">
           <div className="flex justify-center items-center grow">
             <FadeBlockHeader
               color="on-background"
@@ -38,7 +38,7 @@ export default function IndexPage(): JSX.Element {
               Built with modern frameworks
             </FadeBlockHeader>
           </div>
-          <div className="w-2/3">
+          <div className="phone:w-full laptop:w-2/3">
             <IconCloudDemo />
           </div>
         </div>
