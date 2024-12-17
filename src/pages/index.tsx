@@ -15,18 +15,20 @@ import CodeExample from "../components/CodeExample";
 import FractalDotGrid from "../components/FractalDotGrid";
 import ParticleRing from "../components/ParticleRing";
 import FadeBlockHeader from "../components/FadeBlockHeader";
+import { AuroraBackgroundView } from "../components/AuroraBackgroundView";
 
 export default function IndexPage(): JSX.Element {
   return (
     <Layout>
       <>
         <Hero />
+        <AuroraBackgroundView />
         <ProfileFeature />
         <Featured />
         <IntegrationFeatures />
         {/* <CodeExample /> */}
-        <div className="flex gap-6 m-10">
-          <div className="w-2/3 shadow-stand-out border border-slate-800 rounded-sm">
+        <div className="flex gap-6 m-10 laptop:flex-row phone:flex-col-reverse">
+          <div className="phone:w-full laptop:w-2/3 shadow-stand-out border border-slate-800 rounded-sm">
             <ParticleRing />
           </div>
           <div className="flex justify-center items-center grow">
