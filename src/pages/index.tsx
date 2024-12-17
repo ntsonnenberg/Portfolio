@@ -17,18 +17,33 @@ import ParticleRing from "../components/ParticleRing";
 import FadeBlockHeader from "../components/FadeBlockHeader";
 import { AuroraBackgroundView } from "../components/AuroraBackgroundView";
 import { MacbookScrollView } from "../components/MacbookScrollView";
+import { IconCloudDemo } from "../components/IconCloudDemo";
+import { ReactLenis } from "lenis/dist/lenis-react";
 import HorizontalScroll from "../components/ui-layouts/HorizontalScroll";
 
 export default function IndexPage(): JSX.Element {
   return (
     <Layout>
-      <>
+      <ReactLenis root>
         <Hero />
         <AuroraBackgroundView />
         <ProfileFeature />
         <MacbookScrollView />
         <Featured />
         <IntegrationFeatures />
+        <div className="flex gap-10 m-10 pb-40 laptop:flex-row phone:flex-col">
+          <div className="flex justify-center items-center grow">
+            <FadeBlockHeader
+              color="on-background"
+              className="place-self-center"
+            >
+              Built with modern frameworks
+            </FadeBlockHeader>
+          </div>
+          <div className="phone:w-full laptop:w-2/3">
+            <IconCloudDemo />
+          </div>
+        </div>
         {/* <CodeExample /> */}
         <div className="flex gap-6 m-10 laptop:flex-row phone:flex-col-reverse">
           <div className="phone:w-full laptop:w-2/3 shadow-stand-out border border-slate-800 rounded-sm">
@@ -71,7 +86,7 @@ export default function IndexPage(): JSX.Element {
         </Marquee>
         <NewsletterForm />
         <ContactForm />
-      </>
+      </ReactLenis>
     </Layout>
   );
 }
