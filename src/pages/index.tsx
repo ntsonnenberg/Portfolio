@@ -16,6 +16,7 @@ import FractalDotGrid from "../components/FractalDotGrid";
 import ParticleRing from "../components/ParticleRing";
 import FadeBlockHeader from "../components/FadeBlockHeader";
 import { AuroraBackgroundView } from "../components/AuroraBackgroundView";
+import { MacbookScrollView } from "../components/MacbookScrollView";
 import { IconCloudDemo } from "../components/IconCloudDemo";
 
 export default function IndexPage(): JSX.Element {
@@ -25,6 +26,7 @@ export default function IndexPage(): JSX.Element {
         <Hero />
         <AuroraBackgroundView />
         <ProfileFeature />
+        <MacbookScrollView />
         <Featured />
         <IntegrationFeatures />
         <div className="flex gap-10 m-10 pb-40">
