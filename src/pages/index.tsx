@@ -16,6 +16,7 @@ import FractalDotGrid from "../components/FractalDotGrid";
 import ParticleRing from "../components/ParticleRing";
 import FadeBlockHeader from "../components/FadeBlockHeader";
 import { AuroraBackgroundView } from "../components/AuroraBackgroundView";
+import { MacbookScrollView } from "../components/MacbookScrollView";
 
 export default function IndexPage(): JSX.Element {
   return (
@@ -24,6 +25,7 @@ export default function IndexPage(): JSX.Element {
         <Hero />
         <AuroraBackgroundView />
         <ProfileFeature />
+        <MacbookScrollView />
         <Featured />
         <IntegrationFeatures />
         {/* <CodeExample /> */}
