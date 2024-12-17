@@ -15,6 +15,7 @@ import CodeExample from "../components/CodeExample";
 import FractalDotGrid from "../components/FractalDotGrid";
 import ParticleRing from "../components/ParticleRing";
 import FadeBlockHeader from "../components/FadeBlockHeader";
+import { GlobeDemo } from "../components/Globe";
 
 export default function IndexPage(): JSX.Element {
   return (
@@ -24,6 +25,9 @@ export default function IndexPage(): JSX.Element {
         <ProfileFeature />
         <Featured />
         <IntegrationFeatures />
+        <div>
+          <GlobeDemo />
+        </div>
         {/* <CodeExample /> */}
         <div className="flex gap-6 m-10">
           <div className="w-2/3 shadow-stand-out border border-slate-800 rounded-sm">
