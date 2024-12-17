@@ -15,6 +15,7 @@ import CodeExample from "../components/CodeExample";
 import FractalDotGrid from "../components/FractalDotGrid";
 import ParticleRing from "../components/ParticleRing";
 import FadeBlockHeader from "../components/FadeBlockHeader";
+import HorizontalScroll from "../components/ui-layouts/HorizontalScroll";
 
 export default function IndexPage(): JSX.Element {
   return (
@@ -39,6 +40,9 @@ export default function IndexPage(): JSX.Element {
           </div>
         </div>
         <SocialLinks />
+        <div className="my-60">
+          <HorizontalScroll />
+        </div>
         <div className="relative h-screen w-sceeen bg-surface">
           <FractalDotGrid />
         </div>
