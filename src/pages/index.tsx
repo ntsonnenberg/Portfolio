@@ -17,11 +17,12 @@ import ParticleRing from "../components/ParticleRing";
 import FadeBlockHeader from "../components/FadeBlockHeader";
 import { AuroraBackgroundView } from "../components/AuroraBackgroundView";
 import { MacbookScrollView } from "../components/MacbookScrollView";
-import { IconCloudDemo } from "../components/IconCloudDemo";
+import { IconCloudView } from "../components/IconCloudView";
 import { ReactLenis } from "lenis/dist/lenis-react";
 import { GlobeView } from "../components/Globe";
 import { BackgroundBoxesView } from "../components/BackgroundBoxesView";
 import { BackgroundBeamsView } from "../components/BackgroundBeamsView";
+import { FlipWordsView } from "../components/FlipWordsView";
 
 export default function IndexPage(): JSX.Element {
   return (
@@ -35,17 +36,12 @@ export default function IndexPage(): JSX.Element {
         <Featured />
         <BackgroundBeamsView />
         <IntegrationFeatures />
-        <div className="flex gap-10 m-10 pb-40 laptop:flex-row phone:flex-col">
-          <div className="flex justify-center items-center grow">
-            <FadeBlockHeader
-              color="on-background"
-              className="place-self-center"
-            >
-              Built with modern frameworks
-            </FadeBlockHeader>
+        <div className="flex phone:gap-0 laptop:gap-10 m-10 pb-40 laptop:flex-row phone:flex-col justify-evenly">
+          <div className="">
+            <FlipWordsView />
           </div>
-          <div className="phone:w-full laptop:w-2/3">
-            <IconCloudDemo />
+          <div className="">
+            <IconCloudView />
           </div>
         </div>
         <ParticleRing />
