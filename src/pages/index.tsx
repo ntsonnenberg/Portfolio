@@ -20,6 +20,7 @@ import { MacbookScrollView } from "../components/MacbookScrollView";
 import { IconCloudDemo } from "../components/IconCloudDemo";
 import { ReactLenis } from "lenis/dist/lenis-react";
 import { GlobeView } from "../components/Globe";
+import { BackgroundBoxesView } from "../components/BackgroundBoxesView";
 import HorizontalScroll from "../components/ui-layouts/HorizontalScroll";
 
 export default function IndexPage(): JSX.Element {
@@ -29,6 +30,7 @@ export default function IndexPage(): JSX.Element {
         <Hero />
         <AuroraBackgroundView />
         <ProfileFeature />
+        <BackgroundBoxesView />
         <MacbookScrollView />
         <Featured />
         <IntegrationFeatures />
