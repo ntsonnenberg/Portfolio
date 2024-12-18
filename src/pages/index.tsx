@@ -21,6 +21,7 @@ import { IconCloudDemo } from "../components/IconCloudDemo";
 import { ReactLenis } from "lenis/dist/lenis-react";
 import { GlobeView } from "../components/Globe";
 import { BackgroundBoxesView } from "../components/BackgroundBoxesView";
+import { BackgroundBeamsView } from "../components/BackgroundBeamsView";
 
 export default function IndexPage(): JSX.Element {
   return (
@@ -32,6 +33,7 @@ export default function IndexPage(): JSX.Element {
         <BackgroundBoxesView />
         <MacbookScrollView />
         <Featured />
+        <BackgroundBeamsView />
         <IntegrationFeatures />
         <div className="flex gap-10 m-10 pb-40 laptop:flex-row phone:flex-col">
           <div className="flex justify-center items-center grow">
