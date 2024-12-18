@@ -24,6 +24,7 @@ import { BackgroundBoxesView } from "../components/BackgroundBoxesView";
 import { BackgroundBeamsView } from "../components/BackgroundBeamsView";
 import { FlipWordsView } from "../components/FlipWordsView";
 import { TextHoverEffectView } from "../components/TextHoverEffectView";
+import { GeminiEffectView } from "../components/GeminiEffectView";
 
 export default function IndexPage(): JSX.Element {
   return (
@@ -33,7 +34,7 @@ export default function IndexPage(): JSX.Element {
         <TextHoverEffectView />
         <ProfileFeature />
         <AuroraBackgroundView />
-
+        <GeminiEffectView />
         <MacbookScrollView />
         <BackgroundBoxesView />
         <Featured />
