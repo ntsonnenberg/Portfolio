@@ -2,7 +2,6 @@
 
 import React, { Suspense } from "react";
 import { motion } from "framer-motion";
-// import { World } from "./aceternity-ui/globe";
 
 const World = React.lazy(() => import("./aceternity-ui/globe"));
 
