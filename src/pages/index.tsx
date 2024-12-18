@@ -19,6 +19,7 @@ import { AuroraBackgroundView } from "../components/AuroraBackgroundView";
 import { MacbookScrollView } from "../components/MacbookScrollView";
 import { IconCloudDemo } from "../components/IconCloudDemo";
 import { ReactLenis } from "lenis/dist/lenis-react";
+import { GlobeView } from "../components/Globe";
 import HorizontalScroll from "../components/ui-layouts/HorizontalScroll";
 
 export default function IndexPage(): JSX.Element {
@@ -44,20 +45,9 @@ export default function IndexPage(): JSX.Element {
             <IconCloudDemo />
           </div>
         </div>
+        <ParticleRing />
+        <GlobeView />
         {/* <CodeExample /> */}
-        <div className="flex gap-6 m-10 laptop:flex-row phone:flex-col-reverse">
-          <div className="phone:w-full laptop:w-2/3 shadow-stand-out border border-slate-800 rounded-sm">
-            <ParticleRing />
-          </div>
-          <div className="flex justify-center items-center grow">
-            <FadeBlockHeader
-              className="place-self-center"
-              color="on-background"
-            >
-              3D Vectors to Infinity
-            </FadeBlockHeader>
-          </div>
-        </div>
         <SocialLinks />
         <div className="my-60">
           <HorizontalScroll />
