@@ -23,6 +23,7 @@ import { GlobeView } from "../components/Globe";
 import { BackgroundBoxesView } from "../components/BackgroundBoxesView";
 import { BackgroundBeamsView } from "../components/BackgroundBeamsView";
 import { FlipWordsView } from "../components/FlipWordsView";
+import { TextHoverEffectView } from "../components/TextHoverEffectView";
 import HorizontalScroll from "../components/ui-layouts/HorizontalScroll";
 
 export default function IndexPage(): JSX.Element {
@@ -30,10 +31,12 @@ export default function IndexPage(): JSX.Element {
     <Layout>
       <ReactLenis root>
         <Hero />
-        <AuroraBackgroundView />
+        <TextHoverEffectView />
         <ProfileFeature />
-        <BackgroundBoxesView />
+        <AuroraBackgroundView />
+
         <MacbookScrollView />
+        <BackgroundBoxesView />
         <Featured />
         <BackgroundBeamsView />
         <IntegrationFeatures />
