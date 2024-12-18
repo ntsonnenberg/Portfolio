@@ -48,7 +48,7 @@ export default function IndexPage(): JSX.Element {
           </div>
         </div>
         <ParticleRing />
-        {/* <GlobeView /> */}
+        <GlobeView />
         {/* <CodeExample /> */}
         <SocialLinks />
         <div className="relative h-screen w-sceeen bg-surface">
