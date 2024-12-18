@@ -17,7 +17,7 @@ import ParticleRing from "../components/ParticleRing";
 import FadeBlockHeader from "../components/FadeBlockHeader";
 import { AuroraBackgroundView } from "../components/AuroraBackgroundView";
 import { MacbookScrollView } from "../components/MacbookScrollView";
-import { IconCloudDemo } from "../components/IconCloudDemo";
+import { IconCloudView } from "../components/IconCloudView";
 import { ReactLenis } from "lenis/dist/lenis-react";
 import { GlobeView } from "../components/Globe";
 import { BackgroundBoxesView } from "../components/BackgroundBoxesView";
@@ -45,7 +45,7 @@ export default function IndexPage(): JSX.Element {
             </FadeBlockHeader>
           </div>
           <div className="phone:w-full laptop:w-2/3">
-            <IconCloudDemo />
+            <IconCloudView />
           </div>
         </div>
         <ParticleRing />
