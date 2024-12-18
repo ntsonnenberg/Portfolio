@@ -4,7 +4,7 @@ import { Link } from "gatsby";
 
 export function MacbookScrollView() {
   return (
-    <div className="overflow-hidden dark:bg-[#0B0B0F] bg-white w-full mt-20">
+    <div className="overflow-hidden dark:bg-[#0B0B0F] bg-white w-full">
       <MacbookScroll
         title={
           <span>
