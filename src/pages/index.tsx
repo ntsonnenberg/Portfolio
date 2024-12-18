@@ -24,6 +24,7 @@ import { BackgroundBoxesView } from "../components/BackgroundBoxesView";
 import { BackgroundBeamsView } from "../components/BackgroundBeamsView";
 import { FlipWordsView } from "../components/FlipWordsView";
 import { TextHoverEffectView } from "../components/TextHoverEffectView";
+import { GeminiEffectView } from "../components/GeminiEffectView";
 import HorizontalScroll from "../components/ui-layouts/HorizontalScroll";
 
 export default function IndexPage(): JSX.Element {
@@ -34,7 +35,7 @@ export default function IndexPage(): JSX.Element {
         <TextHoverEffectView />
         <ProfileFeature />
         <AuroraBackgroundView />
-
+        <GeminiEffectView />
         <MacbookScrollView />
         <BackgroundBoxesView />
         <Featured />
@@ -49,7 +50,7 @@ export default function IndexPage(): JSX.Element {
           </div>
         </div>
         <ParticleRing />
-        <GlobeView />
+        {/* <GlobeView /> */}
         {/* <CodeExample /> */}
         <SocialLinks />
         <div className="my-60">

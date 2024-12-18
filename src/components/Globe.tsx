@@ -1,8 +1,9 @@
 "use client";
 
-import React from "react";
+import React, { Suspense } from "react";
 import { motion } from "framer-motion";
-import { World } from "./aceternity-ui/globe";
+
+const World = React.lazy(() => import("./aceternity-ui/globe"));
 
 export function GlobeView() {
   const globeConfig = {
@@ -412,7 +413,9 @@ export function GlobeView() {
             Deploy your Application Worldwide
           </h2>
         </motion.div>
-        <World data={sampleArcs} globeConfig={globeConfig} />
+        <Suspense fallback={<div>Loading...</div>}>
+          <World data={sampleArcs} globeConfig={globeConfig} />
+        </Suspense>
       </div>
     </div>
   );
