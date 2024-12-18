@@ -1,4 +1,5 @@
 "use client";
+
 import { useEffect, useRef, useState } from "react";
 import React from "react";
 import { Color, Scene, Fog, PerspectiveCamera, Vector3 } from "three";

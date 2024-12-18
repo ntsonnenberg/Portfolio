@@ -67,15 +67,17 @@ const useResponsive = () => {
   });
 
   useEffect(() => {
-    const handleResize = () => {
-      setWindowSize({
-        width: window.innerWidth,
-        height: window.innerHeight,
-      });
-    };
+    if (typeof window !== "undefined") {
+      const handleResize = () => {
+        setWindowSize({
+          width: window.innerWidth,
+          height: window.innerHeight,
+        });
+      };
 
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
+      window.addEventListener("resize", handleResize);
+      return () => window.removeEventListener("resize", handleResize);
+    }
   }, []);
 
   return {
@@ -231,37 +233,39 @@ const DotCanvas: React.FC<{
     );
 
     useEffect(() => {
-      const canvas = canvasRef.current;
-      if (!canvas) return;
+      if (typeof window !== "undefined") {
+        const canvas = canvasRef.current;
+        if (!canvas) return;
 
-      const ctx = canvas.getContext("2d");
-      if (!ctx) return;
+        const ctx = canvas.getContext("2d");
+        if (!ctx) return;
 
-      const resizeCanvas = () => {
-        canvas.width = window.innerWidth;
-        canvas.height = window.innerHeight;
-      };
+        const resizeCanvas = () => {
+          canvas.width = window.innerWidth;
+          canvas.height = window.innerHeight;
+        };
 
-      resizeCanvas();
-      window.addEventListener("resize", resizeCanvas);
+        resizeCanvas();
+        window.addEventListener("resize", resizeCanvas);
 
-      let lastTime = 0;
-      const animate = (time: number) => {
-        if (time - lastTime > 16) {
-          drawDots(ctx, time);
-          lastTime = time;
-        }
+        let lastTime = 0;
+        const animate = (time: number) => {
+          if (time - lastTime > 16) {
+            drawDots(ctx, time);
+            lastTime = time;
+          }
+          animationRef.current = requestAnimationFrame(animate);
+        };
+
         animationRef.current = requestAnimationFrame(animate);
-      };
 
-      animationRef.current = requestAnimationFrame(animate);
-
-      return () => {
-        window.removeEventListener("resize", resizeCanvas);
-        if (animationRef.current) {
-          cancelAnimationFrame(animationRef.current);
-        }
-      };
+        return () => {
+          window.removeEventListener("resize", resizeCanvas);
+          if (animationRef.current) {
+            cancelAnimationFrame(animationRef.current);
+          }
+        };
+      }
     }, [drawDots]);
 
     return (
@@ -344,8 +348,10 @@ export default function FractalDotGrid({
   }, []);
 
   useEffect(() => {
-    window.addEventListener("mousemove", handleMouseMove);
-    return () => window.removeEventListener("mousemove", handleMouseMove);
+    if (typeof window !== "undefined") {
+      window.addEventListener("mousemove", handleMouseMove);
+      return () => window.removeEventListener("mousemove", handleMouseMove);
+    }
   }, [handleMouseMove]);
 
   const responsiveDotSize = useMemo(() => {
