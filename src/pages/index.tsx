@@ -25,12 +25,14 @@ import { BackgroundBeamsView } from "../components/BackgroundBeamsView";
 import { FlipWordsView } from "../components/FlipWordsView";
 import { TextHoverEffectView } from "../components/TextHoverEffectView";
 import { GeminiEffectView } from "../components/GeminiEffectView";
+import { HeroParallaxView } from "../components/HeroParallaxView";
 
 export default function IndexPage(): JSX.Element {
   return (
     <Layout>
       <ReactLenis root>
-        <Hero />
+        {/* <Hero /> */}
+        <HeroParallaxView />
         <TextHoverEffectView />
         <ProfileFeature />
         <AuroraBackgroundView />
@@ -40,7 +42,8 @@ export default function IndexPage(): JSX.Element {
         <Featured />
         <BackgroundBeamsView />
         <IntegrationFeatures />
-        <div className="flex phone:gap-0 laptop:gap-10 m-10 pb-40 laptop:flex-row phone:flex-col justify-evenly">
+        <ParticleRing />
+        <div className="flex phone:gap-0 laptop:gap-10 m-10 p-40 laptop:flex-row phone:flex-col justify-evenly">
           <div className="">
             <FlipWordsView />
           </div>
@@ -48,7 +51,6 @@ export default function IndexPage(): JSX.Element {
             <IconCloudView />
           </div>
         </div>
-        <ParticleRing />
         {/* <GlobeView /> */}
         {/* <CodeExample /> */}
         <SocialLinks />
