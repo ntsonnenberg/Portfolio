@@ -25,38 +25,47 @@ import { BackgroundBeamsView } from "../components/BackgroundBeamsView";
 import { FlipWordsView } from "../components/FlipWordsView";
 import { TextHoverEffectView } from "../components/TextHoverEffectView";
 import { GeminiEffectView } from "../components/GeminiEffectView";
+import { HeroParallaxView } from "../components/HeroParallaxView";
+import { HackerBackgroundView } from "../components/HackerBackgroundView";
 import HorizontalScroll from "../components/ui-layouts/HorizontalScroll";
 
 export default function IndexPage(): JSX.Element {
+  let isPhone = false;
+  if (typeof window !== "undefined") {
+    isPhone = window.innerWidth <= 412;
+  }
+
   return (
     <Layout>
       <ReactLenis root>
-        <Hero />
+        <HeroParallaxView />
         <TextHoverEffectView />
         <ProfileFeature />
-        <AuroraBackgroundView />
+        <div className="phone:pt-10 laptop:pt-0">
+          <AuroraBackgroundView />
+        </div>
         <GeminiEffectView />
         <MacbookScrollView />
         <BackgroundBoxesView />
         <Featured />
         <BackgroundBeamsView />
         <IntegrationFeatures />
-        <div className="flex phone:gap-0 laptop:gap-10 m-10 pb-40 laptop:flex-row phone:flex-col justify-evenly">
-          <div className="">
-            <FlipWordsView />
-          </div>
-          <div className="">
-            <IconCloudView />
-          </div>
-        </div>
         <ParticleRing />
-        {/* <GlobeView /> */}
-        {/* <CodeExample /> */}
+        <div className="flex phone:gap-0 laptop:gap-10 laptop:m-10 laptop:p-40 laptop:flex-row phone:flex-col justify-evenly">
+          {isPhone ? (
+            <FadeBlockHeader color="on-background" className="py-32 mx-6">
+              Built with modern frameworks
+            </FadeBlockHeader>
+          ) : (
+            <FlipWordsView />
+          )}
+          <IconCloudView />
+        </div>
         <SocialLinks />
         <div className="my-60">
           <HorizontalScroll />
         </div>
-        <div className="relative h-screen w-sceeen bg-surface">
+        <div className="relative h-screen bg-surface">
           <FractalDotGrid />
         </div>
         <Steps />

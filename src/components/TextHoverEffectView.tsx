@@ -3,7 +3,7 @@ import { TextHoverEffect } from "./aceternity-ui/text-hover-effect";
 
 export function TextHoverEffectView() {
   return (
-    <div className="h-[40rem] flex items-center justify-center mt-80">
+    <div className="phone:h-80 laptop:h-[40rem] w-auto flex items-center justify-center">
       <TextHoverEffect text="CODE" />
     </div>
   );
