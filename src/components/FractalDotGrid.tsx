@@ -271,7 +271,7 @@ const DotCanvas: React.FC<{
     return (
       <canvas
         ref={canvasRef}
-        className="absolute inset-0 h-full w-full bg-gray-100"
+        className="absolute inset-0 h-full w-full bg-background"
         style={{ mixBlendMode: "multiply" }}
       />
     );

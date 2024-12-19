@@ -15,7 +15,7 @@ export default function SocialLinks(): JSX.Element {
   };
 
   return (
-    <div className="relative h-dvh flex bg-code bg-no-repeat bg-center bg-cover phone:px-8 laptop:px-0 laptop:bg-fixed">
+    <div className="relative phone:h-80 laptop:h-dvh flex bg-code bg-no-repeat bg-center bg-cover phone:px-8 laptop:px-0 laptop:bg-fixed">
       <div className="flex justify-evenly grow items-center">
         <a
           href="https://www.linkedin.com/in/nathan-sonnenberg/"
