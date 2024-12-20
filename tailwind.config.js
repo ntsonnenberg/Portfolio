@@ -52,8 +52,6 @@ module.exports = {
       },
       backgroundImage: {
         code: "url(https://img.freepik.com/free-vector/pixel-rain-abstract-background_23-2148381456.jpg?size=626&ext=jpg&ga=GA1.1.1413502914.1696896000&semt=ais)",
-        "macbook-almost-closed":
-          "url(https://images.pexels.com/photos/633409/pexels-photo-633409.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1)",
       },
       keyframes: {
         shimmer: {

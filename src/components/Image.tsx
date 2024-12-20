@@ -9,61 +9,76 @@ type Props = {
   className?: string;
 };
 
+interface ImageData {
+  backgroundColor: string;
+  height: number;
+  images: any;
+  layout: string;
+  width: string;
+}
+interface FileNode {
+  file: {
+    childImageSharp: null | {
+      gatsbyImageData: ImageData;
+    };
+    publicURL: string;
+  };
+  id: string;
+  imageUrl: string;
+}
+
 export default function Image({ src, ...rest }: Props): JSX.Element | null {
-  const data = useStaticQuery(graphql`
-    query {
-      images: allFile(
-        filter: { internal: { mediaType: { regex: "/image/" } } }
-      ) {
-        edges {
-          node {
-            relativePath
-            extension
-            publicURL
-            childImageSharp {
-              gatsbyImageData(
-                width: 600
-                placeholder: TRACED_SVG
-                formats: [AUTO, WEBP]
-              )
-            }
-          }
-        }
-      }
-    }
-  `);
+  const data = useStaticQuery(query);
 
   const match = useMemo(
     () =>
-      data.images.edges.find(
-        ({ node }: { node: { relativePath: string } }) =>
-          src === node.relativePath
+      data.allFirebaseImage.nodes.find(
+        (fileNode: FileNode) => src === fileNode.imageUrl
       ),
     [data, src]
   );
 
-  if (!match) return null;
+  if (!match) {
+    return null;
+  }
 
   const {
-    node: { childImageSharp, publicURL, extension },
+    file: { childImageSharp, publicUrl },
   } = match;
 
-  if (extension === "svg" || !childImageSharp)
-    return <img src={publicURL} {...rest} />;
+  if (!childImageSharp) {
+    return <img src={publicUrl} {...rest} />;
+  }
 
   const image = getImage(childImageSharp.gatsbyImageData);
 
-  if (!image) return null;
+  if (
+    src ===
+    "https://firebasestorage.googleapis.com/v0/b/portfolio-401812.appspot.com/o/about-me-images%2Fgrad-maeser.JPG?alt=media&token=386745e0-7124-4372-9b96-1de567c74e31"
+  ) {
+    console.log(image);
+  }
 
-  return (
-    <GatsbyImage
-      style={
-        src === "grad-maeser.JPG" || src === "grad-tanner.JPG"
-          ? { position: "absolute" }
-          : {}
-      }
-      image={image}
-      {...rest}
-    />
-  );
+  if (!image) {
+    return null;
+  }
+
+  return <GatsbyImage image={image} {...rest} />;
 }
+
+const query = graphql`
+  query {
+    allFirebaseImage {
+      nodes {
+        id
+        imageUrl
+        file {
+          publicURL
+          childImageSharp {
+            gatsbyImageData(layout: CONSTRAINED)
+          }
+        }
+      }
+    }
+  }
+`;

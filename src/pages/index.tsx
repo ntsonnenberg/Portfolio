@@ -1,5 +1,4 @@
 import React from "react";
-import Hero from "../components/Hero";
 import Featured from "../components/Featured";
 import Steps from "../components/Steps";
 import ContactForm from "../components/ContactForm";
@@ -11,7 +10,6 @@ import { Helmet } from "react-helmet";
 import bespokeFavicon from "../images/bespoke-black-no-bg.png";
 import Marquee from "react-fast-marquee";
 import IntegrationFeatures from "../components/IntegrationFeatures";
-import CodeExample from "../components/CodeExample";
 import FractalDotGrid from "../components/FractalDotGrid";
 import ParticleRing from "../components/ParticleRing";
 import FadeBlockHeader from "../components/FadeBlockHeader";
@@ -19,14 +17,12 @@ import { AuroraBackgroundView } from "../components/AuroraBackgroundView";
 import { MacbookScrollView } from "../components/MacbookScrollView";
 import { IconCloudView } from "../components/IconCloudView";
 import { ReactLenis } from "lenis/dist/lenis-react";
-import { GlobeView } from "../components/Globe";
 import { BackgroundBoxesView } from "../components/BackgroundBoxesView";
 import { BackgroundBeamsView } from "../components/BackgroundBeamsView";
 import { FlipWordsView } from "../components/FlipWordsView";
 import { TextHoverEffectView } from "../components/TextHoverEffectView";
 import { GeminiEffectView } from "../components/GeminiEffectView";
 import { HeroParallaxView } from "../components/HeroParallaxView";
-import { HackerBackgroundView } from "../components/HackerBackgroundView";
 
 export default function IndexPage(): JSX.Element {
   let isPhone = false;
