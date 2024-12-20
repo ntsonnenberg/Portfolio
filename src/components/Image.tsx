@@ -52,13 +52,6 @@ export default function Image({ src, ...rest }: Props): JSX.Element | null {
 
   const image = getImage(childImageSharp.gatsbyImageData);
 
-  if (
-    src ===
-    "https://firebasestorage.googleapis.com/v0/b/portfolio-401812.appspot.com/o/about-me-images%2Fgrad-maeser.JPG?alt=media&token=386745e0-7124-4372-9b96-1de567c74e31"
-  ) {
-    console.log(image);
-  }
-
   if (!image) {
     return null;
   }
