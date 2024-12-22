@@ -1,45 +1,11 @@
-import React, { useRef } from "react";
 import Layout from "../components/Layout";
 import ProjectCard from "../components/ProjectCard";
-import { graphql, useStaticQuery } from "gatsby";
-import {
-  Spotlight,
-  SpotLightItem,
-} from "../components/ui-layouts/spotlight-card";
-
-export interface Project {
-  id: string;
-  title: string;
-  link: string;
-  image: string;
-}
+import { Spotlight } from "../components/ui-layouts/spotlight-card";
+import { getProjects } from "../lib/projects";
+import React from "react";
 
 export default function ProjectsPage(): JSX.Element {
-  const containerRef = useRef(null);
-
-  const projectNodes = useStaticQuery(graphql`
-    query {
-      allProject {
-        edges {
-          node {
-            id
-            title
-            link
-            image
-          }
-        }
-      }
-    }
-  `);
-
-  const projects: Project[] = projectNodes.allProject.edges.map(
-    ({ node }: { node: Project }) => ({
-      id: node.id,
-      title: node.title,
-      link: node.link,
-      image: node.image,
-    })
-  );
+  const projects = getProjects();
 
   if (!projects) {
     return (
@@ -55,12 +21,7 @@ export default function ProjectsPage(): JSX.Element {
     <Layout>
       <Spotlight className="py-60 min-h-screen grid justify-items-center phone:grid-col-1 phone:gap-12 tablet:grid-cols-2 tablet:gap-12 tablet:mx-12 laptop:grid-cols-3 laptop:gap-16 laptop:mx-52 desktop:mx-60">
         {projects.map((project) => (
-          <ProjectCard
-            key={project.id}
-            title={project.title}
-            link={project.link}
-            image={project.image}
-          />
+          <ProjectCard key={project.id} project={project} />
         ))}
       </Spotlight>
     </Layout>
