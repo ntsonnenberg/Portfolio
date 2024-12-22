@@ -1,5 +1,5 @@
 import { addDoc, collection, serverTimestamp } from "firebase/firestore";
-import { db } from "./firebase";
+import { db } from "../lib/firebase";
 
 export const addEmail = async (email: string): Promise<void> => {
   await addDoc(collection(db, "contacts"), {

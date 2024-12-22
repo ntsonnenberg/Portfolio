@@ -8,19 +8,17 @@ import {
   MotionValue,
 } from "framer-motion";
 import { Link } from "gatsby";
+import { Project } from "../../lib/projects";
+import Image from "../Image";
 
-export const HeroParallax = ({
-  products,
-}: {
-  products: {
-    title: string;
-    link: string;
-    thumbnail: string;
-  }[];
-}) => {
-  const firstRow = products.slice(0, 5);
-  const secondRow = products.slice(5, 10);
-  const thirdRow = products.slice(10, 15);
+interface Props {
+  projects: Project[];
+}
+
+export const HeroParallax = ({ projects }: Props) => {
+  const firstRow = projects.slice(0, 5);
+  const secondRow = projects.slice(5, 10);
+  const thirdRow = projects.slice(10, 15);
   const ref = React.useRef(null);
   const { scrollYProgress } = useScroll({
     target: ref,
@@ -69,11 +67,11 @@ export const HeroParallax = ({
         className=""
       >
         <motion.div className="flex flex-row-reverse space-x-reverse space-x-20 mb-20">
-          {firstRow.map((product) => (
+          {firstRow.map((project) => (
             <ProductCard
-              product={product}
+              product={project}
               translate={translateX}
-              key={product.title}
+              key={project.title}
             />
           ))}
         </motion.div>
@@ -119,11 +117,7 @@ export const ProductCard = ({
   product,
   translate,
 }: {
-  product: {
-    title: string;
-    link: string;
-    thumbnail: string;
-  };
+  product: Project;
   translate: MotionValue<number>;
 }) => {
   return (
@@ -137,13 +131,15 @@ export const ProductCard = ({
       key={product.title}
       className="group/product h-96 w-[30rem] relative flex-shrink-0"
     >
-      <Link to={product.link} className="block group-hover/product:shadow-2xl ">
-        <img
-          src={product.thumbnail}
-          height="600"
-          width="600"
-          className="object-cover object-left-top absolute h-full w-full inset-0"
+      <Link
+        to={product.link}
+        target="_blank"
+        className="block group-hover/product:shadow-2xl "
+      >
+        <Image
+          src={product.image}
           alt={product.title}
+          className="object-cover object-left-top absolute h-full w-full inset-0"
         />
       </Link>
       <div className="absolute inset-0 h-full w-full opacity-0 group-hover/product:opacity-80 bg-black pointer-events-none"></div>
