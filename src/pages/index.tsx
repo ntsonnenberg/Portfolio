@@ -5,7 +5,6 @@ import ContactForm from "../components/ContactForm";
 import Layout from "../components/Layout";
 import SocialLinks from "../components/SocialLinks";
 import ProfileFeature from "../components/ProfileFeature";
-import NewsletterForm from "../components/NewsletterForm";
 import { Helmet } from "react-helmet";
 import bespokeFavicon from "../images/bespoke-black-no-bg.png";
 import Marquee from "react-fast-marquee";
@@ -79,7 +78,6 @@ export default function IndexPage(): JSX.Element {
             alt="UTA Logo"
           />
         </Marquee>
-        <NewsletterForm />
         <ContactForm />
       </ReactLenis>
     </Layout>
