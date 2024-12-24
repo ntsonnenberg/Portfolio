@@ -40,7 +40,16 @@ exports.sourceNodes = async ({
     "about-me-images/scotland-castle.jpeg",
     "about-me-images/summer-sales-2021.JPG",
     "about-me-images/uintas-hike.jpg",
+    "home-images/Slack_icon.png",
+    "home-images/facebook-logo.png",
+    "home-images/gmail-logo.png",
+    "home-images/go-enlite-landing.png",
+    "home-images/hubspot-logo.png",
+    "home-images/logo-Squarespace.png",
     "home-images/profile.jpg",
+    "home-images/shopify-logo.png",
+    "client-logos/enlite-logo.png",
+    "client-logos/utah-automotive-logo.png",
   ];
 
   for (const imagePath of imagePaths) {
