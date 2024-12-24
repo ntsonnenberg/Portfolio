@@ -1,3 +1,4 @@
+import { Link } from "gatsby";
 import { StaticImage } from "gatsby-plugin-image";
 import React, { useState } from "react";
 import { FiLinkedin, FiFacebook, FiGithub } from "react-icons/fi";
@@ -27,13 +28,18 @@ export default function Footer(): JSX.Element {
           />
         </div>
         <div className="basis-2/3 grow flex flex-row justify-evenly phone:mr-4 phone:gap-4 tablet:gap-6 laptop:mr-20 laptop:gap-0">
-          <a
-            href="https://www.linkedin.com/in/nathan-sonnenberg/"
+          <Link
+            title="LinkedIn"
+            to="https://www.linkedin.com/in/nathan-sonnenberg/"
             target="_blank"
           >
             <FiLinkedin className="transition-transform duration-100 tablet:w-11 tablet:h-11 phone:w-6 phone:h-6 hover:transform hover:-translate-y-2 hover:ease-in hover:stroke-[#0077B5] hover:shadow-stand-out" />
-          </a>
-          <a href="https://www.instagram.com/nate.sonny/" target="_blank">
+          </Link>
+          <Link
+            title="Instagram"
+            to="https://www.instagram.com/nate.sonny/"
+            target="_blank"
+          >
             <svg
               id="ig-svg"
               stroke="currentColor"
@@ -76,19 +82,28 @@ export default function Footer(): JSX.Element {
                 y2="6.5"
               ></line>
             </svg>
-          </a>
-          <a href="https://twitter.com/nate_sonnenberg" target="_blank">
+          </Link>
+          <Link
+            title="X"
+            to="https://twitter.com/nate_sonnenberg"
+            target="_blank"
+          >
             <RiTwitterXLine className="transition-transform duration-100 tablet:w-11 tablet:h-11 phone:w-6 phone:h-6 hover:transform hover:-translate-y-2 hover:ease-in hover:text-[#08A0E9] hover:shadow-stand-out" />
-          </a>
-          <a
-            href="https://www.facebook.com/nathan.sonnenberg.14"
+          </Link>
+          <Link
+            title="Facebook"
+            to="https://www.facebook.com/nathan.sonnenberg.14"
             target="_blank"
           >
             <FiFacebook className="transition-transform duration-100 tablet:w-11 tablet:h-11 phone:w-6 phone:h-6 hover:transform hover:-translate-y-2 hover:ease-in hover:stroke-[#4267B2] hover:shadow-stand-out" />
-          </a>
-          <a href="https://github.com/ntsonnenberg" target="_blank">
+          </Link>
+          <Link
+            title="GitHub"
+            to="https://github.com/ntsonnenberg"
+            target="_blank"
+          >
             <FiGithub className="transition-transform duration-100 tablet:w-11 tablet:h-11 phone:w-6 phone:h-6 hover:transform hover:-translate-y-2 hover:ease-in hover:stroke-[#2DBA4E] hover:shadow-stand-out" />
-          </a>
+          </Link>
         </div>
       </div>
     </div>

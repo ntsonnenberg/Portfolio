@@ -2,6 +2,7 @@ import { StaticImage } from "gatsby-plugin-image";
 import { FiLinkedin, FiFacebook, FiGithub } from "react-icons/fi";
 import { RiTwitterXLine } from "react-icons/ri";
 import React, { useState } from "react";
+import { Link } from "gatsby";
 
 export default function SocialLinks(): JSX.Element {
   const [isHovered, setIsHovered] = useState(false);
@@ -17,13 +18,18 @@ export default function SocialLinks(): JSX.Element {
   return (
     <div className="relative phone:h-80 laptop:h-dvh flex bg-code bg-no-repeat bg-center bg-cover phone:px-8 laptop:px-0 laptop:bg-fixed">
       <div className="flex justify-evenly grow items-center">
-        <a
-          href="https://www.linkedin.com/in/nathan-sonnenberg/"
+        <Link
+          title="LinkedIn"
+          to="https://www.linkedin.com/in/nathan-sonnenberg/"
           target="_blank"
         >
           <FiLinkedin className="stroke-white transition-transform duration-100 tablet:w-20 tablet:h-20 phone:w-10 phone:h-10 hover:transform hover:-translate-y-2 hover:ease-in hover:stroke-[#0077B5]" />
-        </a>
-        <a href="https://www.instagram.com/nate.sonny/" target="_blank">
+        </Link>
+        <Link
+          title="Instagram"
+          to="https://www.instagram.com/nate.sonny/"
+          target="_blank"
+        >
           <svg
             id="ig-svg"
             stroke="currentColor"
@@ -60,18 +66,29 @@ export default function SocialLinks(): JSX.Element {
               y2="6.5"
             ></line>
           </svg>
-        </a>
-        <a href="https://twitter.com/nate_sonnenberg" target="_blank">
+        </Link>
+        <Link
+          title="X"
+          to="https://twitter.com/nate_sonnenberg"
+          target="_blank"
+        >
           <RiTwitterXLine className="text-white transition-transform duration-100 tablet:w-20 tablet:h-20 phone:w-10 phone:h-10 hover:transform hover:-translate-y-2 hover:ease-in hover:text-[#08A0E9]" />
-        </a>
-        <a href="https://www.facebook.com/nathan.sonnenberg.14" target="_blank">
+        </Link>
+        <a
+          title="Facebook"
+          href="https://www.facebook.com/nathan.sonnenberg.14"
+          target="_blank"
+        >
           <FiFacebook className="stroke-white  transition-transform duration-100 tablet:w-20 tablet:h-20 phone:w-10 phone:h-10 hover:transform hover:-translate-y-2 hover:ease-in hover:stroke-[#4267B2]" />
         </a>
-        <a href="https://github.com/ntsonnenberg" target="_blank">
+        <Link
+          title="GitHub"
+          to="https://github.com/ntsonnenberg"
+          target="_blank"
+        >
           <FiGithub className="stroke-white  transition-transform duration-100 tablet:w-20 tablet:h-20 phone:w-10 phone:h-10 hover:transform hover:-translate-y-2 hover:ease-in hover:stroke-[#2DBA4E]" />
-        </a>
+        </Link>
       </div>
-      {/* <div className="absolute bg-background w-full h-12 bottom-0 rounded-t-full"></div> */}
     </div>
   );
 }

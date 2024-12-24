@@ -17,14 +17,17 @@ export default function ProfileFeature(): JSX.Element {
         </h2>
         <p className="text-lg phone:w-full laptop:w-1/2">
           I help{" "}
-          <span className="text-secondary-variant font-bold">
+          <span className="text-secondary font-bold">
             businesses from all sizes to build technologies
           </span>
           , allowing them to accomplish there goals.
         </p>
-        <Button filled secondary large className="px-2 py-1 self-center mt-6">
-          <Link to="/aboutme">About Me</Link>
-        </Button>
+        <Link
+          to="/aboutme"
+          className="font-bold outline outline-2 outline-secondary-variant rounded-md bg-secondary-variant text-on-secondary hover:bg-secondary hover:outline-secondary px-2 py-1 self-center mt-6"
+        >
+          About Me
+        </Link>
       </div>
     </div>
   );

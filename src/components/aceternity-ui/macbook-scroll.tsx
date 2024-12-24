@@ -25,6 +25,7 @@ import { IconCommand } from "@tabler/icons-react";
 import { IconCaretLeftFilled } from "@tabler/icons-react";
 import { IconCaretDownFilled } from "@tabler/icons-react";
 import { StaticImage } from "gatsby-plugin-image";
+import Image from "../Image";
 
 export const MacbookScroll = ({
   src,
@@ -166,9 +167,9 @@ export const Lid = ({
         className="h-96 w-[32rem] absolute inset-0 bg-[#010101] rounded-2xl p-2"
       >
         <div className="absolute inset-0 bg-[#272729] rounded-lg" />
-        <img
-          src={src as string}
-          alt="aceternity logo"
+        <Image
+          src="https://firebasestorage.googleapis.com/v0/b/portfolio-401812.appspot.com/o/home-images%2Fgo-enlite-landing.png?alt=media&token=3aa18edb-a4e6-4862-9584-608a5b4cb45b"
+          alt="Go Enlite Landing Page"
           className="object-cover object-left-top absolute rounded-lg inset-0 h-full w-full"
         />
       </motion.div>

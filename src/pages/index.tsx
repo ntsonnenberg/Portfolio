@@ -5,7 +5,6 @@ import ContactForm from "../components/ContactForm";
 import Layout from "../components/Layout";
 import SocialLinks from "../components/SocialLinks";
 import ProfileFeature from "../components/ProfileFeature";
-import NewsletterForm from "../components/NewsletterForm";
 import { Helmet } from "react-helmet";
 import bespokeFavicon from "../images/bespoke-black-no-bg.png";
 import Marquee from "react-fast-marquee";
@@ -23,6 +22,7 @@ import { FlipWordsView } from "../components/FlipWordsView";
 import { TextHoverEffectView } from "../components/TextHoverEffectView";
 import { GeminiEffectView } from "../components/GeminiEffectView";
 import { HeroParallaxView } from "../components/HeroParallaxView";
+import Image from "../components/Image";
 import HorizontalScroll from "../components/ui-layouts/HorizontalScroll";
 
 export default function IndexPage(): JSX.Element {
@@ -72,18 +72,17 @@ export default function IndexPage(): JSX.Element {
           gradientColor="#141414"
           className="py-4 overflow-clip"
         >
-          <img
-            src="https://firebasestorage.googleapis.com/v0/b/portfolio-401812.appspot.com/o/client-logos%2Fenlite-logo.svg?alt=media&token=43f81f71-67e2-4a34-8ae4-8b05991e6120"
+          <Image
+            src="https://firebasestorage.googleapis.com/v0/b/portfolio-401812.appspot.com/o/client-logos%2Fenlite-logo.png?alt=media&token=1b09af9f-7b72-4b26-9040-295881096739"
             className="phone:w-40 phone:h-10 phone:mx-6 tablet:w-52 tablet:h-16 tablet:mx-10 laptop:w-60 laptop:h-20 laptop:mx-14"
             alt="Enlite Logo"
           />
-          <img
-            src="https://firebasestorage.googleapis.com/v0/b/portfolio-401812.appspot.com/o/client-logos%2Futah-automotive-logo.svg?alt=media&token=d1500c1c-5c17-4804-aa09-d92d8f83d0ac"
+          <Image
+            src="https://firebasestorage.googleapis.com/v0/b/portfolio-401812.appspot.com/o/client-logos%2Futah-automotive-logo.png?alt=media&token=aca2c999-402a-424e-8c5d-966f5ae03375"
             className="phone:w-24 phone:h-24 phone:mx-6 tablet:mx-10 tablet:w-28 tablet:h-28 laptop:mx-14"
             alt="UTA Logo"
           />
         </Marquee>
-        <NewsletterForm />
         <ContactForm />
       </ReactLenis>
     </Layout>
@@ -114,6 +113,12 @@ export function Head(): JSX.Element {
       <meta
         property="twitter:description"
         content="Build your ideas into reality with a custom web application for your business."
+      />
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
+      <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet"
       />
     </Helmet>
   );

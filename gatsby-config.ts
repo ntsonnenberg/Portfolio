@@ -47,14 +47,6 @@ const config: GatsbyConfig = {
       __key: "images",
     },
     {
-      resolve: "gatsby-source-filesystem",
-      options: {
-        name: "assets",
-        path: "./src/assets/",
-      },
-      __key: "assets",
-    },
-    {
       resolve: "gatsby-plugin-manifest",
       options: {
         icon: "src/images/bespoke-black-no-bg.png",
