@@ -68,12 +68,6 @@ export default function AboutMePage(): JSX.Element {
     <Layout>
       <>
         <div className="relative phone:min-h-fit tablet:min-h-screen">
-          {/* <StaticImage
-            src="../images/cardiff-castle.jpeg"
-            alt="cardiff castle"
-            placeholder="blurred"
-            className="phone:mt-20 tablet:mt-0"
-          /> */}
           <Image
             src="https://firebasestorage.googleapis.com/v0/b/portfolio-401812.appspot.com/o/about-me-images%2Fcardiff-castle.jpeg?alt=media&token=6d19ac22-0d1d-4e04-8dba-a286c486d933"
             alt="cardiff-castle"
@@ -81,11 +75,11 @@ export default function AboutMePage(): JSX.Element {
           />
           <div className="absolute bg-primary/40 phone:w-52 phone:h-40 phone:right-2 phone:top-44 tablet:w-1/2 tablet:h-80 tablet:right-10 tablet:top-48 laptop:h-96 laptop:right-16 laptop:top-80">
             <div className="absolute bg-surface phone:p-2 phone:inset-2 tablet:p-10 tablet:inset-5">
-              <h1 className="text-on-surface font-bold phone:text-md tablet:text-2xl laptop:text-4xl">
+              <h2 className="text-on-surface font-bold phone:text-md tablet:text-2xl laptop:text-4xl">
                 Your{" "}
                 <span className="text-secondary">Personalized Consultant</span>{" "}
                 for Web Applications
-              </h1>
+              </h2>
               <p className="text-on-surface/50 phone:hidden tablet:block tablet:mt-2 tablet:mx-0 tablet:text-sm laptop:mt-6 laptop:mx-4 laptop:text-lg">
                 I'm Nathan Sonnenberg, here for your web development & IT
                 consulting needs.

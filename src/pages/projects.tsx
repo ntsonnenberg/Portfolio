@@ -10,9 +10,9 @@ export default function ProjectsPage(): JSX.Element {
   if (!projects) {
     return (
       <Layout>
-        <h1 className="p-40 min-h-screen text-2xl font-bold">
+        <h2 className="p-40 min-h-screen text-2xl font-bold">
           No Projects Available
-        </h1>
+        </h2>
       </Layout>
     );
   }

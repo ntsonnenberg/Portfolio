@@ -139,6 +139,7 @@ export const ProductCard = ({
         <Image
           src={product.image}
           alt={product.title}
+          loading="eager"
           className="object-cover object-left-top absolute h-full w-full inset-0"
         />
       </Link>

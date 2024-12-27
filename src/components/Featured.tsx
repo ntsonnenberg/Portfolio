@@ -166,12 +166,12 @@ export default function Featured(): JSX.Element {
               video="https://firebasestorage.googleapis.com/v0/b/portfolio-401812.appspot.com/o/videos%2Fpanel-1-vid.mp4?alt=media&token=3220e429-ef51-4af7-b37c-0418f523b5cd"
               className="absolute phone:w-auto phone:min-w-full phone:min-h-full phone:max-w-none laptop:min-w-0 laptop:min-h-0 laptop:max-w-full"
             />
-            <h1
+            <h2
               id="panel-text-1"
               className="absolute flex items-center font-bold w-1/3 text-clip m-40 phone:text-xl tablet:text-4xl laptop:text-6xl"
             >
               Custom web design for your brand
-            </h1>
+            </h2>
           </div>
           <div
             id="panel"
@@ -181,12 +181,12 @@ export default function Featured(): JSX.Element {
               video="https://firebasestorage.googleapis.com/v0/b/portfolio-401812.appspot.com/o/videos%2Fpanel-2-vid.mp4?alt=media&token=43689a25-c34f-4bca-bf97-b198316b1099"
               className="absolute phone:w-auto phone:min-w-full phone:min-h-full phone:max-w-none laptop:min-w-0 laptop:min-h-0 laptop:max-w-full"
             />
-            <h1
+            <h2
               id="panel-text-2"
               className="absolute flex items-center m-40 font-bold w-1/3 text-clip phone:text-xl tablet:text-4xl laptop:text-6xl"
             >
               Expand your reach to your targeted audience
-            </h1>
+            </h2>
           </div>
           <div
             id="panel"
@@ -196,12 +196,12 @@ export default function Featured(): JSX.Element {
               video="https://firebasestorage.googleapis.com/v0/b/portfolio-401812.appspot.com/o/videos%2Fpanel-3-vid.mp4?alt=media&token=08a744dd-1e7c-467e-bbff-88c02f236cec"
               className="absolute phone:w-auto phone:min-w-full phone:min-h-full phone:max-w-none laptop:min-w-0 laptop:min-h-0 laptop:max-w-full"
             />
-            <h1
+            <h2
               id="panel-text-3"
               className="absolute flex items-center font-bold w-1/3 text-clip p-4 m-40 bg-background phone:text-xl tablet:text-4xl laptop:text-6xl"
             >
               Integrate and automate your operations
-            </h1>
+            </h2>
           </div>
           <div
             id="panel"
@@ -211,12 +211,12 @@ export default function Featured(): JSX.Element {
               video="https://firebasestorage.googleapis.com/v0/b/portfolio-401812.appspot.com/o/videos%2Fpanel-4-vid.mp4?alt=media&token=4b22eb60-066d-45d4-a151-d6bce795a252"
               className="absolute phone:w-auto phone:min-w-full phone:min-h-full phone:max-w-none laptop:min-w-0 laptop:min-h-0 laptop:max-w-full"
             />
-            <h1
+            <h2
               id="panel-text-4"
               className="absolute flex items-center font-bold w-1/3 text-clip p-4 m-40 bg-background phone:text-xl tablet:text-4xl laptop:text-6xl"
             >
               Build your dream, one line of code at a time
-            </h1>
+            </h2>
           </div>
         </div>
       </section>
