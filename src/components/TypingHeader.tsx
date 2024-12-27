@@ -15,11 +15,11 @@ export default function FadeBlockHeader({
   useScrollObserver(headerRef, { animationClass: "animate-typing" });
 
   return (
-    <h1
+    <h2
       ref={headerRef}
       className={`py-4 text-${color} font-bold overflow-hidden whitespace-nowrap border-r-4 phone:text-2xl tablet:text-4xl laptop:text-7xl`}
     >
       {children}
-    </h1>
+    </h2>
   );
 }

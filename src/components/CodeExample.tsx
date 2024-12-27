@@ -25,12 +25,12 @@ export default function CodeExample(): JSX.Element {
 
   return (
     <div ref={containerRef} className="flex flex-col">
-      <h1
+      <h2
         id="code-header"
         className="m-8 tablet:self-end font-bold phone:text-2xl tablet:text-4xl laptop:text-6xl"
       >
         Bringing your app to life
-      </h1>
+      </h2>
       <div className="my-16 h-screen flex phone:flex-col phone:mx-2 tablet:mx-6 tablet:flex-row laptop:mx-10">
         <VideoPlayer
           video="https://firebasestorage.googleapis.com/v0/b/portfolio-401812.appspot.com/o/videos%2Fmobile-demo.mp4?alt=media&token=9961ea36-4c23-4efe-aa7f-5d1e82482a8e"

@@ -7,6 +7,7 @@ type Props = {
   alt: string;
   placeholder?: string;
   className?: string;
+  loading?: "eager" | "lazy";
 };
 
 interface ImageData {
