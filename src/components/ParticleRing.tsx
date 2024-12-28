@@ -20,9 +20,9 @@ const ParticleRing = () => {
         <PointCircle />
       </Canvas>
 
-      <h2 className="absolute top-[50%] left-[50%] -translate-x-[50%] -translate-y-[50%] text-slate-200 font-medium text-4xl md:text-5xl pointer-events-none">
+      <p className="absolute top-[50%] left-[50%] -translate-x-[50%] -translate-y-[50%] text-slate-200 font-medium text-4xl md:text-5xl pointer-events-none">
         3D Vectors to Infinity
-      </h2>
+      </p>
     </div>
   );
 };

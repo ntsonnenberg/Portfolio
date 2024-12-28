@@ -7,6 +7,7 @@ import useScrollObserver from "../hooks/use-scroll-observer";
 import scrollTo from "gatsby-plugin-smoothscroll";
 import Image from "../components/Image";
 import CarouselView from "../components/CarouselView";
+import { TimelineView } from "../components/TimelineView";
 
 export default function AboutMePage(): JSX.Element {
   const gradRef = useRef<HTMLDivElement>(null);
@@ -53,14 +54,19 @@ export default function AboutMePage(): JSX.Element {
       overlayText: "High Uintas, WY",
     },
     {
-      src: "https://firebasestorage.googleapis.com/v0/b/portfolio-401812.appspot.com/o/about-me-images%2Fb-and-n-at-beach.jpeg?alt=media&token=0d2ddf3b-837f-4f31-b769-6c9d4db53ddb",
-      alt: "Pacific Coast Highway",
-      overlayText: "Pacific Coast Highway",
-    },
-    {
       src: "https://firebasestorage.googleapis.com/v0/b/portfolio-401812.appspot.com/o/about-me-images%2Fedinburugh.jpeg?alt=media&token=4f41a4b7-f995-4d46-b51f-e53acb350364",
       alt: "Edinburugh",
       overlayText: "Edinburgh, Scotland",
+    },
+    {
+      src: "https://firebasestorage.googleapis.com/v0/b/portfolio-401812.appspot.com/o/about-me-images%2Feiffel-tower.png?alt=media&token=fa3b965e-5cd6-4f4e-a1d7-cb83f3d3185d",
+      alt: "Eiffel Tower",
+      overlayText: "Paris, France",
+    },
+    {
+      src: "https://firebasestorage.googleapis.com/v0/b/portfolio-401812.appspot.com/o/about-me-images%2Fnice-airbnb.png?alt=media&token=1e5f6858-3c4c-44bc-9375-5c3cd7d246d0",
+      alt: "Nice, France",
+      overlayText: "Nice, France",
     },
   ];
 
@@ -70,7 +76,7 @@ export default function AboutMePage(): JSX.Element {
         <div className="relative phone:min-h-fit tablet:min-h-screen">
           <Image
             src="https://firebasestorage.googleapis.com/v0/b/portfolio-401812.appspot.com/o/about-me-images%2Fcardiff-castle.jpeg?alt=media&token=6d19ac22-0d1d-4e04-8dba-a286c486d933"
-            alt="cardiff-castle"
+            alt="Cardiff Castle in Wales on Study Abroad Trip"
             className="phone:mt-20 tablet:mt-0"
           />
           <div className="absolute bg-primary/40 phone:w-52 phone:h-40 phone:right-2 phone:top-44 tablet:w-1/2 tablet:h-80 tablet:right-10 tablet:top-48 laptop:h-96 laptop:right-16 laptop:top-80">
@@ -103,56 +109,8 @@ export default function AboutMePage(): JSX.Element {
           <div className="font-bold phone: phone:text-4xl phone:h-[30vh] tablet:text-6xl laptop:h-[20vh]">
             My story begins...
           </div>
-          <div className="flex justify-evenly phone:flex-col laptop:flex-row">
-            <div className="font-bold self-center phone:text-center phone:mx-4 phone:text-2xl tablet:text-start tablet:mx-0 tablet:text-4xl tablet:w-5/6 laptop:w-1/3">
-              Graduated with a{" "}
-              <span className="text-secondary-variant">
-                Master's in Information Systems Management
-              </span>{" "}
-              from BYU
-            </div>
-            <div
-              ref={gradRef}
-              className="relative opacity-0 w-1/3 h-screen phone:ml-14 tablet:ml-40 laptop:ml-0"
-            >
-              <Image
-                src="https://firebasestorage.googleapis.com/v0/b/portfolio-401812.appspot.com/o/about-me-images%2Fgrad-maeser.JPG?alt=media&token=386745e0-7124-4372-9b96-1de567c74e31"
-                alt="Grad Maeser"
-                className="h-min absolute shadow-stand-out border border-slate-600 inset-y-1/4 left-0 rounded-lg phone:w-40 tablet:w-72"
-              />
-              <Image
-                src="https://firebasestorage.googleapis.com/v0/b/portfolio-401812.appspot.com/o/about-me-images%2Fgrad-tanner.JPG?alt=media&token=c59a900d-9972-4ba5-93c1-e1dc7884f13e"
-                alt="Grad Tanner"
-                className="h-min absolute shadow-stand-out border border-slate-600 inset-y-1/3 rounded-lg phone:w-40 phone:left-32 tablet:w-72 tablet:left-60"
-              />
-            </div>
-          </div>
-          <div className="font-bold text-center phone:text-4xl phone:mx-6 tablet:text-6xl tablet:mx-0 tablet:w-11/12 laptop:w-3/4">
-            Working for Enlite as their VP of Technology
-          </div>
-          <div
-            ref={summerRef}
-            className="opacity-0 tablet:flex tablet:justify-center"
-          >
-            <Image
-              src="https://firebasestorage.googleapis.com/v0/b/portfolio-401812.appspot.com/o/about-me-images%2Fsummer-sales-2021.JPG?alt=media&token=8176a746-5394-46a2-8976-c75e250a8c9d"
-              alt="Summer Sales"
-              className="h-auto rounded-lg shadow-stand-out border border-slate-600 phone:w-5/6 phone:inset-x-8 tablet:w-1/2"
-            />
-          </div>
-          <div className="font-bold text-center pt-40 phone:text-4xl phone:mx-6 tablet:text-6xl tablet:mx-0 tablet:w-11/12 laptop:w-3/4">
-            Building a Sales Portal for Enlite's sales department
-          </div>
-          <div
-            ref={goEnliteRef}
-            className="opacity-0 tablet:flex tablet:justify-center"
-          >
-            <Image
-              src="https://firebasestorage.googleapis.com/v0/b/portfolio-401812.appspot.com/o/about-me-images%2Fgo-enlite-leaderboard.PNG?alt=media&token=519ef15b-e89a-442b-984d-c89829951edc"
-              alt="Go Enlite"
-              className="h-auto rounded-lg shadow-stand-out border border-slate-600 phone:w-5/6 phone:inset-x-8 tablet:w-1/2"
-            />
-          </div>
+          <TimelineView />
+
           <div className="font-bold text-center pt-40 phone:text-4xl phone:mx-6 tablet:text-6xl tablet:mx-0 tablet:w-11/12 laptop:w-3/4">
             I love programming, but I also love adventures
           </div>

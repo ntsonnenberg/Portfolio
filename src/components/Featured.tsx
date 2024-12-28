@@ -100,7 +100,7 @@ export default function Featured(): JSX.Element {
         </FadeBlockHeader>
         <div className=" grid laptop:grid-cols-3 tablet:grid-cols-2 phone:grid-cols-1 mt-10 text-center phone:mt-16  phone:gap-y-16  tablet:gap-0 desktop:mt-24">
           <div className="tablet:p-8 laptop:p-14">
-            <h3 className="mt-2 mb-8 text-2xl font-bold">Ecommerce</h3>
+            <p className="mt-2 mb-8 text-2xl font-bold">Ecommerce</p>
             <FiShoppingCart className="h-10 w-10 mx-auto" />
             <p className="mt-5 text-base">
               Elevate your brand with a custom Ecommerce site to engage shoppers
@@ -108,7 +108,7 @@ export default function Featured(): JSX.Element {
             </p>
           </div>
           <div className="tablet:p-8 laptop:p-14 tablet:border-l tablet:border-on-background/20 laptop:border-r">
-            <h3 className="mt-2 mb-8 text-2xl font-bold">Landing Pages</h3>
+            <p className="mt-2 mb-8 text-2xl font-bold">Landing Pages</p>
             <GoMegaphone className="h-10 w-10 mx-auto" />
             <p className="mt-5 text-base">
               Capture and convert your audience with SEO-friendly landing pages
@@ -116,7 +116,7 @@ export default function Featured(): JSX.Element {
             </p>
           </div>
           <div className="tablet:p-8 tablet:border-r tablet:border-t tablet:border-on-background/20 laptop:border-t-0 laptop:border-r-0 laptop:p-14">
-            <h3 className="mt-2 mb-8 text-2xl font-bold">SaaS</h3>
+            <p className="mt-2 mb-8 text-2xl font-bold">SaaS</p>
             <FiSettings className="h-10 w-10 mx-auto" />
             <p className="mt-5 text-base">
               Launch your innovative Software as a Serice produce with a
@@ -124,7 +124,7 @@ export default function Featured(): JSX.Element {
             </p>
           </div>
           <div className="tablet:p-8 laptop:p-14 tablet:border-t tablet:border-on-background/20">
-            <h3 className="mt-2 mb-8 text-2xl font-bold">CRM</h3>
+            <p className="mt-2 mb-8 text-2xl font-bold">CRM</p>
             <RiMoneyDollarCircleLine className="h-10 w-10 mx-auto" />
             <p className="mt-5 text-base">
               Transform your customer relationships with a custom CRM tool that
@@ -132,7 +132,7 @@ export default function Featured(): JSX.Element {
             </p>
           </div>
           <div className="tablet:p-8 laptop:p-14 tablet:border-t tablet:border-on-background/20 laptop:border-l">
-            <h3 className="mt-2 mb-8 text-2xl font-bold">Analytics</h3>
+            <p className="mt-2 mb-8 text-2xl font-bold">Analytics</p>
             <FiPieChart className="h-10 w-10 mx-auto" />
             <p className="mt-5 text-base">
               Leverage custom analytics tools to gain deep insights and make
@@ -140,7 +140,7 @@ export default function Featured(): JSX.Element {
             </p>
           </div>
           <div className="tablet:p-8 laptop:p-14 tablet:border-t tablet:border-on-background/20 tablet:border-l">
-            <h3 className="mt-2 mb-8 text-2xl font-bold">Squarespace</h3>
+            <p className="mt-2 mb-8 text-2xl font-bold">Squarespace</p>
             <FaSquarespace className="h-10 w-10 mx-auto" />
             <p className="mt-5 text-base">
               Stand out online with a professionally designed Squarespace site
@@ -166,12 +166,12 @@ export default function Featured(): JSX.Element {
               video="https://firebasestorage.googleapis.com/v0/b/portfolio-401812.appspot.com/o/videos%2Fpanel-1-vid.mp4?alt=media&token=3220e429-ef51-4af7-b37c-0418f523b5cd"
               className="absolute phone:w-auto phone:min-w-full phone:min-h-full phone:max-w-none laptop:min-w-0 laptop:min-h-0 laptop:max-w-full"
             />
-            <h2
+            <p
               id="panel-text-1"
               className="absolute flex items-center font-bold w-1/3 text-clip m-40 phone:text-xl tablet:text-4xl laptop:text-6xl"
             >
               Custom web design for your brand
-            </h2>
+            </p>
           </div>
           <div
             id="panel"
@@ -181,12 +181,12 @@ export default function Featured(): JSX.Element {
               video="https://firebasestorage.googleapis.com/v0/b/portfolio-401812.appspot.com/o/videos%2Fpanel-2-vid.mp4?alt=media&token=43689a25-c34f-4bca-bf97-b198316b1099"
               className="absolute phone:w-auto phone:min-w-full phone:min-h-full phone:max-w-none laptop:min-w-0 laptop:min-h-0 laptop:max-w-full"
             />
-            <h2
+            <p
               id="panel-text-2"
               className="absolute flex items-center m-40 font-bold w-1/3 text-clip phone:text-xl tablet:text-4xl laptop:text-6xl"
             >
               Expand your reach to your targeted audience
-            </h2>
+            </p>
           </div>
           <div
             id="panel"
@@ -196,12 +196,12 @@ export default function Featured(): JSX.Element {
               video="https://firebasestorage.googleapis.com/v0/b/portfolio-401812.appspot.com/o/videos%2Fpanel-3-vid.mp4?alt=media&token=08a744dd-1e7c-467e-bbff-88c02f236cec"
               className="absolute phone:w-auto phone:min-w-full phone:min-h-full phone:max-w-none laptop:min-w-0 laptop:min-h-0 laptop:max-w-full"
             />
-            <h2
+            <p
               id="panel-text-3"
               className="absolute flex items-center font-bold w-1/3 text-clip p-4 m-40 bg-background phone:text-xl tablet:text-4xl laptop:text-6xl"
             >
               Integrate and automate your operations
-            </h2>
+            </p>
           </div>
           <div
             id="panel"
@@ -211,12 +211,12 @@ export default function Featured(): JSX.Element {
               video="https://firebasestorage.googleapis.com/v0/b/portfolio-401812.appspot.com/o/videos%2Fpanel-4-vid.mp4?alt=media&token=4b22eb60-066d-45d4-a151-d6bce795a252"
               className="absolute phone:w-auto phone:min-w-full phone:min-h-full phone:max-w-none laptop:min-w-0 laptop:min-h-0 laptop:max-w-full"
             />
-            <h2
+            <p
               id="panel-text-4"
               className="absolute flex items-center font-bold w-1/3 text-clip p-4 m-40 bg-background phone:text-xl tablet:text-4xl laptop:text-6xl"
             >
               Build your dream, one line of code at a time
-            </h2>
+            </p>
           </div>
         </div>
       </section>

@@ -150,7 +150,7 @@ export const Lid = ({
         >
           <StaticImage
             src="../../images/bespoke-white-no-bg.png"
-            alt="bespoke-logo"
+            alt="Bespoke Dev Solutions Logo"
             className="w-14 h-auto"
           />
         </div>

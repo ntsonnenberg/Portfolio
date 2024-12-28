@@ -28,16 +28,16 @@ export default function Footer(): JSX.Element {
           />
         </div>
         <div className="basis-2/3 grow flex flex-row justify-evenly phone:mr-4 phone:gap-4 tablet:gap-6 laptop:mr-20 laptop:gap-0">
-          <Link
+          <a
             title="LinkedIn"
-            to="https://www.linkedin.com/in/nathan-sonnenberg/"
+            href="https://www.linkedin.com/in/nathan-sonnenberg/"
             target="_blank"
           >
             <FiLinkedin className="transition-transform duration-100 tablet:w-11 tablet:h-11 phone:w-6 phone:h-6 hover:transform hover:-translate-y-2 hover:ease-in hover:stroke-[#0077B5] hover:shadow-stand-out" />
-          </Link>
-          <Link
+          </a>
+          <a
             title="Instagram"
-            to="https://www.instagram.com/nate.sonny/"
+            href="https://www.instagram.com/nate.sonny/"
             target="_blank"
           >
             <svg
@@ -82,28 +82,28 @@ export default function Footer(): JSX.Element {
                 y2="6.5"
               ></line>
             </svg>
-          </Link>
-          <Link
+          </a>
+          <a
             title="X"
-            to="https://twitter.com/nate_sonnenberg"
+            href="https://twitter.com/nate_sonnenberg"
             target="_blank"
           >
             <RiTwitterXLine className="transition-transform duration-100 tablet:w-11 tablet:h-11 phone:w-6 phone:h-6 hover:transform hover:-translate-y-2 hover:ease-in hover:text-[#08A0E9] hover:shadow-stand-out" />
-          </Link>
-          <Link
+          </a>
+          <a
             title="Facebook"
-            to="https://www.facebook.com/nathan.sonnenberg.14"
+            href="https://www.facebook.com/nathan.sonnenberg.14"
             target="_blank"
           >
             <FiFacebook className="transition-transform duration-100 tablet:w-11 tablet:h-11 phone:w-6 phone:h-6 hover:transform hover:-translate-y-2 hover:ease-in hover:stroke-[#4267B2] hover:shadow-stand-out" />
-          </Link>
-          <Link
+          </a>
+          <a
             title="GitHub"
-            to="https://github.com/ntsonnenberg"
+            href="https://github.com/ntsonnenberg"
             target="_blank"
           >
             <FiGithub className="transition-transform duration-100 tablet:w-11 tablet:h-11 phone:w-6 phone:h-6 hover:transform hover:-translate-y-2 hover:ease-in hover:stroke-[#2DBA4E] hover:shadow-stand-out" />
-          </Link>
+          </a>
         </div>
       </div>
     </div>

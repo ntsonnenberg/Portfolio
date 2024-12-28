@@ -23,7 +23,7 @@ export default function StepCard({
           <div className="bg-white text-black text-xl font-extrabold mr-2 px-3 pt-0.5 rounded-md">
             {step}
           </div>
-          <h3 className="text-xl font-extrabold">{title}</h3>
+          <p className="text-xl font-extrabold">{title}</p>
         </div>
         <p className="text-start my-4">{children}</p>
       </div>
