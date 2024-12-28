@@ -32,9 +32,9 @@ export default function Hero(): JSX.Element {
         />
       </div>
       <div className="basis-2/5 flex flex-col my-20 mx-10 gap-10 phone:mx-6 tablet:mx-10">
-        <h1 className="text-6xl font-bold phone:text-5xl">
+        <h2 className="text-6xl font-bold phone:text-5xl">
           Professional Web Development Services
-        </h1>
+        </h2>
         <h2 className="text-2xl">
           Build your ideas into reality and take your startup to the next level.
         </h2>

@@ -18,16 +18,16 @@ export default function SocialLinks(): JSX.Element {
   return (
     <div className="relative phone:h-80 laptop:h-dvh flex bg-code bg-no-repeat bg-center bg-cover phone:px-8 laptop:px-0 laptop:bg-fixed">
       <div className="flex justify-evenly grow items-center">
-        <Link
+        <a
           title="LinkedIn"
-          to="https://www.linkedin.com/in/nathan-sonnenberg/"
+          href="https://www.linkedin.com/in/nathan-sonnenberg/"
           target="_blank"
         >
           <FiLinkedin className="stroke-white transition-transform duration-100 tablet:w-20 tablet:h-20 phone:w-10 phone:h-10 hover:transform hover:-translate-y-2 hover:ease-in hover:stroke-[#0077B5]" />
-        </Link>
-        <Link
+        </a>
+        <a
           title="Instagram"
-          to="https://www.instagram.com/nate.sonny/"
+          href="https://www.instagram.com/nate.sonny/"
           target="_blank"
         >
           <svg
@@ -66,14 +66,10 @@ export default function SocialLinks(): JSX.Element {
               y2="6.5"
             ></line>
           </svg>
-        </Link>
-        <Link
-          title="X"
-          to="https://twitter.com/nate_sonnenberg"
-          target="_blank"
-        >
+        </a>
+        <a title="X" href="https://twitter.com/nate_sonnenberg" target="_blank">
           <RiTwitterXLine className="text-white transition-transform duration-100 tablet:w-20 tablet:h-20 phone:w-10 phone:h-10 hover:transform hover:-translate-y-2 hover:ease-in hover:text-[#08A0E9]" />
-        </Link>
+        </a>
         <a
           title="Facebook"
           href="https://www.facebook.com/nathan.sonnenberg.14"
@@ -81,13 +77,13 @@ export default function SocialLinks(): JSX.Element {
         >
           <FiFacebook className="stroke-white  transition-transform duration-100 tablet:w-20 tablet:h-20 phone:w-10 phone:h-10 hover:transform hover:-translate-y-2 hover:ease-in hover:stroke-[#4267B2]" />
         </a>
-        <Link
+        <a
           title="GitHub"
-          to="https://github.com/ntsonnenberg"
+          href="https://github.com/ntsonnenberg"
           target="_blank"
         >
           <FiGithub className="stroke-white  transition-transform duration-100 tablet:w-20 tablet:h-20 phone:w-10 phone:h-10 hover:transform hover:-translate-y-2 hover:ease-in hover:stroke-[#2DBA4E]" />
-        </Link>
+        </a>
       </div>
     </div>
   );

@@ -16,9 +16,9 @@ export default function ProjectCard({ project }: Props): JSX.Element {
           alt={project.title}
           className="object-cover w-full h-3/5 p-1 rounded-md"
         />
-        <h2 className="p-6 text-2xl font-bold text-on-background">
+        <p className="p-6 text-2xl font-bold text-on-background">
           {project.title}
-        </h2>
+        </p>
       </SpotLightItem>
     </a>
   );

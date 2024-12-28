@@ -11,13 +11,13 @@ export default function IntegrationFeatures(): JSX.Element {
           Crafting Digital Excellence
         </TypingHeader>
       </div>
-      <h3 className="laptop:w-1/2 phone:w-11/12">
+      <p className="laptop:w-1/2 phone:w-11/12">
         <span className="text-secondary font-extrabold">
           Delivering unparalleled code quality
         </span>{" "}
         and customization to craft digital solutions that embody excellence and
         precision for your unique needs.
-      </h3>
+      </p>
       <div className="my-28 grid laptop:grid-cols-3 tablet:grid-cols-2 phone:grid-cols-1 gap-10">
         <Card
           imageUrl="https://firebasestorage.googleapis.com/v0/b/portfolio-401812.appspot.com/o/home-images%2Fgmail-logo.png?alt=media&token=a4b05a7a-73aa-4966-a6ae-2cbd19d6060f"

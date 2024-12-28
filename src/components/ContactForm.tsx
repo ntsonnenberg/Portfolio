@@ -28,9 +28,9 @@ export default function ContactUs(): JSX.Element {
   return (
     <div className="bg-primary-variant text-on-primary flex flex-col text-center items-center py-20 gap-5">
       <div className="phone:mx-6 phone:mb-10 laptop:mb-16">
-        <h1 className="text-on-background font-bold phone:text-5xl tablet:text-7xl">
+        <p className="text-on-background font-bold phone:text-5xl tablet:text-7xl">
           Contact Me to Learn More
-        </h1>
+        </p>
       </div>
       <form
         onSubmit={sendEmail}
