@@ -1,4 +1,3 @@
-// import Image from "next/image";
 import React from "react";
 import { Timeline } from "./aceternity-ui/timeline";
 import Image from "./Image";
@@ -12,7 +11,7 @@ export function TimelineView() {
           <p className="phone:text-md tablet:text-lg laptop:text-2xl mb-8">
             Returned from a mission trip in Santiago, Chile
           </p>
-          <div className="grid grid-cols-2 gap-4">
+          <div className="grid phone:grid-cols-1 tablet:grid-cols-2 gap-4">
             <Image
               src="https://firebasestorage.googleapis.com/v0/b/portfolio-401812.appspot.com/o/about-me-images%2Fmission-end.JPG?alt=media&token=640bb159-8202-4463-9b06-46168f514283"
               alt="Mission Ending"
@@ -30,7 +29,7 @@ export function TimelineView() {
             Completed building my first web applications with a team for my
             degree
           </p>
-          <div className="p-10 grid grid-cols-2 gap-4">
+          <div className="p-10 grid phone:grid-cols-1 tablet:grid-cols-2 gap-4">
             <Image
               src="https://firebasestorage.googleapis.com/v0/b/portfolio-401812.appspot.com/o/project-images%2FBCR-project-new.png?alt=media&token=94dde201-fa51-49d9-94a9-ead4aef53e54"
               alt="BRC Project"
@@ -57,7 +56,7 @@ export function TimelineView() {
             their sales metrics, compete in competitions, and manage their sales
             leaderboards.
           </p>
-          <div className="p-10 grid grid-cols-2 gap-4">
+          <div className="p-10 grid phone:grid-cols-1 tablet:grid-cols-2 gap-4">
             <Image
               src="https://firebasestorage.googleapis.com/v0/b/portfolio-401812.appspot.com/o/about-me-images%2Fsummer-sales-2021.JPG?alt=media&token=8176a746-5394-46a2-8976-c75e250a8c9d"
               alt="Summer Sales 2021 in Sacramento"
@@ -80,7 +79,7 @@ export function TimelineView() {
             Completed my Master's Captsone project, building an iOS app for
             golfers
           </p>
-          <div className="p-10 grid grid-cols-2">
+          <div className="p-10 grid phone:grid-cols-1 tablet:grid-cols-2 phone:gap-4 tablet:gap-0">
             <Image
               src="https://firebasestorage.googleapis.com/v0/b/portfolio-401812.appspot.com/o/project-images%2FLinks.png?alt=media&token=40c3fb5a-a26a-4455-9f39-4de62a61890c"
               alt="Links iOS App Project"
@@ -102,7 +101,7 @@ export function TimelineView() {
           <p className="phone:text-md tablet:text-lg laptop:text-2xl mb-8">
             Graduated from BYU with a Master's in Information Systems Management
           </p>
-          <div className="p-10 grid grid-cols-2 gap-4">
+          <div className="p-10 grid phone:grid-cols-1 tablet:grid-cols-2 gap-4">
             <Image
               src="https://firebasestorage.googleapis.com/v0/b/portfolio-401812.appspot.com/o/about-me-images%2Fgrad-maeser.JPG?alt=media&token=386745e0-7124-4372-9b96-1de567c74e31"
               alt="BYU Graduation in front of Maesar Building"
@@ -125,7 +124,7 @@ export function TimelineView() {
             Started at Qualtrics in June as a Technical Account Manager on their
             Enterprise South team
           </p>
-          <div className="p-10 grid grid-cols-2 gap-4">
+          <div className="p-10 grid phone:grid-cols-1 tablet:grid-cols-2 gap-4">
             <Image
               src="https://firebasestorage.googleapis.com/v0/b/portfolio-401812.appspot.com/o/about-me-images%2Fqualtrics.png?alt=media&token=66899b7c-74fe-4fb1-b9c8-e5704279a422"
               alt="Qualtrics Logo"
