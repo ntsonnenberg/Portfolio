@@ -5,7 +5,6 @@ import { graphql, useStaticQuery } from "gatsby";
 type Props = {
   src: string;
   alt: string;
-  placeholder?: string;
   className?: string;
   loading?: "eager" | "lazy";
 };
@@ -31,6 +30,7 @@ interface FileNode {
 export default function Image({ src, ...rest }: Props): JSX.Element | null {
   const data = useStaticQuery(query);
 
+  // TODO: Change query to only pull one image based on src prop
   const match = useMemo(
     () =>
       data.allFirebaseImage.nodes.find(
@@ -44,11 +44,11 @@ export default function Image({ src, ...rest }: Props): JSX.Element | null {
   }
 
   const {
-    file: { childImageSharp, publicUrl },
+    file: { childImageSharp, publicURL },
   } = match;
 
   if (!childImageSharp) {
-    return <img src={publicUrl} {...rest} />;
+    return <img src={publicURL} {...rest} />;
   }
 
   const image = getImage(childImageSharp.gatsbyImageData);
@@ -61,7 +61,7 @@ export default function Image({ src, ...rest }: Props): JSX.Element | null {
 }
 
 const query = graphql`
-  query {
+  query getImageFiles {
     allFirebaseImage {
       nodes {
         id

@@ -18,7 +18,8 @@ exports.sourceNodes = async ({
 }: Props) => {
   const { createNode } = actions;
 
-  const imagePaths = [
+  const filePaths = [
+    // Project Images Folder
     "project-images/BCR-project-new.png",
     "project-images/BYU-Excavation-project.png",
     "project-images/Links.png",
@@ -29,6 +30,8 @@ exports.sourceNodes = async ({
     "project-images/ecommerce-store.jpeg",
     "project-images/go-enlite.png",
     "project-images/utah-auto.png",
+
+    // About Me Images Folder
     "about-me-images/Lauterbrunnen.png",
     "about-me-images/Links-mystats.png",
     "about-me-images/antibes-billionares-bay.JPEG",
@@ -55,6 +58,8 @@ exports.sourceNodes = async ({
     "about-me-images/summer-sales-2021.JPG",
     "about-me-images/uintas-hike.jpg",
     "about-me-images/versailles.JPEG",
+
+    // Home Images Folder
     "home-images/Slack_icon.png",
     "home-images/facebook-logo.png",
     "home-images/gmail-logo.png",
@@ -63,14 +68,24 @@ exports.sourceNodes = async ({
     "home-images/logo-Squarespace.png",
     "home-images/profile.jpg",
     "home-images/shopify-logo.png",
+
+    // Client Logos Folder
     "client-logos/enlite-logo.png",
     "client-logos/utah-automotive-logo.png",
+
+    // Videos Folder
+    "videos/panel-1-vid.mp4",
+    "videos/panel-2-vid.mp4",
+    "videos/panel-3-vid.mp4",
+    "videos/panel-4-vid.mp4",
+
+    // Root Folder
     "bespoke-black-no-bg.png",
     "bespoke-white-no-bg.png",
   ];
 
-  for (const imagePath of imagePaths) {
-    const storageRef = ref(storage, imagePath);
+  for (const filePath of filePaths) {
+    const storageRef = ref(storage, filePath);
 
     try {
       const url = await getDownloadURL(storageRef);
@@ -85,18 +100,30 @@ exports.sourceNodes = async ({
       });
 
       if (fileNode) {
+        if (fileNode.extension === "mp4") {
+          createNode({
+            id: createNodeId(filePath),
+            videoUrl: url,
+            internal: {
+              type: "FirebaseVideo",
+              contentDigest: createContentDigest(filePath),
+            },
+            file___NODE: fileNode.id,
+          });
+        }
+
         createNode({
-          id: createNodeId(imagePath),
+          id: createNodeId(filePath),
           imageUrl: url,
           internal: {
             type: "FirebaseImage",
-            contentDigest: createContentDigest(imagePath),
+            contentDigest: createContentDigest(filePath),
           },
           file___NODE: fileNode.id,
         });
       }
     } catch (error) {
-      console.error(`Error fetching image "${imagePath}"`, error);
+      console.error(`Error fetching image "${filePath}"`, error);
     }
   }
 };

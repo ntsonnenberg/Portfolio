@@ -151,7 +151,7 @@ export default function Featured(): JSX.Element {
       </section>
       <section
         ref={panelSectionRef}
-        className="flex flex-col my-52 gap-10 items-center"
+        className="flex flex-col mb-40 gap-10 items-center"
       >
         <div
           id="panel-container"
