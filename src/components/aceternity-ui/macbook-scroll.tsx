@@ -148,8 +148,8 @@ export const Lid = ({
           }}
           className="absolute inset-0 bg-[#010101] rounded-lg flex items-center justify-center"
         >
-          <StaticImage
-            src="../../images/bespoke-white-no-bg.png"
+          <Image
+            src="https://firebasestorage.googleapis.com/v0/b/portfolio-401812.appspot.com/o/bespoke-white-no-bg.png?alt=media&token=80aee307-f24a-4136-9664-fd88dec5a9a8"
             alt="Bespoke Dev Solutions Logo"
             className="w-14 h-auto"
           />

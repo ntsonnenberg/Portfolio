@@ -54,9 +54,6 @@ module.exports = {
         code: "url(https://img.freepik.com/free-vector/pixel-rain-abstract-background_23-2148381456.jpg?size=626&ext=jpg&ga=GA1.1.1413502914.1696896000&semt=ais)",
       },
       keyframes: {
-        shimmer: {
-          "100%": { transform: "translateX(100%)" },
-        },
         "fade-in-down": {
           "0%": {
             opacity: "0",
@@ -155,10 +152,6 @@ module.exports = {
           "50%": { borderColor: "transparent" },
           "100%": { borderColor: "white" },
         },
-        grow: {
-          "0%": { transform: "scale(0.5)" },
-          "100%": { transform: "scale(1)" },
-        },
         aurora: {
           from: {
             backgroundPosition: "50% 50%,50% 50%",
@@ -169,7 +162,6 @@ module.exports = {
         },
       },
       animation: {
-        shimmer: "shimmer 1.5s infinite",
         "fade-in-down": "fade-in-down 2s ease-out",
         "fade-in-right": "fade-in-right 2s ease-out",
         "fade-in-left": "fade-in-left 2s ease-out",
@@ -180,7 +172,6 @@ module.exports = {
         "spin-top-out": "spin-top-out 0.5s forwards",
         "spin-bottom-out": "spin-bottom-out 0.5s forwards",
         typing: "typing 2s steps(15) forwards, blink .7s infinite",
-        grow: "grow 1s ease-in-out forwards",
         aurora: "aurora 60s linear infinite",
       },
     },

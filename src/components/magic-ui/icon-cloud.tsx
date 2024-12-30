@@ -1,7 +1,6 @@
 "use client";
 
 import { useEffect, useMemo, useState } from "react";
-import { useTheme } from "next-themes";
 import {
   Cloud,
   fetchSimpleIcons,
@@ -65,7 +64,6 @@ type IconData = Awaited<ReturnType<typeof fetchSimpleIcons>>;
 
 export function IconCloud({ iconSlugs }: DynamicCloudProps) {
   const [data, setData] = useState<IconData | null>(null);
-  const { theme } = useTheme();
 
   useEffect(() => {
     fetchSimpleIcons({ slugs: iconSlugs }).then(setData);
@@ -75,9 +73,9 @@ export function IconCloud({ iconSlugs }: DynamicCloudProps) {
     if (!data) return null;
 
     return Object.values(data.simpleIcons).map((icon) =>
-      renderCustomIcon(icon, theme || "dark")
+      renderCustomIcon(icon, "dark")
     );
-  }, [data, theme]);
+  }, [data]);
 
   return (
     // @ts-ignore

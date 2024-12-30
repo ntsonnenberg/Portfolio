@@ -65,6 +65,8 @@ exports.sourceNodes = async ({
     "home-images/shopify-logo.png",
     "client-logos/enlite-logo.png",
     "client-logos/utah-automotive-logo.png",
+    "bespoke-black-no-bg.png",
+    "bespoke-white-no-bg.png",
   ];
 
   for (const imagePath of imagePaths) {

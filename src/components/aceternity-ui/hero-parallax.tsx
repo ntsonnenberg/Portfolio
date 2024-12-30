@@ -10,6 +10,8 @@ import {
 } from "framer-motion";
 import { Project } from "../../lib/projects";
 import Image from "../Image";
+import Button from "../Button";
+import { Link } from "gatsby";
 
 interface Props {
   projects: Project[];
@@ -100,7 +102,7 @@ export const HeroParallax = ({ projects }: Props) => {
 
 export const Header = () => {
   return (
-    <div className="max-w-7xl relative mx-auto md:py-40 px-20 w-full  left-0 top-0">
+    <div className="max-w-7xl relative mx-auto md:py-40 px-20 w-full left-0 top-0">
       <h1 className="phone:text-3xl tablet:4xl laptop:text-6xl font-boldtext-white">
         The Ultimate <br /> technology consulting services
       </h1>

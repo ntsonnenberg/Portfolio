@@ -34,12 +34,7 @@ Dependencies
 - **_@gsap/react_** v2.1.1
 - **_@tabler/icons-react_** v3.26.0
 - **_autoprefixer_** v10.4.15
-- **_classnames_** v2.3.2
 - **_dotenv_** 16.3.1
-- **_embla-carousel_** 8.5.1
-- **_embla-carousel-autoplay_** v8.5.1
-- **_embla-carousel-class-names_** v8.5.1
-- **_embla-carousel-react_** v8.5.1
 - **_firebase_** v10.6.0
 - **_gatsby_** v5.11.0
 - **_gatsby-firesource_** v2.0.3
@@ -47,7 +42,6 @@ Dependencies
 - **_gatsby-plugin-image_** v3.11.0
 - **_gatsby-plugin-manifest_** v5.13.0
 - **_gatsby-plugin-postcss_** v6.11.0
-- **_gatsby-plugin-react-helmet_** v6.12.0
 - **_gatsby-plugin-sharp_** v5.11.0
 - **_gatsby-plugin-sitemap_** v6.11.0
 - **_gatsby-plugin-smoothscroll_** v1.2.0
@@ -55,16 +49,12 @@ Dependencies
 - **_gatsby-transformer-sharp_** v5.11.0
 - **_gsap_** v3.12.5
 - **_lenis_** v1.1.18
-- **_next-themes_** v0.4.4
 - **_postcss_** v8.4.28
 - **_react_** v18.2.0
 - **_react-dom_** v18.2.0
 - **_react-fast-marquee_** v1.6.4
-- **_react-helmet_** v6.1.0
 - **_react-icon-cloud_** v4.1.4
 - **_react-icons_** v4.10.1
-- **_react-portal_** v4.2.2
-- **_react-router-dom_** v6.16.0
 - **_tailwindcss_** v3.3.3
 - **_three_** v0.171.0
 
@@ -75,8 +65,6 @@ Dev Dependencies
 - **_@types/node_** v20.3.3
 - **_@types/react_** v18.2.14
 - **_@types/react-dom_** v18.2.6
-- **_@types/react-helmet_** v6.1.7
-- **_@types/react-portal_** v4.0.4
 - **_clsx_** v2.1.1
 - **_framer-motion_** v11.15.0
 - **_tailwind-merge_** v2.5.5
@@ -123,8 +111,6 @@ To run this project, you will need to add the following environment variables to
 `FIRESTORE_UNIVERSE_DOMAIN`
 
 ## Roadmap
-
-- Replace Carousel with Bento Grid
 
 - Reduce Package Dependencies used
 

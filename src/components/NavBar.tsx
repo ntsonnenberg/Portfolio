@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "gatsby";
-import { StaticImage } from "gatsby-plugin-image";
+import Image from "./Image";
 
 type Props = {
   openDrawer: () => void;
@@ -67,10 +67,9 @@ export default function NavBar({ openDrawer }: Props): JSX.Element {
     >
       <div className="flex flex-row justify-around h-full items-center align-center">
         <Link to="/" className="cursor-pointer phone:text-2xl tablet:text-4xl">
-          <StaticImage
-            src="../images/bespoke-white-no-bg.png"
+          <Image
+            src="https://firebasestorage.googleapis.com/v0/b/portfolio-401812.appspot.com/o/bespoke-white-no-bg.png?alt=media&token=80aee307-f24a-4136-9664-fd88dec5a9a8"
             alt="Bespoke Dev Solutions"
-            placeholder="blurred"
             className="phone:w-48 phone:h-auto tablet:w-40 tablet:h-auto"
           />
         </Link>

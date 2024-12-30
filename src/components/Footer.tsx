@@ -3,6 +3,7 @@ import { StaticImage } from "gatsby-plugin-image";
 import React, { useState } from "react";
 import { FiLinkedin, FiFacebook, FiGithub } from "react-icons/fi";
 import { RiTwitterXLine } from "react-icons/ri";
+import Image from "./Image";
 
 export default function Footer(): JSX.Element {
   const [isHovered, setIsHovered] = useState(false);
@@ -20,10 +21,9 @@ export default function Footer(): JSX.Element {
       <div className="flex h-full items-center phone:flex-col phone:py-8 phone:gap-6 laptop:flex-row laptop:py-0 laptop:gap-0">
         <div className="flex gap-6 tablet:basis-1/3 tablet:text-2xl laptop:ml-40 phone:text-lg phone:ml-4">
           <p className="text-md">&copy; 2024</p>
-          <StaticImage
-            src="../images/bespoke-white-no-bg.png"
+          <Image
+            src="https://firebasestorage.googleapis.com/v0/b/portfolio-401812.appspot.com/o/bespoke-white-no-bg.png?alt=media&token=80aee307-f24a-4136-9664-fd88dec5a9a8"
             alt="Bespoke Dev Solutions"
-            placeholder="blurred"
             className="phone:w-48 phone:h-auto"
           />
         </div>

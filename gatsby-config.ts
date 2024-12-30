@@ -36,7 +36,6 @@ const config: GatsbyConfig = {
     "gatsby-plugin-sitemap",
     "gatsby-plugin-sharp",
     "gatsby-transformer-sharp",
-    "gatsby-plugin-react-helmet",
     "gatsby-plugin-smoothscroll",
     {
       resolve: "gatsby-source-filesystem",
@@ -49,7 +48,15 @@ const config: GatsbyConfig = {
     {
       resolve: "gatsby-plugin-manifest",
       options: {
-        icon: "src/images/bespoke-black-no-bg.png",
+        name: "Bespoke Dev Solutions",
+        short_name: "BDS",
+        start_url: "/",
+        background_color: "#00FFFFFF",
+        lang: "en",
+        display: "standalone",
+        description:
+          "Build your ideas into reality with a custom web application for your business.",
+        icon: "src/images/BDS-white-no-bg.png",
       },
     },
     {

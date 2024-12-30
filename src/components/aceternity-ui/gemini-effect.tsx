@@ -1,6 +1,7 @@
 "use client";
 import { cn } from "../../lib/utils";
 import { motion, MotionValue } from "framer-motion";
+import { Link } from "gatsby";
 import React from "react";
 
 const transition = {
@@ -21,16 +22,20 @@ export const GoogleGeminiEffect = ({
 }) => {
   return (
     <div className={cn("sticky top-80", className)}>
-      <p className="text-lg md:text-7xl font-normal pb-4 text-center bg-clip-text text-transparent bg-gradient-to-b from-neutral-100 to-neutral-300">
+      <p className="text-2xl font-normal pb-4 text-center bg-clip-text text-transparent bg-gradient-to-b from-neutral-100 to-neutral-300">
         {title || `Build with Bespoke Dev Solutions`}
       </p>
-      <p className="text-xs md:text-xl font-normal text-center text-neutral-400 mt-4 max-w-lg mx-auto">
-        {description || `Unlock your potential and discover the capabilities`}
+      <p className="text-sm md:text-xl font-normal text-center text-neutral-400 mt-4 max-w-lg mx-auto">
+        {description ||
+          `From idea to execution, we specialize in building complex, custom web applications that solve real business problems. Automate processes, optimize operations and improve decision-making with intuitive, seucre, and scalable solutions`}
       </p>
       <div className="w-full h-[890px] -top-60 md:-top-40  flex items-center justify-center bg-red-transparent absolute ">
-        <button className="phone:hidden tablet:block font-bold bg-white rounded-full md:px-4 md:py-2 px-2 py-1 md:mt-24 mt-8 z-30 md:text-base text-black text-xs  w-fit mx-auto">
-          bespokedevsolutions.com
-        </button>
+        <Link
+          to="/contact"
+          className="phone:hidden tablet:block font-bold bg-white rounded-full px-2 py-1 mt-32 z-30 md:text-base text-black text-md w-fit mx-auto cursor-pointer"
+        >
+          Contact Me to Learn More
+        </Link>
       </div>
       <svg
         width="1440"

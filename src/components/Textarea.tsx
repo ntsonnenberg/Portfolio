@@ -1,4 +1,3 @@
-import classNames from "classnames";
 import React from "react";
 
 type Props = {
@@ -16,15 +15,10 @@ export default function Textarea({
   value,
   onChange,
 }: Props): JSX.Element {
-  const textareaWrapperClasses = classNames(
-    "relative bg-transparent text-on-background min-h-60",
-    {}
-  );
-
   return (
     <div>
       <label className="text-2xl">{label}</label>
-      <div className={textareaWrapperClasses}>
+      <div className="relative bg-transparent text-on-background min-h-60">
         <textarea
           value={value}
           placeholder={placeholder}
