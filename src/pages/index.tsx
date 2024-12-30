@@ -7,8 +7,6 @@ import SocialLinks from "../components/SocialLinks";
 import ProfileFeature from "../components/ProfileFeature";
 import Marquee from "react-fast-marquee";
 import IntegrationFeatures from "../components/IntegrationFeatures";
-import FractalDotGrid from "../components/FractalDotGrid";
-import ParticleRing from "../components/ParticleRing";
 import FadeBlockHeader from "../components/FadeBlockHeader";
 import { AuroraBackgroundView } from "../components/AuroraBackgroundView";
 import { MacbookScrollView } from "../components/MacbookScrollView";
@@ -21,7 +19,6 @@ import { TextHoverEffectView } from "../components/TextHoverEffectView";
 import { GeminiEffectView } from "../components/GeminiEffectView";
 import { HeroParallaxView } from "../components/HeroParallaxView";
 import Image from "../components/Image";
-import { Link } from "gatsby";
 
 export default function IndexPage(): JSX.Element {
   let isPhone = false;
@@ -44,7 +41,6 @@ export default function IndexPage(): JSX.Element {
         <Featured />
         <BackgroundBeamsView />
         <IntegrationFeatures />
-        <ParticleRing />
         <div className="flex phone:gap-0 laptop:gap-10 laptop:m-10 laptop:p-40 laptop:flex-row phone:flex-col justify-evenly">
           {isPhone ? (
             <FadeBlockHeader color="on-background" className="py-32 mx-6">
@@ -56,9 +52,6 @@ export default function IndexPage(): JSX.Element {
           <IconCloudView />
         </div>
         <SocialLinks />
-        <div className="relative h-screen bg-surface">
-          <FractalDotGrid />
-        </div>
         <Steps />
         <Marquee
           direction="right"

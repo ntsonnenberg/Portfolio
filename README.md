@@ -56,12 +56,9 @@ Dependencies
 - **_react-icon-cloud_** v4.1.4
 - **_react-icons_** v4.10.1
 - **_tailwindcss_** v3.3.3
-- **_three_** v0.171.0
 
 Dev Dependencies
 
-- **_@react-three/drei_** v9.120.4
-- **_@react-three/fiber_** v8.17.10
 - **_@types/node_** v20.3.3
 - **_@types/react_** v18.2.14
 - **_@types/react-dom_** v18.2.6

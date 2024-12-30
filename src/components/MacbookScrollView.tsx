@@ -11,7 +11,7 @@ export function MacbookScrollView() {
             Boost Your Brand Online <br /> Exceptional Web Design!
           </span>
         }
-        src="/go-enlite-landing.svg"
+        src="https://firebasestorage.googleapis.com/v0/b/portfolio-401812.appspot.com/o/home-images%2Fgo-enlite-landing.png?alt=media&token=3aa18edb-a4e6-4862-9584-608a5b4cb45b"
         showGradient={false}
       />
     </div>
