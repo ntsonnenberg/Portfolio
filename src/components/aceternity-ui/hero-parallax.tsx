@@ -103,7 +103,7 @@ export const HeroParallax = ({ projects }: Props) => {
 export const Header = () => {
   return (
     <div className="max-w-7xl relative mx-auto md:py-40 px-20 w-full left-0 top-0">
-      <h1 className="phone:text-3xl tablet:4xl laptop:text-6xl font-boldtext-white">
+      <h1 className="phone:text-3xl tablet:4xl laptop:text-6xl font-bold text-white">
         The Ultimate <br /> technology consulting services
       </h1>
       <p className="max-w-2xl text-base md:text-xl mt-8 dark:text-neutral-200">
@@ -141,7 +141,7 @@ export const ProductCard = ({
         <Image
           src={product.image}
           alt={product.title}
-          loading="eager"
+          loading="lazy"
           className="object-cover object-left-top absolute h-full w-full inset-0"
         />
       </a>

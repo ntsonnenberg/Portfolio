@@ -154,3 +154,5 @@ export default function AboutMePage(): JSX.Element {
     </Layout>
   );
 }
+
+export { Head } from "./index";

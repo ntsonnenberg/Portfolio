@@ -39,6 +39,12 @@ const config: GatsbyConfig = {
     "gatsby-plugin-smoothscroll",
     "gatsby-plugin-webpack-bundle-analyser-v2",
     {
+      resolve: "gatsby-plugin-html-attributes",
+      options: {
+        lang: "en",
+      },
+    },
+    {
       resolve: "gatsby-source-filesystem",
       options: {
         name: "images",

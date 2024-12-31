@@ -27,3 +27,5 @@ export default function ProjectsPage(): JSX.Element {
     </Layout>
   );
 }
+
+export { Head } from "./index";

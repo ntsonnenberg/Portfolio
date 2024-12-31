@@ -39,6 +39,7 @@ Dependencies
 - **_gatsby_** v5.11.0
 - **_gatsby-firesource_** v2.0.3
 - **_gatsby-plugin-google-gtag_** v.5.11.0
+- **_gatsby-plugin-html-attributes_** v1.0.5
 - **_gatsby-plugin-image_** v3.11.0
 - **_gatsby-plugin-manifest_** v5.13.0
 - **_gatsby-plugin-postcss_** v6.11.0
@@ -64,6 +65,7 @@ Dev Dependencies
 - **_@types/react-dom_** v18.2.6
 - **_clsx_** v2.1.1
 - **_framer-motion_** v11.15.0
+- **_gatsby-plugin-webpack-bundle-analyser-v2_** v1.1.32
 - **_tailwind-merge_** v2.5.5
 - **_typescript_** v5.1.6
 
@@ -109,9 +111,17 @@ To run this project, you will need to add the following environment variables to
 
 ## Roadmap
 
-- Reduce Package Dependencies used
+- Improve Load Performance:
 
-- Improve SEO
+  - Reduce Contentful Paint element (TextHoverEffectView component)
+  - Eliminate render-blocking resources [Gatsby Script API](https://www.gatsbyjs.com/docs/reference/built-in-components/gatsby-script/?utm_source=lighthouse&utm_medium=devtools)
+  - Reduce JavaScript execution time
+  - Minimize main-thread work
+  - Reduce unused JavaScript [Gatsby Webpack Bundle Analyzer](https://www.gatsbyjs.com/plugins/gatsby-plugin-webpack-bundle-analyser-v2/?utm_source=lighthouse&utm_medium=devtools)
+  - Page prevented back-forward cache restoration
+
+- Improve SEO:
+  - Links are not crawlable
 
 ## Feedback
 

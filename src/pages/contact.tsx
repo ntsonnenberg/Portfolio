@@ -116,3 +116,5 @@ export default function ContactPage(): JSX.Element {
     </Layout>
   );
 }
+
+export { Head } from "./index";
