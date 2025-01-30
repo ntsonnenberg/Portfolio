@@ -104,12 +104,14 @@ export const Header = () => {
   return (
     <div className="max-w-7xl relative mx-auto md:py-40 px-20 w-full left-0 top-0">
       <h1 className="phone:text-3xl tablet:4xl laptop:text-6xl font-bold text-white">
-        The Ultimate <br /> technology consulting services
+        Stay at the
+        <br /> forefront of technology
       </h1>
       <p className="max-w-2xl text-base md:text-xl mt-8 dark:text-neutral-200">
-        I build awesome web applications with the latest technologies and
-        frameworks. My team of dedicated developers and designers love to build
-        amazing products to accomplish your business goals.
+        Our web dev solutions cater to modern business needs. Unlock your online
+        potential with our exper website development services tailored to your
+        business needs. Hire a freelance web developer today to customize your
+        website and acclerate your business.
       </p>
     </div>
   );

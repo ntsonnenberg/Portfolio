@@ -1,8 +1,10 @@
 import React, { useLayoutEffect, useRef } from "react";
-import { FiShoppingCart, FiSettings, FiPieChart } from "react-icons/fi";
+import { FiShoppingCart } from "react-icons/fi";
 import { GoMegaphone } from "react-icons/go";
-import { RiMoneyDollarCircleLine } from "react-icons/ri";
-import { FaSquarespace } from "react-icons/fa";
+import { SiAmazonec2 } from "react-icons/si";
+import { VscTerminalCmd } from "react-icons/vsc";
+import { TbChartInfographic } from "react-icons/tb";
+import { LiaMoneyCheckAltSolid } from "react-icons/lia";
 import FadeBlockHeader from "./FadeBlockHeader";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -103,48 +105,50 @@ export default function Featured(): JSX.Element {
             <p className="mt-2 mb-8 text-2xl font-bold">Ecommerce</p>
             <FiShoppingCart className="h-10 w-10 mx-auto" />
             <p className="mt-5 text-base">
-              Elevate your brand with a custom Ecommerce site to engage shoppers
-              and drive sales.
+              Ready to build your eCommerce website? Our team has the expertise
+              to help you sell online efficiently.
             </p>
           </div>
           <div className="tablet:p-8 laptop:p-14 tablet:border-l tablet:border-on-background/20 laptop:border-r">
             <p className="mt-2 mb-8 text-2xl font-bold">Landing Pages</p>
             <GoMegaphone className="h-10 w-10 mx-auto" />
             <p className="mt-5 text-base">
-              Capture and convert your audience with SEO-friendly landing pages
-              that highlight your brand.
+              Hire a front end web developer who will create eye-catching
+              designs that keep your users engaged.
             </p>
           </div>
           <div className="tablet:p-8 tablet:border-r tablet:border-t tablet:border-on-background/20 laptop:border-t-0 laptop:border-r-0 laptop:p-14">
             <p className="mt-2 mb-8 text-2xl font-bold">SaaS</p>
-            <FiSettings className="h-10 w-10 mx-auto" />
+            <VscTerminalCmd className="h-10 w-10 mx-auto" />
             <p className="mt-5 text-base">
-              Launch your innovative Software as a Serice produce with a
-              scalable, user-friendly platform.
+              Transform your ideas into reality with our cutting-edge web app
+              developemnt serices designed for scalability.
             </p>
           </div>
           <div className="tablet:p-8 laptop:p-14 tablet:border-t tablet:border-on-background/20">
-            <p className="mt-2 mb-8 text-2xl font-bold">CRM</p>
-            <RiMoneyDollarCircleLine className="h-10 w-10 mx-auto" />
+            <p className="mt-2 mb-8 text-2xl font-bold">
+              Infrastructure Management
+            </p>
+            <SiAmazonec2 className="h-10 w-10 mx-auto" />
             <p className="mt-5 text-base">
-              Transform your customer relationships with a custom CRM tool that
-              streamlines interactions and harnesses data for growth.
+              Explore the latest software for apps that streamline your
+              development process and enhance functionality.
             </p>
           </div>
           <div className="tablet:p-8 laptop:p-14 tablet:border-t tablet:border-on-background/20 laptop:border-l">
             <p className="mt-2 mb-8 text-2xl font-bold">Analytics</p>
-            <FiPieChart className="h-10 w-10 mx-auto" />
+            <TbChartInfographic className="h-10 w-10 mx-auto" />
             <p className="mt-5 text-base">
-              Leverage custom analytics tools to gain deep insights and make
-              informed decisions that propel your business forward.
+              Leverage python web development for powerful analytics
+              applications that are efficient and easy to maintain.
             </p>
           </div>
           <div className="tablet:p-8 laptop:p-14 tablet:border-t tablet:border-on-background/20 tablet:border-l">
-            <p className="mt-2 mb-8 text-2xl font-bold">Squarespace</p>
-            <FaSquarespace className="h-10 w-10 mx-auto" />
+            <p className="mt-2 mb-8 text-2xl font-bold">FinTech</p>
+            <LiaMoneyCheckAltSolid className="h-10 w-10 mx-auto" />
             <p className="mt-5 text-base">
-              Stand out online with a professionally designed Squarespace site
-              that reflects the excellence of your brand.
+              Our experts will guide you through creating a web page that not
+              only looks great but also convers visitors into customers.
             </p>
           </div>
         </div>

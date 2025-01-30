@@ -66,7 +66,7 @@ exports.sourceNodes = async ({
     "home-images/go-enlite-landing.png",
     "home-images/hubspot-logo.png",
     "home-images/logo-Squarespace.png",
-    "home-images/profile.jpg",
+    "home-images/profile.jpeg",
     "home-images/shopify-logo.png",
 
     // Client Logos Folder

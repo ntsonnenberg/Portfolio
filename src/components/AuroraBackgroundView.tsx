@@ -22,10 +22,11 @@ export function AuroraBackgroundView() {
           Custom Web Solutions for Growing Businesses
         </div>
         <p className="font-extralight text-base md:text-4xl dark:text-neutral-200 py-4 w-2/3 self-center">
-          Revolutionize the way you work with custom web applications designed
-          to solve your unique business challenges. From workflow automation to
-          data management we build powerful, scalable solutions that enhance
-          efficiency and drive growth.
+          Streamline your operations with innovation business automations
+          tailored to improve efficiency and productivity. Let us help you
+          automate process to svae time and reduce cost in your day-to-day
+          operations. Optimize your business process with our tailored solutions
+          that enhance productivive and drive growth.
         </p>
         <Link
           to="/contact"

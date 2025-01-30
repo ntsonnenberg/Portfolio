@@ -41,7 +41,7 @@ export default function Steps(): JSX.Element {
       </div>
       <p className="tablet:w-1/2 phone:w-11/12">
         <span className="text-secondary font-extrabold">
-          My proven methodology ensures a structured and efficient approach
+          Our proven methodology ensures a structured and efficient approach
         </span>{" "}
         to building high-quality software tailored to your needs.
       </p>

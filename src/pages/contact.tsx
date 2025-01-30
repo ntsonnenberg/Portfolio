@@ -52,7 +52,7 @@ export default function ContactPage(): JSX.Element {
   return (
     <Layout>
       <div className="py-60 bg-background text-on-background min-h-screen flex flex-col items-center gap-20 phone:px-8 tablet:px-0">
-        <h2 className="text-center font-bold text-6xl">Book a Demo</h2>
+        <p className="text-center font-bold text-6xl">Book a Demo</p>
         <form
           onSubmit={sendContact}
           className="flex flex-col phone:gap-10 tablet:gap-8 laptop:w-1/3"

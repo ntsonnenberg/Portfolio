@@ -27,7 +27,9 @@ export const GoogleGeminiEffect = ({
       </p>
       <p className="text-sm md:text-xl font-normal text-center text-neutral-400 mt-4 max-w-lg mx-auto">
         {description ||
-          `From idea to execution, we specialize in building complex, custom web applications that solve real business problems. Automate processes, optimize operations and improve decision-making with intuitive, seucre, and scalable solutions`}
+          `Our web devlopment company offers comprehensive solutions that cater to all
+          your digital transformation needs. Experience seamless web application
+          development that enhances user engagement and business efficiency.`}
       </p>
       <div className="w-full h-[890px] -top-60 md:-top-40  flex items-center justify-center bg-red-transparent absolute ">
         <Link

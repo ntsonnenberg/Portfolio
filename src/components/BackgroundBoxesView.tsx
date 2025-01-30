@@ -11,18 +11,19 @@ export function BackgroundBoxesView() {
       <div className="absolute inset-0 w-full h-full bg-slate-900 z-20 [mask-image:radial-gradient(transparent,white)] pointer-events-none" />
 
       <Boxes />
-      <h2
+      <h3
         className={cn(
           "phone:text-3xl tablet:text-4xl laptop:text-6xl text-white relative z-20"
         )}
       >
         Consulting with Code
-      </h2>
+      </h3>
       <p className="text-center mt-6 text-neutral-300 relative z-20 phone:w-5/6 tablet:w-2/3">
-        Your business is unique, and so are your challenges. That's why we build
-        tailored web applications to help you stay ahead of the curve. Automate
-        tasks, enhance collaboration, and unlock your full potential with
-        solutions designed to grow with you.
+        Choose our web development agency for strategic solutions that drive
+        growth and enhance user satisfaction. Our application deveelopment
+        services ensure custom solutions that fit your unique business
+        requirements. Learn about our competitive website design costs and
+        discover how we maximize value for your investment.
       </p>
       <Link
         to="/contact"

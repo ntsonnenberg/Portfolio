@@ -13,10 +13,12 @@ export default function IntegrationFeatures(): JSX.Element {
       </div>
       <p className="laptop:w-1/2 phone:w-11/12">
         <span className="text-secondary font-extrabold">
-          Delivering unparalleled code quality
+          Explore our diverse web development service
         </span>{" "}
-        and customization to craft digital solutions that embody excellence and
-        precision for your unique needs.
+        designed to elevate your brand in the digital landscape. Our back end
+        developer expertise ensures your website functions flawlessly, providing
+        a seamless user experience. Trust our web dev agency to deliver
+        innovative solutinos taht put you ahead of the cometition.
       </p>
       <div className="my-28 grid laptop:grid-cols-3 tablet:grid-cols-2 phone:grid-cols-1 gap-10">
         <Card

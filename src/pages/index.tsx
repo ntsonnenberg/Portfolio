@@ -32,33 +32,12 @@ export default function IndexPage(): JSX.Element {
         <HeroParallaxView />
         <TextHoverEffectView />
         <ProfileFeature />
-        <div className="phone:pt-10 laptop:pt-0">
-          <AuroraBackgroundView />
-        </div>
-        <GeminiEffectView />
-        <MacbookScrollView />
-        <BackgroundBoxesView />
-        <Featured />
-        <BackgroundBeamsView />
-        <IntegrationFeatures />
-        <div className="flex phone:gap-0 laptop:gap-10 laptop:m-10 laptop:p-40 laptop:flex-row phone:flex-col justify-evenly">
-          {isPhone ? (
-            <FadeBlockHeader color="on-background" className="py-32 mx-6">
-              Built with modern frameworks
-            </FadeBlockHeader>
-          ) : (
-            <FlipWordsView />
-          )}
-          <IconCloudView />
-        </div>
-        <SocialLinks />
-        <Steps />
         <Marquee
           direction="right"
           speed={100}
           gradient
           gradientColor="#141414"
-          className="py-4 overflow-clip"
+          className="py-4 overflow-clip mb-40"
         >
           <Image
             src="https://firebasestorage.googleapis.com/v0/b/portfolio-401812.appspot.com/o/client-logos%2Fenlite-logo.png?alt=media&token=1b09af9f-7b72-4b26-9040-295881096739"
@@ -71,6 +50,27 @@ export default function IndexPage(): JSX.Element {
             alt="Utah Automotive Magazine Website Logo"
           />
         </Marquee>
+        <div className="phone:pt-10 laptop:pt-0">
+          <AuroraBackgroundView />
+        </div>
+        <GeminiEffectView />
+        <MacbookScrollView />
+        <BackgroundBoxesView />
+        <Featured />
+        <BackgroundBeamsView />
+        <IntegrationFeatures />
+        <SocialLinks />
+        <div className="flex phone:gap-0 laptop:gap-10 laptop:m-10 laptop:p-40 laptop:flex-row phone:flex-col justify-evenly">
+          {isPhone ? (
+            <FadeBlockHeader color="on-background" className="py-32 mx-6">
+              Built with modern frameworks
+            </FadeBlockHeader>
+          ) : (
+            <FlipWordsView />
+          )}
+          <IconCloudView />
+        </div>
+        <Steps />
         <ContactForm />
       </ReactLenis>
     </Layout>
@@ -86,25 +86,34 @@ export function Head(): JSX.Element {
         type="image/png"
         href="https://firebasestorage.googleapis.com/v0/b/portfolio-401812.appspot.com/o/bespoke-black-no-bg.png?alt=media&token=9e7fc2c7-5466-4830-88e7-d5466d2b1118"
       ></link>
-      <meta name="title" content="Bespoke Dev Solutions" />
-      <meta name="theme-color" content="#141414" />
+      <meta
+        name="title"
+        content="Professional Application Development Services"
+      />
       <meta
         name="description"
-        content="Build your ideas into reality with a custom web application for your business."
+        content="Hire our experienced freelance web developers for customized solutions that fit you busines requirements."
       />
+      <meta name="theme-color" content="#141414" />
       <meta property="og:type" content="website" />
       <meta property="og:url" content="https://bespokedevsolutions.com/" />
-      <meta property="og:title" content="Bespoke Dev Solutions" />
+      <meta
+        property="og:title"
+        content="Professional Application Development Services"
+      />
       <meta
         property="og:description"
-        content="Build your ideas into reality with a custom web application for your business."
+        content="Hire our experienced freelance web developers for customized solutions that fit you busines requirements."
       />
       <meta property="twitter:type" content="website" />
       <meta property="twitter:url" content="https://bespokedevsolutions.com/" />
-      <meta property="twitter:title" content="Bespoke Dev Solutions" />
+      <meta
+        property="twitter:title"
+        content="Professional Application Development Services"
+      />
       <meta
         property="twitter:description"
-        content="Build your ideas into reality with a custom web application for your business."
+        content="Hire our experienced freelance web developers for customized solutions that fit you busines requirements."
       />
       <link rel="preconnect" href="https://fonts.googleapis.com" />
       <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />

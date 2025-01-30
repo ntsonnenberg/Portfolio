@@ -23,7 +23,7 @@ module.exports = {
     screens: {
       phone: "360px",
       tablet: "664px",
-      laptop: "1440px",
+      laptop: "1420px",
       desktop: "1920px",
     },
     extend: {
@@ -49,9 +49,6 @@ module.exports = {
       },
       fontFamily: {
         poppins: ["Poppins", "sans-serif"],
-      },
-      backgroundImage: {
-        code: "url(https://img.freepik.com/free-vector/pixel-rain-abstract-background_23-2148381456.jpg?size=626&ext=jpg&ga=GA1.1.1413502914.1696896000&semt=ais)",
       },
       keyframes: {
         "fade-in-down": {
