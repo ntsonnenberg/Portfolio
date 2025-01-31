@@ -40,7 +40,12 @@ const config: GatsbyConfig = {
     "gatsby-transformer-sharp",
     "gatsby-plugin-smoothscroll",
     "gatsby-plugin-webpack-bundle-analyser-v2",
-    "gatsby-plugin-sitemap",
+    {
+      resolve: "gatsby-plugin-google-gtag",
+      options: {
+        trackingIds: ["G-RPLQCK4TJB"],
+      },
+    },
     {
       resolve: "gatsby-plugin-html-attributes",
       options: {
