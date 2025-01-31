@@ -27,7 +27,9 @@ const firestore_auth = {
 
 const config: GatsbyConfig = {
   siteMetadata: {
-    title: `Portfolio`,
+    title: `Professional Application Development Services`,
+    description: `Hire our experienced freelance web developers for customized solutions that fit you busines requirements.`,
+    image: `https://firebasestorage.googleapis.com/v0/b/portfolio-401812.appspot.com/o/bespoke-black-no-bg.png?alt=media&token=9e7fc2c7-5466-4830-88e7-d5466d2b1118`,
     siteUrl: `https://bespokedevsolutions.com`,
   },
   plugins: [
@@ -38,6 +40,7 @@ const config: GatsbyConfig = {
     "gatsby-transformer-sharp",
     "gatsby-plugin-smoothscroll",
     "gatsby-plugin-webpack-bundle-analyser-v2",
+    "gatsby-plugin-sitemap",
     {
       resolve: "gatsby-plugin-html-attributes",
       options: {

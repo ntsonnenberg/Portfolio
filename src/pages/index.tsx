@@ -19,6 +19,7 @@ import { TextHoverEffectView } from "../components/TextHoverEffectView";
 import { GeminiEffectView } from "../components/GeminiEffectView";
 import { HeroParallaxView } from "../components/HeroParallaxView";
 import Image from "../components/Image";
+import SEO from "../components/Seo";
 
 export default function IndexPage(): JSX.Element {
   let isPhone = false;
@@ -78,49 +79,5 @@ export default function IndexPage(): JSX.Element {
 }
 
 export function Head(): JSX.Element {
-  return (
-    <>
-      <title>Bespoke Dev Solutions - Nathan Sonnenberg</title>
-      <link
-        rel="icon"
-        type="image/png"
-        href="https://firebasestorage.googleapis.com/v0/b/portfolio-401812.appspot.com/o/bespoke-black-no-bg.png?alt=media&token=9e7fc2c7-5466-4830-88e7-d5466d2b1118"
-      ></link>
-      <meta
-        name="title"
-        content="Professional Application Development Services"
-      />
-      <meta
-        name="description"
-        content="Hire our experienced freelance web developers for customized solutions that fit you busines requirements."
-      />
-      <meta name="theme-color" content="#141414" />
-      <meta property="og:type" content="website" />
-      <meta property="og:url" content="https://bespokedevsolutions.com/" />
-      <meta
-        property="og:title"
-        content="Professional Application Development Services"
-      />
-      <meta
-        property="og:description"
-        content="Hire our experienced freelance web developers for customized solutions that fit you busines requirements."
-      />
-      <meta property="twitter:type" content="website" />
-      <meta property="twitter:url" content="https://bespokedevsolutions.com/" />
-      <meta
-        property="twitter:title"
-        content="Professional Application Development Services"
-      />
-      <meta
-        property="twitter:description"
-        content="Hire our experienced freelance web developers for customized solutions that fit you busines requirements."
-      />
-      <link rel="preconnect" href="https://fonts.googleapis.com" />
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
-      <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-        rel="stylesheet"
-      />
-    </>
-  );
+  return <SEO />;
 }

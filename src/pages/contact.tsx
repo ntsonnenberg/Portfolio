@@ -5,6 +5,7 @@ import Textarea from "../components/Textarea";
 import Button from "../components/Button";
 import Spinner from "../components/Spinner";
 import { addContact } from "../api/Contacts";
+import SEO from "../components/Seo";
 
 export default function ContactPage(): JSX.Element {
   const [formInputs, setFormInputs] = useState({
@@ -117,4 +118,12 @@ export default function ContactPage(): JSX.Element {
   );
 }
 
-export { Head } from "./index";
+export function Head(): JSX.Element {
+  return (
+    <SEO
+      title="Contact Us to Learn About Our Services"
+      description="Reach out to our web development agency understand your business needs and start building tailored applications."
+      pathname="/contact"
+    />
+  );
+}

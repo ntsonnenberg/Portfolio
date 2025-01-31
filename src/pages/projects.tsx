@@ -3,6 +3,7 @@ import ProjectCard from "../components/ProjectCard";
 import { Spotlight } from "../components/ui-layouts/spotlight-card";
 import { getProjects } from "../lib/projects";
 import React from "react";
+import SEO from "../components/Seo";
 
 export default function ProjectsPage(): JSX.Element {
   const projects = getProjects();
@@ -28,4 +29,12 @@ export default function ProjectsPage(): JSX.Element {
   );
 }
 
-export { Head } from "./index";
+export function Head(): JSX.Element {
+  return (
+    <SEO
+      title="Projects We Have Built"
+      description="Explore the diverse projects and applications we have built in the past."
+      pathname="/projects"
+    />
+  );
+}

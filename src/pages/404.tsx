@@ -1,5 +1,6 @@
 import * as React from "react";
-import { Link, HeadFC, PageProps } from "gatsby";
+import { Link, PageProps } from "gatsby";
+import SEO from "../components/Seo";
 
 const pageStyles = {
   color: "#232129",
@@ -46,4 +47,12 @@ const NotFoundPage: React.FC<PageProps> = () => {
 
 export default NotFoundPage;
 
-export { Head } from "./index";
+export function Head(): JSX.Element {
+  return (
+    <SEO
+      title="This Page does Not Exist"
+      description="Oops! It looks like this page does not exist. Sorry to dissapoint you!"
+      pathname="/projects"
+    />
+  );
+}

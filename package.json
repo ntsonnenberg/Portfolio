@@ -13,7 +13,8 @@
     "build": "gatsby build",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "sitemap": "gatsby build && gatsby serve"
   },
   "dependencies": {
     "@gsap/react": "^2.1.1",
@@ -29,7 +30,7 @@
     "gatsby-plugin-manifest": "^5.13.0",
     "gatsby-plugin-postcss": "^6.11.0",
     "gatsby-plugin-sharp": "^5.11.0",
-    "gatsby-plugin-sitemap": "^6.11.0",
+    "gatsby-plugin-sitemap": "^6.14.0",
     "gatsby-plugin-smoothscroll": "^1.2.0",
     "gatsby-source-filesystem": "^5.11.0",
     "gatsby-transformer-sharp": "^5.11.0",

@@ -1,5 +1,4 @@
 import React, { useRef } from "react";
-import Button from "./Button";
 import { Link } from "gatsby";
 import Image from "./Image";
 import useScrollObserver from "../hooks/use-scroll-observer";
@@ -17,7 +16,7 @@ export default function ProfileFeature(): JSX.Element {
       <Image
         src="https://firebasestorage.googleapis.com/v0/b/portfolio-401812.appspot.com/o/home-images%2Fprofile.jpeg?alt=media&token=5e6061c3-fcbf-4895-bf13-f9e53dc5e1a5"
         alt="Profile Headshot Photo"
-        className="rounded-md h-auto w-60 shadow-stand-out phone:place-self-center tablet:ml-10 tablet:place-self-center laptop:ml-0"
+        className="rounded-sm h-auto w-80 shadow-stand-out phone:place-self-center tablet:ml-10 tablet:place-self-center laptop:ml-0"
       />
       <div
         ref={textRef}

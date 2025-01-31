@@ -6,6 +6,7 @@ import scrollTo from "gatsby-plugin-smoothscroll";
 import Image from "../components/Image";
 import { TimelineView } from "../components/TimelineView";
 import MasonaryGrid from "../components/ui-layouts/masonary-grid";
+import SEO from "../components/Seo";
 
 export default function AboutMePage(): JSX.Element {
   const items = [
@@ -155,4 +156,12 @@ export default function AboutMePage(): JSX.Element {
   );
 }
 
-export { Head } from "./index";
+export function Head(): JSX.Element {
+  return (
+    <SEO
+      title="Learn About Nathan Sonnenberg"
+      description="Get to know me more and my experience with building application."
+      pathname="/aboutme"
+    />
+  );
+}
