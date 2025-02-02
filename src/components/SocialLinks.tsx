@@ -1,6 +1,5 @@
-import { StaticImage } from "gatsby-plugin-image";
 import { FiLinkedin, FiFacebook, FiGithub } from "react-icons/fi";
-import { RiTwitterXLine } from "react-icons/ri";
+import { FaXTwitter } from "react-icons/fa6";
 import React, { useState } from "react";
 import { Link } from "gatsby";
 
@@ -23,7 +22,7 @@ export default function SocialLinks(): JSX.Element {
           href="https://www.linkedin.com/in/nathan-sonnenberg/"
           target="_blank"
         >
-          <FiLinkedin className="stroke-white transition-transform duration-100 tablet:w-20 tablet:h-20 phone:w-10 phone:h-10 hover:transform hover:-translate-y-2 hover:ease-in hover:stroke-[#0077B5]" />
+          <FiLinkedin className="stroke-white stroke-1 hover:scale-110 transition-transform duration-100 ease-in tablet:w-20 tablet:h-20 phone:w-10 phone:h-10 hover:stroke-[#0077B5]" />
         </a>
         <a
           title="Instagram"
@@ -38,7 +37,7 @@ export default function SocialLinks(): JSX.Element {
             viewBox="0 0 24 24"
             strokeLinecap="round"
             strokeLinejoin="round"
-            className="transition-transform duration-100 tablet:w-20 tablet:h-20 phone:w-10 phone:h-10 hover:transform hover:-translate-y-2 hover:ease-in"
+            className="stroke-1 hover:scale-110 transition-transform duration-100 ease-in tablet:w-20 tablet:h-20 phone:w-10 phone:h-10"
             height="1em"
             width="1em"
             xmlns="http://www.w3.org/2000/svg"
@@ -68,21 +67,21 @@ export default function SocialLinks(): JSX.Element {
           </svg>
         </a>
         <a title="X" href="https://twitter.com/nate_sonnenberg" target="_blank">
-          <RiTwitterXLine className="text-white transition-transform duration-100 tablet:w-20 tablet:h-20 phone:w-10 phone:h-10 hover:transform hover:-translate-y-2 hover:ease-in hover:text-[#08A0E9]" />
+          <FaXTwitter className="text-white stroke-1 hover:scale-110 transition-transform duration-100 ease-in tablet:w-20 tablet:h-20 phone:w-10 phone:h-10 hover:text-[#08A0E9]" />
         </a>
         <a
           title="Facebook"
           href="https://www.facebook.com/nathan.sonnenberg.14"
           target="_blank"
         >
-          <FiFacebook className="stroke-white  transition-transform duration-100 tablet:w-20 tablet:h-20 phone:w-10 phone:h-10 hover:transform hover:-translate-y-2 hover:ease-in hover:stroke-[#4267B2]" />
+          <FiFacebook className="stroke-white stroke-1 hover:scale-110 transition-transform duration-100 ease-in tablet:w-20 tablet:h-20 phone:w-10 phone:h-10 hover:stroke-[#4267B2]" />
         </a>
         <a
           title="GitHub"
           href="https://github.com/ntsonnenberg"
           target="_blank"
         >
-          <FiGithub className="stroke-white  transition-transform duration-100 tablet:w-20 tablet:h-20 phone:w-10 phone:h-10 hover:transform hover:-translate-y-2 hover:ease-in hover:stroke-[#2DBA4E]" />
+          <FiGithub className="stroke-white stroke-1 hover:scale-110 transition-transform duration-100 ease-in tablet:w-20 tablet:h-20 phone:w-10 phone:h-10 hover:stroke-[#2DBA4E]" />
         </a>
       </div>
     </div>

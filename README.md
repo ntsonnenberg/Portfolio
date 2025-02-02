@@ -12,9 +12,11 @@ This project is a portfolio site for Nathan Sonnenberg that showcases all the de
 
 **Client:** Gatsby, React, TailwindCSS
 
-**Database:** Firebase
+**Database:** Firebase, Firestore Storage
 
 **Deployment:** Netlify
+
+**Services** Formspark, Botpoison
 
 ## Installation
 
@@ -109,19 +111,14 @@ To run this project, you will need to add the following environment variables to
 
 `FIRESTORE_UNIVERSE_DOMAIN`
 
+`BOTPOISON_PK`
+
 ## Roadmap
-
-- Improve Load Performance:
-
-  - Reduce Contentful Paint element (TextHoverEffectView component)
-  - Eliminate render-blocking resources [Gatsby Script API](https://www.gatsbyjs.com/docs/reference/built-in-components/gatsby-script/?utm_source=lighthouse&utm_medium=devtools)
-  - Reduce JavaScript execution time
-  - Minimize main-thread work
-  - Reduce unused JavaScript [Gatsby Webpack Bundle Analyzer](https://www.gatsbyjs.com/plugins/gatsby-plugin-webpack-bundle-analyser-v2/?utm_source=lighthouse&utm_medium=devtools)
-  - Page prevented back-forward cache restoration
 
 - Improve SEO:
   - Links are not crawlable
+  - Implement Formspark
+  - Configure Project dynamic pages
 
 ## Feedback
 

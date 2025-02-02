@@ -63,10 +63,13 @@ export default function NavBar({ openDrawer }: Props): JSX.Element {
     <div
       className={`transition-all duration-500 ${
         showNav ? "opacity-100" : "opacity-0"
-      } h-28 w-full bg-primary-variant/70 text-on-primary backdrop-blur-lg fixed top-0 z-50 shadow-xl border-b border-on-background/20`}
+      } h-28 w-full bg-background/70 text-on-primary backdrop-blur-lg fixed top-0 z-50 shadow-xl border-b border-on-background/20`}
     >
-      <div className="flex flex-row justify-around h-full items-center align-center">
-        <Link to="/" className="cursor-pointer phone:text-2xl tablet:text-4xl">
+      <div className="flex flex-row justify-between h-full items-center align-center">
+        <Link
+          to="/"
+          className="cursor-pointer phone:text-2xl phont:ml-6 tablet:ml-10 tablet:text-4xl"
+        >
           <Image
             src="https://firebasestorage.googleapis.com/v0/b/portfolio-401812.appspot.com/o/bespoke-white-no-bg.png?alt=media&token=80aee307-f24a-4136-9664-fd88dec5a9a8"
             alt="Bespoke Dev Solutions"
@@ -74,26 +77,32 @@ export default function NavBar({ openDrawer }: Props): JSX.Element {
           />
         </Link>
         {renderedMenuButton}
-        <div className="hidden laptop:flex flex-row gap-24 text-xl cursor-pointer">
+        <div className="hidden laptop:flex flex-row gap-24 text-xl items-center">
           <Link
             to="/projects"
-            className="transition-transform duration-100 hover:-translate-y-2 hover:ease-in hover:text-secondary hover:font-bold"
+            className="transition-transform duration-100 hover:scale-125 hover:ease-in hover:text-primary"
           >
             Projects
           </Link>
           <Link
             to="/aboutme"
-            className="transition-transform duration-100 hover:-translate-y-2 hover:ease-in hover:text-secondary hover:font-bold"
+            className="transition-transform duration-100 hover:scale-125 hover:ease-in hover:text-primary"
           >
             About Me
           </Link>
           <Link
             to="/contact"
-            className="transition-transform duration-100 hover:-translate-y-2 hover:ease-in hover:text-secondary hover:font-bold"
+            className="transition-transform duration-100 hover:scale-125 hover:ease-in hover:text-primary"
           >
             Contact
           </Link>
         </div>
+        <Link
+          to="/contact"
+          className="primary filled hidden py-1 px-2 text-xl phone:hidden laptop:block laptop:mr-10"
+        >
+          Book a Call
+        </Link>
       </div>
     </div>
   );

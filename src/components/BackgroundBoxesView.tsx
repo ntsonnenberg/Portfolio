@@ -25,9 +25,9 @@ export function BackgroundBoxesView() {
       </p>
       <Link
         to="/contact"
-        className="font-bold outline outline-2 outline-white rounded-sm bg-white text-background px-2 py-1 self-center text-xl mt-10 z-20"
+        className="light filled px-4 py-2 self-center text-xl mt-10 z-20"
       >
-        Talk to Us Now
+        Get Started Now
       </Link>
     </div>
   );

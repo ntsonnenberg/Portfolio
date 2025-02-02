@@ -34,9 +34,9 @@ export const GoogleGeminiEffect = ({
       <div className="w-full h-[890px] -top-60 md:-top-40  flex items-center justify-center bg-red-transparent absolute ">
         <Link
           to="/contact"
-          className="phone:hidden tablet:block font-bold bg-white rounded-full px-2 py-1 mt-32 z-30 md:text-base text-black text-md w-fit mx-auto cursor-pointer"
+          className="light filled phone:hidden tablet:block px-4 py-2 z-30 md:text-base text-black text-lg w-fit mx-auto"
         >
-          Contact Me to Learn More
+          Learn More
         </Link>
       </div>
       <svg

@@ -2,10 +2,10 @@ import React, { useState, FormEvent } from "react";
 import Layout from "../components/Layout";
 import Input from "../components/Input";
 import Textarea from "../components/Textarea";
-import Button from "../components/Button";
 import Spinner from "../components/Spinner";
 import { addContact } from "../api/Contacts";
 import SEO from "../components/Seo";
+import ContactForm from "../components/ContactForm";
 
 export default function ContactPage(): JSX.Element {
   const [formInputs, setFormInputs] = useState({
@@ -52,7 +52,10 @@ export default function ContactPage(): JSX.Element {
 
   return (
     <Layout>
-      <div className="py-60 bg-background text-on-background min-h-screen flex flex-col items-center gap-20 phone:px-8 tablet:px-0">
+      <div className="mt-40 mb-20">
+        <ContactForm />
+      </div>
+      {/* <div className="py-60 bg-background text-on-background min-h-screen flex flex-col items-center gap-20 phone:px-8 tablet:px-0">
         <p className="text-center font-bold text-6xl">Book a Demo</p>
         <form
           onSubmit={sendContact}
@@ -94,17 +97,12 @@ export default function ContactPage(): JSX.Element {
             onChange={(event) => updateFormInputs(event, "message")}
             placeholder="Enter message here..."
           />
-          <Button
-            light
-            filled
-            long
-            className="flex flex-row justify-center gap-3 py-1 mt-10"
-          >
+          <button className="light filled flex flex-row justify-center gap-3 py-1 mt-10 text-lg">
             {isLoading && (
               <Spinner size={6} color="primary" className="mt-0.5" />
             )}
             Submit
-          </Button>
+          </button>
           <div
             className={`mt-4 text-secondary ${
               message.includes("Unable") ? "text-error" : ""
@@ -113,7 +111,7 @@ export default function ContactPage(): JSX.Element {
             {message}
           </div>
         </form>
-      </div>
+      </div> */}
     </Layout>
   );
 }

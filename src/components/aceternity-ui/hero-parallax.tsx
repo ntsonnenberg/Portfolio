@@ -10,7 +10,6 @@ import {
 } from "framer-motion";
 import { Project } from "../../lib/projects";
 import Image from "../Image";
-import Button from "../Button";
 import { Link } from "gatsby";
 
 interface Props {
@@ -102,7 +101,7 @@ export const HeroParallax = ({ projects }: Props) => {
 
 export const Header = () => {
   return (
-    <div className="max-w-7xl relative mx-auto md:py-40 px-20 w-full left-0 top-0">
+    <div className="max-w-7xl relative mx-auto md:py-40 px-20 w-full left-0 top-0 z-40">
       <h1 className="phone:text-3xl tablet:4xl laptop:text-6xl font-bold text-white">
         Stay at the
         <br /> forefront of technology
@@ -113,6 +112,14 @@ export const Header = () => {
         business needs. Hire a freelance web developer today to customize your
         website and acclerate your business.
       </p>
+      <div className="mt-6 flex gap-6">
+        <button className="primary filled py-2 px-4 text-lg">
+          Book a Call
+        </button>
+        <Link to="/projects" className="primary outlined py-2 px-4 text-lg">
+          View Projects
+        </Link>
+      </div>
     </div>
   );
 };

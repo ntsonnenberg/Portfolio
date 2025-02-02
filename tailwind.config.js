@@ -28,11 +28,11 @@ module.exports = {
     },
     extend: {
       colors: {
-        primary: "#676767",
-        "primary-variant": "#141414",
+        primary: "#1A8ADC",
+        "primary-variant": "#005C9E",
         "on-primary": "#FFFFFF",
-        secondary: "#1A8ADC",
-        "secondary-variant": "#005C9E",
+        secondary: "",
+        "secondary-variant": "",
         "on-secondary": "#FFFFFF",
         background: "#141414",
         "on-background": "#E2E2E2",

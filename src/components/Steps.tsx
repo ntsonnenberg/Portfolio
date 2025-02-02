@@ -49,8 +49,8 @@ export default function Steps(): JSX.Element {
         ref={containerRef}
         className="relative my-28 flex laptop:flex-row phone:flex-col items-center gap-5"
       >
-        <StepCard id="step-card" step={1} title="Discovery">
-          Identify goals and scope precisely and succinctly.
+        <StepCard id="step-card" step={1} title="Discovery" className="grow">
+          Identify goals and scope to understand value proposition.
         </StepCard>
         <FiArrowRight
           id="arrow"
@@ -64,7 +64,8 @@ export default function Steps(): JSX.Element {
           className="w-10 h-10 phone:rotate-90 laptop:rotate-0"
         />
         <StepCard id="step-card" step={3} title="Implementation">
-          Execute the blueprint with precise and agile coding.
+          Execute the blueprint with precise and agile coding with a clean
+          architecture.
         </StepCard>
         <FiArrowRight
           id="arrow"

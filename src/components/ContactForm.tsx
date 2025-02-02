@@ -1,65 +1,53 @@
-import React, { useState, FormEvent } from "react";
-import Button from "./Button";
+import React from "react";
 import Input from "./Input";
-import Spinner from "./Spinner";
-import { addEmail } from "../api/Contacts";
+import Textarea from "./Textarea";
 
-export default function ContactUs(): JSX.Element {
-  const [email, setEmail] = useState<string>("");
-  const [isLoading, setIsLoading] = useState<boolean>(false);
-  const [message, setMessage] = useState<string>("");
+const botPoisonPK = process.env.BOTPOISON_PK || "";
 
-  const sendEmail = async (event: FormEvent) => {
-    event.preventDefault();
-
-    try {
-      setIsLoading(true);
-      await addEmail(email);
-      setEmail("");
-      setMessage("Email sent! We will reach out to you shortly.");
-    } catch (error) {
-      console.error("Error sending email:", error);
-      setMessage("Unable to send email.");
-    } finally {
-      setIsLoading(false);
-    }
-  };
-
+export default function ContactForm(): JSX.Element {
   return (
-    <div className="bg-primary-variant text-on-primary flex flex-col text-center items-center py-20 gap-5">
-      <div className="phone:mx-6 phone:mb-10 laptop:mb-16">
-        <p className="text-on-background font-bold phone:text-5xl tablet:text-7xl">
-          Contact Me to Learn More
-        </p>
-      </div>
+    <div className="flex flex-col text-center items-center">
+      <p className="text-on-background font-bold mb-6 phone:text-3xl tablet:text-5xl">
+        Contact Us
+      </p>
       <form
-        onSubmit={sendEmail}
-        className="phone:w-2/3 tablet:w-1/3 laptop:w-1/4"
+        method="POST"
+        action="https://submit-form.com/rEezQqOiY"
+        data-botpoison-public-key={botPoisonPK}
+        className="phone:w-2/3 tablet:w-1/3 laptop:w-1/4 flex flex-col gap-6"
       >
         <Input
-          label="Email"
-          value={email}
-          onChange={(event: FormEvent<HTMLInputElement>) =>
-            setEmail(event?.currentTarget.value)
-          }
+          label="Full name"
+          name="fullName"
           type="text"
+          required
+          placeholder="Enter name..."
+        />
+        <Input
+          label="Email"
+          name="email"
+          type="text"
+          required
           placeholder="Enter email..."
         />
-        <Button
-          light
-          filled
-          className="w-full rounded-sm flex flex-row justify-center gap-3 py-1 text-xl phone:mt-5 phone:h-auto tablet:mt-8 laptop:h-10"
+        <Input
+          label="Phone number"
+          name="phone"
+          type="number"
+          placeholder="Enter phone number..."
+        />
+        <Textarea
+          label="Message"
+          name="message"
+          required
+          placeholder="Describe your project to us..."
+        />
+        <button
+          type="submit"
+          className="light filled w-full flex flex-row justify-center gap-3 py-1 text-xl phone:mt-5 phone:h-auto tablet:mt-8 laptop:h-10"
         >
-          {isLoading && <Spinner size={6} color="primary" />}
           Submit
-        </Button>
-        <div
-          className={`mt-4 ${
-            message.includes("Unable") ? "text-error" : "text-secondary"
-          }`}
-        >
-          {message}
-        </div>
+        </button>
       </form>
     </div>
   );
