@@ -1,6 +1,5 @@
 import React from "react";
 import Layout from "../components/Layout";
-import Button from "../components/Button";
 import ContactForm from "../components/ContactForm";
 import scrollTo from "gatsby-plugin-smoothscroll";
 import Image from "../components/Image";
@@ -122,15 +121,12 @@ export default function AboutMePage(): JSX.Element {
                 I'm Nathan Sonnenberg, here for your web development & IT
                 consulting needs.
               </p>
-              <Button
-                secondary
-                filled
-                large
-                className="absolute rounded-sm phone:p-1 phone:text-sm phone:right-4 phone:bottom-4 tablet:p-2 tablet:right-10 tablet:bottom-6 laptop:right-28 laptop:bottom-16"
+              <button
+                className="primary filled absolute rounded-sm phone:p-1 phone:text-sm phone:right-4 phone:bottom-4 tablet:p-2 tablet:right-10 tablet:bottom-6 laptop:right-28 laptop:bottom-16 laptop:text-lg"
                 onClick={() => scrollTo("#my-story")}
               >
                 Learn More
-              </Button>
+              </button>
             </div>
           </div>
         </div>

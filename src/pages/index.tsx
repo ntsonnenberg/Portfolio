@@ -15,7 +15,6 @@ import { ReactLenis } from "lenis/dist/lenis-react";
 import { BackgroundBoxesView } from "../components/BackgroundBoxesView";
 import { BackgroundBeamsView } from "../components/BackgroundBeamsView";
 import { FlipWordsView } from "../components/FlipWordsView";
-import { TextHoverEffectView } from "../components/TextHoverEffectView";
 import { GeminiEffectView } from "../components/GeminiEffectView";
 import { HeroParallaxView } from "../components/HeroParallaxView";
 import Image from "../components/Image";
@@ -31,7 +30,6 @@ export default function IndexPage(): JSX.Element {
     <Layout>
       <ReactLenis root>
         <HeroParallaxView />
-        <TextHoverEffectView />
         <ProfileFeature />
         <Marquee
           direction="right"
@@ -79,5 +77,9 @@ export default function IndexPage(): JSX.Element {
 }
 
 export function Head(): JSX.Element {
-  return <SEO />;
+  return (
+    <SEO>
+      <script src="https://unpkg.com/@botpoison/browser" async></script>
+    </SEO>
+  );
 }

@@ -26,10 +26,7 @@ export function AuroraBackgroundView() {
           operations. Optimize your business process with our tailored solutions
           that enhance productivive and drive growth.
         </p>
-        <Link
-          to="/contact"
-          className="bg-black dark:bg-white rounded-full w-fit text-white dark:text-black px-4 py-2"
-        >
+        <Link to="/contact" className="light outlined w-fit px-4 py-2">
           Book Consultation
         </Link>
       </motion.div>

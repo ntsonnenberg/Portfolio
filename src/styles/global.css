@@ -7,4 +7,40 @@
     @apply bg-background;
     @apply text-on-background;
   }
+
+  button, a {
+    @apply cursor-pointer
+  }
+
+  button.primary, a.primary {
+    @apply outline outline-1 outline-primary rounded-sm
+  }
+
+  button.primary.filled, a.primary.filled {
+    @apply bg-gradient-to-r from-primary to-primary-variant text-on-primary hover:bg-gradient-to-l hover:outline-primary-variant
+  }
+
+  button.primary.outlined, a.primary.outlined {
+    @apply bg-transparent text-primary hover:bg-primary hover:text-on-primary
+  }
+
+  button.primary.text, a.primary.text {
+    @apply outline-0 text-primary
+  }
+
+  button.light, a.light {
+    @apply outline outline-1 outline-white rounded-sm
+  }
+
+  button.light.filled, a.light.filled {
+    @apply bg-gradient-to-r from-white to-[#DDEAFF] text-background hover:bg-gradient-to-l hover:outline-[#DDEAFF]
+  }
+
+  button.light.outlined, a.light.outlined {
+    @apply bg-transparent text-white hover:bg-white hover:text-background
+  }
+
+  button.light.text, a.light.text {
+    @apply outline-0 text-white
+  }
 }
