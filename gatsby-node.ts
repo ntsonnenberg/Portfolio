@@ -63,7 +63,6 @@ exports.sourceNodes = async ({
     "home-images/Slack_icon.png",
     "home-images/facebook-logo.png",
     "home-images/gmail-logo.png",
-    "home-images/go-enlite-landing.png",
     "home-images/hubspot-logo.png",
     "home-images/logo-Squarespace.png",
     "home-images/profile.jpeg",
