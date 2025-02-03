@@ -6,7 +6,7 @@ import ContactForm from "../components/ContactForm";
 export default function ContactPage(): JSX.Element {
   return (
     <Layout>
-      <div className="pt-40 pb-20 min-h-screen">
+      <div className="pb-20 min-h-screen">
         <ContactForm />
       </div>
     </Layout>
