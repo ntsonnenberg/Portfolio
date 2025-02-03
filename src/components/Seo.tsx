@@ -25,7 +25,7 @@ export default function SEO({ title, description, pathname, children }: Props) {
 
   return (
     <>
-      <title>Bespoke Dev Solutions</title>
+      <title>Bespoke Dev Solutions - Build Custom Web Applications</title>
       <meta name="title" content={seo.title} />
       <meta name="description" content={seo.description} />
       <meta name="image" content={seo.image} />
