@@ -19,7 +19,7 @@ export default function ContactForm(): JSX.Element {
         <input
           type="hidden"
           name="_redirect"
-          value="http://localhost:8000/thanks"
+          value="https://bespokedevsolutions.com/thanks"
         />
         <Input
           label="Full name"
