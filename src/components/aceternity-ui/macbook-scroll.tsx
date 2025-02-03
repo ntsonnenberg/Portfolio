@@ -149,7 +149,7 @@ export const Lid = ({
           className="absolute inset-0 bg-[#010101] rounded-lg flex items-center justify-center"
         >
           <Image
-            src="https://firebasestorage.googleapis.com/v0/b/portfolio-401812.appspot.com/o/bespoke-white-no-bg.png?alt=media&token=80aee307-f24a-4136-9664-fd88dec5a9a8"
+            src={src || ""}
             alt="Bespoke Dev Solutions Logo"
             className="w-14 h-auto"
           />
@@ -168,8 +168,8 @@ export const Lid = ({
       >
         <div className="absolute inset-0 bg-[#272729] rounded-lg" />
         <Image
-          src="https://firebasestorage.googleapis.com/v0/b/portfolio-401812.appspot.com/o/home-images%2Fgo-enlite-landing.png?alt=media&token=3aa18edb-a4e6-4862-9584-608a5b4cb45b"
-          alt="Go Enlite Landing Page"
+          src="https://firebasestorage.googleapis.com/v0/b/portfolio-401812.appspot.com/o/project-images%2Futah-auto.png?alt=media&token=5157ac86-ede1-4229-8ec5-5a138738f270"
+          alt="Utah Automotive Magazine Landing Page"
           className="object-cover object-left-top absolute rounded-lg inset-0 h-full w-full"
         />
       </motion.div>

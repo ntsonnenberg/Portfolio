@@ -77,9 +77,5 @@ export default function IndexPage(): JSX.Element {
 }
 
 export function Head(): JSX.Element {
-  return (
-    <SEO>
-      <script src="https://unpkg.com/@botpoison/browser" async></script>
-    </SEO>
-  );
+  return <SEO />;
 }

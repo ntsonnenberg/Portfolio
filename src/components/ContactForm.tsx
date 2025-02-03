@@ -16,6 +16,11 @@ export default function ContactForm(): JSX.Element {
         data-botpoison-public-key={botPoisonPK}
         className="phone:w-2/3 tablet:w-1/3 laptop:w-1/4 flex flex-col gap-6"
       >
+        <input
+          type="hidden"
+          name="_redirect"
+          value="http://localhost:8000/thanks"
+        />
         <Input
           label="Full name"
           name="fullName"
