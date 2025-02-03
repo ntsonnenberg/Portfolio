@@ -6,7 +6,10 @@ const botPoisonPK = process.env.BOTPOISON_PK || "";
 
 export default function ContactForm(): JSX.Element {
   return (
-    <div className="flex flex-col text-center items-center">
+    <div
+      id="contact-form"
+      className="pt-40 flex flex-col text-center items-center"
+    >
       <p className="text-on-background font-bold mb-6 phone:text-3xl tablet:text-5xl">
         Contact Us
       </p>

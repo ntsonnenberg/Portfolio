@@ -11,6 +11,7 @@ import {
 import { Project } from "../../lib/projects";
 import Image from "../Image";
 import { Link } from "gatsby";
+import scrollTo from "gatsby-plugin-smoothscroll";
 
 interface Props {
   projects: Project[];
@@ -113,7 +114,10 @@ export const Header = () => {
         website and acclerate your business.
       </p>
       <div className="mt-6 flex gap-6">
-        <button className="primary filled py-2 px-4 text-lg">
+        <button
+          className="primary filled py-2 px-4 text-lg"
+          onClick={() => scrollTo("#contact-form")}
+        >
           Book a Call
         </button>
         <Link to="/projects" className="primary outlined py-2 px-4 text-lg">
