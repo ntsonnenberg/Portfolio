@@ -1,5 +1,6 @@
 import React from "react";
 import Layout from "../components/Layout";
+import SEO from "../components/Seo";
 
 export default function Thanks(): JSX.Element {
   return (
@@ -15,5 +16,15 @@ export default function Thanks(): JSX.Element {
         </div>
       </div>
     </Layout>
+  );
+}
+
+export function Head(): JSX.Element {
+  return (
+    <SEO
+      title="Thank You for Submitting Your Project"
+      description="We will reach out to your shortly to hear more about your project. We are excited to work with you!"
+      pathname="/thanks"
+    />
   );
 }
