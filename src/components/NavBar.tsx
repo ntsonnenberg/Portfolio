@@ -1,35 +1,15 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "gatsby";
 import Image from "./Image";
+import useScrollFromTop from "../hooks/use-scroll-from-top";
 
 type Props = {
   openDrawer: () => void;
 };
 
 export default function NavBar({ openDrawer }: Props): JSX.Element {
-  const [showNav, setShowNav] = useState(false);
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
-
-  useEffect(() => {
-    const controlNavbar = () => {
-      if (typeof window !== undefined && window.scrollY >= 500) {
-        setShowNav(true);
-      } else {
-        setShowNav(false);
-      }
-    };
-
-    const path = window.location.pathname;
-    if (path === "/") {
-      window.addEventListener("scroll", controlNavbar);
-    } else {
-      setShowNav(true);
-    }
-
-    return () => {
-      if (path === "/") window.removeEventListener("scroll", controlNavbar);
-    };
-  }, []);
+  const { isStyleOn } = useScrollFromTop();
 
   const runMenuAnimation = () => {
     openDrawer();
@@ -60,12 +40,14 @@ export default function NavBar({ openDrawer }: Props): JSX.Element {
   );
 
   return (
-    <div
-      className={`transition-all duration-500 ${
-        showNav ? "opacity-100" : "opacity-0"
-      } h-28 w-full bg-background/70 text-on-primary backdrop-blur-lg fixed top-0 z-50 shadow-xl border-b border-on-background/20`}
+    <nav
+      className={`transition-all ease-in ${
+        isStyleOn
+          ? "bg-background/70 backdrop-blur-lg border-b border-on-background/20 shadow-xl"
+          : "bg-transparent"
+      } h-20 w-full text-on-primary fixed top-0 z-50`}
     >
-      <div className="flex flex-row justify-between h-full items-center align-center">
+      <div className="flex flex-row justify-between h-full items-center">
         <Link
           to="/"
           className="cursor-pointer phone:text-2xl phont:ml-6 tablet:ml-10 tablet:text-4xl"
@@ -104,6 +86,6 @@ export default function NavBar({ openDrawer }: Props): JSX.Element {
           Book a Call
         </Link>
       </div>
-    </div>
+    </nav>
   );
 }

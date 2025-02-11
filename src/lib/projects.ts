@@ -5,6 +5,11 @@ export interface Project {
   title: string;
   link: string;
   image: string;
+  heroImage: string;
+  images: string[];
+  catchPhrase: string;
+  subtitle: string;
+  description: string;
 }
 
 export const getProjects = () => {
@@ -17,6 +22,11 @@ export const getProjects = () => {
             title
             link
             image
+            heroImage
+            images
+            catchPhrase
+            subtitle
+            description
           }
         }
       }
@@ -29,6 +39,11 @@ export const getProjects = () => {
       title: node.title,
       link: node.link,
       image: node.image,
+      heroImage: node.heroImage,
+      images: node.images,
+      catchPhrase: node.catchPhrase,
+      subtitle: node.subtitle,
+      description: node.description,
     })
   );
 

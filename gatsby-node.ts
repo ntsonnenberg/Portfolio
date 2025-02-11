@@ -20,16 +20,68 @@ exports.sourceNodes = async ({
 
   const filePaths = [
     // Project Images Folder
-    "project-images/BCR-project-new.png",
-    "project-images/BYU-Excavation-project.png",
-    "project-images/Links.png",
-    "project-images/Marketplace-Admin-project.png",
-    "project-images/Marketplace-Store-project.png",
-    "project-images/Quizzzard-project.png",
-    "project-images/ecommerce-admin.jpeg",
-    "project-images/ecommerce-store.jpeg",
-    "project-images/go-enlite.png",
-    "project-images/utah-auto.png",
+
+    // BCR
+    "project-images/BCR/BCR-hero.jpg",
+    "project-images/BCR/BCR-main.png",
+
+    // BYU Egypt Excavation Finder
+    "project-images/byu-egypt-excavation-finder/byu-excavation-hero.jpg",
+    "project-images/byu-egypt-excavation-finder/byu-excavation-main.png",
+
+    // Ecommerce Admin
+    "project-images/ecommerce-admin/ecommerce-admin-hero.jpg",
+    "project-images/ecommerce-admin/ecommerce-admin-main.jpeg",
+    "project-images/ecommerce-admin/ecommerce-admin-new-product.png",
+    "project-images/ecommerce-admin/ecommerce-admin-products.png",
+
+    // Ecommerce Store
+    "project-images/ecommerce-store/ecommerce-store-cart.png",
+    "project-images/ecommerce-store/ecommerce-store-hero.jpg",
+    "project-images/ecommerce-store/ecommerce-store-home.png",
+    "project-images/ecommerce-store/ecommerce-store-main.jpeg",
+    "project-images/ecommerce-store/ecommerce-store-product.png",
+
+    // Go Enlite
+    "project-images/go-enlite/go-enlite-admin-competitions.png",
+    "project-images/go-enlite/go-enlite-hero.jpg",
+    "project-images/go-enlite/go-enlite-leaderboard-individuals.png",
+    "project-images/go-enlite/go-enlite-leaderboard-offices.png",
+    "project-images/go-enlite/go-enlite-main.png",
+    "project-images/go-enlite/go-enlite-solar-calculator.png",
+    "project-images/go-enlite/go-enlite-team-competition-modal.png",
+    "project-images/go-enlite/go-enlite-team-competition.png",
+
+    // Links
+    "project-images/links/links-golf-hero.jpg",
+    "project-images/links/links-home-page.png",
+    "project-images/links/links-my-stats-page.png",
+    "project-images/links/links-play-page.png",
+
+    // Marketplace Admin
+    "project-images/marketplace-admin/marketplace-admin-add-category.png",
+    "project-images/marketplace-admin/marketplace-admin-categories.png",
+    "project-images/marketplace-admin/marketplace-admin-edit-homepage.png",
+    "project-images/marketplace-admin/marketplace-admin-edit-product.png",
+    "project-images/marketplace-admin/marketplace-admin-hero.jpg",
+    "project-images/marketplace-admin/marketplace-admin-main.png",
+
+    // Marketplace Store
+    "project-images/marketplace-store/marketplace-store-cart.png",
+    "project-images/marketplace-store/marketplace-store-companies.png",
+    "project-images/marketplace-store/marketplace-store-hero.jpg",
+    "project-images/marketplace-store/marketplace-store-main.png",
+
+    // Quizzzard
+    "project-images/quizzzard/quizzzard-analyzing.png",
+    "project-images/quizzzard/quizzzard-hero.jpg",
+    "project-images/quizzzard/quizzzard-main.png",
+    "project-images/quizzzard/quizzzard-quiz-answers.png",
+    "project-images/quizzzard/quizzzard-quiz-questions.png",
+
+    // Utah Automotive
+    "project-images/utah-automotive/utah-auto-hero.jpg",
+    "project-images/utah-automotive/utah-auto-main.png",
 
     // About Me Images Folder
     "about-me-images/Lauterbrunnen.png",
