@@ -46,6 +46,7 @@ module.exports = {
       },
       boxShadow: {
         "stand-out": "0 0px 100px 20px rgba(26, 9, 64, 0.7)",
+        "custom-inner": "inset 0 70px 60px rgba(0, 0, 0, 0.5)",
       },
       fontFamily: {
         poppins: ["Poppins", "sans-serif"],

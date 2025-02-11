@@ -2,17 +2,20 @@ import React from "react";
 import { SpotLightItem } from "./ui-layouts/spotlight-card";
 import { Project } from "../lib/projects";
 import Image from "./Image";
+import { Link } from "gatsby";
 
 interface Props {
   project: Project;
 }
 
 export default function ProjectCard({ project }: Props): JSX.Element {
+  const projectPageSlug = project.title.toLowerCase().replaceAll(" ", "-");
+
   return (
-    <a href={project.link} target="_blank">
+    <Link to={`/projects/${projectPageSlug}`}>
       <SpotLightItem className="w-80 h-96 border-2 border-slate-700 cursor-pointer shadow-stand-out transition-all ease-in-out duration-500 hover:scale-105">
         <Image
-          src={project.image}
+          src={project.images[0]}
           alt={project.title}
           className="object-cover w-full h-3/5 p-1 rounded-md"
         />
@@ -20,6 +23,6 @@ export default function ProjectCard({ project }: Props): JSX.Element {
           {project.title}
         </p>
       </SpotLightItem>
-    </a>
+    </Link>
   );
 }

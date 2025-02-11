@@ -109,7 +109,7 @@ export const Header = () => {
       </h1>
       <p className="max-w-2xl text-base md:text-xl mt-8 dark:text-neutral-200">
         Our web dev solutions cater to modern business needs. Unlock your online
-        potential with our exper website development services tailored to your
+        potential with our expert website development services tailored to your
         business needs. Hire a freelance web developer today to customize your
         website and acclerate your business.
       </p>

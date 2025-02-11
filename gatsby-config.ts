@@ -8,6 +8,11 @@ interface ProjectDoc {
   title: string;
   link: string;
   image: string;
+  heroImage: string;
+  images: string[];
+  catchPhrase: string;
+  subtitle: string;
+  description: string;
 }
 
 const firestore_auth = {
@@ -86,6 +91,11 @@ const config: GatsbyConfig = {
               title: doc.title,
               link: doc.link,
               image: doc.image,
+              heroImage: doc.heroImage,
+              images: doc.images,
+              catchPhrase: doc.catchPhrase,
+              subtitle: doc.subtitle,
+              description: doc.description,
             }),
           },
         ],

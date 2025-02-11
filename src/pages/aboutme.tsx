@@ -108,7 +108,7 @@ export default function AboutMePage(): JSX.Element {
           <Image
             src="https://firebasestorage.googleapis.com/v0/b/portfolio-401812.appspot.com/o/about-me-images%2Fcardiff-castle.jpeg?alt=media&token=6d19ac22-0d1d-4e04-8dba-a286c486d933"
             alt="Cardiff Castle in Wales on Study Abroad Trip"
-            className="phone:mt-20 tablet:mt-0"
+            className="phone:mt-20 tablet:mt-0 -z-10"
           />
           <div className="absolute bg-primary/40 phone:w-52 phone:h-40 phone:right-2 phone:top-44 tablet:w-1/2 tablet:h-80 tablet:right-10 tablet:top-48 laptop:h-96 laptop:right-16 laptop:top-80">
             <div className="absolute bg-surface phone:p-2 phone:inset-2 tablet:p-10 tablet:inset-5">
