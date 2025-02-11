@@ -168,7 +168,7 @@ export const Lid = ({
       >
         <div className="absolute inset-0 bg-[#272729] rounded-lg" />
         <Image
-          src="https://firebasestorage.googleapis.com/v0/b/portfolio-401812.appspot.com/o/project-images%2Futah-auto.png?alt=media&token=5157ac86-ede1-4229-8ec5-5a138738f270"
+          src="https://firebasestorage.googleapis.com/v0/b/portfolio-401812.appspot.com/o/project-images%2Futah-automotive%2Futah-auto-main.png?alt=media&token=7ff7289d-3e2c-4922-b29d-fd7466000fba"
           alt="Utah Automotive Magazine Landing Page"
           className="object-cover object-left-top absolute rounded-lg inset-0 h-full w-full"
         />
