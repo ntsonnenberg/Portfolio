@@ -4,6 +4,8 @@ import { graphql, Link } from "gatsby";
 import { Project } from "../../lib/projects";
 import Image from "../../components/Image";
 import FadeBlockHeader from "../../components/FadeBlockHeader";
+import SEO from "../../components/Seo";
+import { IoCaretBackOutline } from "react-icons/io5";
 interface Props {
   data: {
     project: Project;
@@ -21,6 +23,13 @@ export default function ProjectPage({ data: { project }, children }: Props) {
             alt={`${project.title}-hero-image`}
             className="flex self-center -z-10"
           />
+          <Link
+            to="/projects"
+            className="absolute top-28 left-40 bg-background py-1 px-2 text-lg rounded-sm flex gap-2 items-center transition-all ease-in-out hover:scale-105"
+          >
+            <IoCaretBackOutline className="w-4 h-4 stroke-white" />
+            Back to Projects
+          </Link>
           <div className="absolute top-40 left-40 bg-background p-4 w-1/3 drop-shadow-xl rounded-md">
             <FadeBlockHeader color="on-background">
               {project.title}
@@ -60,6 +69,16 @@ export default function ProjectPage({ data: { project }, children }: Props) {
         </div>
       </>
     </Layout>
+  );
+}
+
+export function Head({ data: { project } }: Props): JSX.Element {
+  return (
+    <SEO
+      title={`Explore ${project.title}: ${project.catchPhrase}`}
+      description={project.description}
+      pathname={`/projects/${project.id}`}
+    />
   );
 }
 
