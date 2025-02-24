@@ -16,7 +16,7 @@ This project is a portfolio site for Nathan Sonnenberg that showcases all the de
 
 **Deployment:** Netlify
 
-**Services** Formspark, Botpoison
+**Services:** Formspark, Botpoison
 
 ## Installation
 
@@ -71,54 +71,9 @@ Dev Dependencies
 - **_tailwind-merge_** v2.5.5
 - **_typescript_** v5.1.6
 
-## Environment Variables
-
-To run this project, you will need to add the following environment variables to your .env.development file
-
-`GATSBY_FIREBASE_API_KEY`
-
-`GATSBY_FIREBASE_AUTH_DOMAIN`
-
-`GATSBY_FIREBASE_PROJECT_ID`
-
-`GATSBY_FIREBASE_STORAGE_BUCKET`
-
-`GATSBY_FIREBASE_MESSAGING_SENDING_ID`
-
-`GATSBY_FIREBASE_APP_ID`
-
-`GATSBY_MEASUREMENT_ID`
-
-`FIRESTORE_TYPE`
-
-`FIRESTORE_PROJECT_ID`
-
-`FIRESTORE_PK_ID`
-
-`FIRESTORE_PK`
-
-`FIRESTORE_CLIENT_EMAIL`
-
-`FIRESTORE_CLIENT_ID`
-
-`FIRESTORE_AUTH_URI`
-
-`FIRESTORE_TOKEN_URI`
-
-`FIRESTORE_AUTH_PROVIDER_X509_CERT_URL`
-
-`FIRESTORE_CLIENT_X509_CERT_URL`
-
-`FIRESTORE_UNIVERSE_DOMAIN`
-
-`BOTPOISON_PK`
-
 ## Roadmap
 
-- Improve SEO:
-  - Links are not crawlable
-  - Implement Formspark
-  - Configure Project dynamic pages
+- Get clients
 
 ## Feedback
 
