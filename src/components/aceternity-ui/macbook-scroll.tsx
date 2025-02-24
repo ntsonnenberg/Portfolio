@@ -150,8 +150,8 @@ export const Lid = ({
         >
           <Image
             src={src || ""}
-            alt="Bespoke Dev Solutions Logo"
-            className="w-14 h-auto"
+            alt="Bespoke Code Logo"
+            className="w-32 h-auto"
           />
         </div>
       </div>

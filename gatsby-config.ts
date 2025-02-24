@@ -34,7 +34,7 @@ const config: GatsbyConfig = {
   siteMetadata: {
     title: `Professional Application Development Services`,
     description: `Hire our experienced freelance web developers for customized solutions that fit you busines requirements.`,
-    image: `https://firebasestorage.googleapis.com/v0/b/portfolio-401812.appspot.com/o/bespoke-black-no-bg.png?alt=media&token=9e7fc2c7-5466-4830-88e7-d5466d2b1118`,
+    image: `https://firebasestorage.googleapis.com/v0/b/portfolio-401812.appspot.com/o/bespoke-code-no-bg.svg?alt=media&token=4f2c6717-e0e4-49ba-baae-5a4e9b1a57ee`,
     siteUrl: `https://bespokedevsolutions.com`,
   },
   plugins: [
@@ -68,15 +68,15 @@ const config: GatsbyConfig = {
     {
       resolve: "gatsby-plugin-manifest",
       options: {
-        name: "Bespoke Dev Solutions",
-        short_name: "BDS",
+        name: "Bespoke Code",
+        short_name: "BC",
         start_url: "/",
         background_color: "#00FFFFFF",
         lang: "en",
         display: "standalone",
         description:
           "Build your ideas into reality with a custom web application for your business.",
-        icon: "src/images/BDS-white-no-bg.png",
+        icon: "src/images/bespoke-code-symbol.svg",
       },
     },
     {

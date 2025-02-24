@@ -131,8 +131,7 @@ exports.sourceNodes = async ({
     "videos/panel-4-vid.mp4",
 
     // Root Folder
-    "bespoke-black-no-bg.png",
-    "bespoke-white-no-bg.png",
+    "bespoke-code-no-bg.svg",
   ];
 
   for (const filePath of filePaths) {

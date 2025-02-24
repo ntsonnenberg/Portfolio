@@ -53,9 +53,9 @@ export default function NavBar({ openDrawer }: Props): JSX.Element {
           className="cursor-pointer phone:text-2xl phont:ml-6 tablet:ml-10 tablet:text-4xl"
         >
           <Image
-            src="https://firebasestorage.googleapis.com/v0/b/portfolio-401812.appspot.com/o/bespoke-white-no-bg.png?alt=media&token=80aee307-f24a-4136-9664-fd88dec5a9a8"
-            alt="Bespoke Dev Solutions"
-            className="phone:w-48 phone:h-auto tablet:w-40 tablet:h-auto"
+            src="https://firebasestorage.googleapis.com/v0/b/portfolio-401812.appspot.com/o/bespoke-code-no-bg.svg?alt=media&token=4f2c6717-e0e4-49ba-baae-5a4e9b1a57ee"
+            alt="Bespoke Code"
+            className="phone:w-48 phone:h-auto tablet:w-52 tablet:h-auto"
           />
         </Link>
         {renderedMenuButton}

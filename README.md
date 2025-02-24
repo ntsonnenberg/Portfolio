@@ -1,8 +1,8 @@
-# Bespoke Dev Solutions
+# Bespoke Code
 
-This project is a portfolio site for Nathan Sonnenberg that showcases all the development projects I have worked on in the past. Bespoke Dev Solutions is my freelance web development agency.
+This project is a portfolio site for Nathan Sonnenberg that showcases all the development projects I have worked on in the past. Bespoke Code is my freelance web development agency.
 
-![Logo](https://firebasestorage.googleapis.com/v0/b/portfolio-401812.appspot.com/o/bespoke-white-no-bg.png?alt=media&token=80aee307-f24a-4136-9664-fd88dec5a9a8)
+![Logo](https://firebasestorage.googleapis.com/v0/b/portfolio-401812.appspot.com/o/bespoke-code-no-bg.svg?alt=media&token=4f2c6717-e0e4-49ba-baae-5a4e9b1a57ee)
 
 ## Authors
 

@@ -19,13 +19,15 @@ export default function Footer(): JSX.Element {
   return (
     <div className="bottom-0 mt-20 w-full border-t border-on-background/20 text-on-primary phone:h-auto laptop:h-32">
       <div className="flex h-full items-center phone:flex-col phone:py-8 phone:gap-6 laptop:flex-row laptop:py-0 laptop:gap-0">
-        <div className="flex gap-6 tablet:basis-1/3 tablet:text-2xl laptop:ml-40 phone:text-lg phone:ml-4">
-          <p className="text-sm self-center">&copy; 2025</p>
+        <div className="flex flex-col tablet:basis-1/3 tablet:text-2xl laptop:ml-40 phone:text-lg phone:ml-4">
           <Image
-            src="https://firebasestorage.googleapis.com/v0/b/portfolio-401812.appspot.com/o/bespoke-white-no-bg.png?alt=media&token=80aee307-f24a-4136-9664-fd88dec5a9a8"
-            alt="Bespoke Dev Solutions"
-            className="phone:w-48 phone:h-auto"
+            src="https://firebasestorage.googleapis.com/v0/b/portfolio-401812.appspot.com/o/bespoke-code-no-bg.svg?alt=media&token=4f2c6717-e0e4-49ba-baae-5a4e9b1a57ee"
+            alt="Bespoke Code"
+            className="phone:w-48 phone:h-auto laptop:w-72"
           />
+          <p className="text-sm text-gray-700">
+            &copy; 2025. All rights reserved.
+          </p>
         </div>
         <div className="basis-2/3 grow flex flex-row justify-evenly phone:mr-4 phone:gap-4 tablet:gap-6 laptop:mr-20 laptop:gap-0">
           <a
