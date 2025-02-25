@@ -22,7 +22,7 @@ export default function ContactForm(): JSX.Element {
         <input
           type="hidden"
           name="_redirect"
-          value="https://bespokedevsolutions.com/thanks"
+          value="https://bespokecode.io/thanks"
         />
         <Input
           label="Full name"
