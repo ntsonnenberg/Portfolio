@@ -34,7 +34,7 @@ const config: GatsbyConfig = {
   siteMetadata: {
     title: `Bespoke Code | Professional App Development Services`,
     description: `Hire our experienced freelance web developers for customized solutions that fit you busines requirements.`,
-    image: `https://firebasestorage.googleapis.com/v0/b/portfolio-401812.appspot.com/o/bespoke-code-no-bg.png?alt=media&token=1f6923f7-c1ba-4ab8-89af-8705c5d507b4`,
+    image: `/images/bespoke-code-no-bg.png`,
     siteUrl: `https://bespokecode.io`,
   },
   plugins: [
