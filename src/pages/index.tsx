@@ -81,6 +81,7 @@ export function Head(): JSX.Element {
     <SEO
       title="Bespoke Code | Professional App Development Services"
       description="Hire our experienced freelance web developers for customized solutions that fit you busines requirements."
+      pathname="/"
     />
   );
 }
