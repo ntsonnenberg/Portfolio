@@ -77,5 +77,10 @@ export default function IndexPage(): JSX.Element {
 }
 
 export function Head(): JSX.Element {
-  return <SEO />;
+  return (
+    <SEO
+      title="Bespoke Code | Professional App Development Services"
+      description="Hire our experienced freelance web developers for customized solutions that fit you busines requirements."
+    />
+  );
 }

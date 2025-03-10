@@ -32,10 +32,10 @@ const firestore_auth = {
 
 const config: GatsbyConfig = {
   siteMetadata: {
-    title: `Professional Application Development Services`,
+    title: `Bespoke Code | Professional App Development Services`,
     description: `Hire our experienced freelance web developers for customized solutions that fit you busines requirements.`,
     image: `https://firebasestorage.googleapis.com/v0/b/portfolio-401812.appspot.com/o/bespoke-code-no-bg.svg?alt=media&token=4f2c6717-e0e4-49ba-baae-5a4e9b1a57ee`,
-    siteUrl: `https://bespokedevsolutions.com`,
+    siteUrl: `https://bespokecode.io`,
   },
   plugins: [
     "gatsby-plugin-postcss",
