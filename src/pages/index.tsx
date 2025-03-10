@@ -36,7 +36,7 @@ export default function IndexPage(): JSX.Element {
           speed={100}
           gradient
           gradientColor="#141414"
-          className="py-4 overflow-clip mb-40"
+          className="py-4 overflow-clip my-40"
         >
           <Image
             src="https://firebasestorage.googleapis.com/v0/b/portfolio-401812.appspot.com/o/client-logos%2Fenlite-logo.png?alt=media&token=1b09af9f-7b72-4b26-9040-295881096739"

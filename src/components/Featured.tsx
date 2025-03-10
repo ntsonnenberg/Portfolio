@@ -13,84 +13,84 @@ gsap.registerPlugin(ScrollTrigger);
 gsap.registerPlugin(useGSAP);
 
 export default function Featured(): JSX.Element {
-  const panelContainerRef = useRef<HTMLDivElement>(null);
-  const panelSectionRef = useRef<HTMLDivElement>(null);
+  // const panelContainerRef = useRef<HTMLDivElement>(null);
+  // const panelSectionRef = useRef<HTMLDivElement>(null);
 
-  useLayoutEffect(() => {
-    let ctx = gsap.context(() => {
-      let panels = gsap.utils.toArray("#panel");
-      let container = panelContainerRef.current || null;
+  // useLayoutEffect(() => {
+  //   let ctx = gsap.context(() => {
+  //     let panels = gsap.utils.toArray("#panel");
+  //     let container = panelContainerRef.current || null;
 
-      let scrollTween = gsap.to(panels, {
-        xPercent: -100 * (panels.length - 1),
-        duration: 1,
-        ease: "none",
-        scrollTrigger: {
-          trigger: container,
-          pin: true,
-          scrub: 1,
-          snap: {
-            snapTo: 1 / (panels.length - 1),
-            duration: { min: 0.2, max: 2 },
-            delay: 0.2,
-          },
-          end: () => "+=" + container?.offsetWidth,
-        },
-      });
+  //     let scrollTween = gsap.to(panels, {
+  //       xPercent: -100 * (panels.length - 1),
+  //       duration: 1,
+  //       ease: "none",
+  //       scrollTrigger: {
+  //         trigger: container,
+  //         pin: true,
+  //         scrub: 1,
+  //         snap: {
+  //           snapTo: 1 / (panels.length - 1),
+  //           duration: { min: 0.2, max: 2 },
+  //           delay: 0.2,
+  //         },
+  //         end: () => "+=" + container?.offsetWidth,
+  //       },
+  //     });
 
-      gsap.from("#panel-text-1", {
-        y: -20,
-        opacity: 0,
-        duration: 1,
-        ease: "power2.inOut",
-        delay: 0.5,
-        scrollTrigger: "#panel-text-1",
-        autoAlpha: 0,
-      });
-      gsap.from("#panel-text-2", {
-        y: -20,
-        opacity: 0,
-        duration: 1,
-        ease: "power2.inOut",
-        delay: 1,
-        scrollTrigger: {
-          trigger: "#panel-text-2",
-          containerAnimation: scrollTween,
-        },
-        autoAlpha: 0,
-      });
-      gsap.from("#panel-text-3", {
-        y: -20,
-        opacity: 0,
-        duration: 1,
-        ease: "power2.inOut",
-        delay: 1,
-        scrollTrigger: {
-          trigger: "#panel-text-3",
-          containerAnimation: scrollTween,
-        },
-        autoAlpha: 0,
-      });
-      gsap.from("#panel-text-4", {
-        y: -20,
-        opacity: 0,
-        duration: 1,
-        ease: "power2.inOut",
-        delay: 1,
-        scrollTrigger: {
-          trigger: "#panel-text-4",
-          containerAnimation: scrollTween,
-        },
-        autoAlpha: 0,
-      });
+  //     gsap.from("#panel-text-1", {
+  //       y: -20,
+  //       opacity: 0,
+  //       duration: 1,
+  //       ease: "power2.inOut",
+  //       delay: 0.5,
+  //       scrollTrigger: "#panel-text-1",
+  //       autoAlpha: 0,
+  //     });
+  //     gsap.from("#panel-text-2", {
+  //       y: -20,
+  //       opacity: 0,
+  //       duration: 1,
+  //       ease: "power2.inOut",
+  //       delay: 1,
+  //       scrollTrigger: {
+  //         trigger: "#panel-text-2",
+  //         containerAnimation: scrollTween,
+  //       },
+  //       autoAlpha: 0,
+  //     });
+  //     gsap.from("#panel-text-3", {
+  //       y: -20,
+  //       opacity: 0,
+  //       duration: 1,
+  //       ease: "power2.inOut",
+  //       delay: 1,
+  //       scrollTrigger: {
+  //         trigger: "#panel-text-3",
+  //         containerAnimation: scrollTween,
+  //       },
+  //       autoAlpha: 0,
+  //     });
+  //     gsap.from("#panel-text-4", {
+  //       y: -20,
+  //       opacity: 0,
+  //       duration: 1,
+  //       ease: "power2.inOut",
+  //       delay: 1,
+  //       scrollTrigger: {
+  //         trigger: "#panel-text-4",
+  //         containerAnimation: scrollTween,
+  //       },
+  //       autoAlpha: 0,
+  //     });
 
-      gsap.set(panelSectionRef.current, {
-        height: 1.5 * (container?.offsetWidth || 0),
-      });
-    }, panelSectionRef);
+  //     gsap.set(panelSectionRef.current, {
+  //       height: 1.5 * (container?.offsetWidth || 0),
+  //     });
+  //   }, panelSectionRef);
 
-    return () => ctx.revert();
-  });
+  //   return () => ctx.revert();
+  // });
 
   return (
     <div>
@@ -232,7 +232,7 @@ export default function Featured(): JSX.Element {
           </div>
         </div>
       </section>
-      <section
+      {/* <section
         ref={panelSectionRef}
         className="flex flex-col mb-40 gap-10 items-center"
       >
@@ -302,7 +302,7 @@ export default function Featured(): JSX.Element {
             </p>
           </div>
         </div>
-      </section>
+      </section> */}
     </div>
   );
 }

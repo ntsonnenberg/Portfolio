@@ -5,7 +5,6 @@ import TypingHeader from "./TypingHeader";
 export default function IntegrationFeatures(): JSX.Element {
   return (
     <section className="flex flex-col text-center items-center my-40 px-12 bg-background text-on-background">
-      <div className="phone:h-screen phone:w-auto laptop:h-40" />
       <div className="py-10">
         <TypingHeader color="on-background">
           Crafting Digital Excellence

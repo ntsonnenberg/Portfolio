@@ -47,11 +47,8 @@ export default function NavBar({ openDrawer }: Props): JSX.Element {
           : "bg-transparent"
       } h-20 w-full text-on-primary fixed top-0 z-50`}
     >
-      <div className="flex flex-row justify-between h-full items-center">
-        <Link
-          to="/"
-          className="cursor-pointer phone:text-2xl phont:ml-6 tablet:ml-10 tablet:text-4xl"
-        >
+      <div className="flex flex-row justify-between px-4 h-full items-center">
+        <Link to="/" className="cursor-pointer phone:text-2xl tablet:text-4xl">
           <Image
             src="https://firebasestorage.googleapis.com/v0/b/portfolio-401812.appspot.com/o/bespoke-code-no-bg.svg?alt=media&token=4f2c6717-e0e4-49ba-baae-5a4e9b1a57ee"
             alt="Bespoke Code"

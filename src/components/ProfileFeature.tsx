@@ -20,7 +20,7 @@ export default function ProfileFeature(): JSX.Element {
       />
       <div
         ref={textRef}
-        className="flex flex-col items-start gap-6 phone:mx-6 phone:w-1/2 tablet:mx-0"
+        className="flex flex-col items-start gap-6 phone:w-full phone:px-4 tablet:w-1/2 tablet:px-0"
       >
         <p className="font-bold text-3xl">
           Nathan Sonnenberg
