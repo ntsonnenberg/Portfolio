@@ -23,8 +23,6 @@ export default function SEO({ title, description, pathname, children }: Props) {
     url: `${siteUrl}${pathname || ""}`,
   };
 
-  console.log("SEO:", seo);
-
   return (
     <>
       <title>Bespoke Code - Build Custom Web Applications</title>

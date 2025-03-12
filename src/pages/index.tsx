@@ -53,7 +53,7 @@ export default function IndexPage(): JSX.Element {
           <AuroraBackgroundView />
         </div>
         <GeminiEffectView />
-        <MacbookScrollView />
+        {!isPhone && <MacbookScrollView />}
         <BackgroundBoxesView />
         <Featured />
         <BackgroundBeamsView />

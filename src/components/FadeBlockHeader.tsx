@@ -24,7 +24,7 @@ export default function FadeBlockHeader({
         <div ref={blockRef} className={`absolute h-full bg-${color}`}></div>
         <h2
           ref={headerRef}
-          className={`opacity-0 text-${color} font-bold phone:text-3xl tablet:text-7xl`}
+          className={`opacity-0 text-${color} font-bold phone:text-3xl tablet:text-5xl laptop:text-7xl`}
         >
           {children}
         </h2>

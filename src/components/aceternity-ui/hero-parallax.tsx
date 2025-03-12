@@ -120,7 +120,10 @@ export const Header = () => {
         >
           Book a Call
         </button>
-        <Link to="/projects" className="primary outlined py-2 px-4 text-lg">
+        <Link
+          to="/projects"
+          className="primary outlined py-2 px-4 text-lg text-center"
+        >
           View Projects
         </Link>
       </div>
