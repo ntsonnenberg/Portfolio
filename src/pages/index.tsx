@@ -22,10 +22,10 @@ import SEO from "../components/Seo";
 import HeroMobileView from "../components/HeroMobileView";
 
 export default function IndexPage(): JSX.Element {
-  let isPhone = false;
-  if (typeof window !== "undefined") {
-    isPhone = window.innerWidth <= 412;
-  }
+  // let isPhone = false;
+  // if (typeof window !== "undefined") {
+  //   isPhone = window.innerWidth <= 412;
+  // }
 
   return (
     <Layout>
@@ -54,13 +54,13 @@ export default function IndexPage(): JSX.Element {
           <AuroraBackgroundView />
         </div>
         <GeminiEffectView />
-        {!isPhone && <MacbookScrollView />}
+        {/* {!isPhone && <MacbookScrollView />} */}
         <BackgroundBoxesView />
         <Featured />
         <BackgroundBeamsView />
         <IntegrationFeatures />
         <SocialLinks />
-        <div className="flex phone:gap-0 laptop:gap-10 laptop:m-10 laptop:p-40 laptop:flex-row phone:flex-col justify-evenly">
+        {/* <div className="flex phone:gap-0 laptop:gap-10 laptop:m-10 laptop:p-40 laptop:flex-row phone:flex-col justify-evenly">
           {isPhone ? (
             <FadeBlockHeader color="on-background" className="py-32 mx-6">
               Built with modern frameworks
@@ -69,7 +69,7 @@ export default function IndexPage(): JSX.Element {
             <FlipWordsView />
           )}
           <IconCloudView />
-        </div>
+        </div> */}
         <Steps />
         <ContactForm />
       </ReactLenis>
