@@ -29,8 +29,7 @@ export default function IndexPage(): JSX.Element {
 
   return (
     <Layout>
-      {/* <ReactLenis root> */}
-      <>
+      <ReactLenis root>
         <HeroMobileView />
         <ProfileFeature />
         <Marquee
@@ -73,8 +72,7 @@ export default function IndexPage(): JSX.Element {
         </div> */}
         <Steps />
         <ContactForm />
-        {/* </ReactLenis> */}
-      </>
+      </ReactLenis>
     </Layout>
   );
 }

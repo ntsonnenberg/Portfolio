@@ -3,7 +3,7 @@ import NavBar from "./NavBar";
 import Footer from "./Footer";
 import { useState } from "react";
 import NavDrawer from "./NavDrawer";
-import useScrollFromTop from "../hooks/use-scroll-from-top";
+// import useScrollFromTop from "../hooks/use-scroll-from-top";
 
 type Props = {
   children: JSX.Element;
@@ -11,13 +11,14 @@ type Props = {
 
 export default function Layout({ children }: Props): JSX.Element {
   const [showDrawer, setShowDrawer] = useState(false);
-  const { isStyleOn } = useScrollFromTop();
+  // const { isStyleOn } = useScrollFromTop();
+
+  // ${isStyleOn ? "" : "shadow-custom-inner"}
 
   return (
     <div
-      className={`!scroll-smooth transition-all ${
-        isStyleOn ? "" : "shadow-custom-inner"
-      }`}
+      className={`!scroll-smooth transition-all
+        `}
     >
       <NavBar openDrawer={() => setShowDrawer(!showDrawer)} />
       {children}
