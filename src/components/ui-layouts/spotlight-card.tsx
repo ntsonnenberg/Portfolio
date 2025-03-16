@@ -1,6 +1,6 @@
 "use client";
 
-import { cn } from "../../lib/utils";
+// import { cn } from "../../lib/utils";
 import React, {
   useRef,
   useState,
@@ -57,7 +57,7 @@ export const Spotlight = ({
         CursorFlowGradient,
       }}
     >
-      <div className={cn(className, "group relative z-10 rounded-md")}>
+      <div className={`${className} group relative z-10 rounded-md`}>
         {children}
       </div>
     </SpotLightContext.Provider>
@@ -102,10 +102,7 @@ export function SpotLightItem({ children, className }: SpotlightItemProps) {
       onMouseEnter={() => CursorFlowGradient && setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
       ref={boxWrapper}
-      className={cn(
-        className,
-        " relative rounded-md justify-center items-center p-[2px] bg-[#ffffff15] overflow-hidden"
-      )}
+      className={`${className} relative rounded-md justify-center items-center p-[2px] bg-[#ffffff15] overflow-hidden`}
     >
       {isHovered && (
         <div

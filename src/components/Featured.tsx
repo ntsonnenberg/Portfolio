@@ -1,97 +1,7 @@
-import React, { useLayoutEffect, useRef } from "react";
-import { FiShoppingCart } from "react-icons/fi";
-import { GoMegaphone } from "react-icons/go";
-import { SiAmazonec2 } from "react-icons/si";
-import { VscTerminalCmd } from "react-icons/vsc";
+import React from "react";
 import FadeBlockHeader from "./FadeBlockHeader";
-import { useGSAP } from "@gsap/react";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-import gsap from "gsap";
-import VideoPlayer from "./VideoPlayer";
-
-gsap.registerPlugin(ScrollTrigger);
-gsap.registerPlugin(useGSAP);
 
 export default function Featured(): JSX.Element {
-  // const panelContainerRef = useRef<HTMLDivElement>(null);
-  // const panelSectionRef = useRef<HTMLDivElement>(null);
-
-  // useLayoutEffect(() => {
-  //   let ctx = gsap.context(() => {
-  //     let panels = gsap.utils.toArray("#panel");
-  //     let container = panelContainerRef.current || null;
-
-  //     let scrollTween = gsap.to(panels, {
-  //       xPercent: -100 * (panels.length - 1),
-  //       duration: 1,
-  //       ease: "none",
-  //       scrollTrigger: {
-  //         trigger: container,
-  //         pin: true,
-  //         scrub: 1,
-  //         snap: {
-  //           snapTo: 1 / (panels.length - 1),
-  //           duration: { min: 0.2, max: 2 },
-  //           delay: 0.2,
-  //         },
-  //         end: () => "+=" + container?.offsetWidth,
-  //       },
-  //     });
-
-  //     gsap.from("#panel-text-1", {
-  //       y: -20,
-  //       opacity: 0,
-  //       duration: 1,
-  //       ease: "power2.inOut",
-  //       delay: 0.5,
-  //       scrollTrigger: "#panel-text-1",
-  //       autoAlpha: 0,
-  //     });
-  //     gsap.from("#panel-text-2", {
-  //       y: -20,
-  //       opacity: 0,
-  //       duration: 1,
-  //       ease: "power2.inOut",
-  //       delay: 1,
-  //       scrollTrigger: {
-  //         trigger: "#panel-text-2",
-  //         containerAnimation: scrollTween,
-  //       },
-  //       autoAlpha: 0,
-  //     });
-  //     gsap.from("#panel-text-3", {
-  //       y: -20,
-  //       opacity: 0,
-  //       duration: 1,
-  //       ease: "power2.inOut",
-  //       delay: 1,
-  //       scrollTrigger: {
-  //         trigger: "#panel-text-3",
-  //         containerAnimation: scrollTween,
-  //       },
-  //       autoAlpha: 0,
-  //     });
-  //     gsap.from("#panel-text-4", {
-  //       y: -20,
-  //       opacity: 0,
-  //       duration: 1,
-  //       ease: "power2.inOut",
-  //       delay: 1,
-  //       scrollTrigger: {
-  //         trigger: "#panel-text-4",
-  //         containerAnimation: scrollTween,
-  //       },
-  //       autoAlpha: 0,
-  //     });
-
-  //     gsap.set(panelSectionRef.current, {
-  //       height: 1.5 * (container?.offsetWidth || 0),
-  //     });
-  //   }, panelSectionRef);
-
-  //   return () => ctx.revert();
-  // });
-
   return (
     <div>
       <section className="flex flex-col text-center items-center my-52 mx-12">
@@ -101,7 +11,21 @@ export default function Featured(): JSX.Element {
         <div className=" grid laptop:grid-cols-3 tablet:grid-cols-2 phone:grid-cols-1 mt-10 text-center phone:mt-16  phone:gap-y-16  tablet:gap-0 desktop:mt-24">
           <div className="tablet:p-8 laptop:p-14">
             <p className="mt-2 mb-8 text-2xl font-bold">Ecommerce</p>
-            <FiShoppingCart className="h-10 w-10 mx-auto" />
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              strokeWidth={1.5}
+              stroke="currentColor"
+              className="h-10 w-10 mx-auto"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z"
+              />
+            </svg>
+
             <p className="mt-5 text-base">
               Ready to build your eCommerce website? Our team has the expertise
               to help you sell online efficiently.
@@ -109,7 +33,21 @@ export default function Featured(): JSX.Element {
           </div>
           <div className="tablet:p-8 laptop:p-14 tablet:border-l tablet:border-on-background/20 laptop:border-r">
             <p className="mt-2 mb-8 text-2xl font-bold">Landing Pages</p>
-            <GoMegaphone className="h-10 w-10 mx-auto" />
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              strokeWidth={1.5}
+              stroke="currentColor"
+              className="h-10 w-10 mx-auto"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M10.34 15.84c-.688-.06-1.386-.09-2.09-.09H7.5a4.5 4.5 0 1 1 0-9h.75c.704 0 1.402-.03 2.09-.09m0 9.18c.253.962.584 1.892.985 2.783.247.55.06 1.21-.463 1.511l-.657.38c-.551.318-1.26.117-1.527-.461a20.845 20.845 0 0 1-1.44-4.282m3.102.069a18.03 18.03 0 0 1-.59-4.59c0-1.586.205-3.124.59-4.59m0 9.18a23.848 23.848 0 0 1 8.835 2.535M10.34 6.66a23.847 23.847 0 0 0 8.835-2.535m0 0A23.74 23.74 0 0 0 18.795 3m.38 1.125a23.91 23.91 0 0 1 1.014 5.395m-1.014 8.855c-.118.38-.245.754-.38 1.125m.38-1.125a23.91 23.91 0 0 0 1.014-5.395m0-3.46c.495.413.811 1.035.811 1.73 0 .695-.316 1.317-.811 1.73m0-3.46a24.347 24.347 0 0 1 0 3.46"
+              />
+            </svg>
+
             <p className="mt-5 text-base">
               Hire a front end web developer who will create eye-catching
               designs that keep your users engaged.
@@ -117,7 +55,21 @@ export default function Featured(): JSX.Element {
           </div>
           <div className="tablet:p-8 tablet:border-r tablet:border-t tablet:border-on-background/20 laptop:border-t-0 laptop:border-r-0 laptop:p-14">
             <p className="mt-2 mb-8 text-2xl font-bold">SaaS</p>
-            <VscTerminalCmd className="h-10 w-10 mx-auto" />
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              strokeWidth={1.5}
+              stroke="currentColor"
+              className="w-10 h-10 mx-auto"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="m6.75 7.5 3 2.25-3 2.25m4.5 0h3m-9 8.25h13.5A2.25 2.25 0 0 0 21 18V6a2.25 2.25 0 0 0-2.25-2.25H5.25A2.25 2.25 0 0 0 3 6v12a2.25 2.25 0 0 0 2.25 2.25Z"
+              />
+            </svg>
+
             <p className="mt-5 text-base">
               Transform your ideas into reality with our cutting-edge web app
               developemnt serices designed for scalability.
@@ -127,7 +79,21 @@ export default function Featured(): JSX.Element {
             <p className="mt-2 mb-8 text-2xl font-bold">
               Infrastructure Management
             </p>
-            <SiAmazonec2 className="h-10 w-10 mx-auto" />
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              strokeWidth={1.5}
+              stroke="currentColor"
+              className="h-10 w-10 mx-auto"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M8.25 3v1.5M4.5 8.25H3m18 0h-1.5M4.5 12H3m18 0h-1.5m-15 3.75H3m18 0h-1.5M8.25 19.5V21M12 3v1.5m0 15V21m3.75-18v1.5m0 15V21m-9-1.5h10.5a2.25 2.25 0 0 0 2.25-2.25V6.75a2.25 2.25 0 0 0-2.25-2.25H6.75A2.25 2.25 0 0 0 4.5 6.75v10.5a2.25 2.25 0 0 0 2.25 2.25Zm.75-12h9v9h-9v-9Z"
+              />
+            </svg>
+
             <p className="mt-5 text-base">
               Explore the latest software for apps that streamline your
               development process and enhance functionality.
@@ -232,77 +198,6 @@ export default function Featured(): JSX.Element {
           </div>
         </div>
       </section>
-      {/* <section
-        ref={panelSectionRef}
-        className="flex flex-col mb-40 gap-10 items-center"
-      >
-        <div
-          id="panel-container"
-          ref={panelContainerRef}
-          className="flex overflow-x-hidden w-full min-h-screen"
-        >
-          <div
-            id="panel"
-            className="relative w-svw h-dvh flex-none overflow-hidden phone:flex phone:justify-center laptop:block"
-          >
-            <VideoPlayer
-              video="https://firebasestorage.googleapis.com/v0/b/portfolio-401812.appspot.com/o/videos%2Fpanel-1-vid.mp4?alt=media&token=3220e429-ef51-4af7-b37c-0418f523b5cd"
-              className="absolute phone:w-auto phone:min-w-full phone:min-h-full phone:max-w-none laptop:min-w-0 laptop:min-h-0 laptop:max-w-full"
-            />
-            <p
-              id="panel-text-1"
-              className="absolute flex items-center font-bold w-1/3 text-clip m-40 phone:text-xl tablet:text-4xl laptop:text-6xl"
-            >
-              Custom web design for your brand
-            </p>
-          </div>
-          <div
-            id="panel"
-            className="relative w-svw h-dvh flex-none overflow-hidden phone:flex phone:justify-center laptop:block"
-          >
-            <VideoPlayer
-              video="https://firebasestorage.googleapis.com/v0/b/portfolio-401812.appspot.com/o/videos%2Fpanel-2-vid.mp4?alt=media&token=43689a25-c34f-4bca-bf97-b198316b1099"
-              className="absolute phone:w-auto phone:min-w-full phone:min-h-full phone:max-w-none laptop:min-w-0 laptop:min-h-0 laptop:max-w-full"
-            />
-            <p
-              id="panel-text-2"
-              className="absolute flex items-center m-40 font-bold w-1/3 text-clip phone:text-xl tablet:text-4xl laptop:text-6xl"
-            >
-              Expand your reach to your targeted audience
-            </p>
-          </div>
-          <div
-            id="panel"
-            className="relative w-svw h-dvh flex-none overflow-hidden phone:flex phone:justify-center laptop:block"
-          >
-            <VideoPlayer
-              video="https://firebasestorage.googleapis.com/v0/b/portfolio-401812.appspot.com/o/videos%2Fpanel-3-vid.mp4?alt=media&token=08a744dd-1e7c-467e-bbff-88c02f236cec"
-              className="absolute phone:w-auto phone:min-w-full phone:min-h-full phone:max-w-none laptop:min-w-0 laptop:min-h-0 laptop:max-w-full"
-            />
-            <p
-              id="panel-text-3"
-              className="absolute flex items-center font-bold w-1/3 text-clip p-4 m-40 bg-background phone:text-xl tablet:text-4xl laptop:text-6xl"
-            >
-              Integrate and automate your operations
-            </p>
-          </div>
-          <div
-            id="panel"
-            className="relative w-svw h-dvh flex-none overflow-hidden phone:flex phone:justify-center laptop:block"
-          >
-            <VideoPlayer
-              video="https://firebasestorage.googleapis.com/v0/b/portfolio-401812.appspot.com/o/videos%2Fpanel-4-vid.mp4?alt=media&token=4b22eb60-066d-45d4-a151-d6bce795a252"
-              className="absolute phone:w-auto phone:min-w-full phone:min-h-full phone:max-w-none laptop:min-w-0 laptop:min-h-0 laptop:max-w-full"
-            />
-            <p
-              id="panel-text-4"
-              className="absolute flex items-center font-bold w-1/3 text-clip p-4 m-40 bg-background phone:text-xl tablet:text-4xl laptop:text-6xl"
-            >
-              Build your dream, one line of code at a time
-            </p>
-          </div>
-        </div>
-      </section> */}
     </div>
   );
 }

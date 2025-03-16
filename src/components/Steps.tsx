@@ -5,7 +5,7 @@ import { FiArrowRight } from "react-icons/fi";
 
 export default function Steps(): JSX.Element {
   return (
-    <div className="flex flex-col text-center items-center py-52 phone:px-1 phone:mx-6 tablet:mx-0 tablet:px-6">
+    <div className="flex flex-col text-center items-center py-40 phone:px-1 phone:mx-6 tablet:mx-0 tablet:px-6">
       <div className="pb-20">
         <FadeBlockHeader color="on-background">How it works</FadeBlockHeader>
       </div>
