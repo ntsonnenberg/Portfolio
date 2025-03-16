@@ -53,11 +53,11 @@ export default function IndexPage(): JSX.Element {
         <div className="phone:pt-10 laptop:pt-0">
           <AuroraBackgroundView />
         </div>
-        <GeminiEffectView />
+        {/* <GeminiEffectView /> */}
         {/* {!isPhone && <MacbookScrollView />} */}
         <BackgroundBoxesView />
         <Featured />
-        <BackgroundBeamsView />
+        {/* <BackgroundBeamsView /> */}
         <IntegrationFeatures />
         <SocialLinks />
         {/* <div className="flex phone:gap-0 laptop:gap-10 laptop:m-10 laptop:p-40 laptop:flex-row phone:flex-col justify-evenly">

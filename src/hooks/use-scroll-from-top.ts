@@ -12,7 +12,7 @@ export default function useScrollFromTop() {
       }
     };
 
-    window.addEventListener("scroll", flipStyling);
+    window.addEventListener("scroll", flipStyling, { passive: true });
 
     return () => window.removeEventListener("scroll", flipStyling);
   }, []);

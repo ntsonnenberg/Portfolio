@@ -1,16 +1,9 @@
-import React, { useRef } from "react";
+import React from "react";
 import { Link } from "gatsby";
 import Image from "./Image";
-import useScrollObserver from "../hooks/use-scroll-observer";
+import { motion } from "framer-motion";
 
 export default function ProfileFeature(): JSX.Element {
-  const textRef = useRef(null);
-
-  useScrollObserver(textRef, {
-    animationClass: "animate-fade-in-down",
-    handleOpacity: true,
-  });
-
   return (
     <div className="flex justify-evenly phone:flex-col phone:gap-20 phone:mt-20 tablet:gap-0 tablet:flex-row tablet:min-h-screen tablet:items-center desktop:mx-72">
       <Image
@@ -18,8 +11,14 @@ export default function ProfileFeature(): JSX.Element {
         alt="Profile Headshot Photo"
         className="rounded-sm h-auto w-80 shadow-stand-out phone:place-self-center tablet:ml-10 tablet:place-self-center laptop:ml-0"
       />
-      <div
-        ref={textRef}
+      <motion.div
+        initial={{ opacity: 0.0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{
+          delay: 0.3,
+          duration: 0.8,
+          ease: "easeInOut",
+        }}
         className="flex flex-col items-start gap-6 phone:w-full phone:px-4 tablet:w-1/2 tablet:px-0"
       >
         <p className="font-bold text-3xl">
@@ -42,7 +41,7 @@ export default function ProfileFeature(): JSX.Element {
         >
           About Me
         </Link>
-      </div>
+      </motion.div>
     </div>
   );
 }
