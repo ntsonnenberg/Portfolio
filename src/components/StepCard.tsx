@@ -3,7 +3,6 @@ import React from "react";
 interface Props {
   children: string;
   title: string;
-  id: string;
   step: number;
   className?: string;
 }
@@ -11,13 +10,11 @@ interface Props {
 export default function StepCard({
   title,
   step,
-  id,
   children,
   className,
 }: Props): JSX.Element {
   return (
     <div
-      id={id}
       className={`bg-slate-950 border border-slate-700 text-on-background w-60 h-auto p-3 rounded-xl ${className}`}
     >
       <div className="flex flex-col">

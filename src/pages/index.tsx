@@ -19,6 +19,7 @@ import { GeminiEffectView } from "../components/GeminiEffectView";
 import { HeroParallaxView } from "../components/HeroParallaxView";
 import Image from "../components/Image";
 import SEO from "../components/Seo";
+import HeroMobileView from "../components/HeroMobileView";
 
 export default function IndexPage(): JSX.Element {
   let isPhone = false;
@@ -29,7 +30,7 @@ export default function IndexPage(): JSX.Element {
   return (
     <Layout>
       <ReactLenis root>
-        <HeroParallaxView />
+        {isPhone ? <HeroMobileView /> : <HeroParallaxView />}
         <ProfileFeature />
         <Marquee
           direction="right"

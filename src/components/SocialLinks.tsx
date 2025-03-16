@@ -30,7 +30,6 @@ export default function SocialLinks(): JSX.Element {
           target="_blank"
         >
           <svg
-            id="ig-svg"
             stroke="currentColor"
             fill="none"
             strokeWidth="2"
@@ -43,10 +42,16 @@ export default function SocialLinks(): JSX.Element {
             xmlns="http://www.w3.org/2000/svg"
             onMouseOver={handleMouseEnter}
             onMouseLeave={handleMouseLeave}
-            style={{ stroke: isHovered ? "url(#gradient)" : "white" }}
+            style={{ stroke: isHovered ? "url(#gradient-socials)" : "white" }}
           >
             <defs>
-              <linearGradient id="gradient" x1="0%" y1="100%" x2="100%" y2="0%">
+              <linearGradient
+                id="gradient-socials"
+                x1="0%"
+                y1="100%"
+                x2="100%"
+                y2="0%"
+              >
                 <stop offset="0%" style={{ stopColor: "#405DE6" }} />
                 <stop offset="50%" style={{ stopColor: "#F77737" }} />
                 <stop offset="100%" style={{ stopColor: "#C13584" }} />
@@ -54,11 +59,11 @@ export default function SocialLinks(): JSX.Element {
             </defs>
             <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
             <path
-              style={{ stroke: isHovered ? "url(#gradient)" : "white" }}
+              style={{ stroke: isHovered ? "url(#gradient-socials)" : "white" }}
               d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"
             ></path>
             <line
-              style={{ stroke: isHovered ? "url(#gradient)" : "white" }}
+              style={{ stroke: isHovered ? "url(#gradient-socials)" : "white" }}
               x1="17.5"
               y1="6.5"
               x2="17.51"

@@ -43,7 +43,6 @@ export default function Footer(): JSX.Element {
             target="_blank"
           >
             <svg
-              id="ig-svg"
               stroke="currentColor"
               fill="none"
               strokeWidth="2"
@@ -56,11 +55,11 @@ export default function Footer(): JSX.Element {
               xmlns="http://www.w3.org/2000/svg"
               onMouseOver={handleMouseEnter}
               onMouseLeave={handleMouseLeave}
-              style={{ stroke: isHovered ? "url(#gradient)" : "white" }}
+              style={{ stroke: isHovered ? "url(#gradient-footer)" : "white" }}
             >
               <defs>
                 <linearGradient
-                  id="gradient"
+                  id="gradient-footer"
                   x1="0%"
                   y1="100%"
                   x2="100%"
@@ -73,11 +72,15 @@ export default function Footer(): JSX.Element {
               </defs>
               <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
               <path
-                style={{ stroke: isHovered ? "url(#gradient)" : "white" }}
+                style={{
+                  stroke: isHovered ? "url(#gradient-footer)" : "white",
+                }}
                 d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"
               ></path>
               <line
-                style={{ stroke: isHovered ? "url(#gradient)" : "white" }}
+                style={{
+                  stroke: isHovered ? "url(#gradient-footer)" : "white",
+                }}
                 x1="17.5"
                 y1="6.5"
                 x2="17.51"

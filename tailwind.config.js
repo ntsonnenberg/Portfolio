@@ -50,6 +50,7 @@ module.exports = {
       },
       fontFamily: {
         poppins: ["Poppins", "sans-serif"],
+        pacifico: ["Pacifico", "cursive"],
       },
       keyframes: {
         "fade-in-down": {
