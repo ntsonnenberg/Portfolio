@@ -30,7 +30,7 @@ export default function IndexPage(): JSX.Element {
   return (
     <Layout>
       <ReactLenis root>
-        <HeroMobileView />
+        {/* <HeroMobileView /> */}
         <ProfileFeature />
         <Marquee
           direction="right"
