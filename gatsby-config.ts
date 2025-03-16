@@ -38,6 +38,7 @@ const config: GatsbyConfig = {
     siteUrl: `https://bespokecode.io`,
   },
   plugins: [
+    "@sentry/gatsby",
     "gatsby-plugin-postcss",
     "gatsby-plugin-image",
     "gatsby-plugin-sitemap",
