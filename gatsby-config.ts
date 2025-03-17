@@ -46,12 +46,6 @@ const config: GatsbyConfig = {
     "gatsby-plugin-smoothscroll",
     "gatsby-plugin-webpack-bundle-analyser-v2",
     {
-      resolve: "gatsby-plugin-google-gtag",
-      options: {
-        trackingIds: ["G-RPLQCK4TJB"],
-      },
-    },
-    {
       resolve: "gatsby-plugin-html-attributes",
       options: {
         lang: "en",
