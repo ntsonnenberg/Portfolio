@@ -87,7 +87,7 @@ export function Head(): JSX.Element {
       pathname="/"
     >
       <link
-        href="https://fonts.googleapis.com/css2?family=Pacifico:wght@400&display=swap&text=DigtalVson"
+        href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap&text=DigtalVson"
         rel="stylesheet"
       />
     </SEO>

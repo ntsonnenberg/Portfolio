@@ -12,7 +12,7 @@ export default function Steps(): JSX.Element {
       <p className="tablet:w-1/2 phone:w-11/12">
         <span className="text-secondary font-extrabold">
           Our proven methodology ensures a structured and efficient approach
-        </span>
+        </span>{" "}
         to building high-quality software tailored to your needs.
       </p>
       <div className="relative my-28 flex laptop:flex-row phone:flex-col items-center gap-5">

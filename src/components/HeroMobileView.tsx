@@ -156,10 +156,10 @@ export default function HeroMobileView({
             initial="hidden"
             animate="visible"
           >
-            <h1 className="phone:text-5xl tablet:text-8xl font-bold mb-6 md:mb-8 tracking-tight">
+            <h1 className="phone:text-5xl tablet:text-7xl font-bold mb-6 md:mb-8 tracking-tight">
               <span>{title1}</span>
               <br />
-              <span className="laptop:px-10 laptop:py-6 font-pacifico bg-clip-text text-transparent bg-gradient-to-r from-primary to-white/80">
+              <span className="laptop:px-10 laptop:py-6 font-audiowide bg-clip-text text-transparent bg-gradient-to-r from-primary to-white/80">
                 {title2}
               </span>
             </h1>
