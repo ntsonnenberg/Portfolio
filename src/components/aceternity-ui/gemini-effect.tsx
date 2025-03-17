@@ -9,7 +9,7 @@ const transition = {
   ease: "linear",
 };
 
-export const GoogleGeminiEffect = ({
+export default function GoogleGeminiEffect({
   pathLengths,
   title,
   description,
@@ -19,7 +19,7 @@ export const GoogleGeminiEffect = ({
   title?: string;
   description?: string;
   className?: string;
-}) => {
+}) {
   return (
     <div className={`sticky top-80 ${className}`}>
       <p className="text-2xl font-normal pb-4 text-center bg-clip-text text-transparent bg-gradient-to-b from-neutral-100 to-neutral-300">
@@ -163,4 +163,4 @@ export const GoogleGeminiEffect = ({
       </svg>
     </div>
   );
-};
+}

@@ -1,6 +1,5 @@
 import React from "react";
 import { Boxes } from "./aceternity-ui/background-boxes";
-// import { cn } from "../lib/utils";
 import { Link } from "gatsby";
 
 export default function BackgroundBoxesView() {

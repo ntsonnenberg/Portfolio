@@ -1,9 +1,10 @@
 "use client";
+
 import { useScroll, useTransform } from "framer-motion";
 import React from "react";
-import { GoogleGeminiEffect } from "./aceternity-ui/gemini-effect";
+import GoogleGeminiEffect from "./aceternity-ui/gemini-effect";
 
-export function GeminiEffectView() {
+export default function GeminiEffectView() {
   const ref = React.useRef(null);
   const { scrollYProgress } = useScroll({
     target: ref,

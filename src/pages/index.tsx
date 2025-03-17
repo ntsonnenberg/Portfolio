@@ -1,6 +1,6 @@
 import React from "react";
 import Featured from "../components/Featured";
-// import Steps from "../components/Steps";
+import Steps from "../components/Steps";
 import ContactForm from "../components/ContactForm";
 import Layout from "../components/Layout";
 import SocialLinks from "../components/SocialLinks";
@@ -15,7 +15,7 @@ import { ReactLenis } from "lenis/dist/lenis-react";
 // import BackgroundBoxesView from "../components/BackgroundBoxesView";
 import BackgroundBeamsView from "../components/BackgroundBeamsView";
 // import { FlipWordsView } from "../components/FlipWordsView";
-// import { GeminiEffectView } from "../components/GeminiEffectView";
+import GeminiEffectView from "../components/GeminiEffectView";
 // import { HeroParallaxView } from "../components/HeroParallaxView";
 import Image from "../components/Image";
 import SEO from "../components/Seo";
@@ -55,7 +55,7 @@ export default function IndexPage(): JSX.Element {
         <div className="phone:pt-10 laptop:pt-0">
           <AuroraBackgroundView />
         </div>
-        {/* <GeminiEffectView /> */}
+        <GeminiEffectView />
         {/* {!isPhone && <MacbookScrollView />} */}
         {/* <BackgroundBoxesView /> */}
         <Featured />
@@ -72,7 +72,7 @@ export default function IndexPage(): JSX.Element {
           )}
           <IconCloudView />
         </div> */}
-        {/* <Steps /> */}
+        <Steps />
         <ContactForm />
       </ReactLenis>
     </Layout>
