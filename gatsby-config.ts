@@ -45,6 +45,7 @@ const config: GatsbyConfig = {
     "gatsby-transformer-sharp",
     "gatsby-plugin-smoothscroll",
     "gatsby-plugin-webpack-bundle-analyser-v2",
+    "@sentry/gatsby",
     {
       resolve: "gatsby-plugin-html-attributes",
       options: {

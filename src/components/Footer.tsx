@@ -2,16 +2,6 @@ import React, { useState } from "react";
 import Image from "./Image";
 
 export default function Footer(): JSX.Element {
-  const [isHovered, setIsHovered] = useState(false);
-
-  const handleMouseEnter = () => {
-    setIsHovered(true);
-  };
-
-  const handleMouseLeave = () => {
-    setIsHovered(false);
-  };
-
   return (
     <div className="bottom-0 mt-20 w-full border-t border-on-background/20 text-on-primary phone:h-auto laptop:h-32">
       <div className="flex h-full items-center phone:flex-col phone:py-8 phone:gap-6 laptop:flex-row laptop:py-0 laptop:gap-0">
@@ -59,13 +49,10 @@ export default function Footer(): JSX.Element {
               viewBox="0 0 24 24"
               strokeLinecap="round"
               strokeLinejoin="round"
-              className="stroke-1 hover:scale-110 transition-transform duration-100 ease-in tablet:w-11 tablet:h-11 phone:w-6 phone:h-6 hover:shadow-stand-out"
+              className="stroke-1 hover:scale-110 transition-transform duration-100 ease-in tablet:w-11 tablet:h-11 phone:w-6 phone:h-6 hover:shadow-stand-out hover:stroke-[url(#gradient-socials)]"
               height="1em"
               width="1em"
               xmlns="http://www.w3.org/2000/svg"
-              onMouseOver={handleMouseEnter}
-              onMouseLeave={handleMouseLeave}
-              style={{ stroke: isHovered ? "url(#gradient-footer)" : "white" }}
             >
               <defs>
                 <linearGradient
@@ -82,15 +69,11 @@ export default function Footer(): JSX.Element {
               </defs>
               <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
               <path
-                style={{
-                  stroke: isHovered ? "url(#gradient-footer)" : "white",
-                }}
                 d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"
+                className="hover:stroke-[url(#gradient-socials)]"
               ></path>
               <line
-                style={{
-                  stroke: isHovered ? "url(#gradient-footer)" : "white",
-                }}
+                className="hover:stroke-[url(#gradient-socials)]"
                 x1="17.5"
                 y1="6.5"
                 x2="17.51"

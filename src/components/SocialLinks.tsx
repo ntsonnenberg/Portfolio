@@ -1,16 +1,6 @@
-import React, { useState } from "react";
+import React from "react";
 
 export default function SocialLinks(): JSX.Element {
-  const [isHovered, setIsHovered] = useState(false);
-
-  const handleMouseEnter = () => {
-    setIsHovered(true);
-  };
-
-  const handleMouseLeave = () => {
-    setIsHovered(false);
-  };
-
   return (
     <div className="relative flex mt-60 phone:px-8 laptop:px-0">
       <div className="flex justify-evenly grow items-center">
@@ -47,13 +37,10 @@ export default function SocialLinks(): JSX.Element {
             viewBox="0 0 24 24"
             strokeLinecap="round"
             strokeLinejoin="round"
-            className="stroke-1 hover:scale-110 transition-transform duration-100 ease-in tablet:w-20 tablet:h-20 phone:w-10 phone:h-10"
+            className="stroke-1 hover:scale-110 transition-transform duration-100 ease-in tablet:w-20 tablet:h-20 phone:w-10 phone:h-10 hover:stroke-[url(#gradient-socials)]"
             height="1em"
             width="1em"
             xmlns="http://www.w3.org/2000/svg"
-            onMouseOver={handleMouseEnter}
-            onMouseLeave={handleMouseLeave}
-            style={{ stroke: isHovered ? "url(#gradient-socials)" : "white" }}
           >
             <defs>
               <linearGradient
@@ -70,15 +57,15 @@ export default function SocialLinks(): JSX.Element {
             </defs>
             <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
             <path
-              style={{ stroke: isHovered ? "url(#gradient-socials)" : "white" }}
+              className="hover:stroke-[url(#gradient-socials)]"
               d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"
             ></path>
             <line
-              style={{ stroke: isHovered ? "url(#gradient-socials)" : "white" }}
               x1="17.5"
               y1="6.5"
               x2="17.51"
               y2="6.5"
+              className="hover:stroke-[url(#gradient-socials)]"
             ></line>
           </svg>
         </a>
