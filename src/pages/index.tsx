@@ -13,7 +13,7 @@ import AuroraBackgroundView from "../components/AuroraBackgroundView";
 // import { IconCloudView } from "../components/IconCloudView";
 import { ReactLenis } from "lenis/dist/lenis-react";
 // import BackgroundBoxesView from "../components/BackgroundBoxesView";
-// import { BackgroundBeamsView } from "../components/BackgroundBeamsView";
+import BackgroundBeamsView from "../components/BackgroundBeamsView";
 // import { FlipWordsView } from "../components/FlipWordsView";
 // import { GeminiEffectView } from "../components/GeminiEffectView";
 // import { HeroParallaxView } from "../components/HeroParallaxView";
@@ -59,7 +59,7 @@ export default function IndexPage(): JSX.Element {
         {/* {!isPhone && <MacbookScrollView />} */}
         {/* <BackgroundBoxesView /> */}
         <Featured />
-        {/* <BackgroundBeamsView /> */}
+        <BackgroundBeamsView />
         {/* <IntegrationFeatures />
         <SocialLinks /> */}
         {/* <div className="flex phone:gap-0 laptop:gap-10 laptop:m-10 laptop:p-40 laptop:flex-row phone:flex-col justify-evenly">

@@ -1,7 +1,7 @@
 import React from "react";
-import { BackgroundBeamsWithCollision } from "../components/aceternity-ui/background-beams";
+import BackgroundBeamsWithCollision from "../components/aceternity-ui/background-beams";
 
-export function BackgroundBeamsView() {
+export default function BackgroundBeamsView() {
   return (
     <BackgroundBeamsWithCollision>
       <h3 className="relative z-20 phone:text-2xl tablet:text-3xl laptop:text-5xl font-bold text-center text-black dark:text-white font-sans tracking-tight">

@@ -1,16 +1,15 @@
 "use client";
 
-// import { cn } from "../../lib/utils";
 import { motion, AnimatePresence } from "framer-motion";
 import React, { useRef, useState, useEffect } from "react";
 
-export const BackgroundBeamsWithCollision = ({
+export default function BackgroundBeamsWithCollision({
   children,
   className,
 }: {
   children: React.ReactNode;
   className?: string;
-}) => {
+}) {
   const containerRef = useRef<HTMLDivElement>(null);
   const parentRef = useRef<HTMLDivElement>(null);
 
@@ -92,7 +91,7 @@ export const BackgroundBeamsWithCollision = ({
       ></div>
     </div>
   );
-};
+}
 
 const CollisionMechanism = React.forwardRef<
   HTMLDivElement,
