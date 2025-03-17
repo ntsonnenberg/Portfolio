@@ -3,7 +3,7 @@ import React from "react";
 import { AuroraBackground } from "./aceternity-ui/aurora-background";
 import { Link } from "gatsby";
 
-export function AuroraBackgroundView() {
+export default function AuroraBackgroundView() {
   return (
     <AuroraBackground>
       <motion.div

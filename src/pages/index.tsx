@@ -5,10 +5,10 @@ import ContactForm from "../components/ContactForm";
 import Layout from "../components/Layout";
 // import SocialLinks from "../components/SocialLinks";
 import ProfileFeature from "../components/ProfileFeature";
-// import Marquee from "react-fast-marquee";
+import Marquee from "react-fast-marquee";
 // import IntegrationFeatures from "../components/IntegrationFeatures";
 // import FadeBlockHeader from "../components/FadeBlockHeader";
-// import { AuroraBackgroundView } from "../components/AuroraBackgroundView";
+import AuroraBackgroundView from "../components/AuroraBackgroundView";
 // import { MacbookScrollView } from "../components/MacbookScrollView";
 // import { IconCloudView } from "../components/IconCloudView";
 import { ReactLenis } from "lenis/dist/lenis-react";
@@ -34,7 +34,7 @@ export default function IndexPage(): JSX.Element {
       <ReactLenis root>
         <HeroMobileView />
         <ProfileFeature />
-        {/* <Marquee
+        <Marquee
           direction="right"
           speed={100}
           gradient
@@ -51,10 +51,10 @@ export default function IndexPage(): JSX.Element {
             className="phone:w-24 phone:h-24 phone:mx-6 tablet:mx-10 tablet:w-28 tablet:h-28 laptop:mx-14"
             alt="Utah Automotive Magazine Website Logo"
           />
-        </Marquee> */}
-        {/* <div className="phone:pt-10 laptop:pt-0">
+        </Marquee>
+        <div className="phone:pt-10 laptop:pt-0">
           <AuroraBackgroundView />
-        </div> */}
+        </div>
         {/* <GeminiEffectView /> */}
         {/* {!isPhone && <MacbookScrollView />} */}
         {/* <BackgroundBoxesView />
