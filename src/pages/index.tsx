@@ -1,25 +1,25 @@
 import React from "react";
-import Featured from "../components/Featured";
-import Steps from "../components/Steps";
+// import Featured from "../components/Featured";
+// import Steps from "../components/Steps";
 import ContactForm from "../components/ContactForm";
 import Layout from "../components/Layout";
-import SocialLinks from "../components/SocialLinks";
+// import SocialLinks from "../components/SocialLinks";
 import ProfileFeature from "../components/ProfileFeature";
-import Marquee from "react-fast-marquee";
-import IntegrationFeatures from "../components/IntegrationFeatures";
+// import Marquee from "react-fast-marquee";
+// import IntegrationFeatures from "../components/IntegrationFeatures";
 // import FadeBlockHeader from "../components/FadeBlockHeader";
-import { AuroraBackgroundView } from "../components/AuroraBackgroundView";
+// import { AuroraBackgroundView } from "../components/AuroraBackgroundView";
 // import { MacbookScrollView } from "../components/MacbookScrollView";
 // import { IconCloudView } from "../components/IconCloudView";
 import { ReactLenis } from "lenis/dist/lenis-react";
-import { BackgroundBoxesView } from "../components/BackgroundBoxesView";
+// import { BackgroundBoxesView } from "../components/BackgroundBoxesView";
 // import { BackgroundBeamsView } from "../components/BackgroundBeamsView";
 // import { FlipWordsView } from "../components/FlipWordsView";
 // import { GeminiEffectView } from "../components/GeminiEffectView";
 // import { HeroParallaxView } from "../components/HeroParallaxView";
 import Image from "../components/Image";
 import SEO from "../components/Seo";
-import { HeroParallaxView } from "../components/HeroParallaxView";
+// import { HeroParallaxView } from "../components/HeroParallaxView";
 // import HeroMobileView from "../components/HeroMobileView";
 
 export default function IndexPage(): JSX.Element {
