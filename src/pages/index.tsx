@@ -1,5 +1,5 @@
 import React from "react";
-// import Featured from "../components/Featured";
+import Featured from "../components/Featured";
 // import Steps from "../components/Steps";
 import ContactForm from "../components/ContactForm";
 import Layout from "../components/Layout";
@@ -12,7 +12,7 @@ import AuroraBackgroundView from "../components/AuroraBackgroundView";
 // import { MacbookScrollView } from "../components/MacbookScrollView";
 // import { IconCloudView } from "../components/IconCloudView";
 import { ReactLenis } from "lenis/dist/lenis-react";
-// import { BackgroundBoxesView } from "../components/BackgroundBoxesView";
+import BackgroundBoxesView from "../components/BackgroundBoxesView";
 // import { BackgroundBeamsView } from "../components/BackgroundBeamsView";
 // import { FlipWordsView } from "../components/FlipWordsView";
 // import { GeminiEffectView } from "../components/GeminiEffectView";
@@ -57,8 +57,8 @@ export default function IndexPage(): JSX.Element {
         </div>
         {/* <GeminiEffectView /> */}
         {/* {!isPhone && <MacbookScrollView />} */}
-        {/* <BackgroundBoxesView />
-        <Featured /> */}
+        <BackgroundBoxesView />
+        <Featured />
         {/* <BackgroundBeamsView /> */}
         {/* <IntegrationFeatures />
         <SocialLinks /> */}
