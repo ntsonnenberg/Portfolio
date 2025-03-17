@@ -19,6 +19,7 @@ import { ReactLenis } from "lenis/dist/lenis-react";
 // import { HeroParallaxView } from "../components/HeroParallaxView";
 import Image from "../components/Image";
 import SEO from "../components/Seo";
+import HeroMobileView from "../components/HeroMobileView";
 // import { HeroParallaxView } from "../components/HeroParallaxView";
 // import HeroMobileView from "../components/HeroMobileView";
 
@@ -31,7 +32,7 @@ export default function IndexPage(): JSX.Element {
   return (
     <Layout>
       <ReactLenis root>
-        {/* <HeroParallaxView /> */}
+        <HeroMobileView />
         <ProfileFeature />
         {/* <Marquee
           direction="right"
