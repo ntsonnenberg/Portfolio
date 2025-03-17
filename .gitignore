@@ -8,5 +8,3 @@ yarn.lock
 .pnp.cjs
 .pnp.loader.mjs
 .env.*
-# Sentry Config File
-.env.sentry-build-plugin
