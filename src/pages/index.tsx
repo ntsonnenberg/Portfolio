@@ -31,9 +31,9 @@ export default function IndexPage(): JSX.Element {
   return (
     <Layout>
       <ReactLenis root>
-        <HeroParallaxView />
+        {/* <HeroParallaxView /> */}
         <ProfileFeature />
-        <Marquee
+        {/* <Marquee
           direction="right"
           speed={100}
           gradient
@@ -50,17 +50,17 @@ export default function IndexPage(): JSX.Element {
             className="phone:w-24 phone:h-24 phone:mx-6 tablet:mx-10 tablet:w-28 tablet:h-28 laptop:mx-14"
             alt="Utah Automotive Magazine Website Logo"
           />
-        </Marquee>
-        <div className="phone:pt-10 laptop:pt-0">
+        </Marquee> */}
+        {/* <div className="phone:pt-10 laptop:pt-0">
           <AuroraBackgroundView />
-        </div>
+        </div> */}
         {/* <GeminiEffectView /> */}
         {/* {!isPhone && <MacbookScrollView />} */}
-        <BackgroundBoxesView />
-        <Featured />
+        {/* <BackgroundBoxesView />
+        <Featured /> */}
         {/* <BackgroundBeamsView /> */}
-        <IntegrationFeatures />
-        <SocialLinks />
+        {/* <IntegrationFeatures />
+        <SocialLinks /> */}
         {/* <div className="flex phone:gap-0 laptop:gap-10 laptop:m-10 laptop:p-40 laptop:flex-row phone:flex-col justify-evenly">
           {isPhone ? (
             <FadeBlockHeader color="on-background" className="py-32 mx-6">
@@ -71,7 +71,7 @@ export default function IndexPage(): JSX.Element {
           )}
           <IconCloudView />
         </div> */}
-        <Steps />
+        {/* <Steps /> */}
         <ContactForm />
       </ReactLenis>
     </Layout>
