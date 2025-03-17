@@ -3,10 +3,10 @@ import Featured from "../components/Featured";
 // import Steps from "../components/Steps";
 import ContactForm from "../components/ContactForm";
 import Layout from "../components/Layout";
-// import SocialLinks from "../components/SocialLinks";
+import SocialLinks from "../components/SocialLinks";
 import ProfileFeature from "../components/ProfileFeature";
 import Marquee from "react-fast-marquee";
-// import IntegrationFeatures from "../components/IntegrationFeatures";
+import IntegrationFeatures from "../components/IntegrationFeatures";
 // import FadeBlockHeader from "../components/FadeBlockHeader";
 import AuroraBackgroundView from "../components/AuroraBackgroundView";
 // import { MacbookScrollView } from "../components/MacbookScrollView";
@@ -60,8 +60,8 @@ export default function IndexPage(): JSX.Element {
         {/* <BackgroundBoxesView /> */}
         <Featured />
         <BackgroundBeamsView />
-        {/* <IntegrationFeatures />
-        <SocialLinks /> */}
+        <IntegrationFeatures />
+        <SocialLinks />
         {/* <div className="flex phone:gap-0 laptop:gap-10 laptop:m-10 laptop:p-40 laptop:flex-row phone:flex-col justify-evenly">
           {isPhone ? (
             <FadeBlockHeader color="on-background" className="py-32 mx-6">
