@@ -5,7 +5,6 @@ import { Project } from "../../lib/projects";
 import Image from "../../components/Image";
 import FadeBlockHeader from "../../components/FadeBlockHeader";
 import SEO from "../../components/Seo";
-import { IoCaretBackOutline } from "react-icons/io5";
 interface Props {
   data: {
     project: Project;
@@ -27,7 +26,20 @@ export default function ProjectPage({ data: { project }, children }: Props) {
             to="/projects"
             className="absolute phone:top-24 phone:left-20 tablet:top-28 tablet:left-40 bg-background py-1 px-2 text-lg rounded-sm flex gap-2 items-center transition-all ease-in-out hover:scale-105"
           >
-            <IoCaretBackOutline className="w-4 h-4 stroke-white" />
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              strokeWidth={1.5}
+              stroke="currentColor"
+              className="w-6 h-6 stroke-white"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M15.75 19.5 8.25 12l7.5-7.5"
+              />
+            </svg>
             Back to Projects
           </Link>
           <div className="absolute phone:top-36 phone:left-20 tablet:top-40 tablet:left-40 bg-background p-4 phone:w-9/12 tablet:w-1/3 drop-shadow-xl rounded-md">

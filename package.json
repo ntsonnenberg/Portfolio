@@ -17,7 +17,6 @@
     "sitemap": "gatsby build && gatsby serve"
   },
   "dependencies": {
-    "@gsap/react": "^2.1.1",
     "@sentry/gatsby": "^9.5.0",
     "@sentry/webpack-plugin": "^3.2.2",
     "@tabler/icons-react": "^3.26.0",
@@ -35,14 +34,12 @@
     "gatsby-plugin-smoothscroll": "^1.2.0",
     "gatsby-source-filesystem": "^5.11.0",
     "gatsby-transformer-sharp": "^5.11.0",
-    "gsap": "^3.12.5",
     "lenis": "^1.1.18",
     "postcss": "^8.4.28",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-fast-marquee": "^1.6.4",
     "react-icon-cloud": "^4.1.4",
-    "react-icons": "^4.10.1",
     "tailwindcss": "^3.3.3"
   },
   "devDependencies": {
