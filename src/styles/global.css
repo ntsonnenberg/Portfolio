@@ -14,6 +14,7 @@
     @apply cursor-pointer
   }
 
+
   button.primary, a.primary {
     @apply outline outline-1 outline-primary rounded-sm
   }
