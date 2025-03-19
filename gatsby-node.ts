@@ -124,12 +124,6 @@ exports.sourceNodes = async ({
     "client-logos/enlite-logo.png",
     "client-logos/utah-automotive-logo.png",
 
-    // Videos Folder
-    "videos/panel-1-vid.mp4",
-    "videos/panel-2-vid.mp4",
-    "videos/panel-3-vid.mp4",
-    "videos/panel-4-vid.mp4",
-
     // Root Folder
     "bespoke-code-no-bg.svg",
   ];
