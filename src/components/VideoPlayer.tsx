@@ -18,24 +18,24 @@ export default function VideoPlayer({
   video,
   className,
 }: Props): JSX.Element | null {
-  const data = useStaticQuery(query);
+  // const data = useStaticQuery(query);
 
-  // TODO: Change query to only pull one image based on video prop
-  const match = useMemo(
-    () =>
-      data.allFirebaseVideo.nodes.find(
-        (fileNode: FileNode) => video === fileNode.videoUrl
-      ),
-    [data, video]
-  );
+  // // TODO: Change query to only pull one image based on video prop
+  // const match = useMemo(
+  //   () =>
+  //     data.allFirebaseVideo.nodes.find(
+  //       (fileNode: FileNode) => video === fileNode.videoUrl
+  //     ),
+  //   [data, video]
+  // );
 
-  if (!match) {
-    return null;
-  }
+  // if (!match) {
+  //   return null;
+  // }
 
-  const {
-    file: { publicURL },
-  } = match;
+  // const {
+  //   file: { publicURL },
+  // } = match;
 
   return (
     <video
@@ -47,22 +47,22 @@ export default function VideoPlayer({
       playsInline
       className={className}
     >
-      <source src={publicURL} />
+      {/* <source src={publicURL} /> */}
       Your browser does not support the video tag.
     </video>
   );
 }
 
-const query = graphql`
-  query getVideoFiles {
-    allFirebaseVideo {
-      nodes {
-        id
-        videoUrl
-        file {
-          publicURL
-        }
-      }
-    }
-  }
-`;
+// const query = graphql`
+//   query getVideoFiles {
+//     allFirebaseVideo {
+//       nodes {
+//         id
+//         videoUrl
+//         file {
+//           publicURL
+//         }
+//       }
+//     }
+//   }
+// `;
