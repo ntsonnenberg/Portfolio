@@ -9,7 +9,7 @@ type Props = {
   loading?: "eager" | "lazy";
 };
 
-interface ImageData {
+export interface ImageData {
   backgroundColor: string;
   height: number;
   images: any;
