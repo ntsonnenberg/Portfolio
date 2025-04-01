@@ -92,6 +92,7 @@ export function Head({ data: { project } }: Props): JSX.Element {
       title={`Explore ${project.title}: ${project.catchPhrase}`}
       description={project.description}
       pathname={`/projects/${project.id}`}
+      image={project.heroImage}
     />
   );
 }
