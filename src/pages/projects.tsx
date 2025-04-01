@@ -20,7 +20,7 @@ export default function ProjectsPage(): JSX.Element {
 
   return (
     <Layout>
-      <Spotlight className="py-60 min-h-screen grid justify-items-center phone:grid-col-1 phone:gap-12 tablet:grid-cols-2 tablet:gap-12 tablet:mx-12 laptop:grid-cols-3 laptop:gap-16 laptop:mx-52 desktop:mx-60">
+      <Spotlight className="py-60 min-h-screen grid justify-items-center phone:grid-cols-1 phone:gap-12 tablet:grid-cols-2 tablet:mx-12 laptop:grid-cols-3 laptop:gap-16 laptop:mx-52 desktop:mx-60">
         {projects.map((project) => (
           <ProjectCard key={project.id} project={project} />
         ))}

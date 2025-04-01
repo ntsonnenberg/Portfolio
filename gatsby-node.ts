@@ -124,12 +124,6 @@ exports.sourceNodes = async ({
     "client-logos/enlite-logo.png",
     "client-logos/utah-automotive-logo.png",
 
-    // Videos Folder
-    "videos/panel-1-vid.mp4",
-    "videos/panel-2-vid.mp4",
-    "videos/panel-3-vid.mp4",
-    "videos/panel-4-vid.mp4",
-
     // Root Folder
     "bespoke-code-no-bg.svg",
   ];
@@ -177,3 +171,47 @@ exports.sourceNodes = async ({
     }
   }
 };
+
+// exports.createPages = async ({ graphql, actions }) => {
+//   const { createPage } = actions;
+
+//   const result = await graphql(`
+//     {
+//       allSanityProject(filer: { slug: { current: { ne: null } } }) {
+//         edges {
+//           node {
+//             title
+//             description
+//             tags
+//             launchdate(format: "DD.MM.YYYY")
+//             slug {
+//               current
+//             }
+//             image {
+//               asset {
+//                 url
+//               }
+//             }
+//           }
+//         }
+//       }
+//     }
+//   `);
+
+//   if (result.errors) {
+//     throw result.errors;
+//   }
+
+//   const projects = result.data.allSanityProject.edges || [];
+//   console.log(projects);
+
+//   projects.forEach((edge, index) => {
+//     const path = `/project/${edge.node.slug.current}`;
+
+//     createPage({
+//       path,
+//       component: require.resolve("./src/templates/project.ts"),
+//       context: { slug: edge.node.slug.current },
+//     });
+//   });
+// };

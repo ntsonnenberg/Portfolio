@@ -96,6 +96,16 @@ const config: GatsbyConfig = {
         ],
       },
     },
+    {
+      resolve: "gatsby-source-sanity",
+      options: {
+        projectId: process.env.SANITY_PROJECT_ID || "",
+        dataset: process.env.SANITY_DATASET_NAME || "",
+        token: process.env.SANITY_AUTH_TOKEN || "",
+        graphqlTag: "experiment",
+        watchMode: true,
+      },
+    },
   ],
 };
 
