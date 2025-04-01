@@ -5,21 +5,28 @@ interface Props {
   title?: string;
   description?: string;
   pathname?: string;
+  image?: string;
   children?: React.ReactNode;
 }
 
-export default function SEO({ title, description, pathname, children }: Props) {
+export default function SEO({
+  title,
+  description,
+  pathname,
+  image,
+  children,
+}: Props) {
   const {
     title: defaultTitle,
     description: defaultDecription,
-    image,
+    image: defaultImage,
     siteUrl,
   } = useSiteMetadata();
 
   const seo = {
     title: title || defaultTitle,
     description: description || defaultDecription,
-    image: image,
+    image: image || defaultImage,
     url: `${siteUrl}${pathname || ""}`,
   };
 

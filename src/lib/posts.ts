@@ -21,6 +21,7 @@ interface Image {
 export interface Post {
   id: string;
   title: string;
+  subtitle: string;
   slug: {
     current: string;
     source: string | null;
@@ -81,31 +82,6 @@ export const getPosts = () => {
             author {
               id
               name
-              image {
-                asset {
-                  id
-                  label
-                  title
-                  description
-                  altText
-                  originalFilename
-                  mimeType
-                  size
-                  url
-                }
-                hotspot {
-                  height
-                  width
-                }
-              }
-            }
-            body {
-              _key
-              _type
-              style
-              listItem
-              level
-              _rawChildren
             }
             mainImage {
               asset {
@@ -124,7 +100,6 @@ export const getPosts = () => {
                 width
               }
             }
-            publishedAt
           }
         }
       }

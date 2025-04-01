@@ -10,6 +10,7 @@ import {
   PortableTextComponentProps,
   PortableTextComponents,
   PortableTextMarkComponentProps,
+  PortableTextListComponent,
 } from "@portabletext/react";
 
 interface SanityImageAsset {
@@ -35,8 +36,20 @@ const portableTextComponent: PortableTextComponents = {
       <h1 className="text-3xl font-bold mb-4">{children}</h1>
     ),
     h2: ({ children }: PortableTextComponentProps<PortableTextBlock>) => (
-      <h2 className="text-2xl font-semibold mb-3">{children}</h2>
+      <h2 className="text-2xl font-semibold mb-3 pt-4">{children}</h2>
     ),
+  },
+  list: {
+    bullet: ({ children }) => (
+      <ul className="list-disc pl-6 mb-4">{children}</ul>
+    ),
+    number: ({ children }) => (
+      <ol className="list-decimal pl-6 mb-4">{children}</ol>
+    ),
+  },
+  listItem: {
+    bullet: ({ children }) => <li className="mb-2">{children}</li>,
+    number: ({ children }) => <li className="mb-2">{children}</li>,
   },
   types: {
     image: ({ value }: { value: SanityImageAsset }) => {
@@ -45,11 +58,11 @@ const portableTextComponent: PortableTextComponents = {
       }
 
       return (
-        <div className="my-4">
+        <div className="my-20 flex justify-center">
           <SanityImage
             imageId={value.asset._ref}
             alt={value.alt || "Blog post image"}
-            className="w-full h-auto"
+            className="phone:w-full laptop:w-3/4 h-auto"
           />
         </div>
       );
@@ -98,7 +111,7 @@ export default function BlogPage({ data: { sanityPost }, children }: Props) {
 
   return (
     <Layout>
-      <div className="flex flex-col pt-40 mx-40">
+      <div className="flex flex-col pt-40 phone:mx-10 tablet:mx-20 laptop:mx-40">
         <Link
           to="/blogs"
           className="flex gap-2 py-1 text-lg text-gray-600 items-center mb-6"
@@ -120,9 +133,7 @@ export default function BlogPage({ data: { sanityPost }, children }: Props) {
           Back to Blogs
         </Link>
         <div className="mb-20 flex flex-col gap-6">
-          <h1 className="phone:text-xl tablet:text-3xl laptop:text-5xl">
-            {sanityPost.title}
-          </h1>
+          <h1 className="phone:text-3xl laptop:text-5xl">{sanityPost.title}</h1>
           <h2 className="flex gap-2 items-center text-gray-500">
             <SanityImage
               imageId={authorImage?.asset.id}
@@ -149,10 +160,15 @@ export default function BlogPage({ data: { sanityPost }, children }: Props) {
           alt={mainImage?.asset.altText}
           className="shadow-stand-out w-full mb-20"
         />
-        <PortableText
-          value={sanityPost._rawBody}
-          components={portableTextComponent}
-        />
+        <h3 className="mb-20 phone:mx-0 tablet:mx-10 laptop:mx-20 phone:text-xl laptop:text-3xl text-neutral-400">
+          {sanityPost.subtitle}
+        </h3>
+        <div className="self-center tablet:w-2/3 laptop:w-3/5">
+          <PortableText
+            value={sanityPost._rawBody}
+            components={portableTextComponent}
+          />
+        </div>
       </div>
     </Layout>
   );
@@ -163,6 +179,8 @@ export function Head({ data: { sanityPost } }: Props): JSX.Element {
     <SEO
       title={sanityPost.title}
       pathname={`/blogs/${sanityPost.slug.current}`}
+      description={sanityPost.subtitle}
+      image={sanityPost.mainImage?.asset.url}
     />
   );
 }
@@ -172,6 +190,7 @@ export const query = graphql`
     sanityPost(id: { eq: $id }) {
       id
       title
+      subtitle
       slug {
         current
         source
@@ -223,16 +242,3 @@ export const query = graphql`
     }
   }
 `;
-
-// body {
-//   _key
-//   _type
-//   style
-//   listItem
-//   level
-//   children {
-//     _key
-//     _type
-//     text
-//   }
-// }

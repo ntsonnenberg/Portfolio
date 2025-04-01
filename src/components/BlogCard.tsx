@@ -14,11 +14,8 @@ export default function BlogCard({ post }: Props) {
   const { tags } = post;
 
   return (
-    <Link
-      to={`/blogs/${post.slug.current}`}
-      className="block w-full max-w-[280px] group shadow-stand-out"
-    >
-      <div className="relative overflow-hidden rounded-2xl backdrop-blur-xl shadow-xs transition-all duration-300 hover:shadow-md">
+    <Link to={`/blogs/${post.slug.current}`} className="w-full max-w-[280px]">
+      <div className="overflow-hidden rounded-2xl shadow-stand-out backdrop-blur-xl shadow-xs transition-all duration-300 hover:shadow-md">
         <SanityImage
           imageId={mainImage?.asset.id}
           alt={mainImage?.asset.altText}
@@ -34,16 +31,14 @@ export default function BlogCard({ post }: Props) {
             </span>
           ))}
         </div>
-        <div className="absolute bottom-0 left-0 right-0 p-5">
-          <div className="flex items-center justify-between gap-3">
-            <div className="space-y-1.5 mix-blend-exclusion">
-              <h3 className="text-lg font-semibold text-white leading-snug">
-                {post.title}
-              </h3>
-              <p className="text-sm text-zinc-200 line-clamp-2">
-                {post.author.name}
-              </p>
-            </div>
+      </div>
+      <div className="p-5">
+        <div className="flex items-center justify-between gap-3">
+          <div className="space-y-1.5">
+            <h3 className="text-lg font-semibold leading-snug">{post.title}</h3>
+            <p className="text-sm text-zinc-500 line-clamp-2">
+              {post.author.name}
+            </p>
           </div>
         </div>
       </div>
