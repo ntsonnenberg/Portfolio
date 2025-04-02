@@ -2,8 +2,8 @@
 
 import React from "react";
 import { motion } from "framer-motion";
-// import { cn } from "../lib/utils";
 import Image from "./Image";
+import { Link } from "gatsby";
 
 function ElegantShape({
   className,
@@ -177,9 +177,12 @@ export default function HeroMobileView({
               tailored to your business needs.
               <br />
               <br />
-              Hire a freelance web developer today to customize your website and
-              acclerate your business.
+              Hire a freelance web developer today to build a custom web
+              application and acclerate your business.
             </p>
+            <Link to="/contact" className="primary filled py-2 px-4 text-2xl">
+              Book a Call
+            </Link>
           </motion.div>
         </div>
       </div>

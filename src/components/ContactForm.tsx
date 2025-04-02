@@ -31,19 +31,21 @@ export default function ContactForm(): JSX.Element {
           required
           placeholder="Enter name..."
         />
-        <Input
-          label="Email"
-          name="email"
-          type="text"
-          required
-          placeholder="Enter email..."
-        />
-        <Input
-          label="Phone number"
-          name="phone"
-          type="number"
-          placeholder="Enter phone number..."
-        />
+        <div className="flex gap-2">
+          <Input
+            label="Email"
+            name="email"
+            type="text"
+            required
+            placeholder="Enter email..."
+          />
+          <Input
+            label="Phone number"
+            name="phone"
+            type="number"
+            placeholder="Enter phone number..."
+          />
+        </div>
         <Textarea
           label="Message"
           name="message"
