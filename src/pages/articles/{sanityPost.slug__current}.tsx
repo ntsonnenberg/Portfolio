@@ -177,7 +177,7 @@ export default function ArticlePage({ data: { sanityPost }, children }: Props) {
 export function Head({ data: { sanityPost } }: Props): JSX.Element {
   return (
     <SEO
-      title={sanityPost.title}
+      title={`${sanityPost.title} | Bespoke Code Articles`}
       pathname={`/articles/${sanityPost.slug.current}`}
       description={sanityPost.subtitle}
       image={sanityPost.mainImage?.asset.url}

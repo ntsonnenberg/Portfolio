@@ -82,12 +82,12 @@ export default function IndexPage(): JSX.Element {
 export function Head(): JSX.Element {
   return (
     <SEO
-      title="Bespoke Code | Professional App Development Services"
-      description="Hire our experienced freelance web developers for customized solutions that fit you busines requirements."
+      title="Bespoke Code | Freelance Web Development in Utah | Find Custom Software Solutions"
+      description="Expert web & mobile developers for your local business. Get custom, affordable software solutions that drive results. Free consultation—request a quote today!"
       pathname="/"
     >
       <link
-        href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap&text=DigtalVson"
+        href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap&text=WebDvlopmntSuisfrUahB"
         rel="stylesheet"
       />
     </SEO>

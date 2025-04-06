@@ -112,11 +112,13 @@ export default function AboutMePage(): JSX.Element {
           />
           <div className="absolute bg-primary/40 phone:w-52 phone:h-40 phone:right-2 phone:top-44 tablet:w-1/2 tablet:h-80 tablet:right-10 tablet:top-48 laptop:h-96 laptop:right-16 laptop:top-80">
             <div className="absolute bg-surface phone:p-2 phone:inset-2 tablet:p-10 tablet:inset-5">
-              <h2 className="text-on-surface font-bold phone:text-md tablet:text-2xl laptop:text-4xl">
-                Your{" "}
-                <span className="text-secondary">Personalized Consultant</span>{" "}
-                for Web Applications
-              </h2>
+              <h1 className="text-on-surface font-bold phone:text-md tablet:text-2xl laptop:text-4xl">
+                Custom{" "}
+                <span className="text-primary">
+                  Web & App Development Solutions
+                </span>{" "}
+                By Nathan Sonnenberg
+              </h1>
               <p className="text-on-surface/50 phone:hidden tablet:block tablet:mt-2 tablet:mx-0 tablet:text-sm laptop:mt-6 laptop:mx-4 laptop:text-lg">
                 I'm Nathan Sonnenberg, here for your web development & IT
                 consulting needs.
@@ -155,8 +157,8 @@ export default function AboutMePage(): JSX.Element {
 export function Head(): JSX.Element {
   return (
     <SEO
-      title="Learn About Nathan Sonnenberg"
-      description="Get to know me more and my experience with building application."
+      title="About Nathan Sonnenberg | Web & App Developer | Bespoke Code"
+      description="Meet Nathan Sonnenberg, a skilled web & mobile app developer with 10+ years of experience delivering custom solutions for businesses. Contact me today for personalized development services."
       pathname="/aboutme"
     />
   );

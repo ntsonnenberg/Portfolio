@@ -32,10 +32,15 @@ export default function ArticlesPage(): JSX.Element {
 
   return (
     <Layout>
-      <div className="py-60 min-h-screen grid justify-items-center phone:grid-cols-1 phone:gap-12 tablet:grid-cols-2 tablet:mx-12 laptop:grid-cols-3 laptop:gap-16 laptop:mx-52 desktop:mx-60">
-        {sortedPosts.map((post) => (
-          <ArticleCard key={post.id} post={post} />
-        ))}
+      <div className="py-60">
+        <h1 className="phone:text-3xl tablet:text-5xl text-center mb-20 phone:w-full tablet:w-2/3 laptop:w-1/2 mx-auto">
+          Popular Tech Magazines & Web Development Articles
+        </h1>
+        <div className="min-h-screen grid justify-items-center phone:grid-cols-1 phone:gap-12 tablet:grid-cols-2 tablet:mx-12 laptop:grid-cols-3 laptop:gap-16 laptop:mx-52 desktop:mx-60">
+          {sortedPosts.map((post) => (
+            <ArticleCard key={post.id} post={post} />
+          ))}
+        </div>
       </div>
     </Layout>
   );
@@ -44,8 +49,8 @@ export default function ArticlesPage(): JSX.Element {
 export function Head(): JSX.Element {
   return (
     <SEO
-      title="Our Articles"
-      description="Learn more about our experience and research with our free articles and resources to help you better leverage technology in your business in a scalable way."
+      title="Popular Tech Magazines and Articles | Web Development Insights | Bespoke Code"
+      description="Explore curated tech articles for business owners and developers alike. Stay informed on web development trends that can help your business thrive. Expert insights from Bespoke Code."
       pathname="/articles"
     />
   );
