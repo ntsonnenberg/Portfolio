@@ -1,4 +1,5 @@
 import { graphql, useStaticQuery } from "gatsby";
+import { Category } from "./categories";
 
 interface Image {
   asset: {
@@ -30,6 +31,7 @@ export interface Post {
     label: string;
     value: string;
   }[];
+  categories: Category[];
   author: {
     id: string;
     name: string;
@@ -64,7 +66,7 @@ export interface Post {
 }
 
 export const getPosts = () => {
-  const postNodes = useStaticQuery(graphql`
+  const query = useStaticQuery(graphql`
     query {
       allSanityPost {
         edges {
@@ -78,6 +80,11 @@ export const getPosts = () => {
             tags {
               label
               value
+            }
+            categories {
+              id
+              title
+              description
             }
             author {
               id
@@ -106,18 +113,19 @@ export const getPosts = () => {
     }
   `);
 
-  const posts: Post[] = postNodes.allSanityPost.edges.map(
-    ({ node }: { node: Post }) => ({
-      id: node.id,
-      title: node.title,
-      slug: node.slug,
-      tags: node.tags,
-      author: node.author,
-      body: node.body,
-      mainImage: node.mainImage,
-      publishedAt: node.publishedAt,
-    })
-  );
+  const { allSanityPost } = query;
+
+  const posts: Post[] = allSanityPost.edges.map(({ node }: { node: Post }) => ({
+    id: node.id,
+    title: node.title,
+    slug: node.slug,
+    tags: node.tags,
+    categories: node.categories,
+    author: node.author,
+    body: node.body,
+    mainImage: node.mainImage,
+    publishedAt: node.publishedAt,
+  }));
 
   return posts;
 };

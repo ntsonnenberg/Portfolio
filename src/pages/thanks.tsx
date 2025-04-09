@@ -6,7 +6,7 @@ export default function Thanks(): JSX.Element {
   return (
     <Layout>
       <div className="min-h-screen">
-        <div className="mt-40 flex flex-col items-center gap-4">
+        <div className="pt-40 flex flex-col items-center gap-4">
           <h1 className="font-bold phone:text-xl tablet:text-3xl laptop:text-5xl">
             We've recieved Your Message!
           </h1>

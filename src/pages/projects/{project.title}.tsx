@@ -43,12 +43,14 @@ export default function ProjectPage({ data: { project }, children }: Props) {
             Back to Projects
           </Link>
           <div className="absolute phone:top-36 phone:left-20 tablet:top-40 tablet:left-40 bg-background p-4 phone:w-9/12 tablet:w-1/3 drop-shadow-xl rounded-md">
-            <FadeBlockHeader color="on-background">
-              {project.title}
-            </FadeBlockHeader>
-            <h3 className="mt-4 animate-fade-in-down delay-1000 phone:text-lg tablet:text-2xl">
-              {project.catchPhrase}
-            </h3>
+            <h1>
+              <FadeBlockHeader color="on-background">
+                {project.title}
+              </FadeBlockHeader>
+              <p className="mt-4 animate-fade-in-down delay-1000 phone:text-lg tablet:text-2xl">
+                {project.catchPhrase}
+              </p>
+            </h1>
             <div className="mt-10 flex flex-col gap-4">
               <h4 className="phone:text-sm laptop:text-lg">
                 {project.subtitle}
@@ -89,7 +91,7 @@ export default function ProjectPage({ data: { project }, children }: Props) {
 export function Head({ data: { project } }: Props): JSX.Element {
   return (
     <SEO
-      title={`Explore ${project.title}: ${project.catchPhrase}`}
+      title={`${project.title} | ${project.catchPhrase} | Bespoke Code Project`}
       description={project.description}
       pathname={`/projects/${project.id}`}
       image={project.heroImage}

@@ -70,10 +70,10 @@ export default function NavBar({ openDrawer }: Props): JSX.Element {
             About Me
           </Link>
           <Link
-            to="/blogs"
+            to="/articles"
             className="transition-transform duration-100 hover:scale-125 hover:ease-in hover:text-primary"
           >
-            Blogs
+            Articles
           </Link>
           <Link
             to="/contact"

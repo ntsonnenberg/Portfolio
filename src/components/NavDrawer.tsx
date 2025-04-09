@@ -17,7 +17,7 @@ export default function NavDrawer({ isOpen }: Props): JSX.Element {
       <div className="pt-32 flex flex-col gap-20 text-3xl">
         <Link to="/projects">Projects</Link>
         <Link to="/aboutme">About Me</Link>
-        <Link to="/blogs">Blogs</Link>
+        <Link to="/articles">Articles</Link>
         <Link to="/contact">Contact</Link>
       </div>
     </div>

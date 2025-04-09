@@ -61,7 +61,7 @@ const portableTextComponent: PortableTextComponents = {
         <div className="my-20 flex justify-center">
           <SanityImage
             imageId={value.asset._ref}
-            alt={value.alt || "Blog post image"}
+            alt={value.alt || "Article post image"}
             className="phone:w-full laptop:w-3/4 h-auto"
           />
         </div>
@@ -95,7 +95,7 @@ interface Props {
   children?: React.ReactNode;
 }
 
-export default function BlogPage({ data: { sanityPost }, children }: Props) {
+export default function ArticlePage({ data: { sanityPost }, children }: Props) {
   const { mainImage } = sanityPost;
   const {
     author: { image: authorImage },
@@ -113,7 +113,7 @@ export default function BlogPage({ data: { sanityPost }, children }: Props) {
     <Layout>
       <div className="flex flex-col pt-40 phone:mx-10 tablet:mx-20 laptop:mx-40">
         <Link
-          to="/blogs"
+          to="/articles"
           className="flex gap-2 py-1 text-lg text-gray-600 items-center mb-6"
         >
           <svg
@@ -130,20 +130,31 @@ export default function BlogPage({ data: { sanityPost }, children }: Props) {
               d="M15.75 19.5 8.25 12l7.5-7.5"
             />
           </svg>
-          Back to Blogs
+          Back to Articles
         </Link>
         <div className="mb-20 flex flex-col gap-6">
           <h1 className="phone:text-3xl laptop:text-5xl">{sanityPost.title}</h1>
-          <h2 className="flex gap-2 items-center text-gray-500">
-            <SanityImage
-              imageId={authorImage?.asset.id}
-              alt={authorImage?.asset.altText}
-              className="w-10 h-10 ring-1 ring-gray-400 rounded-full"
-            />
-            {sanityPost.author.name}
-            <span className="self-stretch border border-l mr-1 border-gray-500 my-2.5"></span>
-            Published {prettyPublishedDate}
-          </h2>
+          <div className="flex phone:flex-col tablet:flex-row justify-between phone:gap-8 tablet:gap-0">
+            <h2 className="flex gap-2 items-center text-gray-500">
+              <SanityImage
+                imageId={authorImage?.asset.id}
+                alt={authorImage?.asset.altText}
+                className="w-10 h-10 ring-1 ring-gray-400 rounded-full"
+              />
+              {sanityPost.author.name}
+              <span className="self-stretch border border-l mr-1 border-gray-500 my-2.5"></span>
+              Published {prettyPublishedDate}
+            </h2>
+            <div>
+              <h4 className="font-bold tracking-widest uppercase">
+                Categories
+              </h4>
+              <hr className="mb-2" />
+              {sanityPost.categories.map((category) => (
+                <p key={category.id}>{category.title}</p>
+              ))}
+            </div>
+          </div>
           <div className="mt-4 flex gap-2">
             {sanityPost.tags.map((tag) => (
               <div
@@ -177,8 +188,8 @@ export default function BlogPage({ data: { sanityPost }, children }: Props) {
 export function Head({ data: { sanityPost } }: Props): JSX.Element {
   return (
     <SEO
-      title={sanityPost.title}
-      pathname={`/blogs/${sanityPost.slug.current}`}
+      title={`${sanityPost.title} | Bespoke Code Articles`}
+      pathname={`/articles/${sanityPost.slug.current}`}
       description={sanityPost.subtitle}
       image={sanityPost.mainImage?.asset.url}
     />
@@ -198,6 +209,11 @@ export const query = graphql`
       tags {
         label
         value
+      }
+      categories {
+        id
+        title
+        description
       }
       author {
         id

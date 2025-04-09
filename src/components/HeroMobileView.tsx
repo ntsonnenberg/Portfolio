@@ -2,8 +2,8 @@
 
 import React from "react";
 import { motion } from "framer-motion";
-// import { cn } from "../lib/utils";
 import Image from "./Image";
+import { Link } from "gatsby";
 
 function ElegantShape({
   className,
@@ -64,8 +64,8 @@ function ElegantShape({
 }
 
 export default function HeroMobileView({
-  title1 = "Elevate Your",
-  title2 = "Digital Vision",
+  title1 = "Web Development Solutions",
+  title2 = "for Utah Businesses",
 }: {
   badge?: string;
   title1?: string;
@@ -157,11 +157,11 @@ export default function HeroMobileView({
             animate="visible"
           >
             <h1 className="phone:text-5xl tablet:text-7xl font-bold mb-6 md:mb-8 tracking-tight">
-              <span>{title1}</span>
-              <br />
-              <span className="laptop:px-10 laptop:py-6 font-audiowide bg-clip-text text-transparent bg-gradient-to-r from-primary to-white/80">
-                {title2}
+              <span className="font-audiowide bg-clip-text text-transparent bg-gradient-to-r from-primary to-white/80">
+                {title1}
               </span>
+              <br />
+              <span className="laptop:px-10 laptop:py-6 ">{title2}</span>
             </h1>
           </motion.div>
 
@@ -172,14 +172,13 @@ export default function HeroMobileView({
             animate="visible"
           >
             <p className="pt-4 text-base phone:text-start laptop:text-center sm:text-lg md:text-xl text-white/40 mb-8 leading-relaxed font-light tracking-wide max-w-xl mx-auto px-4">
-              Our web dev solutions cater to modern business needs. Unlock your
-              online potential with our expert website development services
-              tailored to your business needs.
-              <br />
-              <br />
-              Hire a freelance web developer today to customize your website and
-              acclerate your business.
+              Expert web & mobile developers for your local business. Get
+              custom, affordable software solutions that drive results. Free
+              consultation—request a quote today!
             </p>
+            <Link to="/contact" className="primary filled py-2 px-4 text-2xl">
+              Book a Call
+            </Link>
           </motion.div>
         </div>
       </div>

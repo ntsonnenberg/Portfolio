@@ -45,14 +45,14 @@ export default function FadeBlockHeader({
           whileInView="animate"
           className={`absolute h-full bg-${color}`}
         ></motion.div>
-        <motion.h2
+        <motion.span
           initial="hidden"
           whileInView="visible"
           variants={variants}
           className={`opacity-0 text-${color} font-bold phone:text-3xl tablet:text-5xl laptop:text-7xl`}
         >
           {children}
-        </motion.h2>
+        </motion.span>
       </div>
     </div>
   );
