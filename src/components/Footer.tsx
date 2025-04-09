@@ -273,7 +273,7 @@ export default function Footer(): JSX.Element {
             <li>
               <a
                 title="X"
-                href="https://twitter.com/nate_sonnenberg"
+                href="https://www.facebook.com/nathan.sonnenberg.14"
                 target="_blank"
               >
                 <svg

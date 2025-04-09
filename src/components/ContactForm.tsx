@@ -12,7 +12,7 @@ export default function ContactForm(): JSX.Element {
         method="POST"
         action="https://submit-form.com/rEezQqOiY"
         data-botpoison-public-key={botPoisonPK}
-        className=" flex flex-col gap-6"
+        className="flex flex-col gap-6"
       >
         <input
           type="hidden"
@@ -49,7 +49,7 @@ export default function ContactForm(): JSX.Element {
         />
         <button
           type="submit"
-          className="light filled w-full flex flex-row justify-center gap-3 py-1 text-xl phone:mt-5 phone:h-auto tablet:mt-8 laptop:h-10"
+          className="light filled w-full flex flex-row justify-center gap-3 py-1 text-xl phone:mt-5 phone:h-auto tablet:mt-8 laptop:h-10 plausible-even-name=ContactFormSubmit"
         >
           Submit
         </button>
