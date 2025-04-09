@@ -73,7 +73,9 @@ export default function IndexPage(): JSX.Element {
           <IconCloudView />
         </div> */}
         <Steps />
-        <ContactForm />
+        <div className="phone:mx-10 tablet:mx-0">
+          <ContactForm />
+        </div>
       </ReactLenis>
     </Layout>
   );
@@ -91,24 +93,28 @@ export function Head(): JSX.Element {
         rel="stylesheet"
       />
       <script type="application/ld+json">
-        {JSON.stringify({
-          "@context": "https://schema.org",
-          "@type": "ProfessionalService",
-          name: "Bespoke Code",
-          image:
-            "https://firebasestorage.googleapis.com/v0/b/portfolio-401812.appspot.com/o/bespoke-code-no-bg.png?alt=media&token=1f6923f7-c1ba-4ab8-89af-8705c5d507b4",
-          "@id":
-            "https://firebasestorage.googleapis.com/v0/b/portfolio-401812.appspot.com/o/bespoke-code-no-bg.png?alt=media&token=1f6923f7-c1ba-4ab8-89af-8705c5d507b4",
-          url: "https://bespokecode.io/",
-          telephone: "8055045262",
-          sameAs: [
-            "https://www.facebook.com/nathan.sonnenberg.14",
-            "https://x.com/nate_sonnenberg",
-            "https://www.instagram.com/napote.sonny/",
-            "https://www.linkedin.com/in/nathan-sonnenberg/",
-            "https://github.com/ntsonnenberg",
-          ],
-        })}
+        {JSON.stringify(
+          {
+            "@context": "https://schema.org",
+            "@type": "ProfessionalService",
+            name: "Bespoke Code",
+            image:
+              "https://firebasestorage.googleapis.com/v0/b/portfolio-401812.appspot.com/o/bespoke-code-no-bg.png?alt=media&token=1f6923f7-c1ba-4ab8-89af-8705c5d507b4",
+            "@id":
+              "https://firebasestorage.googleapis.com/v0/b/portfolio-401812.appspot.com/o/bespoke-code-no-bg.png?alt=media&token=1f6923f7-c1ba-4ab8-89af-8705c5d507b4",
+            url: "https://bespokecode.io/",
+            telephone: "8055045262",
+            sameAs: [
+              "https://www.facebook.com/nathan.sonnenberg.14",
+              "https://x.com/nate_sonnenberg",
+              "https://www.instagram.com/napote.sonny/",
+              "https://www.linkedin.com/in/nathan-sonnenberg/",
+              "https://github.com/ntsonnenberg",
+            ],
+          },
+          null,
+          2
+        )}
       </script>
     </SEO>
   );

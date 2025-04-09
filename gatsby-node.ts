@@ -84,7 +84,6 @@ exports.sourceNodes = async ({
     "project-images/utah-automotive/utah-auto-main.png",
 
     // About Me Images Folder
-    "about-me-images/Lauterbrunnen-v2.webp",
     "about-me-images/Lauterbrunnen.png",
     "about-me-images/Links-mystats.png",
     "about-me-images/antibes-billionares-bay.JPEG",

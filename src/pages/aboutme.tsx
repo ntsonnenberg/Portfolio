@@ -86,7 +86,7 @@ export default function AboutMePage(): JSX.Element {
     },
     {
       id: 16,
-      url: "https://firebasestorage.googleapis.com/v0/b/portfolio-401812.appspot.com/o/about-me-images%2FLauterbrunnen-v2.webp?alt=media&token=4251289a-a447-4b84-aa6e-c655d63deffa",
+      url: "https://firebasestorage.googleapis.com/v0/b/portfolio-401812.appspot.com/o/about-me-images%2FLauterbrunnen.png?alt=media&token=b848b53c-3771-42e6-a5a7-bfce8712c4e0",
       title: "Lauterbrunnen, Switzerland",
     },
     {
@@ -124,7 +124,7 @@ export default function AboutMePage(): JSX.Element {
                 consulting needs.
               </p>
               <button
-                className="primary filled absolute rounded-sm phone:p-1 phone:text-sm phone:right-4 phone:bottom-4 tablet:p-2 tablet:right-10 tablet:bottom-6 laptop:right-28 laptop:bottom-16 laptop:text-lg"
+                className="primary filled absolute rounded-sm phone:p-1 phone:text-sm phone:right-2 phone:bottom-2 tablet:p-2 tablet:right-10 tablet:bottom-6 laptop:right-28 laptop:bottom-16 laptop:text-lg"
                 onClick={() => scrollTo("#my-story")}
               >
                 Learn More
@@ -144,11 +144,13 @@ export default function AboutMePage(): JSX.Element {
           <div className="font-bold text-center pt-40 phone:text-4xl phone:mx-6 tablet:text-6xl tablet:mx-0 tablet:w-11/12 laptop:w-3/4">
             I love programming, but I also love adventures
           </div>
-          <div className="phone:mx-0 tablet:mx-4 laptop:mx-10">
+          <div className="phone:mx-0 tablet:mx-4 laptop:mx-60">
             <MasonaryGrid items={items} />
           </div>
         </div>
-        <ContactForm />
+        <div className="phone:mx-10 tablet:mx-0">
+          <ContactForm />
+        </div>
       </>
     </Layout>
   );
@@ -160,6 +162,34 @@ export function Head(): JSX.Element {
       title="About Nathan Sonnenberg | Web & App Developer | Bespoke Code"
       description="Meet Nathan Sonnenberg, a skilled web & mobile app developer with 10+ years of experience delivering custom solutions for businesses. Contact me today for personalized development services."
       pathname="/aboutme"
-    />
+      image="https://firebasestorage.googleapis.com/v0/b/portfolio-401812.appspot.com/o/about-me-images%2Fcardiff-castle.jpeg?alt=media&token=6d19ac22-0d1d-4e04-8dba-a286c486d933"
+    >
+      <script type="application/ld+json">
+        {JSON.stringify(
+          {
+            "@context": "https://schema.org/",
+            "@type": "Person",
+            name: "Nathan Sonnenberg",
+            url: "https://bespokecode.io",
+            image:
+              "https://firebasestorage.googleapis.com/v0/b/portfolio-401812.appspot.com/o/home-images%2Fprofile.jpeg?alt=media&token=5e6061c3-fcbf-4895-bf13-f9e53dc5e1a5",
+            sameAs: [
+              "https://www.facebook.com/nathan.sonnenberg.14",
+              "https://x.com/nate_sonnenberg",
+              "https://www.instagram.com/nate.sonny/",
+              "https://www.linkedin.com/in/nathan-sonnenberg/",
+              "https://github.com/ntsonnenberg",
+            ],
+            jobTitle: "Founder",
+            worksFor: {
+              "@type": "Organization",
+              name: "Bespoke Code",
+            },
+          },
+          null,
+          2
+        )}
+      </script>
+    </SEO>
   );
 }
