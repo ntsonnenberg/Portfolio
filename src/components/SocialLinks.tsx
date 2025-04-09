@@ -69,7 +69,7 @@ export default function SocialLinks(): JSX.Element {
             ></line>
           </svg>
         </a>
-        <a title="X" href="https://twitter.com/nate_sonnenberg" target="_blank">
+        <a title="X" href="https://x.com/nate_sonnenberg" target="_blank">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="1em"
