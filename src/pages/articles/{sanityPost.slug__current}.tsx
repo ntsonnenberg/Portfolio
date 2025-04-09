@@ -134,16 +134,27 @@ export default function ArticlePage({ data: { sanityPost }, children }: Props) {
         </Link>
         <div className="mb-20 flex flex-col gap-6">
           <h1 className="phone:text-3xl laptop:text-5xl">{sanityPost.title}</h1>
-          <h2 className="flex gap-2 items-center text-gray-500">
-            <SanityImage
-              imageId={authorImage?.asset.id}
-              alt={authorImage?.asset.altText}
-              className="w-10 h-10 ring-1 ring-gray-400 rounded-full"
-            />
-            {sanityPost.author.name}
-            <span className="self-stretch border border-l mr-1 border-gray-500 my-2.5"></span>
-            Published {prettyPublishedDate}
-          </h2>
+          <div className="flex phone:flex-col tablet:flex-row justify-between phone:gap-8 tablet:gap-0">
+            <h2 className="flex gap-2 items-center text-gray-500">
+              <SanityImage
+                imageId={authorImage?.asset.id}
+                alt={authorImage?.asset.altText}
+                className="w-10 h-10 ring-1 ring-gray-400 rounded-full"
+              />
+              {sanityPost.author.name}
+              <span className="self-stretch border border-l mr-1 border-gray-500 my-2.5"></span>
+              Published {prettyPublishedDate}
+            </h2>
+            <div>
+              <h4 className="font-bold tracking-widest uppercase">
+                Categories
+              </h4>
+              <hr className="mb-2" />
+              {sanityPost.categories.map((category) => (
+                <p key={category.id}>{category.title}</p>
+              ))}
+            </div>
+          </div>
           <div className="mt-4 flex gap-2">
             {sanityPost.tags.map((tag) => (
               <div
@@ -198,6 +209,11 @@ export const query = graphql`
       tags {
         label
         value
+      }
+      categories {
+        id
+        title
+        description
       }
       author {
         id
