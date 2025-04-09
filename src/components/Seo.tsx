@@ -57,6 +57,16 @@ export default function SEO({
         rel="stylesheet"
       />
       <script src="https://unpkg.com/@botpoison/browser" async></script>
+      <script
+        defer
+        data-domain="bespokecode.io"
+        src="https://plausible.io/js/script.outbound-links.js"
+      ></script>
+      <script
+        defer
+        data-domain="bespokecode.io"
+        src="https://plausible.io/js/script.outbound-links.tagged-events.js"
+      ></script>
       {children}
     </>
   );
