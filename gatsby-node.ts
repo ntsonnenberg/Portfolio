@@ -84,6 +84,7 @@ exports.sourceNodes = async ({
     "project-images/utah-automotive/utah-auto-main.png",
 
     // About Me Images Folder
+    "about-me-images/Lauterbrunnen-v2.webp",
     "about-me-images/Lauterbrunnen.png",
     "about-me-images/Links-mystats.png",
     "about-me-images/antibes-billionares-bay.JPEG",
@@ -171,47 +172,3 @@ exports.sourceNodes = async ({
     }
   }
 };
-
-// exports.createPages = async ({ graphql, actions }) => {
-//   const { createPage } = actions;
-
-//   const result = await graphql(`
-//     {
-//       allSanityProject(filer: { slug: { current: { ne: null } } }) {
-//         edges {
-//           node {
-//             title
-//             description
-//             tags
-//             launchdate(format: "DD.MM.YYYY")
-//             slug {
-//               current
-//             }
-//             image {
-//               asset {
-//                 url
-//               }
-//             }
-//           }
-//         }
-//       }
-//     }
-//   `);
-
-//   if (result.errors) {
-//     throw result.errors;
-//   }
-
-//   const projects = result.data.allSanityProject.edges || [];
-//   console.log(projects);
-
-//   projects.forEach((edge, index) => {
-//     const path = `/project/${edge.node.slug.current}`;
-
-//     createPage({
-//       path,
-//       component: require.resolve("./src/templates/project.ts"),
-//       context: { slug: edge.node.slug.current },
-//     });
-//   });
-// };

@@ -86,7 +86,7 @@ export default function AboutMePage(): JSX.Element {
     },
     {
       id: 16,
-      url: "https://firebasestorage.googleapis.com/v0/b/portfolio-401812.appspot.com/o/about-me-images%2FLauterbrunnen.png?alt=media&token=b848b53c-3771-42e6-a5a7-bfce8712c4e0",
+      url: "https://firebasestorage.googleapis.com/v0/b/portfolio-401812.appspot.com/o/about-me-images%2FLauterbrunnen-v2.webp?alt=media&token=4251289a-a447-4b84-aa6e-c655d63deffa",
       title: "Lauterbrunnen, Switzerland",
     },
     {
