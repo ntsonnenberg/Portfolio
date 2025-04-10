@@ -1,18 +1,8 @@
-import type { GatsbyConfig } from "gatsby";
+import { type GatsbyConfig } from "gatsby";
 
 require("dotenv").config({
   path: `.env.${process.env.NODE_ENV}`,
 });
-
-type SitePage = {
-  path: string;
-};
-
-type Site = {
-  siteMetadata: {
-    siteUrl: string;
-  };
-};
 
 interface Project {
   title: string;
@@ -40,21 +30,6 @@ const firestore_auth = {
   universe_domain: process.env.FIRESTORE_UNIVERSE_DOMAIN,
 };
 
-const resourcesQuery = `
-  {
-    site {
-      siteMetadata {
-        siteUrl
-      }
-    }
-    allSitePage {
-      nodes {
-        path
-      }
-    }
-  }
-`;
-
 const config: GatsbyConfig = {
   siteMetadata: {
     title: `Bespoke Code | Professional App Development Services`,
@@ -71,35 +46,6 @@ const config: GatsbyConfig = {
     "gatsby-plugin-smoothscroll",
     "gatsby-plugin-webpack-bundle-analyser-v2",
     "@sentry/gatsby",
-    {
-      resolve: "gatsby-plugin-sitemap",
-      options: {
-        query: resourcesQuery,
-        resolveSiteUrl: ({ site }: { site: Site }) => site.siteMetadata.siteUrl,
-        serialize: ({
-          site,
-          allSitePage,
-        }: {
-          site: Site;
-          allSitePage: { nodes: SitePage[] };
-        }) =>
-          allSitePage.nodes.map((node) => {
-            if (node.path.startsWith("/articles/")) {
-              return {
-                url: `${site.siteMetadata.siteUrl}${node.path}`,
-                changefreq: "never",
-                priority: 0.5,
-              };
-            } else {
-              return {
-                url: `${site.siteMetadata.siteUrl}${node.path}`,
-                changefreq: "weekly",
-                priority: 0.7,
-              };
-            }
-          }),
-      },
-    },
     {
       resolve: "gatsby-plugin-robots-txt",
       options: {
