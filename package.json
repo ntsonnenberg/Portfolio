@@ -13,8 +13,7 @@
     "build": "gatsby build",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "typecheck": "tsc --noEmit",
-    "sitemap": "gatsby build && gatsby serve"
+    "typecheck": "tsc --noEmit"
   },
   "dependencies": {
     "@portabletext/react": "^3.2.1",
