@@ -19,7 +19,7 @@ export default function MasonaryGrid({ items }: Props) {
 
   return (
     <div className="container mx-auto p-4 ">
-      <div className="phone:columns-1 tablet:columns-2 laptop:columns-3 gap-2">
+      <div className="phone:columns-2 laptop:columns-3 gap-2">
         <>
           {items.map((item, index) => (
             <ImageItem
@@ -57,7 +57,7 @@ function ImageItem({ item, index, setSelected }: ImageItemProps) {
       <Image
         src={item.url}
         alt={item.title}
-        className="w-full bg-base-100 shadow-xl image-full cursor-pointer"
+        className="w-auto bg-base-100 shadow-xl image-full cursor-pointer"
       />
       <div className="flex flex-wrap mt-2 absolute bottom-0 left-0 h-60 right-0 p-2 group-hover:opacity-100 opacity-0 font-semibold bg-gradient-to-t from-background">
         <h1 className="self-end">{item.title}</h1>

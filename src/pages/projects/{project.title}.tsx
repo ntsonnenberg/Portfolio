@@ -55,14 +55,16 @@ export default function ProjectPage({ data: { project }, children }: Props) {
               <h4 className="phone:text-sm laptop:text-lg">
                 {project.subtitle}
               </h4>
-              <Link
-                to={project.link}
-                className="outlined light mt-4 place-self-end py-1 px-2"
-              >
-                {project.link.includes("github.com")
-                  ? "View GitHub Repo"
-                  : "View Website"}
-              </Link>
+              {project?.link && (
+                <Link
+                  to={project.link}
+                  className="outlined light mt-4 place-self-end py-1 px-2"
+                >
+                  {project.link.includes("github.com")
+                    ? "View GitHub Repo"
+                    : "View Website"}
+                </Link>
+              )}
             </div>
           </div>
         </div>
@@ -95,7 +97,21 @@ export function Head({ data: { project } }: Props): JSX.Element {
       description={project.description}
       pathname={`/projects/${project.id}`}
       image={project.heroImage}
-    />
+    >
+      <script type="application/ld+json">
+        {JSON.stringify(
+          {
+            "@context": "https://schema.org",
+            "@type": "Project",
+            name: project.title,
+            url: project?.link || "",
+            sameAs: project?.link?.includes("github.com") ? project.link : "",
+          },
+          null,
+          2
+        )}
+      </script>
+    </SEO>
   );
 }
 

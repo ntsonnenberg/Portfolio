@@ -196,31 +196,35 @@ export function Head({ data: { sanityPost } }: Props): JSX.Element {
       image={sanityPost.mainImage?.asset.url}
     >
       <script type="application/ld+json">
-        {JSON.stringify({
-          "@context": "https://schema.org",
-          "@type": "BlogPosting",
-          mainEntityOfPage: {
-            "@type": "WebPage",
-            "@id": `https://bespokecode.io/articles/${sanityPost.slug.current}`,
-          },
-          headline: sanityPost.title,
-          description: sanityPost.subtitle,
-          // Add rest of image content from blogs
-          image: [sanityPost.mainImage?.asset.url],
-          author: {
-            "@type": "Person",
-            name: sanityPost.author.name,
-          },
-          publisher: {
-            "@type": "Organization",
-            name: "Bespoke Code",
-            logo: {
-              "@type": "ImageObject",
-              url: "https://firebasestorage.googleapis.com/v0/b/portfolio-401812.appspot.com/o/bespoke-code-no-bg.svg?alt=media&token=4f2c6717-e0e4-49ba-baae-5a4e9b1a57ee",
+        {JSON.stringify(
+          {
+            "@context": "https://schema.org",
+            "@type": "BlogPosting",
+            mainEntityOfPage: {
+              "@type": "WebPage",
+              "@id": `https://bespokecode.io/articles/${sanityPost.slug.current}`,
             },
+            headline: sanityPost.title,
+            description: sanityPost.subtitle,
+            // Add rest of image content from blogs
+            image: [sanityPost.mainImage?.asset.url],
+            author: {
+              "@type": "Person",
+              name: sanityPost.author.name,
+            },
+            publisher: {
+              "@type": "Organization",
+              name: "Bespoke Code",
+              logo: {
+                "@type": "ImageObject",
+                url: "https://firebasestorage.googleapis.com/v0/b/portfolio-401812.appspot.com/o/bespoke-code-no-bg.svg?alt=media&token=4f2c6717-e0e4-49ba-baae-5a4e9b1a57ee",
+              },
+            },
+            datePublished: sanityPost.publishedAt,
           },
-          datePublished: sanityPost.publishedAt,
-        })}
+          null,
+          2
+        )}
       </script>
     </SEO>
   );

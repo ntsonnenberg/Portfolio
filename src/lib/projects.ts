@@ -3,7 +3,7 @@ import { graphql, useStaticQuery } from "gatsby";
 export interface Project {
   id: string;
   title: string;
-  link: string;
+  link?: string;
   image: string;
   heroImage: string;
   images: string[];

@@ -1,12 +1,12 @@
-import type { GatsbyConfig } from "gatsby";
+import { type GatsbyConfig } from "gatsby";
 
 require("dotenv").config({
   path: `.env.${process.env.NODE_ENV}`,
 });
 
-interface ProjectDoc {
+interface Project {
   title: string;
-  link: string;
+  link?: string;
   image: string;
   heroImage: string;
   images: string[];
@@ -40,12 +40,27 @@ const config: GatsbyConfig = {
   plugins: [
     "gatsby-plugin-postcss",
     "gatsby-plugin-image",
-    "gatsby-plugin-sitemap",
     "gatsby-plugin-sharp",
     "gatsby-transformer-sharp",
     "gatsby-plugin-smoothscroll",
     "gatsby-plugin-webpack-bundle-analyser-v2",
     "@sentry/gatsby",
+    {
+      resolve: "gatsby-plugin-robots-txt",
+      options: {
+        host: "https://bespokecode.io",
+        sitemap: "https://bespokecode.io/sitemap-index.xml",
+        resolveEnv: () => process.env.NODE_ENV,
+        env: {
+          development: {
+            policy: [{ userAgent: "*", disallow: ["/"] }],
+          },
+          production: {
+            policy: [{ userAgent: "*", allow: "/" }],
+          },
+        },
+      },
+    },
     {
       resolve: "gatsby-plugin-html-attributes",
       options: {
@@ -82,7 +97,7 @@ const config: GatsbyConfig = {
           {
             type: "Project",
             collection: "projects",
-            map: (doc: ProjectDoc) => ({
+            map: (doc: Project) => ({
               title: doc.title,
               link: doc.link,
               image: doc.image,
