@@ -171,9 +171,19 @@ export default function HeroMobileView({
             initial="hidden"
             animate="visible"
           >
+            <p className="pt-4 text-base phone:text-start laptop:text-center sm:text-lg md:text-xl text-white/40 leading-relaxed font-light tracking-wide max-w-xl mx-auto px-4">
+              Hire an expert web developer for your local business. If you need{" "}
+              <span className="bg-clip-text text-transparent bg-gradient-to-r from-primary to-purple-500">
+                help on an existing system
+              </span>{" "}
+              or need to{" "}
+              <span className="bg-clip-text text-transparent bg-gradient-to-r from-purple-500 to-primary">
+                build a custom application from scratch
+              </span>
+              , we got you covered!
+            </p>
             <p className="pt-4 text-base phone:text-start laptop:text-center sm:text-lg md:text-xl text-white/40 mb-8 leading-relaxed font-light tracking-wide max-w-xl mx-auto px-4">
-              Expert web & mobile developers for your local business. Get
-              custom, affordable software solutions that drive results. Free
+              Get custom software solutions that drive results. Free
               consultation—request a quote today!
             </p>
             <Link to="/contact" className="primary filled py-2 px-4 text-2xl">

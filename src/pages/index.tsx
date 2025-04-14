@@ -7,28 +7,15 @@ import SocialLinks from "../components/SocialLinks";
 import ProfileFeature from "../components/ProfileFeature";
 import Marquee from "react-fast-marquee";
 import IntegrationFeatures from "../components/IntegrationFeatures";
-// import FadeBlockHeader from "../components/FadeBlockHeader";
 import AuroraBackgroundView from "../components/AuroraBackgroundView";
-// import { MacbookScrollView } from "../components/MacbookScrollView";
-// import { IconCloudView } from "../components/IconCloudView";
 import { ReactLenis } from "lenis/dist/lenis-react";
-// import BackgroundBoxesView from "../components/BackgroundBoxesView";
 import BackgroundBeamsView from "../components/BackgroundBeamsView";
-// import { FlipWordsView } from "../components/FlipWordsView";
 import GeminiEffectView from "../components/GeminiEffectView";
-// import { HeroParallaxView } from "../components/HeroParallaxView";
 import Image from "../components/Image";
 import SEO from "../components/Seo";
 import HeroMobileView from "../components/HeroMobileView";
-// import { HeroParallaxView } from "../components/HeroParallaxView";
-// import HeroMobileView from "../components/HeroMobileView";
 
 export default function IndexPage(): JSX.Element {
-  // let isPhone = false;
-  // if (typeof window !== "undefined") {
-  //   isPhone = window.innerWidth <= 412;
-  // }
-
   return (
     <Layout>
       <ReactLenis root>
@@ -56,22 +43,10 @@ export default function IndexPage(): JSX.Element {
           <AuroraBackgroundView />
         </div>
         <GeminiEffectView />
-        {/* {!isPhone && <MacbookScrollView />} */}
-        {/* <BackgroundBoxesView /> */}
         <Featured />
         <BackgroundBeamsView />
         <IntegrationFeatures />
         <SocialLinks />
-        {/* <div className="flex phone:gap-0 laptop:gap-10 laptop:m-10 laptop:p-40 laptop:flex-row phone:flex-col justify-evenly">
-          {isPhone ? (
-            <FadeBlockHeader color="on-background" className="py-32 mx-6">
-              Built with modern frameworks
-            </FadeBlockHeader>
-          ) : (
-            <FlipWordsView />
-          )}
-          <IconCloudView />
-        </div> */}
         <Steps />
         <div className="phone:mx-10 tablet:mx-0">
           <ContactForm />
@@ -104,6 +79,14 @@ export function Head(): JSX.Element {
               "https://firebasestorage.googleapis.com/v0/b/portfolio-401812.appspot.com/o/bespoke-code-no-bg.png?alt=media&token=1f6923f7-c1ba-4ab8-89af-8705c5d507b4",
             url: "https://bespokecode.io/",
             telephone: "8055045262",
+            address: {
+              "@type": "PostalAddress",
+              streetAddress: "339 N 1320 E",
+              addressLocality: "Lehi",
+              addressRegion: "UT",
+              postalCode: "84043",
+              addressCountry: "US",
+            },
             sameAs: [
               "https://www.facebook.com/nathan.sonnenberg.14",
               "https://x.com/nate_sonnenberg",
