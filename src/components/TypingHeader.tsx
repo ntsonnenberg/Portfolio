@@ -21,7 +21,7 @@ export default function FadeBlockHeader({
           key={index}
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
-          transition={{ delay: index * 0.2, duration: 0.2 }}
+          transition={{ delay: index * 0.2, duration: 0.1 }}
         >
           {char}
         </motion.span>

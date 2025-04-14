@@ -1,6 +1,5 @@
 import Layout from "../components/Layout";
 import ProjectCard from "../components/ProjectCard";
-import { Spotlight } from "../components/ui-layouts/spotlight-card";
 import { getProjects } from "../lib/projects";
 import React from "react";
 import SEO from "../components/Seo";
@@ -24,11 +23,11 @@ export default function ProjectsPage(): JSX.Element {
         <h1 className="phone:text-3xl tablet:text-5xl text-center mb-20 phone:w-full tablet:w-2/3 laptop:w-1/2 mx-auto">
           Web App Ideas Brought to Life: Our Project Portfolio
         </h1>
-        <Spotlight className="min-h-screen grid justify-items-center phone:grid-cols-1 phone:gap-12 tablet:grid-cols-2 tablet:mx-12 laptop:grid-cols-3 laptop:gap-16 laptop:mx-52 desktop:mx-60">
+        <div className="min-h-screen grid justify-items-center phone:grid-cols-1 phone:mx-6 tablet:grid-cols-2 tablet:gap-6 tablet:mx-12 laptop:mx-52 desktop:mx-60">
           {projects.map((project) => (
             <ProjectCard key={project.id} project={project} />
           ))}
-        </Spotlight>
+        </div>
       </div>
     </Layout>
   );

@@ -28,8 +28,8 @@ export default function ProfileFeature(): JSX.Element {
         </p>
         <p className="text-lg">
           I create{" "}
-          <span className="text-secondary font-bold">
-            website applications that provide a dynamic{" "}
+          <span className="text-transparent bg-gradient-to-r from-primary via-purple-500 to-primary bg-clip-text font-bold">
+            web applications that provide a dynamic{" "}
           </span>
           user experience and seamless interaction. Partner with a leading
           website development company that prioritizes innovation, performance,
