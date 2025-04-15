@@ -170,7 +170,7 @@ export default function Footer(): JSX.Element {
             </h6>
             <iframe
               src="https://nathansonnenberg.substack.com/embed"
-              width="380"
+              width="360"
               height="120"
               frameBorder="0"
               scrolling="no"
