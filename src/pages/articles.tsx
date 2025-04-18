@@ -1,10 +1,10 @@
 import Layout from "../components/Layout";
 import React, { useState } from "react";
-import { getPosts } from "../lib/posts";
+import { getPosts } from "../lib/sanity/posts";
 import SEO from "../components/Seo";
 import ArticleCard from "../components/ArticleCard";
 import Dropdown from "../components/global/Dropdown";
-import { getCategories } from "../lib/categories";
+import { getCategories } from "../lib/sanity/categories";
 
 export default function ArticlesPage(): JSX.Element {
   const posts = getPosts();

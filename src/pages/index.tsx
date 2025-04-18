@@ -7,15 +7,19 @@ import SocialLinks from "../components/SocialLinks";
 import ProfileFeature from "../components/ProfileFeature";
 import Marquee from "react-fast-marquee";
 import IntegrationFeatures from "../components/IntegrationFeatures";
-import AuroraBackgroundView from "../components/AuroraBackgroundView";
 import { ReactLenis } from "lenis/dist/lenis-react";
 import BackgroundBeamsView from "../components/BackgroundBeamsView";
 import GeminiEffectView from "../components/GeminiEffectView";
 import Image from "../components/Image";
 import SEO from "../components/Seo";
 import HeroMobileView from "../components/HeroMobileView";
+import { getServices } from "../lib/sanity/services";
+import FadeBlockHeader from "../components/FadeBlockHeader";
+import ServiceOffering from "../components/home/ServiceOffering";
 
 export default function IndexPage(): JSX.Element {
+  const services = getServices();
+
   return (
     <Layout>
       <ReactLenis root>
@@ -39,9 +43,17 @@ export default function IndexPage(): JSX.Element {
             alt="Utah Automotive Magazine Website Logo"
           />
         </Marquee>
-        <div className="phone:pt-10 laptop:pt-0">
-          <AuroraBackgroundView />
-        </div>
+        <section className="phone:pt-10 tablet:py-20">
+          <FadeBlockHeader
+            color="on-background"
+            className="flex justify-center"
+          >
+            Here's Our Offer
+          </FadeBlockHeader>
+          {services.map((service, index) => (
+            <ServiceOffering key={service.id} service={service} index={index} />
+          ))}
+        </section>
         <GeminiEffectView />
         <Featured />
         <BackgroundBeamsView />

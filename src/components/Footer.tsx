@@ -89,14 +89,14 @@ export default function Footer(): JSX.Element {
               </li> */}
 
               <li>
-                <a
-                  href="#"
-                  title=""
+                <Link
+                  to="/terms-and-conditions"
+                  title="Terms & Conditions"
                   className="inline-flex cursor-pointer text-sm font-normal transition-all duration-300 transform hover:text-primary hover:translate-x-1"
                 >
                   {" "}
                   Terms & Conditions{" "}
-                </a>
+                </Link>
               </li>
 
               <li>

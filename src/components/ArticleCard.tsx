@@ -1,7 +1,7 @@
 import { Link } from "gatsby";
 import Image from "./Image";
 import React from "react";
-import { Post } from "../lib/posts";
+import { Post } from "../lib/sanity/posts";
 import { GatsbyImage } from "gatsby-plugin-image";
 import SanityImage from "./SanityImage";
 

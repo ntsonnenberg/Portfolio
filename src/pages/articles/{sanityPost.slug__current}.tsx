@@ -1,5 +1,5 @@
 import { graphql, Link } from "gatsby";
-import { Post } from "../../lib/posts";
+import { Post } from "../../lib/sanity/posts";
 import React from "react";
 import Layout from "../../components/Layout";
 import SEO from "../../components/Seo";
@@ -97,7 +97,6 @@ interface Props {
 
 export default function ArticlePage({ data: { sanityPost }, children }: Props) {
   const { mainImage } = sanityPost;
-  console.log(sanityPost);
 
   const {
     author: { image: authorImage },
